@@ -1,0 +1,136 @@
+grammar com.sandy.xtext.JoveNotes with org.eclipse.xtext.common.Terminals
+
+generate joveNotes "http://www.sandy.com/xtext/JoveNotes"
+
+JoveNotes :
+    ( processingHints = ProcessingHints )?
+    ( chapterDetails = ChapterDetails )
+    ( notesElements += NotesElement )*
+;
+
+ProcessingHints:
+    skipGeneration = '@skip_generation'
+;
+
+ChapterDetails:
+    ( testPaper = '@test_paper' )?
+    'subject'       subjectName   = STRING
+    'chapterNumber' chapterNumber = INT '.' subChapterNumber = INT
+    'chapterName'   chapterName   = STRING
+;
+
+NotesElement:
+    WordMeaning    | 
+    QuestionAnswer | 
+    FIB            |
+    Definition     |
+    Character      |
+    TeacherNote    |
+    Matching       |
+    Event          |
+    TrueFalse      |
+    ChemEquation   |
+    ChemCompound   |
+    Spellbee       |
+    ImageLabel     |
+    Equation       |
+    RefToContext   
+;
+
+WordMeaning:
+    '@wm' word    = STRING
+          meaning = STRING
+;
+
+QuestionAnswer:
+    '@qa' question = STRING
+          answer   = STRING
+          ( cmap = CMap )?
+;
+
+FIB:
+    '@fib'  question  = STRING
+          ( answers  += STRING )+
+;
+
+Definition:
+    '@definition' term       = STRING
+                  definition = STRING
+                  ( cmap     = CMap )?
+;
+
+Character:
+    '@character' character   = STRING
+                 estimate    = STRING
+                 ( cmap      = CMap )?
+;
+
+TeacherNote:
+    '@tn' note = STRING
+          ( cmap = CMap )?
+;
+
+Matching:
+    '@match' question = STRING '{'
+        ( pairs += MatchPair )+
+    '}'
+;
+
+MatchPair: matchQuestion = STRING '=' matchAnswer = STRING ;
+
+Event: '@event' event = STRING time = STRING ;
+
+TrueFalse: '@true_false' statement = STRING 
+                         truthValue = BOOL
+                         ( justification = STRING )?
+;
+
+ChemEquation :
+    '@chem_equation' equation    = STRING
+                     description = STRING
+                     notes       = STRING
+;
+
+ChemCompound :
+    '@chem_compound' symbol      = STRING
+                     chemicalName= STRING
+                     commonName  = STRING
+;
+
+Spellbee :
+    '@spellbee' word = STRING
+;
+
+ImageLabel:
+    '@image_label' caption = STRING '{'
+        'imageName' imageName = STRING
+        ( hotspots += HotSpot )( ',' hotspots += HotSpot )*
+    '}'
+;
+
+HotSpot:
+    x = INT ',' y = INT '=' label = STRING
+;
+
+Equation :
+    '@equation' equation = STRING '{'
+                ( description = STRING )?
+                'where'
+                ( symbols += EqSymbol )( ',' symbols += EqSymbol )*
+    '}'
+;
+
+EqSymbol:
+    symbol = STRING '=' description = STRING
+;
+
+RefToContext:
+    '@rtc' '{'
+        'context' context = STRING
+        ( questions += QuestionAnswer )+
+    '}'
+;
+
+CMap: 'cmap' '{' content = STRING '}' ;
+
+terminal BOOL : 'true' | 'false' ;
