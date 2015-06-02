@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.Matching#getSkipReverseQuestion <em>Skip Reverse Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getPairs <em>Pairs</em>}</li>
  * </ul>
@@ -23,6 +24,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Matching extends NotesElement
 {
+  /**
+   * Returns the value of the '<em><b>Skip Reverse Question</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Skip Reverse Question</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Skip Reverse Question</em>' attribute.
+   * @see #setSkipReverseQuestion(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatching_SkipReverseQuestion()
+   * @model
+   * @generated
+   */
+  String getSkipReverseQuestion();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Matching#getSkipReverseQuestion <em>Skip Reverse Question</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Skip Reverse Question</em>' attribute.
+   * @see #getSkipReverseQuestion()
+   * @generated
+   */
+  void setSkipReverseQuestion(String value);
+
   /**
    * Returns the value of the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->

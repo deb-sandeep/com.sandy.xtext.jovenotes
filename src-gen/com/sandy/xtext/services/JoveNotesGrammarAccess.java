@@ -434,40 +434,48 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Matching");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMatchKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cPairsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cPairsMatchPairParserRuleCall_3_0 = (RuleCall)cPairsAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cSkipReverseQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cSkipReverseQuestionSkip_reverse_questionKeyword_1_0 = (Keyword)cSkipReverseQuestionAssignment_1.eContents().get(0);
+		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cPairsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cPairsMatchPairParserRuleCall_4_0 = (RuleCall)cPairsAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Matching:
-		//	"@match" question=STRING "{" pairs+=MatchPair+ "}";
+		//	"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@match" question=STRING "{" pairs+=MatchPair+ "}"
+		//"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@match"
 		public Keyword getMatchKeyword_0() { return cMatchKeyword_0; }
 
-		//question=STRING
-		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
+		//skipReverseQuestion="skip_reverse_question"?
+		public Assignment getSkipReverseQuestionAssignment_1() { return cSkipReverseQuestionAssignment_1; }
+
+		//"skip_reverse_question"
+		public Keyword getSkipReverseQuestionSkip_reverse_questionKeyword_1_0() { return cSkipReverseQuestionSkip_reverse_questionKeyword_1_0; }
+
+		//question=STRING?
+		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
 
 		//STRING
-		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//pairs+=MatchPair+
-		public Assignment getPairsAssignment_3() { return cPairsAssignment_3; }
+		public Assignment getPairsAssignment_4() { return cPairsAssignment_4; }
 
 		//MatchPair
-		public RuleCall getPairsMatchPairParserRuleCall_3_0() { return cPairsMatchPairParserRuleCall_3_0; }
+		public RuleCall getPairsMatchPairParserRuleCall_4_0() { return cPairsMatchPairParserRuleCall_4_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 
 	public class MatchPairElements extends AbstractParserRuleElementFinder {
@@ -626,10 +634,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCommonNameSTRINGTerminalRuleCall_3_0 = (RuleCall)cCommonNameAssignment_3.eContents().get(0);
 		
 		//ChemCompound:
-		//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING;
+		//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING
+		//"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//"@chem_compound"
@@ -647,7 +655,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getChemicalNameSTRINGTerminalRuleCall_2_0() { return cChemicalNameSTRINGTerminalRuleCall_2_0; }
 
-		//commonName=STRING
+		//commonName=STRING?
 		public Assignment getCommonNameAssignment_3() { return cCommonNameAssignment_3; }
 
 		//STRING
@@ -697,16 +705,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//ImageLabel:
-		//	"@image_label" caption=STRING "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
+		//	"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@image_label" caption=STRING "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}"
+		//"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@image_label"
 		public Keyword getImage_labelKeyword_0() { return cImage_labelKeyword_0; }
 
-		//caption=STRING
+		//caption=STRING?
 		public Assignment getCaptionAssignment_1() { return cCaptionAssignment_1; }
 
 		//STRING
@@ -1157,7 +1165,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Matching:
-	//	"@match" question=STRING "{" pairs+=MatchPair+ "}";
+	//	"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
 	public MatchingElements getMatchingAccess() {
 		return pMatching;
 	}
@@ -1207,7 +1215,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemCompound:
-	//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING;
+	//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?;
 	public ChemCompoundElements getChemCompoundAccess() {
 		return pChemCompound;
 	}
@@ -1227,7 +1235,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ImageLabel:
-	//	"@image_label" caption=STRING "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
+	//	"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
 	public ImageLabelElements getImageLabelAccess() {
 		return pImageLabel;
 	}

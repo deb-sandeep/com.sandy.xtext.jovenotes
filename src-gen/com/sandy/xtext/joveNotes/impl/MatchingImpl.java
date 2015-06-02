@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getSkipReverseQuestion <em>Skip Reverse Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getPairs <em>Pairs</em>}</li>
  * </ul>
@@ -37,6 +38,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MatchingImpl extends NotesElementImpl implements Matching
 {
+  /**
+   * The default value of the '{@link #getSkipReverseQuestion() <em>Skip Reverse Question</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSkipReverseQuestion()
+   * @generated
+   * @ordered
+   */
+  protected static final String SKIP_REVERSE_QUESTION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSkipReverseQuestion() <em>Skip Reverse Question</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSkipReverseQuestion()
+   * @generated
+   * @ordered
+   */
+  protected String skipReverseQuestion = SKIP_REVERSE_QUESTION_EDEFAULT;
+
   /**
    * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -86,6 +107,29 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.MATCHING;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getSkipReverseQuestion()
+  {
+    return skipReverseQuestion;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSkipReverseQuestion(String newSkipReverseQuestion)
+  {
+    String oldSkipReverseQuestion = skipReverseQuestion;
+    skipReverseQuestion = newSkipReverseQuestion;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION, oldSkipReverseQuestion, skipReverseQuestion));
   }
 
   /**
@@ -151,6 +195,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
+        return getSkipReverseQuestion();
       case JoveNotesPackage.MATCHING__QUESTION:
         return getQuestion();
       case JoveNotesPackage.MATCHING__PAIRS:
@@ -170,6 +216,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
+        setSkipReverseQuestion((String)newValue);
+        return;
       case JoveNotesPackage.MATCHING__QUESTION:
         setQuestion((String)newValue);
         return;
@@ -191,6 +240,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
+        setSkipReverseQuestion(SKIP_REVERSE_QUESTION_EDEFAULT);
+        return;
       case JoveNotesPackage.MATCHING__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
@@ -211,6 +263,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
+        return SKIP_REVERSE_QUESTION_EDEFAULT == null ? skipReverseQuestion != null : !SKIP_REVERSE_QUESTION_EDEFAULT.equals(skipReverseQuestion);
       case JoveNotesPackage.MATCHING__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.MATCHING__PAIRS:
@@ -230,7 +284,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (question: ");
+    result.append(" (skipReverseQuestion: ");
+    result.append(skipReverseQuestion);
+    result.append(", question: ");
     result.append(question);
     result.append(')');
     return result.toString();

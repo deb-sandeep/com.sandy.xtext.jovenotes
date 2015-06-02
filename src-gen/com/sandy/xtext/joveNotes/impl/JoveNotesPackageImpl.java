@@ -620,7 +620,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMatching_Question()
+  public EAttribute getMatching_SkipReverseQuestion()
   {
     return (EAttribute)matchingEClass.getEStructuralFeatures().get(0);
   }
@@ -630,9 +630,19 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMatching_Question()
+  {
+    return (EAttribute)matchingEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMatching_Pairs()
   {
-    return (EReference)matchingEClass.getEStructuralFeatures().get(1);
+    return (EReference)matchingEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1110,6 +1120,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEReference(teacherNoteEClass, TEACHER_NOTE__CMAP);
 
     matchingEClass = createEClass(MATCHING);
+    createEAttribute(matchingEClass, MATCHING__SKIP_REVERSE_QUESTION);
     createEAttribute(matchingEClass, MATCHING__QUESTION);
     createEReference(matchingEClass, MATCHING__PAIRS);
 
@@ -1257,6 +1268,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEReference(getTeacherNote_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(matchingEClass, Matching.class, "Matching", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMatching_SkipReverseQuestion(), ecorePackage.getEString(), "skipReverseQuestion", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMatching_Question(), ecorePackage.getEString(), "question", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMatching_Pairs(), this.getMatchPair(), null, "pairs", null, 0, -1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

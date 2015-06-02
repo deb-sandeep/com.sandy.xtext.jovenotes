@@ -49,6 +49,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cmap" eType="#//CMap" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Matching" eSuperTypes="#//NotesElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="skipReverseQuestion" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="question" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="pairs" upperBound="-1"
         eType="#//MatchPair" containment="true"/>

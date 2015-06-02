@@ -908,9 +908,24 @@ ruleMatching returns [EObject current=null]
     }
 (
 (
-		lv_question_1_0=RULE_STRING
+		lv_skipReverseQuestion_1_0=	'skip_reverse_question' 
+    {
+        newLeafNode(lv_skipReverseQuestion_1_0, grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMatchingRule());
+	        }
+       		setWithLastConsumed($current, "skipReverseQuestion", lv_skipReverseQuestion_1_0, "skip_reverse_question");
+	    }
+
+)
+)?(
+(
+		lv_question_2_0=RULE_STRING
 		{
-			newLeafNode(lv_question_1_0, grammarAccess.getMatchingAccess().getQuestionSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_question_2_0, grammarAccess.getMatchingAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -919,36 +934,36 @@ ruleMatching returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"question",
-        		lv_question_1_0, 
+        		lv_question_2_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_2='{' 
+)?	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getMatchingAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getMatchingAccess().getLeftCurlyBracketKeyword_3());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMatchingAccess().getPairsMatchPairParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getMatchingAccess().getPairsMatchPairParserRuleCall_4_0()); 
 	    }
-		lv_pairs_3_0=ruleMatchPair		{
+		lv_pairs_4_0=ruleMatchPair		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMatchingRule());
 	        }
        		add(
        			$current, 
        			"pairs",
-        		lv_pairs_3_0, 
+        		lv_pairs_4_0, 
         		"MatchPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+	otherlv_4='}' 
+)+	otherlv_5='}' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_5());
     }
 )
 ;
@@ -1309,7 +1324,7 @@ ruleChemCompound returns [EObject current=null]
 	    }
 
 )
-))
+)?)
 ;
 
 
@@ -1395,7 +1410,7 @@ ruleImageLabel returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='{' 
+)?	otherlv_2='{' 
     {
     	newLeafNode(otherlv_2, grammarAccess.getImageLabelAccess().getLeftCurlyBracketKeyword_2());
     }

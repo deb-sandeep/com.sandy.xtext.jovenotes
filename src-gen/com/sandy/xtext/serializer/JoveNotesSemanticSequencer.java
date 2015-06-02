@@ -155,23 +155,10 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (symbol=STRING chemicalName=STRING commonName=STRING)
+	 *     (symbol=STRING chemicalName=STRING commonName=STRING?)
 	 */
 	protected void sequence_ChemCompound(EObject context, ChemCompound semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__SYMBOL) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__SYMBOL));
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__CHEMICAL_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__CHEMICAL_NAME));
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__COMMON_NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_COMPOUND__COMMON_NAME));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getChemCompoundAccess().getSymbolSTRINGTerminalRuleCall_1_0(), semanticObject.getSymbol());
-		feeder.accept(grammarAccess.getChemCompoundAccess().getChemicalNameSTRINGTerminalRuleCall_2_0(), semanticObject.getChemicalName());
-		feeder.accept(grammarAccess.getChemCompoundAccess().getCommonNameSTRINGTerminalRuleCall_3_0(), semanticObject.getCommonName());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -286,7 +273,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (caption=STRING imageName=STRING hotspots+=HotSpot hotspots+=HotSpot*)
+	 *     (caption=STRING? imageName=STRING hotspots+=HotSpot hotspots+=HotSpot*)
 	 */
 	protected void sequence_ImageLabel(EObject context, ImageLabel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -323,7 +310,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (question=STRING pairs+=MatchPair+)
+	 *     (skipReverseQuestion='skip_reverse_question'? question=STRING? pairs+=MatchPair+)
 	 */
 	protected void sequence_Matching(EObject context, Matching semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -71,7 +71,8 @@ TeacherNote:
 ;
 
 Matching:
-    '@match' question = STRING '{'
+    '@match' (skipReverseQuestion = 'skip_reverse_question')?
+             (question = STRING)? '{'
         ( pairs += MatchPair )+
     '}'
 ;
@@ -94,7 +95,7 @@ ChemEquation :
 ChemCompound :
     '@chem_compound' symbol      = STRING
                      chemicalName= STRING
-                     commonName  = STRING
+                     (commonName  = STRING)?
 ;
 
 Spellbee :
@@ -102,7 +103,7 @@ Spellbee :
 ;
 
 ImageLabel:
-    '@image_label' caption = STRING '{'
+    '@image_label' (caption = STRING)? '{'
         'imageName' imageName = STRING
         ( hotspots += HotSpot )( ',' hotspots += HotSpot )*
     '}'

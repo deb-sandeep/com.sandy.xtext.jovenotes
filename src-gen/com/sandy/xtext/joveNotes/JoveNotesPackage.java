@@ -473,13 +473,22 @@ public interface JoveNotesPackage extends EPackage
   int MATCHING = 10;
 
   /**
+   * The feature id for the '<em><b>Skip Reverse Question</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCHING__SKIP_REVERSE_QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATCHING__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int MATCHING__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Pairs</b></em>' containment reference list.
@@ -488,7 +497,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__PAIRS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int MATCHING__PAIRS = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Matching</em>' class.
@@ -497,7 +506,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl <em>Match Pair</em>}' class.
@@ -1355,6 +1364,17 @@ public interface JoveNotesPackage extends EPackage
   EClass getMatching();
 
   /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Matching#getSkipReverseQuestion <em>Skip Reverse Question</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Skip Reverse Question</em>'.
+   * @see com.sandy.xtext.joveNotes.Matching#getSkipReverseQuestion()
+   * @see #getMatching()
+   * @generated
+   */
+  EAttribute getMatching_SkipReverseQuestion();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Matching#getQuestion <em>Question</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2128,6 +2148,14 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass MATCHING = eINSTANCE.getMatching();
+
+    /**
+     * The meta object literal for the '<em><b>Skip Reverse Question</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCHING__SKIP_REVERSE_QUESTION = eINSTANCE.getMatching_SkipReverseQuestion();
 
     /**
      * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
