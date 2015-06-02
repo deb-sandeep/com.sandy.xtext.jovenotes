@@ -639,31 +639,40 @@ public interface JoveNotesPackage extends EPackage
   int CHEM_EQUATION = 14;
 
   /**
-   * The feature id for the '<em><b>Equation</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHEM_EQUATION__EQUATION = NOTES_ELEMENT_FEATURE_COUNT + 0;
-
-  /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int CHEM_EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Notes</b></em>' attribute.
+   * The feature id for the '<em><b>Reactants</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__NOTES = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int CHEM_EQUATION__REACTANTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Produces</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHEM_EQUATION__PRODUCES = NOTES_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Products</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHEM_EQUATION__PRODUCTS = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Chem Equation</em>' class.
@@ -672,7 +681,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int CHEM_EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl <em>Chem Compound</em>}' class.
@@ -1514,17 +1523,6 @@ public interface JoveNotesPackage extends EPackage
   EClass getChemEquation();
 
   /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getEquation <em>Equation</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Equation</em>'.
-   * @see com.sandy.xtext.joveNotes.ChemEquation#getEquation()
-   * @see #getChemEquation()
-   * @generated
-   */
-  EAttribute getChemEquation_Equation();
-
-  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getDescription <em>Description</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1536,15 +1534,37 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getChemEquation_Description();
 
   /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getNotes <em>Notes</em>}'.
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getReactants <em>Reactants</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Notes</em>'.
-   * @see com.sandy.xtext.joveNotes.ChemEquation#getNotes()
+   * @return the meta object for the attribute '<em>Reactants</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemEquation#getReactants()
    * @see #getChemEquation()
    * @generated
    */
-  EAttribute getChemEquation_Notes();
+  EAttribute getChemEquation_Reactants();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Produces</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemEquation#getProduces()
+   * @see #getChemEquation()
+   * @generated
+   */
+  EAttribute getChemEquation_Produces();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getProducts <em>Products</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Products</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemEquation#getProducts()
+   * @see #getChemEquation()
+   * @generated
+   */
+  EAttribute getChemEquation_Products();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.ChemCompound <em>Chem Compound</em>}'.
@@ -2270,14 +2290,6 @@ public interface JoveNotesPackage extends EPackage
     EClass CHEM_EQUATION = eINSTANCE.getChemEquation();
 
     /**
-     * The meta object literal for the '<em><b>Equation</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHEM_EQUATION__EQUATION = eINSTANCE.getChemEquation_Equation();
-
-    /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2286,12 +2298,28 @@ public interface JoveNotesPackage extends EPackage
     EAttribute CHEM_EQUATION__DESCRIPTION = eINSTANCE.getChemEquation_Description();
 
     /**
-     * The meta object literal for the '<em><b>Notes</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Reactants</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CHEM_EQUATION__NOTES = eINSTANCE.getChemEquation_Notes();
+    EAttribute CHEM_EQUATION__REACTANTS = eINSTANCE.getChemEquation_Reactants();
+
+    /**
+     * The meta object literal for the '<em><b>Produces</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHEM_EQUATION__PRODUCES = eINSTANCE.getChemEquation_Produces();
+
+    /**
+     * The meta object literal for the '<em><b>Products</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHEM_EQUATION__PRODUCTS = eINSTANCE.getChemEquation_Products();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl <em>Chem Compound</em>}' class.

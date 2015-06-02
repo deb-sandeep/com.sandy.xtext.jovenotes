@@ -1193,27 +1193,9 @@ ruleChemEquation returns [EObject current=null]
     }
 (
 (
-		lv_equation_1_0=RULE_STRING
+		lv_description_1_0=RULE_STRING
 		{
-			newLeafNode(lv_equation_1_0, grammarAccess.getChemEquationAccess().getEquationSTRINGTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getChemEquationRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"equation",
-        		lv_equation_1_0, 
-        		"STRING");
-	    }
-
-)
-)(
-(
-		lv_description_2_0=RULE_STRING
-		{
-			newLeafNode(lv_description_2_0, grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_description_1_0, grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1222,16 +1204,20 @@ ruleChemEquation returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"description",
-        		lv_description_2_0, 
+        		lv_description_1_0, 
         		"STRING");
 	    }
 
 )
-)(
+)?	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getChemEquationAccess().getLeftCurlyBracketKeyword_2());
+    }
 (
-		lv_notes_3_0=RULE_STRING
+(
+		lv_reactants_3_0=RULE_STRING
 		{
-			newLeafNode(lv_notes_3_0, grammarAccess.getChemEquationAccess().getNotesSTRINGTerminalRuleCall_3_0()); 
+			newLeafNode(lv_reactants_3_0, grammarAccess.getChemEquationAccess().getReactantsSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -1239,13 +1225,61 @@ ruleChemEquation returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"notes",
-        		lv_notes_3_0, 
+       			"reactants",
+        		lv_reactants_3_0, 
         		"STRING");
 	    }
 
 )
-))
+)	otherlv_4='>' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_4());
+    }
+(
+(
+		lv_produces_5_0=RULE_STRING
+		{
+			newLeafNode(lv_produces_5_0, grammarAccess.getChemEquationAccess().getProducesSTRINGTerminalRuleCall_5_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChemEquationRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"produces",
+        		lv_produces_5_0, 
+        		"STRING");
+	    }
+
+)
+)?	otherlv_6='>' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_6());
+    }
+(
+(
+		lv_products_7_0=RULE_STRING
+		{
+			newLeafNode(lv_products_7_0, grammarAccess.getChemEquationAccess().getProductsSTRINGTerminalRuleCall_7_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChemEquationRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"products",
+        		lv_products_7_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_8='}' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getChemEquationAccess().getRightCurlyBracketKeyword_8());
+    }
+)
 ;
 
 

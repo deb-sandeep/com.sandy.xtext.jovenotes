@@ -164,23 +164,10 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (equation=STRING description=STRING notes=STRING)
+	 *     (description=STRING? reactants=STRING produces=STRING? products=STRING)
 	 */
 	protected void sequence_ChemEquation(EObject context, ChemEquation semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__EQUATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__EQUATION));
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__DESCRIPTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__DESCRIPTION));
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__NOTES) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHEM_EQUATION__NOTES));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getChemEquationAccess().getEquationSTRINGTerminalRuleCall_1_0(), semanticObject.getEquation());
-		feeder.accept(grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0(), semanticObject.getDescription());
-		feeder.accept(grammarAccess.getChemEquationAccess().getNotesSTRINGTerminalRuleCall_3_0(), semanticObject.getNotes());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

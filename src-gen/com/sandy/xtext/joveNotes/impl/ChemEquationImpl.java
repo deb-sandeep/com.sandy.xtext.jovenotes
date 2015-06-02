@@ -18,9 +18,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getEquation <em>Equation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getNotes <em>Notes</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getReactants <em>Reactants</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getProduces <em>Produces</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getProducts <em>Products</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,26 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
 {
-  /**
-   * The default value of the '{@link #getEquation() <em>Equation</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEquation()
-   * @generated
-   * @ordered
-   */
-  protected static final String EQUATION_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getEquation() <em>Equation</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getEquation()
-   * @generated
-   * @ordered
-   */
-  protected String equation = EQUATION_EDEFAULT;
-
   /**
    * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -69,24 +50,64 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   protected String description = DESCRIPTION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+   * The default value of the '{@link #getReactants() <em>Reactants</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNotes()
+   * @see #getReactants()
    * @generated
    * @ordered
    */
-  protected static final String NOTES_EDEFAULT = null;
+  protected static final String REACTANTS_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getNotes() <em>Notes</em>}' attribute.
+   * The cached value of the '{@link #getReactants() <em>Reactants</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getNotes()
+   * @see #getReactants()
    * @generated
    * @ordered
    */
-  protected String notes = NOTES_EDEFAULT;
+  protected String reactants = REACTANTS_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getProduces() <em>Produces</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProduces()
+   * @generated
+   * @ordered
+   */
+  protected static final String PRODUCES_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getProduces() <em>Produces</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProduces()
+   * @generated
+   * @ordered
+   */
+  protected String produces = PRODUCES_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getProducts() <em>Products</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProducts()
+   * @generated
+   * @ordered
+   */
+  protected static final String PRODUCTS_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getProducts() <em>Products</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getProducts()
+   * @generated
+   * @ordered
+   */
+  protected String products = PRODUCTS_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -107,29 +128,6 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.CHEM_EQUATION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getEquation()
-  {
-    return equation;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setEquation(String newEquation)
-  {
-    String oldEquation = equation;
-    equation = newEquation;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_EQUATION__EQUATION, oldEquation, equation));
   }
 
   /**
@@ -160,9 +158,9 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getNotes()
+  public String getReactants()
   {
-    return notes;
+    return reactants;
   }
 
   /**
@@ -170,12 +168,58 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setNotes(String newNotes)
+  public void setReactants(String newReactants)
   {
-    String oldNotes = notes;
-    notes = newNotes;
+    String oldReactants = reactants;
+    reactants = newReactants;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_EQUATION__NOTES, oldNotes, notes));
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_EQUATION__REACTANTS, oldReactants, reactants));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getProduces()
+  {
+    return produces;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProduces(String newProduces)
+  {
+    String oldProduces = produces;
+    produces = newProduces;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_EQUATION__PRODUCES, oldProduces, produces));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getProducts()
+  {
+    return products;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setProducts(String newProducts)
+  {
+    String oldProducts = products;
+    products = newProducts;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_EQUATION__PRODUCTS, oldProducts, products));
   }
 
   /**
@@ -188,12 +232,14 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHEM_EQUATION__EQUATION:
-        return getEquation();
       case JoveNotesPackage.CHEM_EQUATION__DESCRIPTION:
         return getDescription();
-      case JoveNotesPackage.CHEM_EQUATION__NOTES:
-        return getNotes();
+      case JoveNotesPackage.CHEM_EQUATION__REACTANTS:
+        return getReactants();
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCES:
+        return getProduces();
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCTS:
+        return getProducts();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -208,14 +254,17 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHEM_EQUATION__EQUATION:
-        setEquation((String)newValue);
-        return;
       case JoveNotesPackage.CHEM_EQUATION__DESCRIPTION:
         setDescription((String)newValue);
         return;
-      case JoveNotesPackage.CHEM_EQUATION__NOTES:
-        setNotes((String)newValue);
+      case JoveNotesPackage.CHEM_EQUATION__REACTANTS:
+        setReactants((String)newValue);
+        return;
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCES:
+        setProduces((String)newValue);
+        return;
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCTS:
+        setProducts((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -231,14 +280,17 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHEM_EQUATION__EQUATION:
-        setEquation(EQUATION_EDEFAULT);
-        return;
       case JoveNotesPackage.CHEM_EQUATION__DESCRIPTION:
         setDescription(DESCRIPTION_EDEFAULT);
         return;
-      case JoveNotesPackage.CHEM_EQUATION__NOTES:
-        setNotes(NOTES_EDEFAULT);
+      case JoveNotesPackage.CHEM_EQUATION__REACTANTS:
+        setReactants(REACTANTS_EDEFAULT);
+        return;
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCES:
+        setProduces(PRODUCES_EDEFAULT);
+        return;
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCTS:
+        setProducts(PRODUCTS_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -254,12 +306,14 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHEM_EQUATION__EQUATION:
-        return EQUATION_EDEFAULT == null ? equation != null : !EQUATION_EDEFAULT.equals(equation);
       case JoveNotesPackage.CHEM_EQUATION__DESCRIPTION:
         return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-      case JoveNotesPackage.CHEM_EQUATION__NOTES:
-        return NOTES_EDEFAULT == null ? notes != null : !NOTES_EDEFAULT.equals(notes);
+      case JoveNotesPackage.CHEM_EQUATION__REACTANTS:
+        return REACTANTS_EDEFAULT == null ? reactants != null : !REACTANTS_EDEFAULT.equals(reactants);
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCES:
+        return PRODUCES_EDEFAULT == null ? produces != null : !PRODUCES_EDEFAULT.equals(produces);
+      case JoveNotesPackage.CHEM_EQUATION__PRODUCTS:
+        return PRODUCTS_EDEFAULT == null ? products != null : !PRODUCTS_EDEFAULT.equals(products);
     }
     return super.eIsSet(featureID);
   }
@@ -275,12 +329,14 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (equation: ");
-    result.append(equation);
-    result.append(", description: ");
+    result.append(" (description: ");
     result.append(description);
-    result.append(", notes: ");
-    result.append(notes);
+    result.append(", reactants: ");
+    result.append(reactants);
+    result.append(", produces: ");
+    result.append(produces);
+    result.append(", products: ");
+    result.append(products);
     result.append(')');
     return result.toString();
   }

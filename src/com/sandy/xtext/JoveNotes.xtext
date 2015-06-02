@@ -87,9 +87,9 @@ TrueFalse: '@true_false' statement = STRING
 ;
 
 ChemEquation :
-    '@chem_equation' equation    = STRING
-                     description = STRING
-                     notes       = STRING
+    '@chem_equation' (description = STRING)? '{'
+        reactants = STRING '>' (produces = STRING)? '>' products = STRING 
+    '}'
 ;
 
 ChemCompound :

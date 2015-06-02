@@ -760,7 +760,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Equation()
+  public EAttribute getChemEquation_Description()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(0);
   }
@@ -770,7 +770,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Description()
+  public EAttribute getChemEquation_Reactants()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(1);
   }
@@ -780,9 +780,19 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Notes()
+  public EAttribute getChemEquation_Produces()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChemEquation_Products()
+  {
+    return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1138,9 +1148,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(trueFalseEClass, TRUE_FALSE__JUSTIFICATION);
 
     chemEquationEClass = createEClass(CHEM_EQUATION);
-    createEAttribute(chemEquationEClass, CHEM_EQUATION__EQUATION);
     createEAttribute(chemEquationEClass, CHEM_EQUATION__DESCRIPTION);
-    createEAttribute(chemEquationEClass, CHEM_EQUATION__NOTES);
+    createEAttribute(chemEquationEClass, CHEM_EQUATION__REACTANTS);
+    createEAttribute(chemEquationEClass, CHEM_EQUATION__PRODUCES);
+    createEAttribute(chemEquationEClass, CHEM_EQUATION__PRODUCTS);
 
     chemCompoundEClass = createEClass(CHEM_COMPOUND);
     createEAttribute(chemCompoundEClass, CHEM_COMPOUND__SYMBOL);
@@ -1286,9 +1297,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getTrueFalse_Justification(), ecorePackage.getEString(), "justification", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chemEquationEClass, ChemEquation.class, "ChemEquation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getChemEquation_Equation(), ecorePackage.getEString(), "equation", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemEquation_Description(), ecorePackage.getEString(), "description", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getChemEquation_Notes(), ecorePackage.getEString(), "notes", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChemEquation_Reactants(), ecorePackage.getEString(), "reactants", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChemEquation_Produces(), ecorePackage.getEString(), "produces", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChemEquation_Products(), ecorePackage.getEString(), "products", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chemCompoundEClass, ChemCompound.class, "ChemCompound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChemCompound_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

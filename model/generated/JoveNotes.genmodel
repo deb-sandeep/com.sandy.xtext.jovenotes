@@ -69,9 +69,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TrueFalse/justification"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ChemEquation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/equation"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/description"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/notes"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/reactants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/produces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/products"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ChemCompound">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemCompound/symbol"/>

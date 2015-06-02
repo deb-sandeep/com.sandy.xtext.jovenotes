@@ -586,40 +586,64 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChemEquation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChem_equationKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEquationAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEquationSTRINGTerminalRuleCall_1_0 = (RuleCall)cEquationAssignment_1.eContents().get(0);
-		private final Assignment cDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescriptionAssignment_2.eContents().get(0);
-		private final Assignment cNotesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNotesSTRINGTerminalRuleCall_3_0 = (RuleCall)cNotesAssignment_3.eContents().get(0);
+		private final Assignment cDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_0 = (RuleCall)cDescriptionAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cReactantsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cReactantsSTRINGTerminalRuleCall_3_0 = (RuleCall)cReactantsAssignment_3.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cProducesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cProducesSTRINGTerminalRuleCall_5_0 = (RuleCall)cProducesAssignment_5.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cProductsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cProductsSTRINGTerminalRuleCall_7_0 = (RuleCall)cProductsAssignment_7.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ChemEquation:
-		//	"@chem_equation" equation=STRING description=STRING notes=STRING;
+		//	"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@chem_equation" equation=STRING description=STRING notes=STRING
+		//"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@chem_equation"
 		public Keyword getChem_equationKeyword_0() { return cChem_equationKeyword_0; }
 
-		//equation=STRING
-		public Assignment getEquationAssignment_1() { return cEquationAssignment_1; }
+		//description=STRING?
+		public Assignment getDescriptionAssignment_1() { return cDescriptionAssignment_1; }
 
 		//STRING
-		public RuleCall getEquationSTRINGTerminalRuleCall_1_0() { return cEquationSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_1_0() { return cDescriptionSTRINGTerminalRuleCall_1_0; }
 
-		//description=STRING
-		public Assignment getDescriptionAssignment_2() { return cDescriptionAssignment_2; }
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_0() { return cDescriptionSTRINGTerminalRuleCall_2_0; }
-
-		//notes=STRING
-		public Assignment getNotesAssignment_3() { return cNotesAssignment_3; }
+		//reactants=STRING
+		public Assignment getReactantsAssignment_3() { return cReactantsAssignment_3; }
 
 		//STRING
-		public RuleCall getNotesSTRINGTerminalRuleCall_3_0() { return cNotesSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getReactantsSTRINGTerminalRuleCall_3_0() { return cReactantsSTRINGTerminalRuleCall_3_0; }
+
+		//">"
+		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
+
+		//produces=STRING?
+		public Assignment getProducesAssignment_5() { return cProducesAssignment_5; }
+
+		//STRING
+		public RuleCall getProducesSTRINGTerminalRuleCall_5_0() { return cProducesSTRINGTerminalRuleCall_5_0; }
+
+		//">"
+		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
+
+		//products=STRING
+		public Assignment getProductsAssignment_7() { return cProductsAssignment_7; }
+
+		//STRING
+		public RuleCall getProductsSTRINGTerminalRuleCall_7_0() { return cProductsSTRINGTerminalRuleCall_7_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class ChemCompoundElements extends AbstractParserRuleElementFinder {
@@ -1205,7 +1229,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemEquation:
-	//	"@chem_equation" equation=STRING description=STRING notes=STRING;
+	//	"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}";
 	public ChemEquationElements getChemEquationAccess() {
 		return pChemEquation;
 	}

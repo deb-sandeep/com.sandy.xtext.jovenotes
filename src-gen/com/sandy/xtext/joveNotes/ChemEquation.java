@@ -11,9 +11,10 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getEquation <em>Equation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getDescription <em>Description</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getNotes <em>Notes</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getReactants <em>Reactants</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProducts <em>Products</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,32 +24,6 @@ package com.sandy.xtext.joveNotes;
  */
 public interface ChemEquation extends NotesElement
 {
-  /**
-   * Returns the value of the '<em><b>Equation</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Equation</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Equation</em>' attribute.
-   * @see #setEquation(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_Equation()
-   * @model
-   * @generated
-   */
-  String getEquation();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getEquation <em>Equation</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Equation</em>' attribute.
-   * @see #getEquation()
-   * @generated
-   */
-  void setEquation(String value);
-
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -76,29 +51,81 @@ public interface ChemEquation extends NotesElement
   void setDescription(String value);
 
   /**
-   * Returns the value of the '<em><b>Notes</b></em>' attribute.
+   * Returns the value of the '<em><b>Reactants</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Notes</em>' attribute isn't clear,
+   * If the meaning of the '<em>Reactants</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Notes</em>' attribute.
-   * @see #setNotes(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_Notes()
+   * @return the value of the '<em>Reactants</em>' attribute.
+   * @see #setReactants(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_Reactants()
    * @model
    * @generated
    */
-  String getNotes();
+  String getReactants();
 
   /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getNotes <em>Notes</em>}' attribute.
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getReactants <em>Reactants</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Notes</em>' attribute.
-   * @see #getNotes()
+   * @param value the new value of the '<em>Reactants</em>' attribute.
+   * @see #getReactants()
    * @generated
    */
-  void setNotes(String value);
+  void setReactants(String value);
+
+  /**
+   * Returns the value of the '<em><b>Produces</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Produces</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Produces</em>' attribute.
+   * @see #setProduces(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_Produces()
+   * @model
+   * @generated
+   */
+  String getProduces();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Produces</em>' attribute.
+   * @see #getProduces()
+   * @generated
+   */
+  void setProduces(String value);
+
+  /**
+   * Returns the value of the '<em><b>Products</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Products</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Products</em>' attribute.
+   * @see #setProducts(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_Products()
+   * @model
+   * @generated
+   */
+  String getProducts();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getProducts <em>Products</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Products</em>' attribute.
+   * @see #getProducts()
+   * @generated
+   */
+  void setProducts(String value);
 
 } // ChemEquation
