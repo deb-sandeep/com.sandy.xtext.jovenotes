@@ -205,13 +205,22 @@ public interface JoveNotesPackage extends EPackage
   int NOTES_ELEMENT = 3;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int NOTES_ELEMENT__HIDE_FROM_VIEW = 0;
+
+  /**
    * The number of structural features of the '<em>Notes Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NOTES_ELEMENT_FEATURE_COUNT = 0;
+  int NOTES_ELEMENT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl <em>Word Meaning</em>}' class.
@@ -222,6 +231,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int WORD_MEANING = 4;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int WORD_MEANING__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Word</b></em>' attribute.
@@ -259,6 +277,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int QUESTION_ANSWER = 5;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int QUESTION_ANSWER__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -307,6 +334,15 @@ public interface JoveNotesPackage extends EPackage
   int FIB = 6;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIB__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -342,6 +378,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int DEFINITION = 7;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DEFINITION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Term</b></em>' attribute.
@@ -390,6 +435,15 @@ public interface JoveNotesPackage extends EPackage
   int CHARACTER = 8;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHARACTER__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Character</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -436,6 +490,15 @@ public interface JoveNotesPackage extends EPackage
   int TEACHER_NOTE = 9;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEACHER_NOTE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Note</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -471,6 +534,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int MATCHING = 10;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCHING__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Skip Reverse Question</b></em>' attribute.
@@ -556,6 +628,15 @@ public interface JoveNotesPackage extends EPackage
   int EVENT = 12;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVENT__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -591,6 +672,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int TRUE_FALSE = 13;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TRUE_FALSE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' attribute.
@@ -637,6 +727,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int CHEM_EQUATION = 14;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHEM_EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -694,6 +793,15 @@ public interface JoveNotesPackage extends EPackage
   int CHEM_COMPOUND = 15;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHEM_COMPOUND__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Symbol</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -740,6 +848,15 @@ public interface JoveNotesPackage extends EPackage
   int SPELLBEE = 16;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SPELLBEE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Word</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -766,6 +883,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int IMAGE_LABEL = 17;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int IMAGE_LABEL__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -860,6 +986,15 @@ public interface JoveNotesPackage extends EPackage
   int EQUATION = 19;
 
   /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+
+  /**
    * The feature id for the '<em><b>Equation</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -941,6 +1076,15 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   int REF_TO_CONTEXT = 21;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int REF_TO_CONTEXT__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
    * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -1136,6 +1280,17 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getNotesElement();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.NotesElement#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.NotesElement#getHideFromView()
+   * @see #getNotesElement()
+   * @generated
+   */
+  EAttribute getNotesElement_HideFromView();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.WordMeaning <em>Word Meaning</em>}'.
@@ -1978,6 +2133,14 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass NOTES_ELEMENT = eINSTANCE.getNotesElement();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute NOTES_ELEMENT__HIDE_FROM_VIEW = eINSTANCE.getNotesElement_HideFromView();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl <em>Word Meaning</em>}' class.

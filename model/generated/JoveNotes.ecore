@@ -19,7 +19,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="subChapterNumber" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="chapterName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="NotesElement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NotesElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hideFromView" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WordMeaning" eSuperTypes="#//NotesElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="word" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="meaning" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

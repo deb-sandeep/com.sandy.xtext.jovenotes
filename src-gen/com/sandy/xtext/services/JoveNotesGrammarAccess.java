@@ -218,178 +218,258 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "WordMeaning");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWmKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cWordAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cWordSTRINGTerminalRuleCall_1_0 = (RuleCall)cWordAssignment_1.eContents().get(0);
-		private final Assignment cMeaningAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cMeaningSTRINGTerminalRuleCall_2_0 = (RuleCall)cMeaningAssignment_2.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cWordAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cWordSTRINGTerminalRuleCall_2_0 = (RuleCall)cWordAssignment_2.eContents().get(0);
+		private final Assignment cMeaningAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cMeaningSTRINGTerminalRuleCall_3_0 = (RuleCall)cMeaningAssignment_3.eContents().get(0);
 		
 		//WordMeaning:
-		//	"@wm" word=STRING meaning=STRING;
+		//	"@wm" hideFromView="hide"? word=STRING meaning=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@wm" word=STRING meaning=STRING
+		//"@wm" hideFromView="hide"? word=STRING meaning=STRING
 		public Group getGroup() { return cGroup; }
 
 		//"@wm"
 		public Keyword getWmKeyword_0() { return cWmKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//word=STRING
-		public Assignment getWordAssignment_1() { return cWordAssignment_1; }
+		public Assignment getWordAssignment_2() { return cWordAssignment_2; }
 
 		//STRING
-		public RuleCall getWordSTRINGTerminalRuleCall_1_0() { return cWordSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getWordSTRINGTerminalRuleCall_2_0() { return cWordSTRINGTerminalRuleCall_2_0; }
 
 		//meaning=STRING
-		public Assignment getMeaningAssignment_2() { return cMeaningAssignment_2; }
+		public Assignment getMeaningAssignment_3() { return cMeaningAssignment_3; }
 
 		//STRING
-		public RuleCall getMeaningSTRINGTerminalRuleCall_2_0() { return cMeaningSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getMeaningSTRINGTerminalRuleCall_3_0() { return cMeaningSTRINGTerminalRuleCall_3_0; }
 	}
 
 	public class QuestionAnswerElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QuestionAnswer");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQaKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Assignment cAnswerAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cAnswerSTRINGTerminalRuleCall_2_0 = (RuleCall)cAnswerAssignment_2.eContents().get(0);
-		private final Assignment cCmapAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCmapCMapParserRuleCall_3_0 = (RuleCall)cCmapAssignment_3.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
+		private final Assignment cAnswerAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAnswerSTRINGTerminalRuleCall_3_0 = (RuleCall)cAnswerAssignment_3.eContents().get(0);
+		private final Assignment cCmapAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//QuestionAnswer:
-		//	"@qa" question=STRING answer=STRING cmap=CMap?;
+		//	"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@qa" question=STRING answer=STRING cmap=CMap?
+		//"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
 		//"@qa"
 		public Keyword getQaKeyword_0() { return cQaKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//question=STRING
-		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
+		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
 
 		//STRING
-		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
 		//answer=STRING
-		public Assignment getAnswerAssignment_2() { return cAnswerAssignment_2; }
+		public Assignment getAnswerAssignment_3() { return cAnswerAssignment_3; }
 
 		//STRING
-		public RuleCall getAnswerSTRINGTerminalRuleCall_2_0() { return cAnswerSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getAnswerSTRINGTerminalRuleCall_3_0() { return cAnswerSTRINGTerminalRuleCall_3_0; }
 
 		//cmap=CMap?
-		public Assignment getCmapAssignment_3() { return cCmapAssignment_3; }
+		public Assignment getCmapAssignment_4() { return cCmapAssignment_4; }
 
 		//CMap
-		public RuleCall getCmapCMapParserRuleCall_3_0() { return cCmapCMapParserRuleCall_3_0; }
+		public RuleCall getCmapCMapParserRuleCall_4_0() { return cCmapCMapParserRuleCall_4_0; }
 	}
 
 	public class FIBElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FIB");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFibKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Assignment cAnswersAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cAnswersSTRINGTerminalRuleCall_2_0 = (RuleCall)cAnswersAssignment_2.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
+		private final Assignment cAnswersAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAnswersSTRINGTerminalRuleCall_3_0 = (RuleCall)cAnswersAssignment_3.eContents().get(0);
 		
 		//FIB:
-		//	"@fib" question=STRING answers+=STRING+;
+		//	"@fib" hideFromView="hide"? question=STRING answers+=STRING+;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@fib" question=STRING answers+=STRING+
+		//"@fib" hideFromView="hide"? question=STRING answers+=STRING+
 		public Group getGroup() { return cGroup; }
 
 		//"@fib"
 		public Keyword getFibKeyword_0() { return cFibKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//question=STRING
-		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
+		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
 
 		//STRING
-		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
 		//answers+=STRING+
-		public Assignment getAnswersAssignment_2() { return cAnswersAssignment_2; }
+		public Assignment getAnswersAssignment_3() { return cAnswersAssignment_3; }
 
 		//STRING
-		public RuleCall getAnswersSTRINGTerminalRuleCall_2_0() { return cAnswersSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getAnswersSTRINGTerminalRuleCall_3_0() { return cAnswersSTRINGTerminalRuleCall_3_0; }
 	}
 
 	public class DefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Definition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDefinitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cTermAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTermSTRINGTerminalRuleCall_1_0 = (RuleCall)cTermAssignment_1.eContents().get(0);
-		private final Assignment cDefinitionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cDefinitionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDefinitionAssignment_2.eContents().get(0);
-		private final Assignment cCmapAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCmapCMapParserRuleCall_3_0 = (RuleCall)cCmapAssignment_3.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cTermAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTermSTRINGTerminalRuleCall_2_0 = (RuleCall)cTermAssignment_2.eContents().get(0);
+		private final Assignment cDefinitionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cDefinitionSTRINGTerminalRuleCall_3_0 = (RuleCall)cDefinitionAssignment_3.eContents().get(0);
+		private final Assignment cCmapAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//Definition:
-		//	"@definition" term=STRING definition=STRING cmap=CMap?;
+		//	"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@definition" term=STRING definition=STRING cmap=CMap?
+		//"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
 		//"@definition"
 		public Keyword getDefinitionKeyword_0() { return cDefinitionKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//term=STRING
-		public Assignment getTermAssignment_1() { return cTermAssignment_1; }
+		public Assignment getTermAssignment_2() { return cTermAssignment_2; }
 
 		//STRING
-		public RuleCall getTermSTRINGTerminalRuleCall_1_0() { return cTermSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getTermSTRINGTerminalRuleCall_2_0() { return cTermSTRINGTerminalRuleCall_2_0; }
 
 		//definition=STRING
-		public Assignment getDefinitionAssignment_2() { return cDefinitionAssignment_2; }
+		public Assignment getDefinitionAssignment_3() { return cDefinitionAssignment_3; }
 
 		//STRING
-		public RuleCall getDefinitionSTRINGTerminalRuleCall_2_0() { return cDefinitionSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getDefinitionSTRINGTerminalRuleCall_3_0() { return cDefinitionSTRINGTerminalRuleCall_3_0; }
 
 		//cmap=CMap?
-		public Assignment getCmapAssignment_3() { return cCmapAssignment_3; }
+		public Assignment getCmapAssignment_4() { return cCmapAssignment_4; }
 
 		//CMap
-		public RuleCall getCmapCMapParserRuleCall_3_0() { return cCmapCMapParserRuleCall_3_0; }
+		public RuleCall getCmapCMapParserRuleCall_4_0() { return cCmapCMapParserRuleCall_4_0; }
 	}
 
 	public class CharacterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Character");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCharacterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cCharacterAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCharacterSTRINGTerminalRuleCall_1_0 = (RuleCall)cCharacterAssignment_1.eContents().get(0);
-		private final Assignment cEstimateAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cEstimateSTRINGTerminalRuleCall_2_0 = (RuleCall)cEstimateAssignment_2.eContents().get(0);
-		private final Assignment cCmapAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCmapCMapParserRuleCall_3_0 = (RuleCall)cCmapAssignment_3.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cCharacterAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCharacterSTRINGTerminalRuleCall_2_0 = (RuleCall)cCharacterAssignment_2.eContents().get(0);
+		private final Assignment cEstimateAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cEstimateSTRINGTerminalRuleCall_3_0 = (RuleCall)cEstimateAssignment_3.eContents().get(0);
+		private final Assignment cCmapAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//Character:
-		//	"@character" character=STRING estimate=STRING cmap=CMap?;
+		//	"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@character" character=STRING estimate=STRING cmap=CMap?
+		//"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
 		//"@character"
 		public Keyword getCharacterKeyword_0() { return cCharacterKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//character=STRING
-		public Assignment getCharacterAssignment_1() { return cCharacterAssignment_1; }
+		public Assignment getCharacterAssignment_2() { return cCharacterAssignment_2; }
 
 		//STRING
-		public RuleCall getCharacterSTRINGTerminalRuleCall_1_0() { return cCharacterSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getCharacterSTRINGTerminalRuleCall_2_0() { return cCharacterSTRINGTerminalRuleCall_2_0; }
 
 		//estimate=STRING
-		public Assignment getEstimateAssignment_2() { return cEstimateAssignment_2; }
+		public Assignment getEstimateAssignment_3() { return cEstimateAssignment_3; }
 
 		//STRING
-		public RuleCall getEstimateSTRINGTerminalRuleCall_2_0() { return cEstimateSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getEstimateSTRINGTerminalRuleCall_3_0() { return cEstimateSTRINGTerminalRuleCall_3_0; }
+
+		//cmap=CMap?
+		public Assignment getCmapAssignment_4() { return cCmapAssignment_4; }
+
+		//CMap
+		public RuleCall getCmapCMapParserRuleCall_4_0() { return cCmapCMapParserRuleCall_4_0; }
+	}
+
+	public class TeacherNoteElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TeacherNote");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTnKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cNoteAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNoteSTRINGTerminalRuleCall_2_0 = (RuleCall)cNoteAssignment_2.eContents().get(0);
+		private final Assignment cCmapAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cCmapCMapParserRuleCall_3_0 = (RuleCall)cCmapAssignment_3.eContents().get(0);
+		
+		//TeacherNote:
+		//	"@tn" hideFromView="hide"? note=STRING cmap=CMap?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"@tn" hideFromView="hide"? note=STRING cmap=CMap?
+		public Group getGroup() { return cGroup; }
+
+		//"@tn"
+		public Keyword getTnKeyword_0() { return cTnKeyword_0; }
+
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
+		//note=STRING
+		public Assignment getNoteAssignment_2() { return cNoteAssignment_2; }
+
+		//STRING
+		public RuleCall getNoteSTRINGTerminalRuleCall_2_0() { return cNoteSTRINGTerminalRuleCall_2_0; }
 
 		//cmap=CMap?
 		public Assignment getCmapAssignment_3() { return cCmapAssignment_3; }
@@ -398,84 +478,60 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getCmapCMapParserRuleCall_3_0() { return cCmapCMapParserRuleCall_3_0; }
 	}
 
-	public class TeacherNoteElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TeacherNote");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTnKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNoteAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNoteSTRINGTerminalRuleCall_1_0 = (RuleCall)cNoteAssignment_1.eContents().get(0);
-		private final Assignment cCmapAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCmapCMapParserRuleCall_2_0 = (RuleCall)cCmapAssignment_2.eContents().get(0);
-		
-		//TeacherNote:
-		//	"@tn" note=STRING cmap=CMap?;
-		@Override public ParserRule getRule() { return rule; }
-
-		//"@tn" note=STRING cmap=CMap?
-		public Group getGroup() { return cGroup; }
-
-		//"@tn"
-		public Keyword getTnKeyword_0() { return cTnKeyword_0; }
-
-		//note=STRING
-		public Assignment getNoteAssignment_1() { return cNoteAssignment_1; }
-
-		//STRING
-		public RuleCall getNoteSTRINGTerminalRuleCall_1_0() { return cNoteSTRINGTerminalRuleCall_1_0; }
-
-		//cmap=CMap?
-		public Assignment getCmapAssignment_2() { return cCmapAssignment_2; }
-
-		//CMap
-		public RuleCall getCmapCMapParserRuleCall_2_0() { return cCmapCMapParserRuleCall_2_0; }
-	}
-
 	public class MatchingElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Matching");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMatchKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cSkipReverseQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cSkipReverseQuestionSkip_reverse_questionKeyword_1_0 = (Keyword)cSkipReverseQuestionAssignment_1.eContents().get(0);
-		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cPairsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cPairsMatchPairParserRuleCall_4_0 = (RuleCall)cPairsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cSkipReverseQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSkipReverseQuestionSkip_reverse_questionKeyword_2_0 = (Keyword)cSkipReverseQuestionAssignment_2.eContents().get(0);
+		private final Assignment cQuestionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_3_0 = (RuleCall)cQuestionAssignment_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cPairsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cPairsMatchPairParserRuleCall_5_0 = (RuleCall)cPairsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//Matching:
-		//	"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
+		//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}"
+		//"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@match"
 		public Keyword getMatchKeyword_0() { return cMatchKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//skipReverseQuestion="skip_reverse_question"?
-		public Assignment getSkipReverseQuestionAssignment_1() { return cSkipReverseQuestionAssignment_1; }
+		public Assignment getSkipReverseQuestionAssignment_2() { return cSkipReverseQuestionAssignment_2; }
 
 		//"skip_reverse_question"
-		public Keyword getSkipReverseQuestionSkip_reverse_questionKeyword_1_0() { return cSkipReverseQuestionSkip_reverse_questionKeyword_1_0; }
+		public Keyword getSkipReverseQuestionSkip_reverse_questionKeyword_2_0() { return cSkipReverseQuestionSkip_reverse_questionKeyword_2_0; }
 
 		//question=STRING?
-		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
+		public Assignment getQuestionAssignment_3() { return cQuestionAssignment_3; }
 
 		//STRING
-		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getQuestionSTRINGTerminalRuleCall_3_0() { return cQuestionSTRINGTerminalRuleCall_3_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//pairs+=MatchPair+
-		public Assignment getPairsAssignment_4() { return cPairsAssignment_4; }
+		public Assignment getPairsAssignment_5() { return cPairsAssignment_5; }
 
 		//MatchPair
-		public RuleCall getPairsMatchPairParserRuleCall_4_0() { return cPairsMatchPairParserRuleCall_4_0; }
+		public RuleCall getPairsMatchPairParserRuleCall_5_0() { return cPairsMatchPairParserRuleCall_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class MatchPairElements extends AbstractParserRuleElementFinder {
@@ -514,268 +570,320 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Event");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEventAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEventSTRINGTerminalRuleCall_1_0 = (RuleCall)cEventAssignment_1.eContents().get(0);
-		private final Assignment cTimeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTimeSTRINGTerminalRuleCall_2_0 = (RuleCall)cTimeAssignment_2.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cEventAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEventSTRINGTerminalRuleCall_2_0 = (RuleCall)cEventAssignment_2.eContents().get(0);
+		private final Assignment cTimeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTimeSTRINGTerminalRuleCall_3_0 = (RuleCall)cTimeAssignment_3.eContents().get(0);
 		
 		//Event:
-		//	"@event" event=STRING time=STRING;
+		//	"@event" hideFromView="hide"? event=STRING time=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@event" event=STRING time=STRING
+		//"@event" hideFromView="hide"? event=STRING time=STRING
 		public Group getGroup() { return cGroup; }
 
 		//"@event"
 		public Keyword getEventKeyword_0() { return cEventKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//event=STRING
-		public Assignment getEventAssignment_1() { return cEventAssignment_1; }
+		public Assignment getEventAssignment_2() { return cEventAssignment_2; }
 
 		//STRING
-		public RuleCall getEventSTRINGTerminalRuleCall_1_0() { return cEventSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getEventSTRINGTerminalRuleCall_2_0() { return cEventSTRINGTerminalRuleCall_2_0; }
 
 		//time=STRING
-		public Assignment getTimeAssignment_2() { return cTimeAssignment_2; }
+		public Assignment getTimeAssignment_3() { return cTimeAssignment_3; }
 
 		//STRING
-		public RuleCall getTimeSTRINGTerminalRuleCall_2_0() { return cTimeSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getTimeSTRINGTerminalRuleCall_3_0() { return cTimeSTRINGTerminalRuleCall_3_0; }
 	}
 
 	public class TrueFalseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrueFalse");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTrue_falseKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cStatementAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cStatementSTRINGTerminalRuleCall_1_0 = (RuleCall)cStatementAssignment_1.eContents().get(0);
-		private final Assignment cTruthValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTruthValueBOOLTerminalRuleCall_2_0 = (RuleCall)cTruthValueAssignment_2.eContents().get(0);
-		private final Assignment cJustificationAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cJustificationSTRINGTerminalRuleCall_3_0 = (RuleCall)cJustificationAssignment_3.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cStatementAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cStatementSTRINGTerminalRuleCall_2_0 = (RuleCall)cStatementAssignment_2.eContents().get(0);
+		private final Assignment cTruthValueAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTruthValueBOOLTerminalRuleCall_3_0 = (RuleCall)cTruthValueAssignment_3.eContents().get(0);
+		private final Assignment cJustificationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cJustificationSTRINGTerminalRuleCall_4_0 = (RuleCall)cJustificationAssignment_4.eContents().get(0);
 		
 		//TrueFalse:
-		//	"@true_false" statement=STRING truthValue=BOOL justification=STRING?;
+		//	"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@true_false" statement=STRING truthValue=BOOL justification=STRING?
+		//"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//"@true_false"
 		public Keyword getTrue_falseKeyword_0() { return cTrue_falseKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//statement=STRING
-		public Assignment getStatementAssignment_1() { return cStatementAssignment_1; }
+		public Assignment getStatementAssignment_2() { return cStatementAssignment_2; }
 
 		//STRING
-		public RuleCall getStatementSTRINGTerminalRuleCall_1_0() { return cStatementSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getStatementSTRINGTerminalRuleCall_2_0() { return cStatementSTRINGTerminalRuleCall_2_0; }
 
 		//truthValue=BOOL
-		public Assignment getTruthValueAssignment_2() { return cTruthValueAssignment_2; }
+		public Assignment getTruthValueAssignment_3() { return cTruthValueAssignment_3; }
 
 		//BOOL
-		public RuleCall getTruthValueBOOLTerminalRuleCall_2_0() { return cTruthValueBOOLTerminalRuleCall_2_0; }
+		public RuleCall getTruthValueBOOLTerminalRuleCall_3_0() { return cTruthValueBOOLTerminalRuleCall_3_0; }
 
 		//justification=STRING?
-		public Assignment getJustificationAssignment_3() { return cJustificationAssignment_3; }
+		public Assignment getJustificationAssignment_4() { return cJustificationAssignment_4; }
 
 		//STRING
-		public RuleCall getJustificationSTRINGTerminalRuleCall_3_0() { return cJustificationSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getJustificationSTRINGTerminalRuleCall_4_0() { return cJustificationSTRINGTerminalRuleCall_4_0; }
 	}
 
 	public class ChemEquationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChemEquation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChem_equationKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_1_0 = (RuleCall)cDescriptionAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cReactantsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cReactantsSTRINGTerminalRuleCall_3_0 = (RuleCall)cReactantsAssignment_3.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cProducesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cProducesSTRINGTerminalRuleCall_5_0 = (RuleCall)cProducesAssignment_5.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cProductsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cProductsSTRINGTerminalRuleCall_7_0 = (RuleCall)cProductsAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescriptionAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cReactantsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReactantsSTRINGTerminalRuleCall_4_0 = (RuleCall)cReactantsAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cProducesAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cProducesSTRINGTerminalRuleCall_6_0 = (RuleCall)cProducesAssignment_6.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cProductsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cProductsSTRINGTerminalRuleCall_8_0 = (RuleCall)cProductsAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//ChemEquation:
-		//	"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}";
+		//	"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">"
+		//	products=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}"
+		//"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING
+		//"}"
 		public Group getGroup() { return cGroup; }
 
 		//"@chem_equation"
 		public Keyword getChem_equationKeyword_0() { return cChem_equationKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//description=STRING?
-		public Assignment getDescriptionAssignment_1() { return cDescriptionAssignment_1; }
+		public Assignment getDescriptionAssignment_2() { return cDescriptionAssignment_2; }
 
 		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_1_0() { return cDescriptionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_0() { return cDescriptionSTRINGTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//reactants=STRING
-		public Assignment getReactantsAssignment_3() { return cReactantsAssignment_3; }
+		public Assignment getReactantsAssignment_4() { return cReactantsAssignment_4; }
 
 		//STRING
-		public RuleCall getReactantsSTRINGTerminalRuleCall_3_0() { return cReactantsSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getReactantsSTRINGTerminalRuleCall_4_0() { return cReactantsSTRINGTerminalRuleCall_4_0; }
 
 		//">"
-		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 
 		//produces=STRING?
-		public Assignment getProducesAssignment_5() { return cProducesAssignment_5; }
+		public Assignment getProducesAssignment_6() { return cProducesAssignment_6; }
 
 		//STRING
-		public RuleCall getProducesSTRINGTerminalRuleCall_5_0() { return cProducesSTRINGTerminalRuleCall_5_0; }
+		public RuleCall getProducesSTRINGTerminalRuleCall_6_0() { return cProducesSTRINGTerminalRuleCall_6_0; }
 
 		//">"
-		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
+		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
 
 		//products=STRING
-		public Assignment getProductsAssignment_7() { return cProductsAssignment_7; }
+		public Assignment getProductsAssignment_8() { return cProductsAssignment_8; }
 
 		//STRING
-		public RuleCall getProductsSTRINGTerminalRuleCall_7_0() { return cProductsSTRINGTerminalRuleCall_7_0; }
+		public RuleCall getProductsSTRINGTerminalRuleCall_8_0() { return cProductsSTRINGTerminalRuleCall_8_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class ChemCompoundElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChemCompound");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChem_compoundKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cSymbolAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSymbolSTRINGTerminalRuleCall_1_0 = (RuleCall)cSymbolAssignment_1.eContents().get(0);
-		private final Assignment cChemicalNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cChemicalNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cChemicalNameAssignment_2.eContents().get(0);
-		private final Assignment cCommonNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCommonNameSTRINGTerminalRuleCall_3_0 = (RuleCall)cCommonNameAssignment_3.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cSymbolAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSymbolSTRINGTerminalRuleCall_2_0 = (RuleCall)cSymbolAssignment_2.eContents().get(0);
+		private final Assignment cChemicalNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cChemicalNameSTRINGTerminalRuleCall_3_0 = (RuleCall)cChemicalNameAssignment_3.eContents().get(0);
+		private final Assignment cCommonNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCommonNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cCommonNameAssignment_4.eContents().get(0);
 		
 		//ChemCompound:
-		//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?;
+		//	"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?
+		//"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?
 		public Group getGroup() { return cGroup; }
 
 		//"@chem_compound"
 		public Keyword getChem_compoundKeyword_0() { return cChem_compoundKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//symbol=STRING
-		public Assignment getSymbolAssignment_1() { return cSymbolAssignment_1; }
+		public Assignment getSymbolAssignment_2() { return cSymbolAssignment_2; }
 
 		//STRING
-		public RuleCall getSymbolSTRINGTerminalRuleCall_1_0() { return cSymbolSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getSymbolSTRINGTerminalRuleCall_2_0() { return cSymbolSTRINGTerminalRuleCall_2_0; }
 
 		//chemicalName=STRING
-		public Assignment getChemicalNameAssignment_2() { return cChemicalNameAssignment_2; }
+		public Assignment getChemicalNameAssignment_3() { return cChemicalNameAssignment_3; }
 
 		//STRING
-		public RuleCall getChemicalNameSTRINGTerminalRuleCall_2_0() { return cChemicalNameSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getChemicalNameSTRINGTerminalRuleCall_3_0() { return cChemicalNameSTRINGTerminalRuleCall_3_0; }
 
 		//commonName=STRING?
-		public Assignment getCommonNameAssignment_3() { return cCommonNameAssignment_3; }
+		public Assignment getCommonNameAssignment_4() { return cCommonNameAssignment_4; }
 
 		//STRING
-		public RuleCall getCommonNameSTRINGTerminalRuleCall_3_0() { return cCommonNameSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getCommonNameSTRINGTerminalRuleCall_4_0() { return cCommonNameSTRINGTerminalRuleCall_4_0; }
 	}
 
 	public class SpellbeeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Spellbee");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpellbeeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cWordAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cWordSTRINGTerminalRuleCall_1_0 = (RuleCall)cWordAssignment_1.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cWordAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cWordSTRINGTerminalRuleCall_2_0 = (RuleCall)cWordAssignment_2.eContents().get(0);
 		
 		//Spellbee:
-		//	"@spellbee" word=STRING;
+		//	"@spellbee" hideFromView="hide"? word=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@spellbee" word=STRING
+		//"@spellbee" hideFromView="hide"? word=STRING
 		public Group getGroup() { return cGroup; }
 
 		//"@spellbee"
 		public Keyword getSpellbeeKeyword_0() { return cSpellbeeKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//word=STRING
-		public Assignment getWordAssignment_1() { return cWordAssignment_1; }
+		public Assignment getWordAssignment_2() { return cWordAssignment_2; }
 
 		//STRING
-		public RuleCall getWordSTRINGTerminalRuleCall_1_0() { return cWordSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getWordSTRINGTerminalRuleCall_2_0() { return cWordSTRINGTerminalRuleCall_2_0; }
 	}
 
 	public class ImageLabelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImageLabel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImage_labelKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cCaptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_1_0 = (RuleCall)cCaptionAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cImageNameKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cImageNameAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cImageNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cImageNameAssignment_4.eContents().get(0);
-		private final Assignment cHotspotsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cHotspotsHotSpotParserRuleCall_5_0 = (RuleCall)cHotspotsAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cHotspotsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cHotspotsHotSpotParserRuleCall_6_1_0 = (RuleCall)cHotspotsAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cCaptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cCaptionAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cImageNameKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cImageNameAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cImageNameSTRINGTerminalRuleCall_5_0 = (RuleCall)cImageNameAssignment_5.eContents().get(0);
+		private final Assignment cHotspotsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cHotspotsHotSpotParserRuleCall_6_0 = (RuleCall)cHotspotsAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cHotspotsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cHotspotsHotSpotParserRuleCall_7_1_0 = (RuleCall)cHotspotsAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ImageLabel:
-		//	"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
+		//	"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+		//	hotspots+=HotSpot)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}"
+		//"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+		//hotspots+=HotSpot)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@image_label"
 		public Keyword getImage_labelKeyword_0() { return cImage_labelKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//caption=STRING?
-		public Assignment getCaptionAssignment_1() { return cCaptionAssignment_1; }
+		public Assignment getCaptionAssignment_2() { return cCaptionAssignment_2; }
 
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_1_0() { return cCaptionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_2_0() { return cCaptionSTRINGTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//"imageName"
-		public Keyword getImageNameKeyword_3() { return cImageNameKeyword_3; }
+		public Keyword getImageNameKeyword_4() { return cImageNameKeyword_4; }
 
 		//imageName=STRING
-		public Assignment getImageNameAssignment_4() { return cImageNameAssignment_4; }
+		public Assignment getImageNameAssignment_5() { return cImageNameAssignment_5; }
 
 		//STRING
-		public RuleCall getImageNameSTRINGTerminalRuleCall_4_0() { return cImageNameSTRINGTerminalRuleCall_4_0; }
+		public RuleCall getImageNameSTRINGTerminalRuleCall_5_0() { return cImageNameSTRINGTerminalRuleCall_5_0; }
 
 		//hotspots+=HotSpot
-		public Assignment getHotspotsAssignment_5() { return cHotspotsAssignment_5; }
+		public Assignment getHotspotsAssignment_6() { return cHotspotsAssignment_6; }
 
 		//HotSpot
-		public RuleCall getHotspotsHotSpotParserRuleCall_5_0() { return cHotspotsHotSpotParserRuleCall_5_0; }
+		public RuleCall getHotspotsHotSpotParserRuleCall_6_0() { return cHotspotsHotSpotParserRuleCall_6_0; }
 
 		//("," hotspots+=HotSpot)*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//","
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//hotspots+=HotSpot
-		public Assignment getHotspotsAssignment_6_1() { return cHotspotsAssignment_6_1; }
+		public Assignment getHotspotsAssignment_7_1() { return cHotspotsAssignment_7_1; }
 
 		//HotSpot
-		public RuleCall getHotspotsHotSpotParserRuleCall_6_1_0() { return cHotspotsHotSpotParserRuleCall_6_1_0; }
+		public RuleCall getHotspotsHotSpotParserRuleCall_7_1_0() { return cHotspotsHotSpotParserRuleCall_7_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class HotSpotElements extends AbstractParserRuleElementFinder {
@@ -826,68 +934,78 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Equation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEquationKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cEquationAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cEquationSTRINGTerminalRuleCall_1_0 = (RuleCall)cEquationAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cDescriptionAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_3_0 = (RuleCall)cDescriptionAssignment_3.eContents().get(0);
-		private final Keyword cWhereKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cSymbolsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cSymbolsEqSymbolParserRuleCall_5_0 = (RuleCall)cSymbolsAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cSymbolsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cSymbolsEqSymbolParserRuleCall_6_1_0 = (RuleCall)cSymbolsAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cEquationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEquationSTRINGTerminalRuleCall_2_0 = (RuleCall)cEquationAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cWhereKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSymbolsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cSymbolsEqSymbolParserRuleCall_6_0 = (RuleCall)cSymbolsAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cSymbolsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cSymbolsEqSymbolParserRuleCall_7_1_0 = (RuleCall)cSymbolsAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Equation:
-		//	"@equation" equation=STRING "{" description=STRING? "where" symbols+=EqSymbol ("," symbols+=EqSymbol)* "}";
+		//	"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+		//	symbols+=EqSymbol)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@equation" equation=STRING "{" description=STRING? "where" symbols+=EqSymbol ("," symbols+=EqSymbol)* "}"
+		//"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+		//symbols+=EqSymbol)* "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@equation"
 		public Keyword getEquationKeyword_0() { return cEquationKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//equation=STRING
-		public Assignment getEquationAssignment_1() { return cEquationAssignment_1; }
+		public Assignment getEquationAssignment_2() { return cEquationAssignment_2; }
 
 		//STRING
-		public RuleCall getEquationSTRINGTerminalRuleCall_1_0() { return cEquationSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getEquationSTRINGTerminalRuleCall_2_0() { return cEquationSTRINGTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//description=STRING?
-		public Assignment getDescriptionAssignment_3() { return cDescriptionAssignment_3; }
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
 
 		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_3_0() { return cDescriptionSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
 
 		//"where"
-		public Keyword getWhereKeyword_4() { return cWhereKeyword_4; }
+		public Keyword getWhereKeyword_5() { return cWhereKeyword_5; }
 
 		//symbols+=EqSymbol
-		public Assignment getSymbolsAssignment_5() { return cSymbolsAssignment_5; }
+		public Assignment getSymbolsAssignment_6() { return cSymbolsAssignment_6; }
 
 		//EqSymbol
-		public RuleCall getSymbolsEqSymbolParserRuleCall_5_0() { return cSymbolsEqSymbolParserRuleCall_5_0; }
+		public RuleCall getSymbolsEqSymbolParserRuleCall_6_0() { return cSymbolsEqSymbolParserRuleCall_6_0; }
 
 		//("," symbols+=EqSymbol)*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//","
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//symbols+=EqSymbol
-		public Assignment getSymbolsAssignment_6_1() { return cSymbolsAssignment_6_1; }
+		public Assignment getSymbolsAssignment_7_1() { return cSymbolsAssignment_7_1; }
 
 		//EqSymbol
-		public RuleCall getSymbolsEqSymbolParserRuleCall_6_1_0() { return cSymbolsEqSymbolParserRuleCall_6_1_0; }
+		public RuleCall getSymbolsEqSymbolParserRuleCall_7_1_0() { return cSymbolsEqSymbolParserRuleCall_7_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class EqSymbolElements extends AbstractParserRuleElementFinder {
@@ -926,44 +1044,52 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RefToContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRtcKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cContextKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cContextAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cContextSTRINGTerminalRuleCall_3_0 = (RuleCall)cContextAssignment_3.eContents().get(0);
-		private final Assignment cQuestionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cQuestionsQuestionAnswerParserRuleCall_4_0 = (RuleCall)cQuestionsAssignment_4.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cContextKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cContextAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cContextSTRINGTerminalRuleCall_4_0 = (RuleCall)cContextAssignment_4.eContents().get(0);
+		private final Assignment cQuestionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cQuestionsQuestionAnswerParserRuleCall_5_0 = (RuleCall)cQuestionsAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//RefToContext:
-		//	"@rtc" "{" "context" context=STRING questions+=QuestionAnswer+ "}";
+		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@rtc" "{" "context" context=STRING questions+=QuestionAnswer+ "}"
+		//"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@rtc"
 		public Keyword getRtcKeyword_0() { return cRtcKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
 		//"context"
-		public Keyword getContextKeyword_2() { return cContextKeyword_2; }
+		public Keyword getContextKeyword_3() { return cContextKeyword_3; }
 
 		//context=STRING
-		public Assignment getContextAssignment_3() { return cContextAssignment_3; }
+		public Assignment getContextAssignment_4() { return cContextAssignment_4; }
 
 		//STRING
-		public RuleCall getContextSTRINGTerminalRuleCall_3_0() { return cContextSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getContextSTRINGTerminalRuleCall_4_0() { return cContextSTRINGTerminalRuleCall_4_0; }
 
 		//questions+=QuestionAnswer+
-		public Assignment getQuestionsAssignment_4() { return cQuestionsAssignment_4; }
+		public Assignment getQuestionsAssignment_5() { return cQuestionsAssignment_5; }
 
 		//QuestionAnswer
-		public RuleCall getQuestionsQuestionAnswerParserRuleCall_4_0() { return cQuestionsQuestionAnswerParserRuleCall_4_0; }
+		public RuleCall getQuestionsQuestionAnswerParserRuleCall_5_0() { return cQuestionsQuestionAnswerParserRuleCall_5_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class CMapElements extends AbstractParserRuleElementFinder {
@@ -1129,7 +1255,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//WordMeaning:
-	//	"@wm" word=STRING meaning=STRING;
+	//	"@wm" hideFromView="hide"? word=STRING meaning=STRING;
 	public WordMeaningElements getWordMeaningAccess() {
 		return pWordMeaning;
 	}
@@ -1139,7 +1265,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QuestionAnswer:
-	//	"@qa" question=STRING answer=STRING cmap=CMap?;
+	//	"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?;
 	public QuestionAnswerElements getQuestionAnswerAccess() {
 		return pQuestionAnswer;
 	}
@@ -1149,7 +1275,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FIB:
-	//	"@fib" question=STRING answers+=STRING+;
+	//	"@fib" hideFromView="hide"? question=STRING answers+=STRING+;
 	public FIBElements getFIBAccess() {
 		return pFIB;
 	}
@@ -1159,7 +1285,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Definition:
-	//	"@definition" term=STRING definition=STRING cmap=CMap?;
+	//	"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?;
 	public DefinitionElements getDefinitionAccess() {
 		return pDefinition;
 	}
@@ -1169,7 +1295,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Character:
-	//	"@character" character=STRING estimate=STRING cmap=CMap?;
+	//	"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?;
 	public CharacterElements getCharacterAccess() {
 		return pCharacter;
 	}
@@ -1179,7 +1305,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TeacherNote:
-	//	"@tn" note=STRING cmap=CMap?;
+	//	"@tn" hideFromView="hide"? note=STRING cmap=CMap?;
 	public TeacherNoteElements getTeacherNoteAccess() {
 		return pTeacherNote;
 	}
@@ -1189,7 +1315,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Matching:
-	//	"@match" skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
+	//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
 	public MatchingElements getMatchingAccess() {
 		return pMatching;
 	}
@@ -1209,7 +1335,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Event:
-	//	"@event" event=STRING time=STRING;
+	//	"@event" hideFromView="hide"? event=STRING time=STRING;
 	public EventElements getEventAccess() {
 		return pEvent;
 	}
@@ -1219,7 +1345,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TrueFalse:
-	//	"@true_false" statement=STRING truthValue=BOOL justification=STRING?;
+	//	"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?;
 	public TrueFalseElements getTrueFalseAccess() {
 		return pTrueFalse;
 	}
@@ -1229,7 +1355,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemEquation:
-	//	"@chem_equation" description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING "}";
+	//	"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">"
+	//	products=STRING "}";
 	public ChemEquationElements getChemEquationAccess() {
 		return pChemEquation;
 	}
@@ -1239,7 +1366,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemCompound:
-	//	"@chem_compound" symbol=STRING chemicalName=STRING commonName=STRING?;
+	//	"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?;
 	public ChemCompoundElements getChemCompoundAccess() {
 		return pChemCompound;
 	}
@@ -1249,7 +1376,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Spellbee:
-	//	"@spellbee" word=STRING;
+	//	"@spellbee" hideFromView="hide"? word=STRING;
 	public SpellbeeElements getSpellbeeAccess() {
 		return pSpellbee;
 	}
@@ -1259,7 +1386,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ImageLabel:
-	//	"@image_label" caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot ("," hotspots+=HotSpot)* "}";
+	//	"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+	//	hotspots+=HotSpot)* "}";
 	public ImageLabelElements getImageLabelAccess() {
 		return pImageLabel;
 	}
@@ -1279,7 +1407,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Equation:
-	//	"@equation" equation=STRING "{" description=STRING? "where" symbols+=EqSymbol ("," symbols+=EqSymbol)* "}";
+	//	"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+	//	symbols+=EqSymbol)* "}";
 	public EquationElements getEquationAccess() {
 		return pEquation;
 	}
@@ -1299,7 +1428,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefToContext:
-	//	"@rtc" "{" "context" context=STRING questions+=QuestionAnswer+ "}";
+	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}";
 	public RefToContextElements getRefToContextAccess() {
 		return pRefToContext;
 	}

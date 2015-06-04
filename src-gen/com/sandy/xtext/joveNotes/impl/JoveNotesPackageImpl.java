@@ -400,6 +400,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getNotesElement_HideFromView()
+  {
+    return (EAttribute)notesElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getWordMeaning()
   {
     return wordMeaningEClass;
@@ -1101,6 +1111,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NAME);
 
     notesElementEClass = createEClass(NOTES_ELEMENT);
+    createEAttribute(notesElementEClass, NOTES_ELEMENT__HIDE_FROM_VIEW);
 
     wordMeaningEClass = createEClass(WORD_MEANING);
     createEAttribute(wordMeaningEClass, WORD_MEANING__WORD);
@@ -1250,6 +1261,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getChapterDetails_ChapterName(), ecorePackage.getEString(), "chapterName", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notesElementEClass, NotesElement.class, "NotesElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getNotesElement_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(wordMeaningEClass, WordMeaning.class, "WordMeaning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getWordMeaning_Word(), ecorePackage.getEString(), "word", null, 0, 1, WordMeaning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -38,40 +38,47 @@ NotesElement:
 ;
 
 WordMeaning:
-    '@wm' word    = STRING
+    '@wm' (hideFromView = 'hide')?
+          word    = STRING
           meaning = STRING
 ;
 
 QuestionAnswer:
-    '@qa' question = STRING
+    '@qa' (hideFromView = 'hide')?
+          question = STRING
           answer   = STRING
           ( cmap = CMap )?
 ;
 
 FIB:
-    '@fib'  question  = STRING
-          ( answers  += STRING )+
+    '@fib' (hideFromView = 'hide')?
+            question  = STRING
+            (answers  += STRING)+
 ;
 
 Definition:
-    '@definition' term       = STRING
+    '@definition' (hideFromView = 'hide')?
+                  term       = STRING
                   definition = STRING
                   ( cmap     = CMap )?
 ;
 
 Character:
-    '@character' character   = STRING
+    '@character' (hideFromView = 'hide')?
+                 character   = STRING
                  estimate    = STRING
                  ( cmap      = CMap )?
 ;
 
 TeacherNote:
-    '@tn' note = STRING
-          ( cmap = CMap )?
+    '@tn' (hideFromView = 'hide')?
+           note = STRING
+          (cmap = CMap)?
 ;
 
 Matching:
-    '@match' (skipReverseQuestion = 'skip_reverse_question')?
+    '@match' (hideFromView = 'hide')?
+             (skipReverseQuestion = 'skip_reverse_question')?
              (question = STRING)? '{'
         ( pairs += MatchPair )+
     '}'
@@ -79,31 +86,39 @@ Matching:
 
 MatchPair: matchQuestion = STRING '=' matchAnswer = STRING ;
 
-Event: '@event' event = STRING time = STRING ;
+Event: '@event' (hideFromView = 'hide')?
+                event = STRING time = STRING
+;
 
-TrueFalse: '@true_false' statement = STRING 
-                         truthValue = BOOL
-                         ( justification = STRING )?
+TrueFalse: 
+    '@true_false' (hideFromView = 'hide')?
+                   statement = STRING 
+                   truthValue = BOOL
+                   (justification = STRING)?
 ;
 
 ChemEquation :
-    '@chem_equation' (description = STRING)? '{'
+    '@chem_equation' (hideFromView = 'hide')?
+                     (description = STRING)? '{'
         reactants = STRING '>' (produces = STRING)? '>' products = STRING 
     '}'
 ;
 
 ChemCompound :
-    '@chem_compound' symbol      = STRING
+    '@chem_compound' (hideFromView = 'hide')?
+                     symbol      = STRING
                      chemicalName= STRING
                      (commonName  = STRING)?
 ;
 
 Spellbee :
-    '@spellbee' word = STRING
+    '@spellbee' (hideFromView = 'hide')?
+                word = STRING
 ;
 
 ImageLabel:
-    '@image_label' (caption = STRING)? '{'
+    '@image_label' (hideFromView = 'hide')?
+                   (caption = STRING)? '{'
         'imageName' imageName = STRING
         ( hotspots += HotSpot )( ',' hotspots += HotSpot )*
     '}'
@@ -114,8 +129,9 @@ HotSpot:
 ;
 
 Equation :
-    '@equation' equation = STRING '{'
-                ( description = STRING )?
+    '@equation' (hideFromView = 'hide')?
+                 equation = STRING '{'
+                (description = STRING)?
                 'where'
                 ( symbols += EqSymbol )( ',' symbols += EqSymbol )*
     '}'
@@ -126,7 +142,7 @@ EqSymbol:
 ;
 
 RefToContext:
-    '@rtc' '{'
+    '@rtc' (hideFromView = 'hide')? '{'
         'context' context = STRING
         ( questions += QuestionAnswer )+
     '}'
