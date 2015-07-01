@@ -11,6 +11,7 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getCaption <em>Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getNote <em>Note</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getCmap <em>Cmap</em>}</li>
  * </ul>
@@ -22,6 +23,32 @@ package com.sandy.xtext.joveNotes;
  */
 public interface TeacherNote extends NotesElement
 {
+  /**
+   * Returns the value of the '<em><b>Caption</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Caption</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Caption</em>' attribute.
+   * @see #setCaption(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getTeacherNote_Caption()
+   * @model
+   * @generated
+   */
+  String getCaption();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.TeacherNote#getCaption <em>Caption</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Caption</em>' attribute.
+   * @see #getCaption()
+   * @generated
+   */
+  void setCaption(String value);
+
   /**
    * Returns the value of the '<em><b>Note</b></em>' attribute.
    * <!-- begin-user-doc -->

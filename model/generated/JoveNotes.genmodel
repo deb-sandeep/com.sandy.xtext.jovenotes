@@ -49,6 +49,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Character/cmap"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//TeacherNote">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TeacherNote/caption"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TeacherNote/note"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//TeacherNote/cmap"/>
     </genClasses>

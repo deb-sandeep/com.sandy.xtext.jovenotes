@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getCaption <em>Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getNote <em>Note</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
@@ -30,6 +31,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
 {
+  /**
+   * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCaption()
+   * @generated
+   * @ordered
+   */
+  protected static final String CAPTION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getCaption() <em>Caption</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCaption()
+   * @generated
+   * @ordered
+   */
+  protected String caption = CAPTION_EDEFAULT;
+
   /**
    * The default value of the '{@link #getNote() <em>Note</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -79,6 +100,29 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.TEACHER_NOTE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getCaption()
+  {
+    return caption;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCaption(String newCaption)
+  {
+    String oldCaption = caption;
+    caption = newCaption;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.TEACHER_NOTE__CAPTION, oldCaption, caption));
   }
 
   /**
@@ -178,6 +222,8 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__CAPTION:
+        return getCaption();
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
         return getNote();
       case JoveNotesPackage.TEACHER_NOTE__CMAP:
@@ -196,6 +242,9 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__CAPTION:
+        setCaption((String)newValue);
+        return;
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
         setNote((String)newValue);
         return;
@@ -216,6 +265,9 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__CAPTION:
+        setCaption(CAPTION_EDEFAULT);
+        return;
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
         setNote(NOTE_EDEFAULT);
         return;
@@ -236,6 +288,8 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__CAPTION:
+        return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
         return NOTE_EDEFAULT == null ? note != null : !NOTE_EDEFAULT.equals(note);
       case JoveNotesPackage.TEACHER_NOTE__CMAP:
@@ -255,7 +309,9 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (note: ");
+    result.append(" (caption: ");
+    result.append(caption);
+    result.append(", note: ");
     result.append(note);
     result.append(')');
     return result.toString();

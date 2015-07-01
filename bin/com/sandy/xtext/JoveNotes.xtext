@@ -72,6 +72,7 @@ Character:
 
 TeacherNote:
     '@tn' (hideFromView = 'hide')?
+          (caption = STRING)?
            note = STRING
           (cmap = CMap)?
 ;

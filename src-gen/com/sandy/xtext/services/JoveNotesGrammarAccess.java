@@ -444,16 +444,18 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTnKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
-		private final Assignment cNoteAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNoteSTRINGTerminalRuleCall_2_0 = (RuleCall)cNoteAssignment_2.eContents().get(0);
-		private final Assignment cCmapAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cCmapCMapParserRuleCall_3_0 = (RuleCall)cCmapAssignment_3.eContents().get(0);
+		private final Assignment cCaptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cCaptionAssignment_2.eContents().get(0);
+		private final Assignment cNoteAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNoteSTRINGTerminalRuleCall_3_0 = (RuleCall)cNoteAssignment_3.eContents().get(0);
+		private final Assignment cCmapAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//TeacherNote:
-		//	"@tn" hideFromView="hide"? note=STRING cmap=CMap?;
+		//	"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@tn" hideFromView="hide"? note=STRING cmap=CMap?
+		//"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
 		//"@tn"
@@ -465,17 +467,23 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
-		//note=STRING
-		public Assignment getNoteAssignment_2() { return cNoteAssignment_2; }
+		//caption=STRING?
+		public Assignment getCaptionAssignment_2() { return cCaptionAssignment_2; }
 
 		//STRING
-		public RuleCall getNoteSTRINGTerminalRuleCall_2_0() { return cNoteSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_2_0() { return cCaptionSTRINGTerminalRuleCall_2_0; }
+
+		//note=STRING
+		public Assignment getNoteAssignment_3() { return cNoteAssignment_3; }
+
+		//STRING
+		public RuleCall getNoteSTRINGTerminalRuleCall_3_0() { return cNoteSTRINGTerminalRuleCall_3_0; }
 
 		//cmap=CMap?
-		public Assignment getCmapAssignment_3() { return cCmapAssignment_3; }
+		public Assignment getCmapAssignment_4() { return cCmapAssignment_4; }
 
 		//CMap
-		public RuleCall getCmapCMapParserRuleCall_3_0() { return cCmapCMapParserRuleCall_3_0; }
+		public RuleCall getCmapCMapParserRuleCall_4_0() { return cCmapCMapParserRuleCall_4_0; }
 	}
 
 	public class MatchingElements extends AbstractParserRuleElementFinder {
@@ -1305,7 +1313,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TeacherNote:
-	//	"@tn" hideFromView="hide"? note=STRING cmap=CMap?;
+	//	"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?;
 	public TeacherNoteElements getTeacherNoteAccess() {
 		return pTeacherNote;
 	}

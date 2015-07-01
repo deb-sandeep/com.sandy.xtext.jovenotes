@@ -600,7 +600,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTeacherNote_Note()
+  public EAttribute getTeacherNote_Caption()
   {
     return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(0);
   }
@@ -610,9 +610,19 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTeacherNote_Note()
+  {
+    return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTeacherNote_Cmap()
   {
-    return (EReference)teacherNoteEClass.getEStructuralFeatures().get(1);
+    return (EReference)teacherNoteEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1137,6 +1147,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEReference(characterEClass, CHARACTER__CMAP);
 
     teacherNoteEClass = createEClass(TEACHER_NOTE);
+    createEAttribute(teacherNoteEClass, TEACHER_NOTE__CAPTION);
     createEAttribute(teacherNoteEClass, TEACHER_NOTE__NOTE);
     createEReference(teacherNoteEClass, TEACHER_NOTE__CMAP);
 
@@ -1287,6 +1298,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEReference(getCharacter_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(teacherNoteEClass, TeacherNote.class, "TeacherNote", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getTeacherNote_Caption(), ecorePackage.getEString(), "caption", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTeacherNote_Note(), ecorePackage.getEString(), "note", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTeacherNote_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

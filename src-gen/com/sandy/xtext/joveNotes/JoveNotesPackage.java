@@ -499,13 +499,22 @@ public interface JoveNotesPackage extends EPackage
   int TEACHER_NOTE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
 
   /**
+   * The feature id for the '<em><b>Caption</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int TEACHER_NOTE__CAPTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Note</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__NOTE = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int TEACHER_NOTE__NOTE = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -514,7 +523,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int TEACHER_NOTE__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Teacher Note</em>' class.
@@ -523,7 +532,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int TEACHER_NOTE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchingImpl <em>Matching</em>}' class.
@@ -1496,6 +1505,17 @@ public interface JoveNotesPackage extends EPackage
   EClass getTeacherNote();
 
   /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TeacherNote#getCaption <em>Caption</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Caption</em>'.
+   * @see com.sandy.xtext.joveNotes.TeacherNote#getCaption()
+   * @see #getTeacherNote()
+   * @generated
+   */
+  EAttribute getTeacherNote_Caption();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TeacherNote#getNote <em>Note</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2305,6 +2325,14 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass TEACHER_NOTE = eINSTANCE.getTeacherNote();
+
+    /**
+     * The meta object literal for the '<em><b>Caption</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEACHER_NOTE__CAPTION = eINSTANCE.getTeacherNote_Caption();
 
     /**
      * The meta object literal for the '<em><b>Note</b></em>' attribute feature.

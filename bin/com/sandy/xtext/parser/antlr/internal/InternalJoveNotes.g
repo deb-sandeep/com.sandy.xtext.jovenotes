@@ -937,9 +937,27 @@ ruleTeacherNote returns [EObject current=null]
 )
 )?(
 (
-		lv_note_2_0=RULE_STRING
+		lv_caption_2_0=RULE_STRING
 		{
-			newLeafNode(lv_note_2_0, grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_caption_2_0, grammarAccess.getTeacherNoteAccess().getCaptionSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getTeacherNoteRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"caption",
+        		lv_caption_2_0, 
+        		"STRING");
+	    }
+
+)
+)?(
+(
+		lv_note_3_0=RULE_STRING
+		{
+			newLeafNode(lv_note_3_0, grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -948,7 +966,7 @@ ruleTeacherNote returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"note",
-        		lv_note_2_0, 
+        		lv_note_3_0, 
         		"STRING");
 	    }
 
@@ -956,16 +974,16 @@ ruleTeacherNote returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_4_0()); 
 	    }
-		lv_cmap_3_0=ruleCMap		{
+		lv_cmap_4_0=ruleCMap		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getTeacherNoteRule());
 	        }
        		set(
        			$current, 
        			"cmap",
-        		lv_cmap_3_0, 
+        		lv_cmap_4_0, 
         		"CMap");
 	        afterParserOrEnumRuleCall();
 	    }
