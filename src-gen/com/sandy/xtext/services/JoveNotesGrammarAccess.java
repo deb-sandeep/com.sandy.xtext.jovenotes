@@ -262,16 +262,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
 		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
-		private final Assignment cAnswerAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cAnswerSTRINGTerminalRuleCall_3_0 = (RuleCall)cAnswerAssignment_3.eContents().get(0);
+		private final Assignment cAnswerPartsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAnswerPartsSTRINGTerminalRuleCall_3_0 = (RuleCall)cAnswerPartsAssignment_3.eContents().get(0);
 		private final Assignment cCmapAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//QuestionAnswer:
-		//	"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?;
+		//	"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?
+		//"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
 		//"@qa"
@@ -289,11 +289,11 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
-		//answer=STRING
-		public Assignment getAnswerAssignment_3() { return cAnswerAssignment_3; }
+		//answerParts+=STRING+
+		public Assignment getAnswerPartsAssignment_3() { return cAnswerPartsAssignment_3; }
 
 		//STRING
-		public RuleCall getAnswerSTRINGTerminalRuleCall_3_0() { return cAnswerSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getAnswerPartsSTRINGTerminalRuleCall_3_0() { return cAnswerPartsSTRINGTerminalRuleCall_3_0; }
 
 		//cmap=CMap?
 		public Assignment getCmapAssignment_4() { return cCmapAssignment_4; }
@@ -1273,7 +1273,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QuestionAnswer:
-	//	"@qa" hideFromView="hide"? question=STRING answer=STRING cmap=CMap?;
+	//	"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?;
 	public QuestionAnswerElements getQuestionAnswerAccess() {
 		return pQuestionAnswer;
 	}

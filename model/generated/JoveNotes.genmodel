@@ -31,7 +31,7 @@
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//QuestionAnswer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/question"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/answer"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/answerParts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//QuestionAnswer/cmap"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//FIB">

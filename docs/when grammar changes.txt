@@ -1,0 +1,57 @@
+Steps to take when there are changes to grammar
+--------------------------------------------------------------------------------
+
+JoveNotes grammar is so primordial to the JoveNotes app that changes to it run
+a high risk of impacting not only the study heuristics but also having a 
+rippling change across all the JoveNotes system components.
+
+BE VERY CAUTIOUS AND THOUGHFUL WHEN MAKING CHANGES TO THE GRAMMAR.
+
+After you have been cautious and thougtful and still decided to go ahead with 
+grammar changes, following are the steps that needs to be followed to ensure
+that the changes are properly integrated with the rest of the system.
+
+1. Make changes to the grammar
+
+2. Run MWE2 workflow
+
+3. Test the grammar changes in a new instance of eclipse
+
+4. If all changes are satisfactory, export both com.sandy.xtext.jovenotes and
+   com.sandy.xtext.jovenotes.ui plugins to 
+   a) ~/temp/jars directory
+   b) ~/softwares/eclipse/dropins
+   
+5. Go to the above directories and remove the old plugin jars if present
+
+6. Go to the ~/temp/jars directory and rename the exported jar file to
+   com.sandy.xtext.jovenotes.jar
+   
+7. Check the jovenotes pom to see the latest version being used - say x.ab
+
+8. In the ~/temp/jars directory there is an install_jn_jar file, involve it 
+   with x.ab + 0.01 version number. Say the new version number is x.ac
+   
+9. In the pom.xml of jnprocessor, change the dependency jar to x.ac
+
+10. In the jnprocessor script present in src/main/scripts folder of the jnprocessor
+    project, change the name of the jar (version number) in the classpath.
+    
+11. Compile the jnprocessor project (either through command line or eclipse)
+
+12. Modify jnprocessor in relation to the changes done in the grammar.
+
+12. Clean, Compile and Package jnprocessor
+
+13. Move the following artifacts to Op (only if changes exist)
+    a. Script
+    b. Any additional jars
+    c. New jnprocessor jar
+    d. Any configuration files
+    
+14. Take a backup of server database
+
+15. Run jnp -f on server
+
+16. If all is well, version the codebase
+

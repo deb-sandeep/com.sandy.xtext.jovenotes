@@ -460,7 +460,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQuestionAnswer_Answer()
+  public EAttribute getQuestionAnswer_AnswerParts()
   {
     return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(1);
   }
@@ -1129,7 +1129,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     questionAnswerEClass = createEClass(QUESTION_ANSWER);
     createEAttribute(questionAnswerEClass, QUESTION_ANSWER__QUESTION);
-    createEAttribute(questionAnswerEClass, QUESTION_ANSWER__ANSWER);
+    createEAttribute(questionAnswerEClass, QUESTION_ANSWER__ANSWER_PARTS);
     createEReference(questionAnswerEClass, QUESTION_ANSWER__CMAP);
 
     fibEClass = createEClass(FIB);
@@ -1280,7 +1280,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(questionAnswerEClass, QuestionAnswer.class, "QuestionAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getQuestionAnswer_Question(), ecorePackage.getEString(), "question", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getQuestionAnswer_Answer(), ecorePackage.getEString(), "answer", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getQuestionAnswer_AnswerParts(), ecorePackage.getEString(), "answerParts", null, 0, -1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQuestionAnswer_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fibEClass, com.sandy.xtext.joveNotes.FIB.class, "FIB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

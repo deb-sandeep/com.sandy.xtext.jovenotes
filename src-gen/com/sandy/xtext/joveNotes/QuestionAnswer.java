@@ -2,6 +2,7 @@
  */
 package com.sandy.xtext.joveNotes;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +13,7 @@ package com.sandy.xtext.joveNotes;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getQuestion <em>Question</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswerParts <em>Answer Parts</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getCmap <em>Cmap</em>}</li>
  * </ul>
  * </p>
@@ -50,30 +51,20 @@ public interface QuestionAnswer extends NotesElement
   void setQuestion(String value);
 
   /**
-   * Returns the value of the '<em><b>Answer</b></em>' attribute.
+   * Returns the value of the '<em><b>Answer Parts</b></em>' attribute list.
+   * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Answer</em>' attribute isn't clear,
+   * If the meaning of the '<em>Answer Parts</em>' attribute list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Answer</em>' attribute.
-   * @see #setAnswer(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getQuestionAnswer_Answer()
-   * @model
+   * @return the value of the '<em>Answer Parts</em>' attribute list.
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getQuestionAnswer_AnswerParts()
+   * @model unique="false"
    * @generated
    */
-  String getAnswer();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswer <em>Answer</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Answer</em>' attribute.
-   * @see #getAnswer()
-   * @generated
-   */
-  void setAnswer(String value);
+  EList<String> getAnswerParts();
 
   /**
    * Returns the value of the '<em><b>Cmap</b></em>' containment reference.

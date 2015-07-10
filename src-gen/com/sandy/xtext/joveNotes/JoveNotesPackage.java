@@ -297,13 +297,13 @@ public interface JoveNotesPackage extends EPackage
   int QUESTION_ANSWER__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Answer</b></em>' attribute.
+   * The feature id for the '<em><b>Answer Parts</b></em>' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__ANSWER = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int QUESTION_ANSWER__ANSWER_PARTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -1355,15 +1355,15 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getQuestionAnswer_Question();
 
   /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswer <em>Answer</em>}'.
+   * Returns the meta object for the attribute list '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswerParts <em>Answer Parts</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Answer</em>'.
-   * @see com.sandy.xtext.joveNotes.QuestionAnswer#getAnswer()
+   * @return the meta object for the attribute list '<em>Answer Parts</em>'.
+   * @see com.sandy.xtext.joveNotes.QuestionAnswer#getAnswerParts()
    * @see #getQuestionAnswer()
    * @generated
    */
-  EAttribute getQuestionAnswer_Answer();
+  EAttribute getQuestionAnswer_AnswerParts();
 
   /**
    * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getCmap <em>Cmap</em>}'.
@@ -2207,12 +2207,12 @@ public interface JoveNotesPackage extends EPackage
     EAttribute QUESTION_ANSWER__QUESTION = eINSTANCE.getQuestionAnswer_Question();
 
     /**
-     * The meta object literal for the '<em><b>Answer</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Answer Parts</b></em>' attribute list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute QUESTION_ANSWER__ANSWER = eINSTANCE.getQuestionAnswer_Answer();
+    EAttribute QUESTION_ANSWER__ANSWER_PARTS = eINSTANCE.getQuestionAnswer_AnswerParts();
 
     /**
      * The meta object literal for the '<em><b>Cmap</b></em>' containment reference feature.

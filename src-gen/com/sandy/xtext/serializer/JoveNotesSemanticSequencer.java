@@ -312,7 +312,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? question=STRING answer=STRING cmap=CMap?)
+	 *     (hideFromView='hide'? question=STRING answerParts+=STRING+ cmap=CMap?)
 	 */
 	protected void sequence_QuestionAnswer(EObject context, QuestionAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

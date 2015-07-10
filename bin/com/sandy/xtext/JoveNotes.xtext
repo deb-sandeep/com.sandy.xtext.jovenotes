@@ -44,10 +44,10 @@ WordMeaning:
 ;
 
 QuestionAnswer:
-    '@qa' (hideFromView = 'hide')?
-          question = STRING
-          answer   = STRING
-          ( cmap = CMap )?
+    '@qa' ( hideFromView = 'hide' )?
+            question     = STRING
+          ( answerParts += STRING )+
+          ( cmap         = CMap   )?
 ;
 
 FIB:

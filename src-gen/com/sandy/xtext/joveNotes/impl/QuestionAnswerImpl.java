@@ -6,13 +6,19 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
+import org.eclipse.emf.ecore.util.EDataTypeEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getQuestion <em>Question</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getAnswer <em>Answer</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getAnswerParts <em>Answer Parts</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
  * </p>
@@ -52,24 +58,14 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   protected String question = QUESTION_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getAnswer() <em>Answer</em>}' attribute.
+   * The cached value of the '{@link #getAnswerParts() <em>Answer Parts</em>}' attribute list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getAnswer()
+   * @see #getAnswerParts()
    * @generated
    * @ordered
    */
-  protected static final String ANSWER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getAnswer() <em>Answer</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAnswer()
-   * @generated
-   * @ordered
-   */
-  protected String answer = ANSWER_EDEFAULT;
+  protected EList<String> answerParts;
 
   /**
    * The cached value of the '{@link #getCmap() <em>Cmap</em>}' containment reference.
@@ -130,22 +126,13 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getAnswer()
+  public EList<String> getAnswerParts()
   {
-    return answer;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAnswer(String newAnswer)
-  {
-    String oldAnswer = answer;
-    answer = newAnswer;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.QUESTION_ANSWER__ANSWER, oldAnswer, answer));
+    if (answerParts == null)
+    {
+      answerParts = new EDataTypeEList<String>(String.class, this, JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS);
+    }
+    return answerParts;
   }
 
   /**
@@ -224,8 +211,8 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
     {
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         return getQuestion();
-      case JoveNotesPackage.QUESTION_ANSWER__ANSWER:
-        return getAnswer();
+      case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
+        return getAnswerParts();
       case JoveNotesPackage.QUESTION_ANSWER__CMAP:
         return getCmap();
     }
@@ -237,6 +224,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -245,8 +233,9 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         setQuestion((String)newValue);
         return;
-      case JoveNotesPackage.QUESTION_ANSWER__ANSWER:
-        setAnswer((String)newValue);
+      case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
+        getAnswerParts().clear();
+        getAnswerParts().addAll((Collection<? extends String>)newValue);
         return;
       case JoveNotesPackage.QUESTION_ANSWER__CMAP:
         setCmap((CMap)newValue);
@@ -268,8 +257,8 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
-      case JoveNotesPackage.QUESTION_ANSWER__ANSWER:
-        setAnswer(ANSWER_EDEFAULT);
+      case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
+        getAnswerParts().clear();
         return;
       case JoveNotesPackage.QUESTION_ANSWER__CMAP:
         setCmap((CMap)null);
@@ -290,8 +279,8 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
     {
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
-      case JoveNotesPackage.QUESTION_ANSWER__ANSWER:
-        return ANSWER_EDEFAULT == null ? answer != null : !ANSWER_EDEFAULT.equals(answer);
+      case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
+        return answerParts != null && !answerParts.isEmpty();
       case JoveNotesPackage.QUESTION_ANSWER__CMAP:
         return cmap != null;
     }
@@ -311,8 +300,8 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (question: ");
     result.append(question);
-    result.append(", answer: ");
-    result.append(answer);
+    result.append(", answerParts: ");
+    result.append(answerParts);
     result.append(')');
     return result.toString();
   }

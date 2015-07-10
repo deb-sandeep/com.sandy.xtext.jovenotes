@@ -597,23 +597,23 @@ ruleQuestionAnswer returns [EObject current=null]
 )
 )(
 (
-		lv_answer_3_0=RULE_STRING
+		lv_answerParts_3_0=RULE_STRING
 		{
-			newLeafNode(lv_answer_3_0, grammarAccess.getQuestionAnswerAccess().getAnswerSTRINGTerminalRuleCall_3_0()); 
+			newLeafNode(lv_answerParts_3_0, grammarAccess.getQuestionAnswerAccess().getAnswerPartsSTRINGTerminalRuleCall_3_0()); 
 		}
 		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getQuestionAnswerRule());
 	        }
-       		setWithLastConsumed(
+       		addWithLastConsumed(
        			$current, 
-       			"answer",
-        		lv_answer_3_0, 
+       			"answerParts",
+        		lv_answerParts_3_0, 
         		"STRING");
 	    }
 
 )
-)(
+)+(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getQuestionAnswerAccess().getCmapCMapParserRuleCall_4_0()); 
