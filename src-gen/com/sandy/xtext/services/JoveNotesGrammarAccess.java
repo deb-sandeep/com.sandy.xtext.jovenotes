@@ -29,13 +29,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNotesElementsNotesElementParserRuleCall_2_0 = (RuleCall)cNotesElementsAssignment_2.eContents().get(0);
 		
 		//JoveNotes:
-		//	processingHints=ProcessingHints? chapterDetails=ChapterDetails notesElements+=NotesElement*;
+		//	processingHints=ProcessingHints chapterDetails=ChapterDetails notesElements+=NotesElement*;
 		@Override public ParserRule getRule() { return rule; }
 
-		//processingHints=ProcessingHints? chapterDetails=ChapterDetails notesElements+=NotesElement*
+		//processingHints=ProcessingHints chapterDetails=ChapterDetails notesElements+=NotesElement*
 		public Group getGroup() { return cGroup; }
 
-		//processingHints=ProcessingHints?
+		//processingHints=ProcessingHints
 		public Assignment getProcessingHintsAssignment_0() { return cProcessingHintsAssignment_0; }
 
 		//ProcessingHints
@@ -56,18 +56,34 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class ProcessingHintsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProcessingHints");
-		private final Assignment cSkipGenerationAssignment = (Assignment)rule.eContents().get(1);
-		private final Keyword cSkipGenerationSkip_generationKeyword_0 = (Keyword)cSkipGenerationAssignment.eContents().get(0);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cProcessingHintsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cSkipGenerationAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cSkipGenerationSkip_generationKeyword_1_0 = (Keyword)cSkipGenerationAssignment_1.eContents().get(0);
+		private final Assignment cSkipGenerationInProductionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Keyword cSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0 = (Keyword)cSkipGenerationInProductionAssignment_2.eContents().get(0);
 		
 		//ProcessingHints:
-		//	skipGeneration="@skip_generation";
+		//	{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//skipGeneration="@skip_generation"
-		public Assignment getSkipGenerationAssignment() { return cSkipGenerationAssignment; }
+		//{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?
+		public Group getGroup() { return cGroup; }
+
+		//{ProcessingHints}
+		public Action getProcessingHintsAction_0() { return cProcessingHintsAction_0; }
+
+		//skipGeneration="@skip_generation"?
+		public Assignment getSkipGenerationAssignment_1() { return cSkipGenerationAssignment_1; }
 
 		//"@skip_generation"
-		public Keyword getSkipGenerationSkip_generationKeyword_0() { return cSkipGenerationSkip_generationKeyword_0; }
+		public Keyword getSkipGenerationSkip_generationKeyword_1_0() { return cSkipGenerationSkip_generationKeyword_1_0; }
+
+		//skipGenerationInProduction="@skip_generation_in_production"?
+		public Assignment getSkipGenerationInProductionAssignment_2() { return cSkipGenerationInProductionAssignment_2; }
+
+		//"@skip_generation_in_production"
+		public Keyword getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0() { return cSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0; }
 	}
 
 	public class ChapterDetailsElements extends AbstractParserRuleElementFinder {
@@ -1221,7 +1237,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//JoveNotes:
-	//	processingHints=ProcessingHints? chapterDetails=ChapterDetails notesElements+=NotesElement*;
+	//	processingHints=ProcessingHints chapterDetails=ChapterDetails notesElements+=NotesElement*;
 	public JoveNotesElements getJoveNotesAccess() {
 		return pJoveNotes;
 	}
@@ -1231,7 +1247,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ProcessingHints:
-	//	skipGeneration="@skip_generation";
+	//	{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?;
 	public ProcessingHintsElements getProcessingHintsAccess() {
 		return pProcessingHints;
 	}

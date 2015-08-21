@@ -14,6 +14,7 @@
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ProcessingHints">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ProcessingHints/skipGeneration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ProcessingHints/skipGenerationInProduction"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ChapterDetails">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/testPaper"/>

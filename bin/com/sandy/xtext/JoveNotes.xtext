@@ -3,13 +3,15 @@ grammar com.sandy.xtext.JoveNotes with org.eclipse.xtext.common.Terminals
 generate joveNotes "http://www.sandy.com/xtext/JoveNotes"
 
 JoveNotes :
-    ( processingHints = ProcessingHints )?
+    ( processingHints = ProcessingHints )
     ( chapterDetails = ChapterDetails )
     ( notesElements += NotesElement )*
 ;
 
 ProcessingHints:
-    skipGeneration = '@skip_generation'
+    {ProcessingHints}
+    (skipGeneration             = '@skip_generation')?
+    (skipGenerationInProduction = '@skip_generation_in_production')?
 ;
 
 ChapterDetails:

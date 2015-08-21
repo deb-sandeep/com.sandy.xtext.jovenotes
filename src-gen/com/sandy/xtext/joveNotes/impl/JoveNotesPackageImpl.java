@@ -330,6 +330,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getProcessingHints_SkipGenerationInProduction()
+  {
+    return (EAttribute)processingHintsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getChapterDetails()
   {
     return chapterDetailsEClass;
@@ -1112,6 +1122,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     processingHintsEClass = createEClass(PROCESSING_HINTS);
     createEAttribute(processingHintsEClass, PROCESSING_HINTS__SKIP_GENERATION);
+    createEAttribute(processingHintsEClass, PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION);
 
     chapterDetailsEClass = createEClass(CHAPTER_DETAILS);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__TEST_PAPER);
@@ -1263,6 +1274,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(processingHintsEClass, ProcessingHints.class, "ProcessingHints", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getProcessingHints_SkipGeneration(), ecorePackage.getEString(), "skipGeneration", null, 0, 1, ProcessingHints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getProcessingHints_SkipGenerationInProduction(), ecorePackage.getEString(), "skipGenerationInProduction", null, 0, 1, ProcessingHints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chapterDetailsEClass, ChapterDetails.class, "ChapterDetails", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChapterDetails_TestPaper(), ecorePackage.getEString(), "testPaper", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

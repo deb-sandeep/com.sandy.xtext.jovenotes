@@ -95,7 +95,7 @@ ruleJoveNotes returns [EObject current=null]
 	    }
 
 )
-)?(
+)(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getJoveNotesAccess().getChapterDetailsChapterDetailsParserRuleCall_1_0()); 
@@ -152,22 +152,43 @@ ruleProcessingHints returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
-(
-		lv_skipGeneration_0_0=	'@skip_generation' 
+((
     {
-        newLeafNode(lv_skipGeneration_0_0, grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_0());
+        $current = forceCreateModelElement(
+            grammarAccess.getProcessingHintsAccess().getProcessingHintsAction_0(),
+            $current);
+    }
+)(
+(
+		lv_skipGeneration_1_0=	'@skip_generation' 
+    {
+        newLeafNode(lv_skipGeneration_1_0, grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_1_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getProcessingHintsRule());
 	        }
-       		setWithLastConsumed($current, "skipGeneration", lv_skipGeneration_0_0, "@skip_generation");
+       		setWithLastConsumed($current, "skipGeneration", lv_skipGeneration_1_0, "@skip_generation");
 	    }
 
 )
+)?(
+(
+		lv_skipGenerationInProduction_2_0=	'@skip_generation_in_production' 
+    {
+        newLeafNode(lv_skipGenerationInProduction_2_0, grammarAccess.getProcessingHintsAccess().getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getProcessingHintsRule());
+	        }
+       		setWithLastConsumed($current, "skipGenerationInProduction", lv_skipGenerationInProduction_2_0, "@skip_generation_in_production");
+	    }
+
 )
+)?)
 ;
 
 

@@ -259,7 +259,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (processingHints=ProcessingHints? chapterDetails=ChapterDetails notesElements+=NotesElement*)
+	 *     (processingHints=ProcessingHints chapterDetails=ChapterDetails notesElements+=NotesElement*)
 	 */
 	protected void sequence_JoveNotes(EObject context, JoveNotes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -296,17 +296,10 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     skipGeneration='@skip_generation'
+	 *     (skipGeneration='@skip_generation'? skipGenerationInProduction='@skip_generation_in_production'?)
 	 */
 	protected void sequence_ProcessingHints(EObject context, ProcessingHints semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.PROCESSING_HINTS__SKIP_GENERATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.PROCESSING_HINTS__SKIP_GENERATION));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getProcessingHintsAccess().getSkipGenerationSkip_generationKeyword_0(), semanticObject.getSkipGeneration());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

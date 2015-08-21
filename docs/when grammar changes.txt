@@ -46,8 +46,10 @@ that the changes are properly integrated with the rest of the system.
 13. Move the following artifacts to Op (only if changes exist)
     a. Script
     b. Any additional jars
-    c. New jnprocessor jar
-    d. Any configuration files
+    c  The new jovenotes.xtext-<x.ac>.jar
+    d. Delete the jovenotes.xtext-<x.ab>.jar from the server
+    e. New jnprocessor jar
+    f. Any configuration files
     
 14. Take a backup of server database
 

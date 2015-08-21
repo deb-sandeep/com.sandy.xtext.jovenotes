@@ -122,13 +122,22 @@ public interface JoveNotesPackage extends EPackage
   int PROCESSING_HINTS__SKIP_GENERATION = 0;
 
   /**
+   * The feature id for the '<em><b>Skip Generation In Production</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION = 1;
+
+  /**
    * The number of structural features of the '<em>Processing Hints</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int PROCESSING_HINTS_FEATURE_COUNT = 1;
+  int PROCESSING_HINTS_FEATURE_COUNT = 2;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl <em>Chapter Details</em>}' class.
@@ -1216,6 +1225,17 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getProcessingHints_SkipGeneration();
 
   /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction <em>Skip Generation In Production</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Skip Generation In Production</em>'.
+   * @see com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction()
+   * @see #getProcessingHints()
+   * @generated
+   */
+  EAttribute getProcessingHints_SkipGenerationInProduction();
+
+  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.ChapterDetails <em>Chapter Details</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2093,6 +2113,14 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute PROCESSING_HINTS__SKIP_GENERATION = eINSTANCE.getProcessingHints_SkipGeneration();
+
+    /**
+     * The meta object literal for the '<em><b>Skip Generation In Production</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION = eINSTANCE.getProcessingHints_SkipGenerationInProduction();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl <em>Chapter Details</em>}' class.

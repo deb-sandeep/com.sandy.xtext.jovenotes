@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGeneration <em>Skip Generation</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
  * </p>
  *
@@ -46,6 +47,26 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * @ordered
    */
   protected String skipGeneration = SKIP_GENERATION_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getSkipGenerationInProduction() <em>Skip Generation In Production</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSkipGenerationInProduction()
+   * @generated
+   * @ordered
+   */
+  protected static final String SKIP_GENERATION_IN_PRODUCTION_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getSkipGenerationInProduction() <em>Skip Generation In Production</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getSkipGenerationInProduction()
+   * @generated
+   * @ordered
+   */
+  protected String skipGenerationInProduction = SKIP_GENERATION_IN_PRODUCTION_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -96,6 +117,29 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getSkipGenerationInProduction()
+  {
+    return skipGenerationInProduction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setSkipGenerationInProduction(String newSkipGenerationInProduction)
+  {
+    String oldSkipGenerationInProduction = skipGenerationInProduction;
+    skipGenerationInProduction = newSkipGenerationInProduction;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION, oldSkipGenerationInProduction, skipGenerationInProduction));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -103,6 +147,8 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
     {
       case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION:
         return getSkipGeneration();
+      case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION:
+        return getSkipGenerationInProduction();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -119,6 +165,9 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
     {
       case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION:
         setSkipGeneration((String)newValue);
+        return;
+      case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION:
+        setSkipGenerationInProduction((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -137,6 +186,9 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
       case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION:
         setSkipGeneration(SKIP_GENERATION_EDEFAULT);
         return;
+      case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION:
+        setSkipGenerationInProduction(SKIP_GENERATION_IN_PRODUCTION_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -153,6 +205,8 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
     {
       case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION:
         return SKIP_GENERATION_EDEFAULT == null ? skipGeneration != null : !SKIP_GENERATION_EDEFAULT.equals(skipGeneration);
+      case JoveNotesPackage.PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION:
+        return SKIP_GENERATION_IN_PRODUCTION_EDEFAULT == null ? skipGenerationInProduction != null : !SKIP_GENERATION_IN_PRODUCTION_EDEFAULT.equals(skipGenerationInProduction);
     }
     return super.eIsSet(featureID);
   }
@@ -170,6 +224,8 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (skipGeneration: ");
     result.append(skipGeneration);
+    result.append(", skipGenerationInProduction: ");
+    result.append(skipGenerationInProduction);
     result.append(')');
     return result.toString();
   }

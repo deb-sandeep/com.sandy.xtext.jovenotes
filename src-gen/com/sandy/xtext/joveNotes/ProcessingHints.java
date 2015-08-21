@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGeneration <em>Skip Generation</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
  * </p>
  *
@@ -47,5 +48,31 @@ public interface ProcessingHints extends EObject
    * @generated
    */
   void setSkipGeneration(String value);
+
+  /**
+   * Returns the value of the '<em><b>Skip Generation In Production</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Skip Generation In Production</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Skip Generation In Production</em>' attribute.
+   * @see #setSkipGenerationInProduction(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getProcessingHints_SkipGenerationInProduction()
+   * @model
+   * @generated
+   */
+  String getSkipGenerationInProduction();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction <em>Skip Generation In Production</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Skip Generation In Production</em>' attribute.
+   * @see #getSkipGenerationInProduction()
+   * @generated
+   */
+  void setSkipGenerationInProduction(String value);
 
 } // ProcessingHints
