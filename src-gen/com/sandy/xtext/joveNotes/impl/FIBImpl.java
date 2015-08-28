@@ -24,7 +24,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getAnswers <em>Answers</em>}</li>
  * </ul>
@@ -34,26 +33,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  */
 public class FIBImpl extends NotesElementImpl implements FIB
 {
-  /**
-   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
-
   /**
    * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -110,29 +89,6 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getHideFromView()
-  {
-    return hideFromView;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHideFromView(String newHideFromView)
-  {
-    String oldHideFromView = hideFromView;
-    hideFromView = newHideFromView;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.FIB__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getQuestion()
   {
     return question;
@@ -175,8 +131,6 @@ public class FIBImpl extends NotesElementImpl implements FIB
   {
     switch (featureID)
     {
-      case JoveNotesPackage.FIB__HIDE_FROM_VIEW:
-        return getHideFromView();
       case JoveNotesPackage.FIB__QUESTION:
         return getQuestion();
       case JoveNotesPackage.FIB__ANSWERS:
@@ -196,9 +150,6 @@ public class FIBImpl extends NotesElementImpl implements FIB
   {
     switch (featureID)
     {
-      case JoveNotesPackage.FIB__HIDE_FROM_VIEW:
-        setHideFromView((String)newValue);
-        return;
       case JoveNotesPackage.FIB__QUESTION:
         setQuestion((String)newValue);
         return;
@@ -220,9 +171,6 @@ public class FIBImpl extends NotesElementImpl implements FIB
   {
     switch (featureID)
     {
-      case JoveNotesPackage.FIB__HIDE_FROM_VIEW:
-        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
-        return;
       case JoveNotesPackage.FIB__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
@@ -243,8 +191,6 @@ public class FIBImpl extends NotesElementImpl implements FIB
   {
     switch (featureID)
     {
-      case JoveNotesPackage.FIB__HIDE_FROM_VIEW:
-        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.FIB__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.FIB__ANSWERS:
@@ -264,9 +210,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (hideFromView: ");
-    result.append(hideFromView);
-    result.append(", question: ");
+    result.append(" (question: ");
     result.append(question);
     result.append(", answers: ");
     result.append(answers);

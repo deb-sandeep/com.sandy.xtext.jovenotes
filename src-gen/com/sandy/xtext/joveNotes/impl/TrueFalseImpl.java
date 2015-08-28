@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getStatement <em>Statement</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getTruthValue <em>Truth Value</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getJustification <em>Justification</em>}</li>
@@ -29,26 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
 {
-  /**
-   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
-
   /**
    * The default value of the '{@link #getStatement() <em>Statement</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -135,29 +114,6 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getHideFromView()
-  {
-    return hideFromView;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHideFromView(String newHideFromView)
-  {
-    String oldHideFromView = hideFromView;
-    hideFromView = newHideFromView;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.TRUE_FALSE__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public String getStatement()
   {
     return statement;
@@ -232,8 +188,6 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
   {
     switch (featureID)
     {
-      case JoveNotesPackage.TRUE_FALSE__HIDE_FROM_VIEW:
-        return getHideFromView();
       case JoveNotesPackage.TRUE_FALSE__STATEMENT:
         return getStatement();
       case JoveNotesPackage.TRUE_FALSE__TRUTH_VALUE:
@@ -254,9 +208,6 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
   {
     switch (featureID)
     {
-      case JoveNotesPackage.TRUE_FALSE__HIDE_FROM_VIEW:
-        setHideFromView((String)newValue);
-        return;
       case JoveNotesPackage.TRUE_FALSE__STATEMENT:
         setStatement((String)newValue);
         return;
@@ -280,9 +231,6 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
   {
     switch (featureID)
     {
-      case JoveNotesPackage.TRUE_FALSE__HIDE_FROM_VIEW:
-        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
-        return;
       case JoveNotesPackage.TRUE_FALSE__STATEMENT:
         setStatement(STATEMENT_EDEFAULT);
         return;
@@ -306,8 +254,6 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
   {
     switch (featureID)
     {
-      case JoveNotesPackage.TRUE_FALSE__HIDE_FROM_VIEW:
-        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.TRUE_FALSE__STATEMENT:
         return STATEMENT_EDEFAULT == null ? statement != null : !STATEMENT_EDEFAULT.equals(statement);
       case JoveNotesPackage.TRUE_FALSE__TRUTH_VALUE:
@@ -329,9 +275,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (hideFromView: ");
-    result.append(hideFromView);
-    result.append(", statement: ");
+    result.append(" (statement: ");
     result.append(statement);
     result.append(", truthValue: ");
     result.append(truthValue);

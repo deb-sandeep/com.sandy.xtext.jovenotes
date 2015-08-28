@@ -11,7 +11,6 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.Event#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getEvent <em>Event</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getTime <em>Time</em>}</li>
  * </ul>
@@ -23,32 +22,6 @@ package com.sandy.xtext.joveNotes;
  */
 public interface Event extends NotesElement
 {
-  /**
-   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Hide From View</em>' attribute.
-   * @see #setHideFromView(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEvent_HideFromView()
-   * @model
-   * @generated
-   */
-  String getHideFromView();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Event#getHideFromView <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Hide From View</em>' attribute.
-   * @see #getHideFromView()
-   * @generated
-   */
-  void setHideFromView(String value);
-
   /**
    * Returns the value of the '<em><b>Event</b></em>' attribute.
    * <!-- begin-user-doc -->

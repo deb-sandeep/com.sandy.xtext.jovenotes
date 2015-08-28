@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getEquation <em>Equation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getSymbols <em>Symbols</em>}</li>
@@ -39,26 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class EquationImpl extends NotesElementImpl implements Equation
 {
-  /**
-   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getHideFromView()
-   * @generated
-   * @ordered
-   */
-  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
-
   /**
    * The default value of the '{@link #getEquation() <em>Equation</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -128,29 +107,6 @@ public class EquationImpl extends NotesElementImpl implements Equation
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.EQUATION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getHideFromView()
-  {
-    return hideFromView;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setHideFromView(String newHideFromView)
-  {
-    String oldHideFromView = hideFromView;
-    hideFromView = newHideFromView;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.EQUATION__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
   }
 
   /**
@@ -239,8 +195,6 @@ public class EquationImpl extends NotesElementImpl implements Equation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.EQUATION__HIDE_FROM_VIEW:
-        return getHideFromView();
       case JoveNotesPackage.EQUATION__EQUATION:
         return getEquation();
       case JoveNotesPackage.EQUATION__DESCRIPTION:
@@ -262,9 +216,6 @@ public class EquationImpl extends NotesElementImpl implements Equation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.EQUATION__HIDE_FROM_VIEW:
-        setHideFromView((String)newValue);
-        return;
       case JoveNotesPackage.EQUATION__EQUATION:
         setEquation((String)newValue);
         return;
@@ -289,9 +240,6 @@ public class EquationImpl extends NotesElementImpl implements Equation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.EQUATION__HIDE_FROM_VIEW:
-        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
-        return;
       case JoveNotesPackage.EQUATION__EQUATION:
         setEquation(EQUATION_EDEFAULT);
         return;
@@ -315,8 +263,6 @@ public class EquationImpl extends NotesElementImpl implements Equation
   {
     switch (featureID)
     {
-      case JoveNotesPackage.EQUATION__HIDE_FROM_VIEW:
-        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.EQUATION__EQUATION:
         return EQUATION_EDEFAULT == null ? equation != null : !EQUATION_EDEFAULT.equals(equation);
       case JoveNotesPackage.EQUATION__DESCRIPTION:
@@ -338,9 +284,7 @@ public class EquationImpl extends NotesElementImpl implements Equation
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (hideFromView: ");
-    result.append(hideFromView);
-    result.append(", equation: ");
+    result.append(" (equation: ");
     result.append(equation);
     result.append(", description: ");
     result.append(description);

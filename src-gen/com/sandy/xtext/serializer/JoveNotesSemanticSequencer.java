@@ -304,7 +304,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (question=STRING options+=Option options+=Option* explanation=STRING?)
+	 *     (hideFromView='hide'? question=STRING options+=Option options+=Option* explanation=STRING?)
 	 */
 	protected void sequence_MultiChoice(EObject context, MultiChoice semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

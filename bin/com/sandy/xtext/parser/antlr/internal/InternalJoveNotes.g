@@ -2145,9 +2145,24 @@ ruleMultiChoice returns [EObject current=null]
     }
 (
 (
-		lv_question_1_0=RULE_STRING
+		lv_hideFromView_1_0=	'hide' 
+    {
+        newLeafNode(lv_hideFromView_1_0, grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiChoiceRule());
+	        }
+       		setWithLastConsumed($current, "hideFromView", lv_hideFromView_1_0, "hide");
+	    }
+
+)
+)?(
+(
+		lv_question_2_0=RULE_STRING
 		{
-			newLeafNode(lv_question_1_0, grammarAccess.getMultiChoiceAccess().getQuestionSTRINGTerminalRuleCall_1_0()); 
+			newLeafNode(lv_question_2_0, grammarAccess.getMultiChoiceAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2156,76 +2171,76 @@ ruleMultiChoice returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"question",
-        		lv_question_1_0, 
+        		lv_question_2_0, 
         		"STRING");
 	    }
 
 )
-)	otherlv_2='{' 
+)	otherlv_3='{' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_2());
+    	newLeafNode(otherlv_3, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_3());
     }
-	otherlv_3='@options' 
+	otherlv_4='@options' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getMultiChoiceAccess().getOptionsKeyword_3());
+    	newLeafNode(otherlv_4, grammarAccess.getMultiChoiceAccess().getOptionsKeyword_4());
     }
-	otherlv_4='{' 
+	otherlv_5='{' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_4());
+    	newLeafNode(otherlv_5, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_5());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_6_0()); 
 	    }
-		lv_options_5_0=ruleOption		{
+		lv_options_6_0=ruleOption		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultiChoiceRule());
 	        }
        		add(
        			$current, 
        			"options",
-        		lv_options_5_0, 
+        		lv_options_6_0, 
         		"Option");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_6=',' 
+)(	otherlv_7=',' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getMultiChoiceAccess().getCommaKeyword_6_0());
+    	newLeafNode(otherlv_7, grammarAccess.getMultiChoiceAccess().getCommaKeyword_7_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_6_1_0()); 
+	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_7_1_0()); 
 	    }
-		lv_options_7_0=ruleOption		{
+		lv_options_8_0=ruleOption		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMultiChoiceRule());
 	        }
        		add(
        			$current, 
        			"options",
-        		lv_options_7_0, 
+        		lv_options_8_0, 
         		"Option");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))*	otherlv_8='}' 
+))*	otherlv_9='}' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_7());
+    	newLeafNode(otherlv_9, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_8());
     }
-(	otherlv_9='@explanation' 
+(	otherlv_10='@explanation' 
     {
-    	newLeafNode(otherlv_9, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_8_0());
+    	newLeafNode(otherlv_10, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_9_0());
     }
 (
 (
-		lv_explanation_10_0=RULE_STRING
+		lv_explanation_11_0=RULE_STRING
 		{
-			newLeafNode(lv_explanation_10_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_8_1_0()); 
+			newLeafNode(lv_explanation_11_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_9_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2234,14 +2249,14 @@ ruleMultiChoice returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"explanation",
-        		lv_explanation_10_0, 
+        		lv_explanation_11_0, 
         		"STRING");
 	    }
 
 )
-))?	otherlv_11='}' 
+))?	otherlv_12='}' 
     {
-    	newLeafNode(otherlv_11, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_9());
+    	newLeafNode(otherlv_12, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_10());
     }
 )
 ;

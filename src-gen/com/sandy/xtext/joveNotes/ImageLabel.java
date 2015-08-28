@@ -12,7 +12,6 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getCaption <em>Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getImageName <em>Image Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHotspots <em>Hotspots</em>}</li>
@@ -25,32 +24,6 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface ImageLabel extends NotesElement
 {
-  /**
-   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Hide From View</em>' attribute.
-   * @see #setHideFromView(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getImageLabel_HideFromView()
-   * @model
-   * @generated
-   */
-  String getHideFromView();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ImageLabel#getHideFromView <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Hide From View</em>' attribute.
-   * @see #getHideFromView()
-   * @generated
-   */
-  void setHideFromView(String value);
-
   /**
    * Returns the value of the '<em><b>Caption</b></em>' attribute.
    * <!-- begin-user-doc -->

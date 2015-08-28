@@ -1124,86 +1124,94 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultiChoice");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMulti_choiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cOptionsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cOptionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cOptionsOptionParserRuleCall_5_0 = (RuleCall)cOptionsAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cOptionsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cOptionsOptionParserRuleCall_6_1_0 = (RuleCall)cOptionsAssignment_6_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cExplanationKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cExplanationAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cExplanationSTRINGTerminalRuleCall_8_1_0 = (RuleCall)cExplanationAssignment_8_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cQuestionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_2_0 = (RuleCall)cQuestionAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cOptionsKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cLeftCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cOptionsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cOptionsOptionParserRuleCall_6_0 = (RuleCall)cOptionsAssignment_6.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cCommaKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cOptionsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cOptionsOptionParserRuleCall_7_1_0 = (RuleCall)cOptionsAssignment_7_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cExplanationKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cExplanationAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cExplanationSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cExplanationAssignment_9_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//MultiChoice:
-		//	"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
-		//	explanation=STRING)? "}";
+		//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+		//	("@explanation" explanation=STRING)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
-		//explanation=STRING)? "}"
+		//"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+		//("@explanation" explanation=STRING)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@multi_choice"
 		public Keyword getMulti_choiceKeyword_0() { return cMulti_choiceKeyword_0; }
 
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
 		//question=STRING
-		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
+		public Assignment getQuestionAssignment_2() { return cQuestionAssignment_2; }
 
 		//STRING
-		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//"@options"
-		public Keyword getOptionsKeyword_3() { return cOptionsKeyword_3; }
+		public Keyword getOptionsKeyword_4() { return cOptionsKeyword_4; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
 		//options+=Option
-		public Assignment getOptionsAssignment_5() { return cOptionsAssignment_5; }
+		public Assignment getOptionsAssignment_6() { return cOptionsAssignment_6; }
 
 		//Option
-		public RuleCall getOptionsOptionParserRuleCall_5_0() { return cOptionsOptionParserRuleCall_5_0; }
+		public RuleCall getOptionsOptionParserRuleCall_6_0() { return cOptionsOptionParserRuleCall_6_0; }
 
 		//("," options+=Option)*
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_7() { return cGroup_7; }
 
 		//","
-		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//options+=Option
-		public Assignment getOptionsAssignment_6_1() { return cOptionsAssignment_6_1; }
+		public Assignment getOptionsAssignment_7_1() { return cOptionsAssignment_7_1; }
 
 		//Option
-		public RuleCall getOptionsOptionParserRuleCall_6_1_0() { return cOptionsOptionParserRuleCall_6_1_0; }
+		public RuleCall getOptionsOptionParserRuleCall_7_1_0() { return cOptionsOptionParserRuleCall_7_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 
 		//("@explanation" explanation=STRING)?
-		public Group getGroup_8() { return cGroup_8; }
+		public Group getGroup_9() { return cGroup_9; }
 
 		//"@explanation"
-		public Keyword getExplanationKeyword_8_0() { return cExplanationKeyword_8_0; }
+		public Keyword getExplanationKeyword_9_0() { return cExplanationKeyword_9_0; }
 
 		//explanation=STRING
-		public Assignment getExplanationAssignment_8_1() { return cExplanationAssignment_8_1; }
+		public Assignment getExplanationAssignment_9_1() { return cExplanationAssignment_9_1; }
 
 		//STRING
-		public RuleCall getExplanationSTRINGTerminalRuleCall_8_1_0() { return cExplanationSTRINGTerminalRuleCall_8_1_0; }
+		public RuleCall getExplanationSTRINGTerminalRuleCall_9_1_0() { return cExplanationSTRINGTerminalRuleCall_9_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 
 	public class OptionElements extends AbstractParserRuleElementFinder {
@@ -1584,8 +1592,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultiChoice:
-	//	"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
-	//	explanation=STRING)? "}";
+	//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+	//	("@explanation" explanation=STRING)? "}";
 	public MultiChoiceElements getMultiChoiceAccess() {
 		return pMultiChoice;
 	}

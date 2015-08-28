@@ -11,7 +11,6 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getDescription <em>Description</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getReactants <em>Reactants</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}</li>
@@ -25,32 +24,6 @@ package com.sandy.xtext.joveNotes;
  */
 public interface ChemEquation extends NotesElement
 {
-  /**
-   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Hide From View</em>' attribute.
-   * @see #setHideFromView(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation_HideFromView()
-   * @model
-   * @generated
-   */
-  String getHideFromView();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChemEquation#getHideFromView <em>Hide From View</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Hide From View</em>' attribute.
-   * @see #getHideFromView()
-   * @generated
-   */
-  void setHideFromView(String value);
-
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
