@@ -18,7 +18,9 @@ import com.sandy.xtext.joveNotes.JoveNotesFactory;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
+import com.sandy.xtext.joveNotes.MultiChoice;
 import com.sandy.xtext.joveNotes.NotesElement;
+import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
@@ -109,6 +111,8 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.EQUATION: return createEquation();
       case JoveNotesPackage.EQ_SYMBOL: return createEqSymbol();
       case JoveNotesPackage.REF_TO_CONTEXT: return createRefToContext();
+      case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
+      case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -355,6 +359,28 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     RefToContextImpl refToContext = new RefToContextImpl();
     return refToContext;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultiChoice createMultiChoice()
+  {
+    MultiChoiceImpl multiChoice = new MultiChoiceImpl();
+    return multiChoice;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Option createOption()
+  {
+    OptionImpl option = new OptionImpl();
+    return option;
   }
 
   /**

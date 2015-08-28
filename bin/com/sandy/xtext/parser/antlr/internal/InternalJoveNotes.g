@@ -482,6 +482,16 @@ ruleNotesElement returns [EObject current=null]
         $current = $this_RefToContext_14.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_15()); 
+    }
+    this_MultiChoice_15=ruleMultiChoice
+    { 
+        $current = $this_MultiChoice_15.current; 
+        afterParserOrEnumRuleCall();
+    }
 )
 ;
 
@@ -2109,6 +2119,185 @@ ruleRefToContext returns [EObject current=null]
     	newLeafNode(otherlv_6, grammarAccess.getRefToContextAccess().getRightCurlyBracketKeyword_6());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleMultiChoice
+entryRuleMultiChoice returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMultiChoiceRule()); }
+	 iv_ruleMultiChoice=ruleMultiChoice 
+	 { $current=$iv_ruleMultiChoice.current; } 
+	 EOF 
+;
+
+// Rule MultiChoice
+ruleMultiChoice returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='@multi_choice' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getMultiChoiceAccess().getMulti_choiceKeyword_0());
+    }
+(
+(
+		lv_question_1_0=RULE_STRING
+		{
+			newLeafNode(lv_question_1_0, grammarAccess.getMultiChoiceAccess().getQuestionSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiChoiceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"question",
+        		lv_question_1_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_2='{' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_2());
+    }
+	otherlv_3='@options' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getMultiChoiceAccess().getOptionsKeyword_3());
+    }
+	otherlv_4='{' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_5_0()); 
+	    }
+		lv_options_5_0=ruleOption		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMultiChoiceRule());
+	        }
+       		add(
+       			$current, 
+       			"options",
+        		lv_options_5_0, 
+        		"Option");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_6=',' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getMultiChoiceAccess().getCommaKeyword_6_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_6_1_0()); 
+	    }
+		lv_options_7_0=ruleOption		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMultiChoiceRule());
+	        }
+       		add(
+       			$current, 
+       			"options",
+        		lv_options_7_0, 
+        		"Option");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_8='}' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_7());
+    }
+(	otherlv_9='@explanation' 
+    {
+    	newLeafNode(otherlv_9, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_8_0());
+    }
+(
+(
+		lv_explanation_10_0=RULE_STRING
+		{
+			newLeafNode(lv_explanation_10_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_8_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiChoiceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"explanation",
+        		lv_explanation_10_0, 
+        		"STRING");
+	    }
+
+)
+))?	otherlv_11='}' 
+    {
+    	newLeafNode(otherlv_11, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_9());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleOption
+entryRuleOption returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getOptionRule()); }
+	 iv_ruleOption=ruleOption 
+	 { $current=$iv_ruleOption.current; } 
+	 EOF 
+;
+
+// Rule Option
+ruleOption returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_optionValue_0_0=RULE_STRING
+		{
+			newLeafNode(lv_optionValue_0_0, grammarAccess.getOptionAccess().getOptionValueSTRINGTerminalRuleCall_0_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOptionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"optionValue",
+        		lv_optionValue_0_0, 
+        		"STRING");
+	    }
+
+)
+)(
+(
+		lv_correctOption_1_0=	'correct' 
+    {
+        newLeafNode(lv_correctOption_1_0, grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getOptionRule());
+	        }
+       		setWithLastConsumed($current, "correctOption", lv_correctOption_1_0, "correct");
+	    }
+
+)
+)?)
 ;
 
 

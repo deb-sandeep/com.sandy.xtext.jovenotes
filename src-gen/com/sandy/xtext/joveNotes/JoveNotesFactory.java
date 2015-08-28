@@ -221,6 +221,24 @@ public interface JoveNotesFactory extends EFactory
   RefToContext createRefToContext();
 
   /**
+   * Returns a new object of class '<em>Multi Choice</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multi Choice</em>'.
+   * @generated
+   */
+  MultiChoice createMultiChoice();
+
+  /**
+   * Returns a new object of class '<em>Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Option</em>'.
+   * @generated
+   */
+  Option createOption();
+
+  /**
    * Returns a new object of class '<em>CMap</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

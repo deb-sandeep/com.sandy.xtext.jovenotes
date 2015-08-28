@@ -17,7 +17,9 @@ import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
+import com.sandy.xtext.joveNotes.MultiChoice;
 import com.sandy.xtext.joveNotes.NotesElement;
+import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
@@ -205,6 +207,16 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRefToContext(RefToContext object)
       {
         return createRefToContextAdapter();
+      }
+      @Override
+      public Adapter caseMultiChoice(MultiChoice object)
+      {
+        return createMultiChoiceAdapter();
+      }
+      @Override
+      public Adapter caseOption(Option object)
+      {
+        return createOptionAdapter();
       }
       @Override
       public Adapter caseCMap(CMap object)
@@ -559,6 +571,36 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRefToContextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.MultiChoice <em>Multi Choice</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.MultiChoice
+   * @generated
+   */
+  public Adapter createMultiChoiceAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.Option <em>Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.Option
+   * @generated
+   */
+  public Adapter createOptionAdapter()
   {
     return null;
   }

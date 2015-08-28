@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.SpellbeeImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.SpellbeeImpl#getWord <em>Word</em>}</li>
  * </ul>
  * </p>
@@ -26,6 +27,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class SpellbeeImpl extends NotesElementImpl implements Spellbee
 {
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getWord() <em>Word</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -72,6 +93,29 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.SPELLBEE__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getWord()
   {
     return word;
@@ -100,6 +144,8 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
   {
     switch (featureID)
     {
+      case JoveNotesPackage.SPELLBEE__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.SPELLBEE__WORD:
         return getWord();
     }
@@ -116,6 +162,9 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
   {
     switch (featureID)
     {
+      case JoveNotesPackage.SPELLBEE__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.SPELLBEE__WORD:
         setWord((String)newValue);
         return;
@@ -133,6 +182,9 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
   {
     switch (featureID)
     {
+      case JoveNotesPackage.SPELLBEE__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.SPELLBEE__WORD:
         setWord(WORD_EDEFAULT);
         return;
@@ -150,6 +202,8 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
   {
     switch (featureID)
     {
+      case JoveNotesPackage.SPELLBEE__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.SPELLBEE__WORD:
         return WORD_EDEFAULT == null ? word != null : !WORD_EDEFAULT.equals(word);
     }
@@ -167,7 +221,9 @@ public class SpellbeeImpl extends NotesElementImpl implements Spellbee
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (word: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", word: ");
     result.append(word);
     result.append(')');
     return result.toString();

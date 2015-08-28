@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getChemicalName <em>Chemical Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getCommonName <em>Common Name</em>}</li>
@@ -28,6 +29,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
 {
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getSymbol() <em>Symbol</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -114,6 +135,29 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHEM_COMPOUND__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getSymbol()
   {
     return symbol;
@@ -188,6 +232,8 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
   {
     switch (featureID)
     {
+      case JoveNotesPackage.CHEM_COMPOUND__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.CHEM_COMPOUND__SYMBOL:
         return getSymbol();
       case JoveNotesPackage.CHEM_COMPOUND__CHEMICAL_NAME:
@@ -208,6 +254,9 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
   {
     switch (featureID)
     {
+      case JoveNotesPackage.CHEM_COMPOUND__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.CHEM_COMPOUND__SYMBOL:
         setSymbol((String)newValue);
         return;
@@ -231,6 +280,9 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
   {
     switch (featureID)
     {
+      case JoveNotesPackage.CHEM_COMPOUND__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.CHEM_COMPOUND__SYMBOL:
         setSymbol(SYMBOL_EDEFAULT);
         return;
@@ -254,6 +306,8 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
   {
     switch (featureID)
     {
+      case JoveNotesPackage.CHEM_COMPOUND__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.CHEM_COMPOUND__SYMBOL:
         return SYMBOL_EDEFAULT == null ? symbol != null : !SYMBOL_EDEFAULT.equals(symbol);
       case JoveNotesPackage.CHEM_COMPOUND__CHEMICAL_NAME:
@@ -275,7 +329,9 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (symbol: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", symbol: ");
     result.append(symbol);
     result.append(", chemicalName: ");
     result.append(chemicalName);

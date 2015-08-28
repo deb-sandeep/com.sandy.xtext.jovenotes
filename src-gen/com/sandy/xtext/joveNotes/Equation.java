@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.Equation#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getEquation <em>Equation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getDescription <em>Description</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getSymbols <em>Symbols</em>}</li>
@@ -24,6 +25,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Equation extends NotesElement
 {
+  /**
+   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hide From View</em>' attribute.
+   * @see #setHideFromView(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEquation_HideFromView()
+   * @model
+   * @generated
+   */
+  String getHideFromView();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Equation#getHideFromView <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Hide From View</em>' attribute.
+   * @see #getHideFromView()
+   * @generated
+   */
+  void setHideFromView(String value);
+
   /**
    * Returns the value of the '<em><b>Equation</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -174,14 +174,15 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cImageLabelParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		private final RuleCall cEquationParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
 		private final RuleCall cRefToContextParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cMultiChoiceParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
 		
 		//NotesElement:
 		//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext;
+		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice;
 		@Override public ParserRule getRule() { return rule; }
 
 		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//WordMeaning
@@ -228,6 +229,9 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//RefToContext
 		public RuleCall getRefToContextParserRuleCall_14() { return cRefToContextParserRuleCall_14; }
+
+		//MultiChoice
+		public RuleCall getMultiChoiceParserRuleCall_15() { return cMultiChoiceParserRuleCall_15; }
 	}
 
 	public class WordMeaningElements extends AbstractParserRuleElementFinder {
@@ -1116,6 +1120,120 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
+	public class MultiChoiceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultiChoice");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMulti_choiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cQuestionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_1_0 = (RuleCall)cQuestionAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cOptionsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cOptionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cOptionsOptionParserRuleCall_5_0 = (RuleCall)cOptionsAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cCommaKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cOptionsAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cOptionsOptionParserRuleCall_6_1_0 = (RuleCall)cOptionsAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cExplanationKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cExplanationAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cExplanationSTRINGTerminalRuleCall_8_1_0 = (RuleCall)cExplanationAssignment_8_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//MultiChoice:
+		//	"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
+		//	explanation=STRING)? "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
+		//explanation=STRING)? "}"
+		public Group getGroup() { return cGroup; }
+
+		//"@multi_choice"
+		public Keyword getMulti_choiceKeyword_0() { return cMulti_choiceKeyword_0; }
+
+		//question=STRING
+		public Assignment getQuestionAssignment_1() { return cQuestionAssignment_1; }
+
+		//STRING
+		public RuleCall getQuestionSTRINGTerminalRuleCall_1_0() { return cQuestionSTRINGTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"@options"
+		public Keyword getOptionsKeyword_3() { return cOptionsKeyword_3; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+
+		//options+=Option
+		public Assignment getOptionsAssignment_5() { return cOptionsAssignment_5; }
+
+		//Option
+		public RuleCall getOptionsOptionParserRuleCall_5_0() { return cOptionsOptionParserRuleCall_5_0; }
+
+		//("," options+=Option)*
+		public Group getGroup_6() { return cGroup_6; }
+
+		//","
+		public Keyword getCommaKeyword_6_0() { return cCommaKeyword_6_0; }
+
+		//options+=Option
+		public Assignment getOptionsAssignment_6_1() { return cOptionsAssignment_6_1; }
+
+		//Option
+		public RuleCall getOptionsOptionParserRuleCall_6_1_0() { return cOptionsOptionParserRuleCall_6_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
+
+		//("@explanation" explanation=STRING)?
+		public Group getGroup_8() { return cGroup_8; }
+
+		//"@explanation"
+		public Keyword getExplanationKeyword_8_0() { return cExplanationKeyword_8_0; }
+
+		//explanation=STRING
+		public Assignment getExplanationAssignment_8_1() { return cExplanationAssignment_8_1; }
+
+		//STRING
+		public RuleCall getExplanationSTRINGTerminalRuleCall_8_1_0() { return cExplanationSTRINGTerminalRuleCall_8_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+	}
+
+	public class OptionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Option");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cOptionValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cOptionValueSTRINGTerminalRuleCall_0_0 = (RuleCall)cOptionValueAssignment_0.eContents().get(0);
+		private final Assignment cCorrectOptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cCorrectOptionCorrectKeyword_1_0 = (Keyword)cCorrectOptionAssignment_1.eContents().get(0);
+		
+		//Option:
+		//	optionValue=STRING correctOption="correct"?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//optionValue=STRING correctOption="correct"?
+		public Group getGroup() { return cGroup; }
+
+		//optionValue=STRING
+		public Assignment getOptionValueAssignment_0() { return cOptionValueAssignment_0; }
+
+		//STRING
+		public RuleCall getOptionValueSTRINGTerminalRuleCall_0_0() { return cOptionValueSTRINGTerminalRuleCall_0_0; }
+
+		//correctOption="correct"?
+		public Assignment getCorrectOptionAssignment_1() { return cCorrectOptionAssignment_1; }
+
+		//"correct"
+		public Keyword getCorrectOptionCorrectKeyword_1_0() { return cCorrectOptionCorrectKeyword_1_0; }
+	}
+
 	public class CMapElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CMap");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1171,6 +1289,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final EquationElements pEquation;
 	private final EqSymbolElements pEqSymbol;
 	private final RefToContextElements pRefToContext;
+	private final MultiChoiceElements pMultiChoice;
+	private final OptionElements pOption;
 	private final CMapElements pCMap;
 	private final TerminalRule tBOOL;
 	
@@ -1205,6 +1325,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEquation = new EquationElements();
 		this.pEqSymbol = new EqSymbolElements();
 		this.pRefToContext = new RefToContextElements();
+		this.pMultiChoice = new MultiChoiceElements();
+		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
 		this.tBOOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOL");
 	}
@@ -1269,7 +1391,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//NotesElement:
 	//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext;
+	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice;
 	public NotesElementElements getNotesElementAccess() {
 		return pNotesElement;
 	}
@@ -1459,6 +1581,27 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getRefToContextRule() {
 		return getRefToContextAccess().getRule();
+	}
+
+	//MultiChoice:
+	//	"@multi_choice" question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}" ("@explanation"
+	//	explanation=STRING)? "}";
+	public MultiChoiceElements getMultiChoiceAccess() {
+		return pMultiChoice;
+	}
+	
+	public ParserRule getMultiChoiceRule() {
+		return getMultiChoiceAccess().getRule();
+	}
+
+	//Option:
+	//	optionValue=STRING correctOption="correct"?;
+	public OptionElements getOptionAccess() {
+		return pOption;
+	}
+	
+	public ParserRule getOptionRule() {
+		return getOptionAccess().getRule();
 	}
 
 	//CMap:

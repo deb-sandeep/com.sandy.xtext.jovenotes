@@ -11,6 +11,7 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.Character#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Character#getCharacter <em>Character</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Character#getEstimate <em>Estimate</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Character#getCmap <em>Cmap</em>}</li>
@@ -23,6 +24,32 @@ package com.sandy.xtext.joveNotes;
  */
 public interface Character extends NotesElement
 {
+  /**
+   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hide From View</em>' attribute.
+   * @see #setHideFromView(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getCharacter_HideFromView()
+   * @model
+   * @generated
+   */
+  String getHideFromView();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Character#getHideFromView <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Hide From View</em>' attribute.
+   * @see #getHideFromView()
+   * @generated
+   */
+  void setHideFromView(String value);
+
   /**
    * Returns the value of the '<em><b>Character</b></em>' attribute.
    * <!-- begin-user-doc -->

@@ -17,7 +17,9 @@ import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
+import com.sandy.xtext.joveNotes.MultiChoice;
 import com.sandy.xtext.joveNotes.NotesElement;
+import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
@@ -260,6 +262,21 @@ public class JoveNotesSwitch<T> extends Switch<T>
         RefToContext refToContext = (RefToContext)theEObject;
         T result = caseRefToContext(refToContext);
         if (result == null) result = caseNotesElement(refToContext);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.MULTI_CHOICE:
+      {
+        MultiChoice multiChoice = (MultiChoice)theEObject;
+        T result = caseMultiChoice(multiChoice);
+        if (result == null) result = caseNotesElement(multiChoice);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.OPTION:
+      {
+        Option option = (Option)theEObject;
+        T result = caseOption(option);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -622,6 +639,38 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRefToContext(RefToContext object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multi Choice</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multi Choice</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiChoice(MultiChoice object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseOption(Option object)
   {
     return null;
   }

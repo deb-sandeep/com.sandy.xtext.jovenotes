@@ -36,7 +36,8 @@ NotesElement:
     Spellbee       |
     ImageLabel     |
     Equation       |
-    RefToContext   
+    RefToContext   |
+    MultiChoice
 ;
 
 WordMeaning:
@@ -149,6 +150,20 @@ RefToContext:
         'context' context = STRING
         ( questions += QuestionAnswer )+
     '}'
+;
+
+MultiChoice:
+    '@multi_choice' question = STRING '{'
+        '@options' '{'
+            ( options += Option )( ',' options += Option )*
+        '}'
+        ( '@explanation' explanation = STRING )?
+    '}'
+;
+
+Option:
+    optionValue = STRING
+    (correctOption = 'correct' )?
 ;
 
 CMap: 'cmap' '{' content = STRING '}' ;

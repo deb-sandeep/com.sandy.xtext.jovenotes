@@ -20,6 +20,8 @@ import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
+import com.sandy.xtext.joveNotes.MultiChoice;
+import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
@@ -93,6 +95,12 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				return; 
 			case JoveNotesPackage.MATCHING:
 				sequence_Matching(context, (Matching) semanticObject); 
+				return; 
+			case JoveNotesPackage.MULTI_CHOICE:
+				sequence_MultiChoice(context, (MultiChoice) semanticObject); 
+				return; 
+			case JoveNotesPackage.OPTION:
+				sequence_Option(context, (Option) semanticObject); 
 				return; 
 			case JoveNotesPackage.PROCESSING_HINTS:
 				sequence_ProcessingHints(context, (ProcessingHints) semanticObject); 
@@ -290,6 +298,24 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     (hideFromView='hide'? skipReverseQuestion='skip_reverse_question'? question=STRING? pairs+=MatchPair+)
 	 */
 	protected void sequence_Matching(EObject context, Matching semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (question=STRING options+=Option options+=Option* explanation=STRING?)
+	 */
+	protected void sequence_MultiChoice(EObject context, MultiChoice semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (optionValue=STRING correctOption='correct'?)
+	 */
+	protected void sequence_Option(EObject context, Option semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
