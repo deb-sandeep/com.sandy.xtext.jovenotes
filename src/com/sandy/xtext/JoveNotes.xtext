@@ -157,6 +157,8 @@ MultiChoice:
         '@options' '{'
             ( options += Option )( ',' options += Option )*
         '}'
+        ( '@numOptionsToShow' numOptionsToShow = INT )?
+        ( '@numOptionsPerRow' numOptionsPerRow = INT )?
         ( '@explanation' explanation = STRING )?
     '}'
 ;

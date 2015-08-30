@@ -1169,13 +1169,31 @@ public interface JoveNotesPackage extends EPackage
   int MULTI_CHOICE__OPTIONS = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Num Options To Show</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTI_CHOICE__NUM_OPTIONS_TO_SHOW = NOTES_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Num Options Per Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MULTI_CHOICE__NUM_OPTIONS_PER_ROW = NOTES_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Explanation</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__EXPLANATION = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int MULTI_CHOICE__EXPLANATION = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Multi Choice</em>' class.
@@ -1184,7 +1202,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int MULTI_CHOICE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.
@@ -2143,6 +2161,28 @@ public interface JoveNotesPackage extends EPackage
   EReference getMultiChoice_Options();
 
   /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsToShow <em>Num Options To Show</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Num Options To Show</em>'.
+   * @see com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsToShow()
+   * @see #getMultiChoice()
+   * @generated
+   */
+  EAttribute getMultiChoice_NumOptionsToShow();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsPerRow <em>Num Options Per Row</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Num Options Per Row</em>'.
+   * @see com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsPerRow()
+   * @see #getMultiChoice()
+   * @generated
+   */
+  EAttribute getMultiChoice_NumOptionsPerRow();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MultiChoice#getExplanation <em>Explanation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2938,6 +2978,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EReference MULTI_CHOICE__OPTIONS = eINSTANCE.getMultiChoice_Options();
+
+    /**
+     * The meta object literal for the '<em><b>Num Options To Show</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULTI_CHOICE__NUM_OPTIONS_TO_SHOW = eINSTANCE.getMultiChoice_NumOptionsToShow();
+
+    /**
+     * The meta object literal for the '<em><b>Num Options Per Row</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULTI_CHOICE__NUM_OPTIONS_PER_ROW = eINSTANCE.getMultiChoice_NumOptionsPerRow();
 
     /**
      * The meta object literal for the '<em><b>Explanation</b></em>' attribute feature.

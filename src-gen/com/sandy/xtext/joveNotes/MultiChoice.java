@@ -14,6 +14,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getOptions <em>Options</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsToShow <em>Num Options To Show</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getExplanation <em>Explanation</em>}</li>
  * </ul>
  * </p>
@@ -65,6 +67,58 @@ public interface MultiChoice extends NotesElement
    * @generated
    */
   EList<Option> getOptions();
+
+  /**
+   * Returns the value of the '<em><b>Num Options To Show</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Num Options To Show</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Num Options To Show</em>' attribute.
+   * @see #setNumOptionsToShow(int)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMultiChoice_NumOptionsToShow()
+   * @model
+   * @generated
+   */
+  int getNumOptionsToShow();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsToShow <em>Num Options To Show</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Num Options To Show</em>' attribute.
+   * @see #getNumOptionsToShow()
+   * @generated
+   */
+  void setNumOptionsToShow(int value);
+
+  /**
+   * Returns the value of the '<em><b>Num Options Per Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Num Options Per Row</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Num Options Per Row</em>' attribute.
+   * @see #setNumOptionsPerRow(int)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMultiChoice_NumOptionsPerRow()
+   * @model
+   * @generated
+   */
+  int getNumOptionsPerRow();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsPerRow <em>Num Options Per Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Num Options Per Row</em>' attribute.
+   * @see #getNumOptionsPerRow()
+   * @generated
+   */
+  void setNumOptionsPerRow(int value);
 
   /**
    * Returns the value of the '<em><b>Explanation</b></em>' attribute.

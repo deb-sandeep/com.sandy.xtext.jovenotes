@@ -1116,9 +1116,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMultiChoice_Explanation()
+  public EAttribute getMultiChoice_NumOptionsToShow()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiChoice_NumOptionsPerRow()
+  {
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiChoice_Explanation()
+  {
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1306,6 +1326,8 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     multiChoiceEClass = createEClass(MULTI_CHOICE);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__QUESTION);
     createEReference(multiChoiceEClass, MULTI_CHOICE__OPTIONS);
+    createEAttribute(multiChoiceEClass, MULTI_CHOICE__NUM_OPTIONS_TO_SHOW);
+    createEAttribute(multiChoiceEClass, MULTI_CHOICE__NUM_OPTIONS_PER_ROW);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__EXPLANATION);
 
     optionEClass = createEClass(OPTION);
@@ -1468,6 +1490,8 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEClass(multiChoiceEClass, MultiChoice.class, "MultiChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultiChoice_Question(), ecorePackage.getEString(), "question", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMultiChoice_Options(), this.getOption(), null, "options", null, 0, -1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiChoice_NumOptionsToShow(), ecorePackage.getEInt(), "numOptionsToShow", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiChoice_NumOptionsPerRow(), ecorePackage.getEInt(), "numOptionsPerRow", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiChoice_Explanation(), ecorePackage.getEString(), "explanation", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

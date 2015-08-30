@@ -1139,18 +1139,28 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cOptionsOptionParserRuleCall_7_1_0 = (RuleCall)cOptionsAssignment_7_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cExplanationKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cExplanationAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cExplanationSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cExplanationAssignment_9_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cNumOptionsToShowKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cNumOptionsToShowAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cNumOptionsToShowINTTerminalRuleCall_9_1_0 = (RuleCall)cNumOptionsToShowAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cNumOptionsPerRowKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cNumOptionsPerRowAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cNumOptionsPerRowINTTerminalRuleCall_10_1_0 = (RuleCall)cNumOptionsPerRowAssignment_10_1.eContents().get(0);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cExplanationKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Assignment cExplanationAssignment_11_1 = (Assignment)cGroup_11.eContents().get(1);
+		private final RuleCall cExplanationSTRINGTerminalRuleCall_11_1_0 = (RuleCall)cExplanationAssignment_11_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//MultiChoice:
 		//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
-		//	("@explanation" explanation=STRING)? "}";
+		//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+		//	explanation=STRING)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
 		//"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
-		//("@explanation" explanation=STRING)? "}"
+		//("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+		//explanation=STRING)? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@multi_choice"
@@ -1198,20 +1208,44 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 
-		//("@explanation" explanation=STRING)?
+		//("@numOptionsToShow" numOptionsToShow=INT)?
 		public Group getGroup_9() { return cGroup_9; }
 
+		//"@numOptionsToShow"
+		public Keyword getNumOptionsToShowKeyword_9_0() { return cNumOptionsToShowKeyword_9_0; }
+
+		//numOptionsToShow=INT
+		public Assignment getNumOptionsToShowAssignment_9_1() { return cNumOptionsToShowAssignment_9_1; }
+
+		//INT
+		public RuleCall getNumOptionsToShowINTTerminalRuleCall_9_1_0() { return cNumOptionsToShowINTTerminalRuleCall_9_1_0; }
+
+		//("@numOptionsPerRow" numOptionsPerRow=INT)?
+		public Group getGroup_10() { return cGroup_10; }
+
+		//"@numOptionsPerRow"
+		public Keyword getNumOptionsPerRowKeyword_10_0() { return cNumOptionsPerRowKeyword_10_0; }
+
+		//numOptionsPerRow=INT
+		public Assignment getNumOptionsPerRowAssignment_10_1() { return cNumOptionsPerRowAssignment_10_1; }
+
+		//INT
+		public RuleCall getNumOptionsPerRowINTTerminalRuleCall_10_1_0() { return cNumOptionsPerRowINTTerminalRuleCall_10_1_0; }
+
+		//("@explanation" explanation=STRING)?
+		public Group getGroup_11() { return cGroup_11; }
+
 		//"@explanation"
-		public Keyword getExplanationKeyword_9_0() { return cExplanationKeyword_9_0; }
+		public Keyword getExplanationKeyword_11_0() { return cExplanationKeyword_11_0; }
 
 		//explanation=STRING
-		public Assignment getExplanationAssignment_9_1() { return cExplanationAssignment_9_1; }
+		public Assignment getExplanationAssignment_11_1() { return cExplanationAssignment_11_1; }
 
 		//STRING
-		public RuleCall getExplanationSTRINGTerminalRuleCall_9_1_0() { return cExplanationSTRINGTerminalRuleCall_9_1_0; }
+		public RuleCall getExplanationSTRINGTerminalRuleCall_11_1_0() { return cExplanationSTRINGTerminalRuleCall_11_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class OptionElements extends AbstractParserRuleElementFinder {
@@ -1593,7 +1627,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//MultiChoice:
 	//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
-	//	("@explanation" explanation=STRING)? "}";
+	//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+	//	explanation=STRING)? "}";
 	public MultiChoiceElements getMultiChoiceAccess() {
 		return pMultiChoice;
 	}

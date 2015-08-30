@@ -2232,15 +2232,59 @@ ruleMultiChoice returns [EObject current=null]
     {
     	newLeafNode(otherlv_9, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_8());
     }
-(	otherlv_10='@explanation' 
+(	otherlv_10='@numOptionsToShow' 
     {
-    	newLeafNode(otherlv_10, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_9_0());
+    	newLeafNode(otherlv_10, grammarAccess.getMultiChoiceAccess().getNumOptionsToShowKeyword_9_0());
     }
 (
 (
-		lv_explanation_11_0=RULE_STRING
+		lv_numOptionsToShow_11_0=RULE_INT
 		{
-			newLeafNode(lv_explanation_11_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_9_1_0()); 
+			newLeafNode(lv_numOptionsToShow_11_0, grammarAccess.getMultiChoiceAccess().getNumOptionsToShowINTTerminalRuleCall_9_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiChoiceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"numOptionsToShow",
+        		lv_numOptionsToShow_11_0, 
+        		"INT");
+	    }
+
+)
+))?(	otherlv_12='@numOptionsPerRow' 
+    {
+    	newLeafNode(otherlv_12, grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowKeyword_10_0());
+    }
+(
+(
+		lv_numOptionsPerRow_13_0=RULE_INT
+		{
+			newLeafNode(lv_numOptionsPerRow_13_0, grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowINTTerminalRuleCall_10_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMultiChoiceRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"numOptionsPerRow",
+        		lv_numOptionsPerRow_13_0, 
+        		"INT");
+	    }
+
+)
+))?(	otherlv_14='@explanation' 
+    {
+    	newLeafNode(otherlv_14, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_11_0());
+    }
+(
+(
+		lv_explanation_15_0=RULE_STRING
+		{
+			newLeafNode(lv_explanation_15_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_11_1_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2249,14 +2293,14 @@ ruleMultiChoice returns [EObject current=null]
        		setWithLastConsumed(
        			$current, 
        			"explanation",
-        		lv_explanation_11_0, 
+        		lv_explanation_15_0, 
         		"STRING");
 	    }
 
 )
-))?	otherlv_12='}' 
+))?	otherlv_16='}' 
     {
-    	newLeafNode(otherlv_12, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_10());
+    	newLeafNode(otherlv_16, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_12());
     }
 )
 ;

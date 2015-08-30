@@ -30,6 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getOptions <em>Options</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getNumOptionsToShow <em>Num Options To Show</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getExplanation <em>Explanation</em>}</li>
  * </ul>
  * </p>
@@ -67,6 +69,46 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
    * @ordered
    */
   protected EList<Option> options;
+
+  /**
+   * The default value of the '{@link #getNumOptionsToShow() <em>Num Options To Show</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumOptionsToShow()
+   * @generated
+   * @ordered
+   */
+  protected static final int NUM_OPTIONS_TO_SHOW_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getNumOptionsToShow() <em>Num Options To Show</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumOptionsToShow()
+   * @generated
+   * @ordered
+   */
+  protected int numOptionsToShow = NUM_OPTIONS_TO_SHOW_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getNumOptionsPerRow() <em>Num Options Per Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumOptionsPerRow()
+   * @generated
+   * @ordered
+   */
+  protected static final int NUM_OPTIONS_PER_ROW_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getNumOptionsPerRow() <em>Num Options Per Row</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getNumOptionsPerRow()
+   * @generated
+   * @ordered
+   */
+  protected int numOptionsPerRow = NUM_OPTIONS_PER_ROW_EDEFAULT;
 
   /**
    * The default value of the '{@link #getExplanation() <em>Explanation</em>}' attribute.
@@ -151,6 +193,52 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
    * <!-- end-user-doc -->
    * @generated
    */
+  public int getNumOptionsToShow()
+  {
+    return numOptionsToShow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNumOptionsToShow(int newNumOptionsToShow)
+  {
+    int oldNumOptionsToShow = numOptionsToShow;
+    numOptionsToShow = newNumOptionsToShow;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_TO_SHOW, oldNumOptionsToShow, numOptionsToShow));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public int getNumOptionsPerRow()
+  {
+    return numOptionsPerRow;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setNumOptionsPerRow(int newNumOptionsPerRow)
+  {
+    int oldNumOptionsPerRow = numOptionsPerRow;
+    numOptionsPerRow = newNumOptionsPerRow;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_PER_ROW, oldNumOptionsPerRow, numOptionsPerRow));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getExplanation()
   {
     return explanation;
@@ -199,6 +287,10 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
         return getQuestion();
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
         return getOptions();
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_TO_SHOW:
+        return getNumOptionsToShow();
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_PER_ROW:
+        return getNumOptionsPerRow();
       case JoveNotesPackage.MULTI_CHOICE__EXPLANATION:
         return getExplanation();
     }
@@ -223,6 +315,12 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
         getOptions().clear();
         getOptions().addAll((Collection<? extends Option>)newValue);
         return;
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_TO_SHOW:
+        setNumOptionsToShow((Integer)newValue);
+        return;
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_PER_ROW:
+        setNumOptionsPerRow((Integer)newValue);
+        return;
       case JoveNotesPackage.MULTI_CHOICE__EXPLANATION:
         setExplanation((String)newValue);
         return;
@@ -246,6 +344,12 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
         getOptions().clear();
         return;
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_TO_SHOW:
+        setNumOptionsToShow(NUM_OPTIONS_TO_SHOW_EDEFAULT);
+        return;
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_PER_ROW:
+        setNumOptionsPerRow(NUM_OPTIONS_PER_ROW_EDEFAULT);
+        return;
       case JoveNotesPackage.MULTI_CHOICE__EXPLANATION:
         setExplanation(EXPLANATION_EDEFAULT);
         return;
@@ -267,6 +371,10 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
         return options != null && !options.isEmpty();
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_TO_SHOW:
+        return numOptionsToShow != NUM_OPTIONS_TO_SHOW_EDEFAULT;
+      case JoveNotesPackage.MULTI_CHOICE__NUM_OPTIONS_PER_ROW:
+        return numOptionsPerRow != NUM_OPTIONS_PER_ROW_EDEFAULT;
       case JoveNotesPackage.MULTI_CHOICE__EXPLANATION:
         return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
     }
@@ -286,6 +394,10 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (question: ");
     result.append(question);
+    result.append(", numOptionsToShow: ");
+    result.append(numOptionsToShow);
+    result.append(", numOptionsPerRow: ");
+    result.append(numOptionsPerRow);
     result.append(", explanation: ");
     result.append(explanation);
     result.append(')');

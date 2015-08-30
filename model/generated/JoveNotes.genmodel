@@ -112,6 +112,8 @@
     <genClasses ecoreClass="JoveNotes.ecore#//MultiChoice">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/question"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//MultiChoice/options"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsToShow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsPerRow"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/explanation"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Option">
