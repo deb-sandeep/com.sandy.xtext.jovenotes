@@ -58,10 +58,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Matching/skipReverseQuestion"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Matching/question"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Matching/pairs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Matching/mcqConfig"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//MatchPair">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchPair/matchQuestion"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchPair/matchAnswer"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//MatchMCQConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/forwardCaption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/reverseCaption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/numOptionsToShow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/numOptionsPerRow"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Event">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Event/event"/>

@@ -85,10 +85,20 @@ Matching:
              (skipReverseQuestion = 'skip_reverse_question')?
              (question = STRING)? '{'
         ( pairs += MatchPair )+
+        ( mcqConfig = MatchMCQConfig )?
     '}'
 ;
 
 MatchPair: matchQuestion = STRING '=' matchAnswer = STRING ;
+
+MatchMCQConfig:
+    '@mcq_config' '{'
+          '@forwardCaption'   forwardCaption   = STRING
+        ( '@reverseCaption'   reverseCaption   = STRING )?
+        ( '@numOptionsToShow' numOptionsToShow = INT    )?
+        ( '@numOptionsPerRow' numOptionsPerRow = INT    )?
+    '}'
+;
 
 Event: '@event' (hideFromView = 'hide')?
                 event = STRING time = STRING

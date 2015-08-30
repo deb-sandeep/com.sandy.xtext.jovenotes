@@ -18,6 +18,7 @@ import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 import com.sandy.xtext.joveNotes.MultiChoice;
@@ -89,6 +90,9 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				return; 
 			case JoveNotesPackage.JOVE_NOTES:
 				sequence_JoveNotes(context, (JoveNotes) semanticObject); 
+				return; 
+			case JoveNotesPackage.MATCH_MCQ_CONFIG:
+				sequence_MatchMCQConfig(context, (MatchMCQConfig) semanticObject); 
 				return; 
 			case JoveNotesPackage.MATCH_PAIR:
 				sequence_MatchPair(context, (MatchPair) semanticObject); 
@@ -276,6 +280,15 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
+	 *     (forwardCaption=STRING reverseCaption=STRING? numOptionsToShow=INT? numOptionsPerRow=INT?)
+	 */
+	protected void sequence_MatchMCQConfig(EObject context, MatchMCQConfig semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (matchQuestion=STRING matchAnswer=STRING)
 	 */
 	protected void sequence_MatchPair(EObject context, MatchPair semanticObject) {
@@ -295,7 +308,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? skipReverseQuestion='skip_reverse_question'? question=STRING? pairs+=MatchPair+)
+	 *     (hideFromView='hide'? skipReverseQuestion='skip_reverse_question'? question=STRING? pairs+=MatchPair+ mcqConfig=MatchMCQConfig?)
 	 */
 	protected void sequence_Matching(EObject context, Matching semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

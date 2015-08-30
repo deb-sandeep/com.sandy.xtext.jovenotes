@@ -590,13 +590,22 @@ public interface JoveNotesPackage extends EPackage
   int MATCHING__PAIRS = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
+   * The feature id for the '<em><b>Mcq Config</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCHING__MCQ_CONFIG = NOTES_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Matching</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl <em>Match Pair</em>}' class.
@@ -636,6 +645,61 @@ public interface JoveNotesPackage extends EPackage
   int MATCH_PAIR_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl <em>Match MCQ Config</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getMatchMCQConfig()
+   * @generated
+   */
+  int MATCH_MCQ_CONFIG = 12;
+
+  /**
+   * The feature id for the '<em><b>Forward Caption</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCH_MCQ_CONFIG__FORWARD_CAPTION = 0;
+
+  /**
+   * The feature id for the '<em><b>Reverse Caption</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCH_MCQ_CONFIG__REVERSE_CAPTION = 1;
+
+  /**
+   * The feature id for the '<em><b>Num Options To Show</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCH_MCQ_CONFIG__NUM_OPTIONS_TO_SHOW = 2;
+
+  /**
+   * The feature id for the '<em><b>Num Options Per Row</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCH_MCQ_CONFIG__NUM_OPTIONS_PER_ROW = 3;
+
+  /**
+   * The number of structural features of the '<em>Match MCQ Config</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MATCH_MCQ_CONFIG_FEATURE_COUNT = 4;
+
+  /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.EventImpl <em>Event</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -643,7 +707,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvent()
    * @generated
    */
-  int EVENT = 12;
+  int EVENT = 13;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -689,7 +753,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getTrueFalse()
    * @generated
    */
-  int TRUE_FALSE = 13;
+  int TRUE_FALSE = 14;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -744,7 +808,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getChemEquation()
    * @generated
    */
-  int CHEM_EQUATION = 14;
+  int CHEM_EQUATION = 15;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -808,7 +872,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getChemCompound()
    * @generated
    */
-  int CHEM_COMPOUND = 15;
+  int CHEM_COMPOUND = 16;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -863,7 +927,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getSpellbee()
    * @generated
    */
-  int SPELLBEE = 16;
+  int SPELLBEE = 17;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -900,7 +964,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getImageLabel()
    * @generated
    */
-  int IMAGE_LABEL = 17;
+  int IMAGE_LABEL = 18;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -955,7 +1019,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getHotSpot()
    * @generated
    */
-  int HOT_SPOT = 18;
+  int HOT_SPOT = 19;
 
   /**
    * The feature id for the '<em><b>X</b></em>' attribute.
@@ -1001,7 +1065,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEquation()
    * @generated
    */
-  int EQUATION = 19;
+  int EQUATION = 20;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1056,7 +1120,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEqSymbol()
    * @generated
    */
-  int EQ_SYMBOL = 20;
+  int EQ_SYMBOL = 21;
 
   /**
    * The feature id for the '<em><b>Symbol</b></em>' attribute.
@@ -1093,7 +1157,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getRefToContext()
    * @generated
    */
-  int REF_TO_CONTEXT = 21;
+  int REF_TO_CONTEXT = 22;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1139,7 +1203,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getMultiChoice()
    * @generated
    */
-  int MULTI_CHOICE = 22;
+  int MULTI_CHOICE = 23;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1212,7 +1276,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getOption()
    * @generated
    */
-  int OPTION = 23;
+  int OPTION = 24;
 
   /**
    * The feature id for the '<em><b>Option Value</b></em>' attribute.
@@ -1249,7 +1313,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCMap()
    * @generated
    */
-  int CMAP = 24;
+  int CMAP = 25;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1711,6 +1775,17 @@ public interface JoveNotesPackage extends EPackage
   EReference getMatching_Pairs();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Matching#getMcqConfig <em>Mcq Config</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Mcq Config</em>'.
+   * @see com.sandy.xtext.joveNotes.Matching#getMcqConfig()
+   * @see #getMatching()
+   * @generated
+   */
+  EReference getMatching_McqConfig();
+
+  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.MatchPair <em>Match Pair</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1741,6 +1816,60 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EAttribute getMatchPair_MatchAnswer();
+
+  /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.MatchMCQConfig <em>Match MCQ Config</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Match MCQ Config</em>'.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig
+   * @generated
+   */
+  EClass getMatchMCQConfig();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getForwardCaption <em>Forward Caption</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Forward Caption</em>'.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig#getForwardCaption()
+   * @see #getMatchMCQConfig()
+   * @generated
+   */
+  EAttribute getMatchMCQConfig_ForwardCaption();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getReverseCaption <em>Reverse Caption</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Reverse Caption</em>'.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig#getReverseCaption()
+   * @see #getMatchMCQConfig()
+   * @generated
+   */
+  EAttribute getMatchMCQConfig_ReverseCaption();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsToShow <em>Num Options To Show</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Num Options To Show</em>'.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsToShow()
+   * @see #getMatchMCQConfig()
+   * @generated
+   */
+  EAttribute getMatchMCQConfig_NumOptionsToShow();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsPerRow <em>Num Options Per Row</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Num Options Per Row</em>'.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsPerRow()
+   * @see #getMatchMCQConfig()
+   * @generated
+   */
+  EAttribute getMatchMCQConfig_NumOptionsPerRow();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.Event <em>Event</em>}'.
@@ -2620,6 +2749,14 @@ public interface JoveNotesPackage extends EPackage
     EReference MATCHING__PAIRS = eINSTANCE.getMatching_Pairs();
 
     /**
+     * The meta object literal for the '<em><b>Mcq Config</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MATCHING__MCQ_CONFIG = eINSTANCE.getMatching_McqConfig();
+
+    /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl <em>Match Pair</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2644,6 +2781,48 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute MATCH_PAIR__MATCH_ANSWER = eINSTANCE.getMatchPair_MatchAnswer();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl <em>Match MCQ Config</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getMatchMCQConfig()
+     * @generated
+     */
+    EClass MATCH_MCQ_CONFIG = eINSTANCE.getMatchMCQConfig();
+
+    /**
+     * The meta object literal for the '<em><b>Forward Caption</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCH_MCQ_CONFIG__FORWARD_CAPTION = eINSTANCE.getMatchMCQConfig_ForwardCaption();
+
+    /**
+     * The meta object literal for the '<em><b>Reverse Caption</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCH_MCQ_CONFIG__REVERSE_CAPTION = eINSTANCE.getMatchMCQConfig_ReverseCaption();
+
+    /**
+     * The meta object literal for the '<em><b>Num Options To Show</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCH_MCQ_CONFIG__NUM_OPTIONS_TO_SHOW = eINSTANCE.getMatchMCQConfig_NumOptionsToShow();
+
+    /**
+     * The meta object literal for the '<em><b>Num Options Per Row</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCH_MCQ_CONFIG__NUM_OPTIONS_PER_ROW = eINSTANCE.getMatchMCQConfig_NumOptionsPerRow();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.EventImpl <em>Event</em>}' class.

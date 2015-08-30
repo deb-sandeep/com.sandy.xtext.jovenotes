@@ -16,6 +16,7 @@ import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesFactory;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 import com.sandy.xtext.joveNotes.MultiChoice;
@@ -101,6 +102,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.TEACHER_NOTE: return createTeacherNote();
       case JoveNotesPackage.MATCHING: return createMatching();
       case JoveNotesPackage.MATCH_PAIR: return createMatchPair();
+      case JoveNotesPackage.MATCH_MCQ_CONFIG: return createMatchMCQConfig();
       case JoveNotesPackage.EVENT: return createEvent();
       case JoveNotesPackage.TRUE_FALSE: return createTrueFalse();
       case JoveNotesPackage.CHEM_EQUATION: return createChemEquation();
@@ -249,6 +251,17 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     MatchPairImpl matchPair = new MatchPairImpl();
     return matchPair;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MatchMCQConfig createMatchMCQConfig()
+  {
+    MatchMCQConfigImpl matchMCQConfig = new MatchMCQConfigImpl();
+    return matchMCQConfig;
   }
 
   /**

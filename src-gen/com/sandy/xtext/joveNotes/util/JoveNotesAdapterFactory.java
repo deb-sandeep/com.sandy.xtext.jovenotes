@@ -15,6 +15,7 @@ import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 import com.sandy.xtext.joveNotes.MultiChoice;
@@ -157,6 +158,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseMatchPair(MatchPair object)
       {
         return createMatchPairAdapter();
+      }
+      @Override
+      public Adapter caseMatchMCQConfig(MatchMCQConfig object)
+      {
+        return createMatchMCQConfigAdapter();
       }
       @Override
       public Adapter caseEvent(Event object)
@@ -421,6 +427,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createMatchPairAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.MatchMCQConfig <em>Match MCQ Config</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.MatchMCQConfig
+   * @generated
+   */
+  public Adapter createMatchMCQConfigAdapter()
   {
     return null;
   }

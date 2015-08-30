@@ -131,6 +131,15 @@ public interface JoveNotesFactory extends EFactory
   MatchPair createMatchPair();
 
   /**
+   * Returns a new object of class '<em>Match MCQ Config</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Match MCQ Config</em>'.
+   * @generated
+   */
+  MatchMCQConfig createMatchMCQConfig();
+
+  /**
    * Returns a new object of class '<em>Event</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

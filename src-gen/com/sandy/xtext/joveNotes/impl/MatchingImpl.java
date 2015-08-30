@@ -3,6 +3,7 @@
 package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getSkipReverseQuestion <em>Skip Reverse Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getPairs <em>Pairs</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getMcqConfig <em>Mcq Config</em>}</li>
  * </ul>
  * </p>
  *
@@ -87,6 +89,16 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * @ordered
    */
   protected EList<MatchPair> pairs;
+
+  /**
+   * The cached value of the '{@link #getMcqConfig() <em>Mcq Config</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getMcqConfig()
+   * @generated
+   * @ordered
+   */
+  protected MatchMCQConfig mcqConfig;
 
   /**
    * <!-- begin-user-doc -->
@@ -174,6 +186,54 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  public MatchMCQConfig getMcqConfig()
+  {
+    return mcqConfig;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetMcqConfig(MatchMCQConfig newMcqConfig, NotificationChain msgs)
+  {
+    MatchMCQConfig oldMcqConfig = mcqConfig;
+    mcqConfig = newMcqConfig;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__MCQ_CONFIG, oldMcqConfig, newMcqConfig);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setMcqConfig(MatchMCQConfig newMcqConfig)
+  {
+    if (newMcqConfig != mcqConfig)
+    {
+      NotificationChain msgs = null;
+      if (mcqConfig != null)
+        msgs = ((InternalEObject)mcqConfig).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MATCHING__MCQ_CONFIG, null, msgs);
+      if (newMcqConfig != null)
+        msgs = ((InternalEObject)newMcqConfig).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MATCHING__MCQ_CONFIG, null, msgs);
+      msgs = basicSetMcqConfig(newMcqConfig, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__MCQ_CONFIG, newMcqConfig, newMcqConfig));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -181,6 +241,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
     {
       case JoveNotesPackage.MATCHING__PAIRS:
         return ((InternalEList<?>)getPairs()).basicRemove(otherEnd, msgs);
+      case JoveNotesPackage.MATCHING__MCQ_CONFIG:
+        return basicSetMcqConfig(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -201,6 +263,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
         return getQuestion();
       case JoveNotesPackage.MATCHING__PAIRS:
         return getPairs();
+      case JoveNotesPackage.MATCHING__MCQ_CONFIG:
+        return getMcqConfig();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -226,6 +290,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
         getPairs().clear();
         getPairs().addAll((Collection<? extends MatchPair>)newValue);
         return;
+      case JoveNotesPackage.MATCHING__MCQ_CONFIG:
+        setMcqConfig((MatchMCQConfig)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -249,6 +316,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
       case JoveNotesPackage.MATCHING__PAIRS:
         getPairs().clear();
         return;
+      case JoveNotesPackage.MATCHING__MCQ_CONFIG:
+        setMcqConfig((MatchMCQConfig)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -269,6 +339,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.MATCHING__PAIRS:
         return pairs != null && !pairs.isEmpty();
+      case JoveNotesPackage.MATCHING__MCQ_CONFIG:
+        return mcqConfig != null;
     }
     return super.eIsSet(featureID);
   }

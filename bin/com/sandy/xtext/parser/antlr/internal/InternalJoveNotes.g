@@ -1115,9 +1115,27 @@ ruleMatching returns [EObject current=null]
 	    }
 
 )
-)+	otherlv_6='}' 
+)+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMatchingAccess().getMcqConfigMatchMCQConfigParserRuleCall_6_0()); 
+	    }
+		lv_mcqConfig_6_0=ruleMatchMCQConfig		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getMatchingRule());
+	        }
+       		set(
+       			$current, 
+       			"mcqConfig",
+        		lv_mcqConfig_6_0, 
+        		"MatchMCQConfig");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?	otherlv_7='}' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_6());
+    	newLeafNode(otherlv_7, grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_7());
     }
 )
 ;
@@ -1181,6 +1199,127 @@ ruleMatchPair returns [EObject current=null]
 
 )
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleMatchMCQConfig
+entryRuleMatchMCQConfig returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getMatchMCQConfigRule()); }
+	 iv_ruleMatchMCQConfig=ruleMatchMCQConfig 
+	 { $current=$iv_ruleMatchMCQConfig.current; } 
+	 EOF 
+;
+
+// Rule MatchMCQConfig
+ruleMatchMCQConfig returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='@mcq_config' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getMatchMCQConfigAccess().getMcq_configKeyword_0());
+    }
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getMatchMCQConfigAccess().getLeftCurlyBracketKeyword_1());
+    }
+	otherlv_2='@forwardCaption' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getMatchMCQConfigAccess().getForwardCaptionKeyword_2());
+    }
+(
+(
+		lv_forwardCaption_3_0=RULE_STRING
+		{
+			newLeafNode(lv_forwardCaption_3_0, grammarAccess.getMatchMCQConfigAccess().getForwardCaptionSTRINGTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMatchMCQConfigRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"forwardCaption",
+        		lv_forwardCaption_3_0, 
+        		"STRING");
+	    }
+
+)
+)(	otherlv_4='@reverseCaption' 
+    {
+    	newLeafNode(otherlv_4, grammarAccess.getMatchMCQConfigAccess().getReverseCaptionKeyword_4_0());
+    }
+(
+(
+		lv_reverseCaption_5_0=RULE_STRING
+		{
+			newLeafNode(lv_reverseCaption_5_0, grammarAccess.getMatchMCQConfigAccess().getReverseCaptionSTRINGTerminalRuleCall_4_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMatchMCQConfigRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"reverseCaption",
+        		lv_reverseCaption_5_0, 
+        		"STRING");
+	    }
+
+)
+))?(	otherlv_6='@numOptionsToShow' 
+    {
+    	newLeafNode(otherlv_6, grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowKeyword_5_0());
+    }
+(
+(
+		lv_numOptionsToShow_7_0=RULE_INT
+		{
+			newLeafNode(lv_numOptionsToShow_7_0, grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowINTTerminalRuleCall_5_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMatchMCQConfigRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"numOptionsToShow",
+        		lv_numOptionsToShow_7_0, 
+        		"INT");
+	    }
+
+)
+))?(	otherlv_8='@numOptionsPerRow' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowKeyword_6_0());
+    }
+(
+(
+		lv_numOptionsPerRow_9_0=RULE_INT
+		{
+			newLeafNode(lv_numOptionsPerRow_9_0, grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowINTTerminalRuleCall_6_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMatchMCQConfigRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"numOptionsPerRow",
+        		lv_numOptionsPerRow_9_0, 
+        		"INT");
+	    }
+
+)
+))?	otherlv_10='}' 
+    {
+    	newLeafNode(otherlv_10, grammarAccess.getMatchMCQConfigAccess().getRightCurlyBracketKeyword_7());
+    }
+)
 ;
 
 

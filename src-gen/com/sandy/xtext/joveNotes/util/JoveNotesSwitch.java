@@ -15,6 +15,7 @@ import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 import com.sandy.xtext.joveNotes.MultiChoice;
@@ -184,6 +185,13 @@ public class JoveNotesSwitch<T> extends Switch<T>
       {
         MatchPair matchPair = (MatchPair)theEObject;
         T result = caseMatchPair(matchPair);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.MATCH_MCQ_CONFIG:
+      {
+        MatchMCQConfig matchMCQConfig = (MatchMCQConfig)theEObject;
+        T result = caseMatchMCQConfig(matchMCQConfig);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -479,6 +487,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMatchPair(MatchPair object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Match MCQ Config</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Match MCQ Config</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMatchMCQConfig(MatchMCQConfig object)
   {
     return null;
   }

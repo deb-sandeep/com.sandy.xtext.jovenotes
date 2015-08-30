@@ -15,6 +15,7 @@ import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
 import com.sandy.xtext.joveNotes.JoveNotesFactory;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
 import com.sandy.xtext.joveNotes.MultiChoice;
@@ -126,6 +127,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * @generated
    */
   private EClass matchPairEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass matchMCQConfigEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -696,6 +704,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMatching_McqConfig()
+  {
+    return (EReference)matchingEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getMatchPair()
   {
     return matchPairEClass;
@@ -719,6 +737,56 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
   public EAttribute getMatchPair_MatchAnswer()
   {
     return (EAttribute)matchPairEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMatchMCQConfig()
+  {
+    return matchMCQConfigEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMatchMCQConfig_ForwardCaption()
+  {
+    return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMatchMCQConfig_ReverseCaption()
+  {
+    return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMatchMCQConfig_NumOptionsToShow()
+  {
+    return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMatchMCQConfig_NumOptionsPerRow()
+  {
+    return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1272,10 +1340,17 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(matchingEClass, MATCHING__SKIP_REVERSE_QUESTION);
     createEAttribute(matchingEClass, MATCHING__QUESTION);
     createEReference(matchingEClass, MATCHING__PAIRS);
+    createEReference(matchingEClass, MATCHING__MCQ_CONFIG);
 
     matchPairEClass = createEClass(MATCH_PAIR);
     createEAttribute(matchPairEClass, MATCH_PAIR__MATCH_QUESTION);
     createEAttribute(matchPairEClass, MATCH_PAIR__MATCH_ANSWER);
+
+    matchMCQConfigEClass = createEClass(MATCH_MCQ_CONFIG);
+    createEAttribute(matchMCQConfigEClass, MATCH_MCQ_CONFIG__FORWARD_CAPTION);
+    createEAttribute(matchMCQConfigEClass, MATCH_MCQ_CONFIG__REVERSE_CAPTION);
+    createEAttribute(matchMCQConfigEClass, MATCH_MCQ_CONFIG__NUM_OPTIONS_TO_SHOW);
+    createEAttribute(matchMCQConfigEClass, MATCH_MCQ_CONFIG__NUM_OPTIONS_PER_ROW);
 
     eventEClass = createEClass(EVENT);
     createEAttribute(eventEClass, EVENT__EVENT);
@@ -1436,10 +1511,17 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getMatching_SkipReverseQuestion(), ecorePackage.getEString(), "skipReverseQuestion", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMatching_Question(), ecorePackage.getEString(), "question", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMatching_Pairs(), this.getMatchPair(), null, "pairs", null, 0, -1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMatching_McqConfig(), this.getMatchMCQConfig(), null, "mcqConfig", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(matchPairEClass, MatchPair.class, "MatchPair", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMatchPair_MatchQuestion(), ecorePackage.getEString(), "matchQuestion", null, 0, 1, MatchPair.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMatchPair_MatchAnswer(), ecorePackage.getEString(), "matchAnswer", null, 0, 1, MatchPair.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(matchMCQConfigEClass, MatchMCQConfig.class, "MatchMCQConfig", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getMatchMCQConfig_ForwardCaption(), ecorePackage.getEString(), "forwardCaption", null, 0, 1, MatchMCQConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMatchMCQConfig_ReverseCaption(), ecorePackage.getEString(), "reverseCaption", null, 0, 1, MatchMCQConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMatchMCQConfig_NumOptionsToShow(), ecorePackage.getEInt(), "numOptionsToShow", null, 0, 1, MatchMCQConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMatchMCQConfig_NumOptionsPerRow(), ecorePackage.getEInt(), "numOptionsPerRow", null, 0, 1, MatchMCQConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getEvent_Event(), ecorePackage.getEString(), "event", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

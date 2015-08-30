@@ -519,13 +519,17 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cPairsAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cPairsMatchPairParserRuleCall_5_0 = (RuleCall)cPairsAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cMcqConfigAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cMcqConfigMatchMCQConfigParserRuleCall_6_0 = (RuleCall)cMcqConfigAssignment_6.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Matching:
-		//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
+		//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+		//	mcqConfig=MatchMCQConfig? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}"
+		//"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+		//mcqConfig=MatchMCQConfig? "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@match"
@@ -558,8 +562,14 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//MatchPair
 		public RuleCall getPairsMatchPairParserRuleCall_5_0() { return cPairsMatchPairParserRuleCall_5_0; }
 
+		//mcqConfig=MatchMCQConfig?
+		public Assignment getMcqConfigAssignment_6() { return cMcqConfigAssignment_6; }
+
+		//MatchMCQConfig
+		public RuleCall getMcqConfigMatchMCQConfigParserRuleCall_6_0() { return cMcqConfigMatchMCQConfigParserRuleCall_6_0; }
+
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class MatchPairElements extends AbstractParserRuleElementFinder {
@@ -592,6 +602,92 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getMatchAnswerSTRINGTerminalRuleCall_2_0() { return cMatchAnswerSTRINGTerminalRuleCall_2_0; }
+	}
+
+	public class MatchMCQConfigElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MatchMCQConfig");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cMcq_configKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cForwardCaptionKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cForwardCaptionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cForwardCaptionSTRINGTerminalRuleCall_3_0 = (RuleCall)cForwardCaptionAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cReverseCaptionKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cReverseCaptionAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cReverseCaptionSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cReverseCaptionAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cNumOptionsToShowKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cNumOptionsToShowAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cNumOptionsToShowINTTerminalRuleCall_5_1_0 = (RuleCall)cNumOptionsToShowAssignment_5_1.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cNumOptionsPerRowKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Assignment cNumOptionsPerRowAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
+		private final RuleCall cNumOptionsPerRowINTTerminalRuleCall_6_1_0 = (RuleCall)cNumOptionsPerRowAssignment_6_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//MatchMCQConfig:
+		//	"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+		//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+		//("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}"
+		public Group getGroup() { return cGroup; }
+
+		//"@mcq_config"
+		public Keyword getMcq_configKeyword_0() { return cMcq_configKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//"@forwardCaption"
+		public Keyword getForwardCaptionKeyword_2() { return cForwardCaptionKeyword_2; }
+
+		//forwardCaption=STRING
+		public Assignment getForwardCaptionAssignment_3() { return cForwardCaptionAssignment_3; }
+
+		//STRING
+		public RuleCall getForwardCaptionSTRINGTerminalRuleCall_3_0() { return cForwardCaptionSTRINGTerminalRuleCall_3_0; }
+
+		//("@reverseCaption" reverseCaption=STRING)?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"@reverseCaption"
+		public Keyword getReverseCaptionKeyword_4_0() { return cReverseCaptionKeyword_4_0; }
+
+		//reverseCaption=STRING
+		public Assignment getReverseCaptionAssignment_4_1() { return cReverseCaptionAssignment_4_1; }
+
+		//STRING
+		public RuleCall getReverseCaptionSTRINGTerminalRuleCall_4_1_0() { return cReverseCaptionSTRINGTerminalRuleCall_4_1_0; }
+
+		//("@numOptionsToShow" numOptionsToShow=INT)?
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"@numOptionsToShow"
+		public Keyword getNumOptionsToShowKeyword_5_0() { return cNumOptionsToShowKeyword_5_0; }
+
+		//numOptionsToShow=INT
+		public Assignment getNumOptionsToShowAssignment_5_1() { return cNumOptionsToShowAssignment_5_1; }
+
+		//INT
+		public RuleCall getNumOptionsToShowINTTerminalRuleCall_5_1_0() { return cNumOptionsToShowINTTerminalRuleCall_5_1_0; }
+
+		//("@numOptionsPerRow" numOptionsPerRow=INT)?
+		public Group getGroup_6() { return cGroup_6; }
+
+		//"@numOptionsPerRow"
+		public Keyword getNumOptionsPerRowKeyword_6_0() { return cNumOptionsPerRowKeyword_6_0; }
+
+		//numOptionsPerRow=INT
+		public Assignment getNumOptionsPerRowAssignment_6_1() { return cNumOptionsPerRowAssignment_6_1; }
+
+		//INT
+		public RuleCall getNumOptionsPerRowINTTerminalRuleCall_6_1_0() { return cNumOptionsPerRowINTTerminalRuleCall_6_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
@@ -1321,6 +1417,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final TeacherNoteElements pTeacherNote;
 	private final MatchingElements pMatching;
 	private final MatchPairElements pMatchPair;
+	private final MatchMCQConfigElements pMatchMCQConfig;
 	private final EventElements pEvent;
 	private final TrueFalseElements pTrueFalse;
 	private final ChemEquationElements pChemEquation;
@@ -1357,6 +1454,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pTeacherNote = new TeacherNoteElements();
 		this.pMatching = new MatchingElements();
 		this.pMatchPair = new MatchPairElements();
+		this.pMatchMCQConfig = new MatchMCQConfigElements();
 		this.pEvent = new EventElements();
 		this.pTrueFalse = new TrueFalseElements();
 		this.pChemEquation = new ChemEquationElements();
@@ -1503,7 +1601,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Matching:
-	//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+ "}";
+	//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+	//	mcqConfig=MatchMCQConfig? "}";
 	public MatchingElements getMatchingAccess() {
 		return pMatching;
 	}
@@ -1520,6 +1619,17 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMatchPairRule() {
 		return getMatchPairAccess().getRule();
+	}
+
+	//MatchMCQConfig:
+	//	"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+	//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}";
+	public MatchMCQConfigElements getMatchMCQConfigAccess() {
+		return pMatchMCQConfig;
+	}
+	
+	public ParserRule getMatchMCQConfigRule() {
+		return getMatchMCQConfigAccess().getRule();
 	}
 
 	//Event:
