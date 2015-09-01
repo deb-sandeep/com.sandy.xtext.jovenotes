@@ -19,9 +19,10 @@ ChapterDetails:
     'subject'       subjectName   = STRING
     'chapterNumber' chapterNumber = INT '.' subChapterNumber = INT
     'chapterName'   chapterName   = STRING
+    ( script = Script )?
 ;
 
-NotesElement:
+NotesElement: (
     WordMeaning    | 
     QuestionAnswer | 
     FIB            |
@@ -37,7 +38,8 @@ NotesElement:
     ImageLabel     |
     Equation       |
     RefToContext   |
-    MultiChoice
+    MultiChoice )
+    ( script = Script )?
 ;
 
 WordMeaning:
@@ -179,5 +181,11 @@ Option:
 ;
 
 CMap: 'cmap' '{' content = STRING '}' ;
+
+Script:
+    'script' '{'
+        scriptBody = STRING
+    '}'
+;
 
 terminal BOOL : 'true' | 'false' ;

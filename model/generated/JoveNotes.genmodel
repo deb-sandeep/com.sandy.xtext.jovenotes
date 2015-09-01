@@ -22,8 +22,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subChapterNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChapterDetails/script"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//NotesElement">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//NotesElement/script"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//NotesElement/hideFromView"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//WordMeaning">
@@ -129,6 +131,9 @@
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//CMap">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//CMap/content"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Script">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Script/scriptBody"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

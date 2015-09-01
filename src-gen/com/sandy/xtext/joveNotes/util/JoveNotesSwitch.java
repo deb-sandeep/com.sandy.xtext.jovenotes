@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
+import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -292,6 +293,13 @@ public class JoveNotesSwitch<T> extends Switch<T>
       {
         CMap cMap = (CMap)theEObject;
         T result = caseCMap(cMap);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.SCRIPT:
+      {
+        Script script = (Script)theEObject;
+        T result = caseScript(script);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -711,6 +719,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCMap(CMap object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Script</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Script</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseScript(Script object)
   {
     return null;
   }

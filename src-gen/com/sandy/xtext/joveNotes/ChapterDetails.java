@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterNumber <em>Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubChapterNumber <em>Sub Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterName <em>Chapter Name</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getScript <em>Script</em>}</li>
  * </ul>
  * </p>
  *
@@ -155,5 +156,31 @@ public interface ChapterDetails extends EObject
    * @generated
    */
   void setChapterName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Script</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Script</em>' containment reference.
+   * @see #setScript(Script)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails_Script()
+   * @model containment="true"
+   * @generated
+   */
+  Script getScript();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChapterDetails#getScript <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Script</em>' containment reference.
+   * @see #getScript()
+   * @generated
+   */
+  void setScript(Script value);
 
 } // ChapterDetails

@@ -312,7 +312,25 @@ ruleChapterDetails returns [EObject current=null]
 	    }
 
 )
-))
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getChapterDetailsAccess().getScriptScriptParserRuleCall_9_0()); 
+	    }
+		lv_script_9_0=ruleScript		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getChapterDetailsRule());
+	        }
+       		set(
+       			$current, 
+       			"script",
+        		lv_script_9_0, 
+        		"Script");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?)
 ;
 
 
@@ -333,9 +351,9 @@ ruleNotesElement returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(
+((
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getWordMeaningParserRuleCall_0()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getWordMeaningParserRuleCall_0_0()); 
     }
     this_WordMeaning_0=ruleWordMeaning
     { 
@@ -345,7 +363,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getQuestionAnswerParserRuleCall_1()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getQuestionAnswerParserRuleCall_0_1()); 
     }
     this_QuestionAnswer_1=ruleQuestionAnswer
     { 
@@ -355,7 +373,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getFIBParserRuleCall_2()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getFIBParserRuleCall_0_2()); 
     }
     this_FIB_2=ruleFIB
     { 
@@ -365,7 +383,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getDefinitionParserRuleCall_3()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getDefinitionParserRuleCall_0_3()); 
     }
     this_Definition_3=ruleDefinition
     { 
@@ -375,7 +393,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getCharacterParserRuleCall_4()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getCharacterParserRuleCall_0_4()); 
     }
     this_Character_4=ruleCharacter
     { 
@@ -385,7 +403,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getTeacherNoteParserRuleCall_5()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getTeacherNoteParserRuleCall_0_5()); 
     }
     this_TeacherNote_5=ruleTeacherNote
     { 
@@ -395,7 +413,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getMatchingParserRuleCall_6()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getMatchingParserRuleCall_0_6()); 
     }
     this_Matching_6=ruleMatching
     { 
@@ -405,7 +423,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getEventParserRuleCall_7()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getEventParserRuleCall_0_7()); 
     }
     this_Event_7=ruleEvent
     { 
@@ -415,7 +433,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getTrueFalseParserRuleCall_8()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getTrueFalseParserRuleCall_0_8()); 
     }
     this_TrueFalse_8=ruleTrueFalse
     { 
@@ -425,7 +443,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getChemEquationParserRuleCall_9()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getChemEquationParserRuleCall_0_9()); 
     }
     this_ChemEquation_9=ruleChemEquation
     { 
@@ -435,7 +453,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getChemCompoundParserRuleCall_10()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getChemCompoundParserRuleCall_0_10()); 
     }
     this_ChemCompound_10=ruleChemCompound
     { 
@@ -445,7 +463,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getSpellbeeParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getSpellbeeParserRuleCall_0_11()); 
     }
     this_Spellbee_11=ruleSpellbee
     { 
@@ -455,7 +473,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getImageLabelParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getImageLabelParserRuleCall_0_12()); 
     }
     this_ImageLabel_12=ruleImageLabel
     { 
@@ -465,7 +483,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getEquationParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getEquationParserRuleCall_0_13()); 
     }
     this_Equation_13=ruleEquation
     { 
@@ -475,7 +493,7 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getRefToContextParserRuleCall_14()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getRefToContextParserRuleCall_0_14()); 
     }
     this_RefToContext_14=ruleRefToContext
     { 
@@ -485,14 +503,32 @@ ruleNotesElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_15()); 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_0_15()); 
     }
     this_MultiChoice_15=ruleMultiChoice
     { 
         $current = $this_MultiChoice_15.current; 
         afterParserOrEnumRuleCall();
     }
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
+	    }
+		lv_script_16_0=ruleScript		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getNotesElementRule());
+	        }
+       		set(
+       			$current, 
+       			"script",
+        		lv_script_16_0, 
+        		"Script");
+	        afterParserOrEnumRuleCall();
+	    }
+
 )
+)?)
 ;
 
 
@@ -2545,6 +2581,57 @@ ruleCMap returns [EObject current=null]
 )	otherlv_3='}' 
     {
     	newLeafNode(otherlv_3, grammarAccess.getCMapAccess().getRightCurlyBracketKeyword_3());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleScript
+entryRuleScript returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getScriptRule()); }
+	 iv_ruleScript=ruleScript 
+	 { $current=$iv_ruleScript.current; } 
+	 EOF 
+;
+
+// Rule Script
+ruleScript returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='script' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getScriptAccess().getScriptKeyword_0());
+    }
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getScriptAccess().getLeftCurlyBracketKeyword_1());
+    }
+(
+(
+		lv_scriptBody_2_0=RULE_STRING
+		{
+			newLeafNode(lv_scriptBody_2_0, grammarAccess.getScriptAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getScriptRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"scriptBody",
+        		lv_scriptBody_2_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_3='}' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getScriptAccess().getRightCurlyBracketKeyword_3());
     }
 )
 ;

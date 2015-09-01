@@ -25,6 +25,7 @@ import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
+import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -116,6 +117,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
+      case JoveNotesPackage.SCRIPT: return createScript();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -405,6 +407,17 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     CMapImpl cMap = new CMapImpl();
     return cMap;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Script createScript()
+  {
+    ScriptImpl script = new ScriptImpl();
+    return script;
   }
 
   /**

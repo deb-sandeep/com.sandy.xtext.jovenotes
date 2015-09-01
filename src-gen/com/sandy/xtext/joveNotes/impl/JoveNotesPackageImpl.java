@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
+import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -227,6 +228,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
   private EClass cMapEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass scriptEClass = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -424,6 +432,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getChapterDetails_Script()
+  {
+    return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getNotesElement()
   {
     return notesElementEClass;
@@ -434,9 +452,19 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getNotesElement_Script()
+  {
+    return (EReference)notesElementEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getNotesElement_HideFromView()
   {
-    return (EAttribute)notesElementEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)notesElementEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -1264,6 +1292,26 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getScript()
+  {
+    return scriptEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getScript_ScriptBody()
+  {
+    return (EAttribute)scriptEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public JoveNotesFactory getJoveNotesFactory()
   {
     return (JoveNotesFactory)getEFactoryInstance();
@@ -1304,8 +1352,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NUMBER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__SUB_CHAPTER_NUMBER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NAME);
+    createEReference(chapterDetailsEClass, CHAPTER_DETAILS__SCRIPT);
 
     notesElementEClass = createEClass(NOTES_ELEMENT);
+    createEReference(notesElementEClass, NOTES_ELEMENT__SCRIPT);
     createEAttribute(notesElementEClass, NOTES_ELEMENT__HIDE_FROM_VIEW);
 
     wordMeaningEClass = createEClass(WORD_MEANING);
@@ -1411,6 +1461,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     cMapEClass = createEClass(CMAP);
     createEAttribute(cMapEClass, CMAP__CONTENT);
+
+    scriptEClass = createEClass(SCRIPT);
+    createEAttribute(scriptEClass, SCRIPT__SCRIPT_BODY);
   }
 
   /**
@@ -1475,8 +1528,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getChapterDetails_ChapterNumber(), ecorePackage.getEInt(), "chapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_SubChapterNumber(), ecorePackage.getEInt(), "subChapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_ChapterName(), ecorePackage.getEString(), "chapterName", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChapterDetails_Script(), this.getScript(), null, "script", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notesElementEClass, NotesElement.class, "NotesElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getNotesElement_Script(), this.getScript(), null, "script", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getNotesElement_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(wordMeaningEClass, WordMeaning.class, "WordMeaning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1582,6 +1637,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(cMapEClass, CMap.class, "CMap", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getCMap_Content(), ecorePackage.getEString(), "content", null, 0, 1, CMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(scriptEClass, Script.class, "Script", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getScript_ScriptBody(), ecorePackage.getEString(), "scriptBody", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_BOOL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@skip_generation'", "'@skip_generation_in_production'", "'@test_paper'", "'subject'", "'chapterNumber'", "'.'", "'chapterName'", "'@wm'", "'hide'", "'@qa'", "'@fib'", "'@definition'", "'@character'", "'@tn'", "'@match'", "'skip_reverse_question'", "'{'", "'}'", "'='", "'@mcq_config'", "'@forwardCaption'", "'@reverseCaption'", "'@numOptionsToShow'", "'@numOptionsPerRow'", "'@event'", "'@true_false'", "'@chem_equation'", "'>'", "'@chem_compound'", "'@spellbee'", "'@image_label'", "'imageName'", "','", "'@equation'", "'where'", "'@rtc'", "'context'", "'@multi_choice'", "'@options'", "'@explanation'", "'correct'", "'cmap'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_INT", "RULE_BOOL", "RULE_ID", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'@skip_generation'", "'@skip_generation_in_production'", "'@test_paper'", "'subject'", "'chapterNumber'", "'.'", "'chapterName'", "'@wm'", "'hide'", "'@qa'", "'@fib'", "'@definition'", "'@character'", "'@tn'", "'@match'", "'skip_reverse_question'", "'{'", "'}'", "'='", "'@mcq_config'", "'@forwardCaption'", "'@reverseCaption'", "'@numOptionsToShow'", "'@numOptionsPerRow'", "'@event'", "'@true_false'", "'@chem_equation'", "'>'", "'@chem_compound'", "'@spellbee'", "'@image_label'", "'imageName'", "','", "'@equation'", "'where'", "'@rtc'", "'context'", "'@multi_choice'", "'@options'", "'@explanation'", "'correct'", "'cmap'", "'script'"
     };
     public static final int RULE_ID=7;
     public static final int T__29=29;
@@ -44,6 +44,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
     public static final int T__15=15;
     public static final int T__53=53;
     public static final int T__18=18;
+    public static final int T__54=54;
     public static final int T__17=17;
     public static final int T__12=12;
     public static final int T__14=14;
@@ -488,7 +489,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChapterDetails"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:208:1: ruleChapterDetails returns [EObject current=null] : ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:208:1: ruleChapterDetails returns [EObject current=null] : ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ( (lv_script_9_0= ruleScript ) )? ) ;
     public final EObject ruleChapterDetails() throws RecognitionException {
         EObject current = null;
 
@@ -501,15 +502,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
         Token lv_subChapterNumber_6_0=null;
         Token otherlv_7=null;
         Token lv_chapterName_8_0=null;
+        EObject lv_script_9_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:211:28: ( ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:1: ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:211:28: ( ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ( (lv_script_9_0= ruleScript ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:1: ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ( (lv_script_9_0= ruleScript ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:1: ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:2: ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:1: ( ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ( (lv_script_9_0= ruleScript ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:2: ( (lv_testPaper_0_0= '@test_paper' ) )? otherlv_1= 'subject' ( (lv_subjectName_2_0= RULE_STRING ) ) otherlv_3= 'chapterNumber' ( (lv_chapterNumber_4_0= RULE_INT ) ) otherlv_5= '.' ( (lv_subChapterNumber_6_0= RULE_INT ) ) otherlv_7= 'chapterName' ( (lv_chapterName_8_0= RULE_STRING ) ) ( (lv_script_9_0= ruleScript ) )?
             {
             // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:212:2: ( (lv_testPaper_0_0= '@test_paper' ) )?
             int alt4=2;
@@ -664,6 +667,48 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:315:2: ( (lv_script_9_0= ruleScript ) )?
+            int alt5=2;
+            int LA5_0 = input.LA(1);
+
+            if ( (LA5_0==54) ) {
+                alt5=1;
+            }
+            switch (alt5) {
+                case 1 :
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:316:1: (lv_script_9_0= ruleScript )
+                    {
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:316:1: (lv_script_9_0= ruleScript )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:317:3: lv_script_9_0= ruleScript
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getChapterDetailsAccess().getScriptScriptParserRuleCall_9_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleScript_in_ruleChapterDetails578);
+                    lv_script_9_0=ruleScript();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getChapterDetailsRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"script",
+                            		lv_script_9_0, 
+                            		"Script");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -685,7 +730,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleNotesElement"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:323:1: entryRuleNotesElement returns [EObject current=null] : iv_ruleNotesElement= ruleNotesElement EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:341:1: entryRuleNotesElement returns [EObject current=null] : iv_ruleNotesElement= ruleNotesElement EOF ;
     public final EObject entryRuleNotesElement() throws RecognitionException {
         EObject current = null;
 
@@ -693,17 +738,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:324:2: (iv_ruleNotesElement= ruleNotesElement EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:325:2: iv_ruleNotesElement= ruleNotesElement EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:342:2: (iv_ruleNotesElement= ruleNotesElement EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:343:2: iv_ruleNotesElement= ruleNotesElement EOF
             {
              newCompositeNode(grammarAccess.getNotesElementRule()); 
-            pushFollow(FOLLOW_ruleNotesElement_in_entryRuleNotesElement593);
+            pushFollow(FOLLOW_ruleNotesElement_in_entryRuleNotesElement615);
             iv_ruleNotesElement=ruleNotesElement();
 
             state._fsp--;
 
              current =iv_ruleNotesElement; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleNotesElement603); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleNotesElement625); 
 
             }
 
@@ -721,7 +766,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleNotesElement"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:332:1: ruleNotesElement returns [EObject current=null] : (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:350:1: ruleNotesElement returns [EObject current=null] : ( (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ( (lv_script_16_0= ruleScript ) )? ) ;
     public final EObject ruleNotesElement() throws RecognitionException {
         EObject current = null;
 
@@ -757,111 +802,116 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
         EObject this_MultiChoice_15 = null;
 
+        EObject lv_script_16_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:335:28: ( (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:336:1: (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:353:28: ( ( (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ( (lv_script_16_0= ruleScript ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:354:1: ( (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ( (lv_script_16_0= ruleScript ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:336:1: (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice )
-            int alt5=16;
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:354:1: ( (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ( (lv_script_16_0= ruleScript ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:354:2: (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice ) ( (lv_script_16_0= ruleScript ) )?
+            {
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:354:2: (this_WordMeaning_0= ruleWordMeaning | this_QuestionAnswer_1= ruleQuestionAnswer | this_FIB_2= ruleFIB | this_Definition_3= ruleDefinition | this_Character_4= ruleCharacter | this_TeacherNote_5= ruleTeacherNote | this_Matching_6= ruleMatching | this_Event_7= ruleEvent | this_TrueFalse_8= ruleTrueFalse | this_ChemEquation_9= ruleChemEquation | this_ChemCompound_10= ruleChemCompound | this_Spellbee_11= ruleSpellbee | this_ImageLabel_12= ruleImageLabel | this_Equation_13= ruleEquation | this_RefToContext_14= ruleRefToContext | this_MultiChoice_15= ruleMultiChoice )
+            int alt6=16;
             switch ( input.LA(1) ) {
             case 19:
                 {
-                alt5=1;
+                alt6=1;
                 }
                 break;
             case 21:
                 {
-                alt5=2;
+                alt6=2;
                 }
                 break;
             case 22:
                 {
-                alt5=3;
+                alt6=3;
                 }
                 break;
             case 23:
                 {
-                alt5=4;
+                alt6=4;
                 }
                 break;
             case 24:
                 {
-                alt5=5;
+                alt6=5;
                 }
                 break;
             case 25:
                 {
-                alt5=6;
+                alt6=6;
                 }
                 break;
             case 26:
                 {
-                alt5=7;
+                alt6=7;
                 }
                 break;
             case 36:
                 {
-                alt5=8;
+                alt6=8;
                 }
                 break;
             case 37:
                 {
-                alt5=9;
+                alt6=9;
                 }
                 break;
             case 38:
                 {
-                alt5=10;
+                alt6=10;
                 }
                 break;
             case 40:
                 {
-                alt5=11;
+                alt6=11;
                 }
                 break;
             case 41:
                 {
-                alt5=12;
+                alt6=12;
                 }
                 break;
             case 42:
                 {
-                alt5=13;
+                alt6=13;
                 }
                 break;
             case 45:
                 {
-                alt5=14;
+                alt6=14;
                 }
                 break;
             case 47:
                 {
-                alt5=15;
+                alt6=15;
                 }
                 break;
             case 49:
                 {
-                alt5=16;
+                alt6=16;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 5, 0, input);
+                    new NoViableAltException("", 6, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt5) {
+            switch (alt6) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:337:5: this_WordMeaning_0= ruleWordMeaning
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:355:5: this_WordMeaning_0= ruleWordMeaning
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getWordMeaningParserRuleCall_0()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getWordMeaningParserRuleCall_0_0()); 
                         
-                    pushFollow(FOLLOW_ruleWordMeaning_in_ruleNotesElement650);
+                    pushFollow(FOLLOW_ruleWordMeaning_in_ruleNotesElement673);
                     this_WordMeaning_0=ruleWordMeaning();
 
                     state._fsp--;
@@ -874,12 +924,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:347:5: this_QuestionAnswer_1= ruleQuestionAnswer
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:365:5: this_QuestionAnswer_1= ruleQuestionAnswer
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getQuestionAnswerParserRuleCall_1()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getQuestionAnswerParserRuleCall_0_1()); 
                         
-                    pushFollow(FOLLOW_ruleQuestionAnswer_in_ruleNotesElement677);
+                    pushFollow(FOLLOW_ruleQuestionAnswer_in_ruleNotesElement700);
                     this_QuestionAnswer_1=ruleQuestionAnswer();
 
                     state._fsp--;
@@ -892,12 +942,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:357:5: this_FIB_2= ruleFIB
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:375:5: this_FIB_2= ruleFIB
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getFIBParserRuleCall_2()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getFIBParserRuleCall_0_2()); 
                         
-                    pushFollow(FOLLOW_ruleFIB_in_ruleNotesElement704);
+                    pushFollow(FOLLOW_ruleFIB_in_ruleNotesElement727);
                     this_FIB_2=ruleFIB();
 
                     state._fsp--;
@@ -910,12 +960,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:367:5: this_Definition_3= ruleDefinition
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:385:5: this_Definition_3= ruleDefinition
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getDefinitionParserRuleCall_3()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getDefinitionParserRuleCall_0_3()); 
                         
-                    pushFollow(FOLLOW_ruleDefinition_in_ruleNotesElement731);
+                    pushFollow(FOLLOW_ruleDefinition_in_ruleNotesElement754);
                     this_Definition_3=ruleDefinition();
 
                     state._fsp--;
@@ -928,12 +978,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:377:5: this_Character_4= ruleCharacter
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:395:5: this_Character_4= ruleCharacter
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getCharacterParserRuleCall_4()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getCharacterParserRuleCall_0_4()); 
                         
-                    pushFollow(FOLLOW_ruleCharacter_in_ruleNotesElement758);
+                    pushFollow(FOLLOW_ruleCharacter_in_ruleNotesElement781);
                     this_Character_4=ruleCharacter();
 
                     state._fsp--;
@@ -946,12 +996,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:387:5: this_TeacherNote_5= ruleTeacherNote
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:405:5: this_TeacherNote_5= ruleTeacherNote
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getTeacherNoteParserRuleCall_5()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getTeacherNoteParserRuleCall_0_5()); 
                         
-                    pushFollow(FOLLOW_ruleTeacherNote_in_ruleNotesElement785);
+                    pushFollow(FOLLOW_ruleTeacherNote_in_ruleNotesElement808);
                     this_TeacherNote_5=ruleTeacherNote();
 
                     state._fsp--;
@@ -964,12 +1014,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:397:5: this_Matching_6= ruleMatching
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:415:5: this_Matching_6= ruleMatching
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getMatchingParserRuleCall_6()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getMatchingParserRuleCall_0_6()); 
                         
-                    pushFollow(FOLLOW_ruleMatching_in_ruleNotesElement812);
+                    pushFollow(FOLLOW_ruleMatching_in_ruleNotesElement835);
                     this_Matching_6=ruleMatching();
 
                     state._fsp--;
@@ -982,12 +1032,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:407:5: this_Event_7= ruleEvent
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:425:5: this_Event_7= ruleEvent
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getEventParserRuleCall_7()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getEventParserRuleCall_0_7()); 
                         
-                    pushFollow(FOLLOW_ruleEvent_in_ruleNotesElement839);
+                    pushFollow(FOLLOW_ruleEvent_in_ruleNotesElement862);
                     this_Event_7=ruleEvent();
 
                     state._fsp--;
@@ -1000,12 +1050,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:417:5: this_TrueFalse_8= ruleTrueFalse
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:435:5: this_TrueFalse_8= ruleTrueFalse
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getTrueFalseParserRuleCall_8()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getTrueFalseParserRuleCall_0_8()); 
                         
-                    pushFollow(FOLLOW_ruleTrueFalse_in_ruleNotesElement866);
+                    pushFollow(FOLLOW_ruleTrueFalse_in_ruleNotesElement889);
                     this_TrueFalse_8=ruleTrueFalse();
 
                     state._fsp--;
@@ -1018,12 +1068,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:427:5: this_ChemEquation_9= ruleChemEquation
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:445:5: this_ChemEquation_9= ruleChemEquation
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getChemEquationParserRuleCall_9()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getChemEquationParserRuleCall_0_9()); 
                         
-                    pushFollow(FOLLOW_ruleChemEquation_in_ruleNotesElement893);
+                    pushFollow(FOLLOW_ruleChemEquation_in_ruleNotesElement916);
                     this_ChemEquation_9=ruleChemEquation();
 
                     state._fsp--;
@@ -1036,12 +1086,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 11 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:437:5: this_ChemCompound_10= ruleChemCompound
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:455:5: this_ChemCompound_10= ruleChemCompound
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getChemCompoundParserRuleCall_10()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getChemCompoundParserRuleCall_0_10()); 
                         
-                    pushFollow(FOLLOW_ruleChemCompound_in_ruleNotesElement920);
+                    pushFollow(FOLLOW_ruleChemCompound_in_ruleNotesElement943);
                     this_ChemCompound_10=ruleChemCompound();
 
                     state._fsp--;
@@ -1054,12 +1104,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 12 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:447:5: this_Spellbee_11= ruleSpellbee
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:465:5: this_Spellbee_11= ruleSpellbee
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getSpellbeeParserRuleCall_11()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getSpellbeeParserRuleCall_0_11()); 
                         
-                    pushFollow(FOLLOW_ruleSpellbee_in_ruleNotesElement947);
+                    pushFollow(FOLLOW_ruleSpellbee_in_ruleNotesElement970);
                     this_Spellbee_11=ruleSpellbee();
 
                     state._fsp--;
@@ -1072,12 +1122,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 13 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:457:5: this_ImageLabel_12= ruleImageLabel
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:475:5: this_ImageLabel_12= ruleImageLabel
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getImageLabelParserRuleCall_12()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getImageLabelParserRuleCall_0_12()); 
                         
-                    pushFollow(FOLLOW_ruleImageLabel_in_ruleNotesElement974);
+                    pushFollow(FOLLOW_ruleImageLabel_in_ruleNotesElement997);
                     this_ImageLabel_12=ruleImageLabel();
 
                     state._fsp--;
@@ -1090,12 +1140,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 14 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:467:5: this_Equation_13= ruleEquation
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:485:5: this_Equation_13= ruleEquation
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getEquationParserRuleCall_13()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getEquationParserRuleCall_0_13()); 
                         
-                    pushFollow(FOLLOW_ruleEquation_in_ruleNotesElement1001);
+                    pushFollow(FOLLOW_ruleEquation_in_ruleNotesElement1024);
                     this_Equation_13=ruleEquation();
 
                     state._fsp--;
@@ -1108,12 +1158,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 15 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:477:5: this_RefToContext_14= ruleRefToContext
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:495:5: this_RefToContext_14= ruleRefToContext
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getRefToContextParserRuleCall_14()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getRefToContextParserRuleCall_0_14()); 
                         
-                    pushFollow(FOLLOW_ruleRefToContext_in_ruleNotesElement1028);
+                    pushFollow(FOLLOW_ruleRefToContext_in_ruleNotesElement1051);
                     this_RefToContext_14=ruleRefToContext();
 
                     state._fsp--;
@@ -1126,12 +1176,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 16 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:487:5: this_MultiChoice_15= ruleMultiChoice
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:505:5: this_MultiChoice_15= ruleMultiChoice
                     {
                      
-                            newCompositeNode(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_15()); 
+                            newCompositeNode(grammarAccess.getNotesElementAccess().getMultiChoiceParserRuleCall_0_15()); 
                         
-                    pushFollow(FOLLOW_ruleMultiChoice_in_ruleNotesElement1055);
+                    pushFollow(FOLLOW_ruleMultiChoice_in_ruleNotesElement1078);
                     this_MultiChoice_15=ruleMultiChoice();
 
                     state._fsp--;
@@ -1143,6 +1193,51 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
                     }
                     break;
+
+            }
+
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:513:2: ( (lv_script_16_0= ruleScript ) )?
+            int alt7=2;
+            int LA7_0 = input.LA(1);
+
+            if ( (LA7_0==54) ) {
+                alt7=1;
+            }
+            switch (alt7) {
+                case 1 :
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:514:1: (lv_script_16_0= ruleScript )
+                    {
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:514:1: (lv_script_16_0= ruleScript )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:515:3: lv_script_16_0= ruleScript
+                    {
+                     
+                    	        newCompositeNode(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
+                    	    
+                    pushFollow(FOLLOW_ruleScript_in_ruleNotesElement1099);
+                    lv_script_16_0=ruleScript();
+
+                    state._fsp--;
+
+
+                    	        if (current==null) {
+                    	            current = createModelElementForParent(grammarAccess.getNotesElementRule());
+                    	        }
+                           		set(
+                           			current, 
+                           			"script",
+                            		lv_script_16_0, 
+                            		"Script");
+                    	        afterParserOrEnumRuleCall();
+                    	    
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
 
             }
 
@@ -1164,7 +1259,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleWordMeaning"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:503:1: entryRuleWordMeaning returns [EObject current=null] : iv_ruleWordMeaning= ruleWordMeaning EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:539:1: entryRuleWordMeaning returns [EObject current=null] : iv_ruleWordMeaning= ruleWordMeaning EOF ;
     public final EObject entryRuleWordMeaning() throws RecognitionException {
         EObject current = null;
 
@@ -1172,17 +1267,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:504:2: (iv_ruleWordMeaning= ruleWordMeaning EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:505:2: iv_ruleWordMeaning= ruleWordMeaning EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:540:2: (iv_ruleWordMeaning= ruleWordMeaning EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:541:2: iv_ruleWordMeaning= ruleWordMeaning EOF
             {
              newCompositeNode(grammarAccess.getWordMeaningRule()); 
-            pushFollow(FOLLOW_ruleWordMeaning_in_entryRuleWordMeaning1090);
+            pushFollow(FOLLOW_ruleWordMeaning_in_entryRuleWordMeaning1136);
             iv_ruleWordMeaning=ruleWordMeaning();
 
             state._fsp--;
 
              current =iv_ruleWordMeaning; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleWordMeaning1100); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleWordMeaning1146); 
 
             }
 
@@ -1200,7 +1295,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleWordMeaning"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:512:1: ruleWordMeaning returns [EObject current=null] : (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:548:1: ruleWordMeaning returns [EObject current=null] : (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) ) ;
     public final EObject ruleWordMeaning() throws RecognitionException {
         EObject current = null;
 
@@ -1212,31 +1307,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:515:28: ( (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:516:1: (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:551:28: ( (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:552:1: (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:516:1: (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:516:3: otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:552:1: (otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:552:3: otherlv_0= '@wm' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ( (lv_meaning_3_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleWordMeaning1137); 
+            otherlv_0=(Token)match(input,19,FOLLOW_19_in_ruleWordMeaning1183); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getWordMeaningAccess().getWmKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:520:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt6=2;
-            int LA6_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:556:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt8=2;
+            int LA8_0 = input.LA(1);
 
-            if ( (LA6_0==20) ) {
-                alt6=1;
+            if ( (LA8_0==20) ) {
+                alt8=1;
             }
-            switch (alt6) {
+            switch (alt8) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:521:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:557:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:521:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:522:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:557:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:558:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleWordMeaning1155); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleWordMeaning1201); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getWordMeaningAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -1255,13 +1350,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:535:3: ( (lv_word_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:536:1: (lv_word_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:571:3: ( (lv_word_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:572:1: (lv_word_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:536:1: (lv_word_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:537:3: lv_word_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:572:1: (lv_word_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:573:3: lv_word_2_0= RULE_STRING
             {
-            lv_word_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleWordMeaning1186); 
+            lv_word_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleWordMeaning1232); 
 
             			newLeafNode(lv_word_2_0, grammarAccess.getWordMeaningAccess().getWordSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1281,13 +1376,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:553:2: ( (lv_meaning_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:554:1: (lv_meaning_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:589:2: ( (lv_meaning_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:590:1: (lv_meaning_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:554:1: (lv_meaning_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:555:3: lv_meaning_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:590:1: (lv_meaning_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:591:3: lv_meaning_3_0= RULE_STRING
             {
-            lv_meaning_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleWordMeaning1208); 
+            lv_meaning_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleWordMeaning1254); 
 
             			newLeafNode(lv_meaning_3_0, grammarAccess.getWordMeaningAccess().getMeaningSTRINGTerminalRuleCall_3_0()); 
             		
@@ -1328,7 +1423,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQuestionAnswer"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:579:1: entryRuleQuestionAnswer returns [EObject current=null] : iv_ruleQuestionAnswer= ruleQuestionAnswer EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:615:1: entryRuleQuestionAnswer returns [EObject current=null] : iv_ruleQuestionAnswer= ruleQuestionAnswer EOF ;
     public final EObject entryRuleQuestionAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1336,17 +1431,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:580:2: (iv_ruleQuestionAnswer= ruleQuestionAnswer EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:581:2: iv_ruleQuestionAnswer= ruleQuestionAnswer EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:616:2: (iv_ruleQuestionAnswer= ruleQuestionAnswer EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:617:2: iv_ruleQuestionAnswer= ruleQuestionAnswer EOF
             {
              newCompositeNode(grammarAccess.getQuestionAnswerRule()); 
-            pushFollow(FOLLOW_ruleQuestionAnswer_in_entryRuleQuestionAnswer1249);
+            pushFollow(FOLLOW_ruleQuestionAnswer_in_entryRuleQuestionAnswer1295);
             iv_ruleQuestionAnswer=ruleQuestionAnswer();
 
             state._fsp--;
 
              current =iv_ruleQuestionAnswer; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleQuestionAnswer1259); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleQuestionAnswer1305); 
 
             }
 
@@ -1364,7 +1459,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQuestionAnswer"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:588:1: ruleQuestionAnswer returns [EObject current=null] : (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:624:1: ruleQuestionAnswer returns [EObject current=null] : (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? ) ;
     public final EObject ruleQuestionAnswer() throws RecognitionException {
         EObject current = null;
 
@@ -1378,31 +1473,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:591:28: ( (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:592:1: (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:627:28: ( (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:628:1: (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:592:1: (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:592:3: otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:628:1: (otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:628:3: otherlv_0= '@qa' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answerParts_3_0= RULE_STRING ) )+ ( (lv_cmap_4_0= ruleCMap ) )?
             {
-            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleQuestionAnswer1296); 
+            otherlv_0=(Token)match(input,21,FOLLOW_21_in_ruleQuestionAnswer1342); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getQuestionAnswerAccess().getQaKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:596:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt7=2;
-            int LA7_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:632:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt9=2;
+            int LA9_0 = input.LA(1);
 
-            if ( (LA7_0==20) ) {
-                alt7=1;
+            if ( (LA9_0==20) ) {
+                alt9=1;
             }
-            switch (alt7) {
+            switch (alt9) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:597:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:633:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:597:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:598:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:633:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:634:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleQuestionAnswer1314); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleQuestionAnswer1360); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getQuestionAnswerAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -1421,13 +1516,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:611:3: ( (lv_question_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:612:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:647:3: ( (lv_question_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:648:1: (lv_question_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:612:1: (lv_question_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:613:3: lv_question_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:648:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:649:3: lv_question_2_0= RULE_STRING
             {
-            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleQuestionAnswer1345); 
+            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleQuestionAnswer1391); 
 
             			newLeafNode(lv_question_2_0, grammarAccess.getQuestionAnswerAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1447,26 +1542,26 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:629:2: ( (lv_answerParts_3_0= RULE_STRING ) )+
-            int cnt8=0;
-            loop8:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:665:2: ( (lv_answerParts_3_0= RULE_STRING ) )+
+            int cnt10=0;
+            loop10:
             do {
-                int alt8=2;
-                int LA8_0 = input.LA(1);
+                int alt10=2;
+                int LA10_0 = input.LA(1);
 
-                if ( (LA8_0==RULE_STRING) ) {
-                    alt8=1;
+                if ( (LA10_0==RULE_STRING) ) {
+                    alt10=1;
                 }
 
 
-                switch (alt8) {
+                switch (alt10) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:630:1: (lv_answerParts_3_0= RULE_STRING )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:666:1: (lv_answerParts_3_0= RULE_STRING )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:630:1: (lv_answerParts_3_0= RULE_STRING )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:631:3: lv_answerParts_3_0= RULE_STRING
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:666:1: (lv_answerParts_3_0= RULE_STRING )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:667:3: lv_answerParts_3_0= RULE_STRING
             	    {
-            	    lv_answerParts_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleQuestionAnswer1367); 
+            	    lv_answerParts_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleQuestionAnswer1413); 
 
             	    			newLeafNode(lv_answerParts_3_0, grammarAccess.getQuestionAnswerAccess().getAnswerPartsSTRINGTerminalRuleCall_3_0()); 
             	    		
@@ -1488,32 +1583,32 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt8 >= 1 ) break loop8;
+            	    if ( cnt10 >= 1 ) break loop10;
                         EarlyExitException eee =
-                            new EarlyExitException(8, input);
+                            new EarlyExitException(10, input);
                         throw eee;
                 }
-                cnt8++;
+                cnt10++;
             } while (true);
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:647:3: ( (lv_cmap_4_0= ruleCMap ) )?
-            int alt9=2;
-            int LA9_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:683:3: ( (lv_cmap_4_0= ruleCMap ) )?
+            int alt11=2;
+            int LA11_0 = input.LA(1);
 
-            if ( (LA9_0==53) ) {
-                alt9=1;
+            if ( (LA11_0==53) ) {
+                alt11=1;
             }
-            switch (alt9) {
+            switch (alt11) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:648:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:684:1: (lv_cmap_4_0= ruleCMap )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:648:1: (lv_cmap_4_0= ruleCMap )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:649:3: lv_cmap_4_0= ruleCMap
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:684:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:685:3: lv_cmap_4_0= ruleCMap
                     {
                      
                     	        newCompositeNode(grammarAccess.getQuestionAnswerAccess().getCmapCMapParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCMap_in_ruleQuestionAnswer1394);
+                    pushFollow(FOLLOW_ruleCMap_in_ruleQuestionAnswer1440);
                     lv_cmap_4_0=ruleCMap();
 
                     state._fsp--;
@@ -1559,7 +1654,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFIB"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:673:1: entryRuleFIB returns [EObject current=null] : iv_ruleFIB= ruleFIB EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:709:1: entryRuleFIB returns [EObject current=null] : iv_ruleFIB= ruleFIB EOF ;
     public final EObject entryRuleFIB() throws RecognitionException {
         EObject current = null;
 
@@ -1567,17 +1662,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:674:2: (iv_ruleFIB= ruleFIB EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:675:2: iv_ruleFIB= ruleFIB EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:710:2: (iv_ruleFIB= ruleFIB EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:711:2: iv_ruleFIB= ruleFIB EOF
             {
              newCompositeNode(grammarAccess.getFIBRule()); 
-            pushFollow(FOLLOW_ruleFIB_in_entryRuleFIB1431);
+            pushFollow(FOLLOW_ruleFIB_in_entryRuleFIB1477);
             iv_ruleFIB=ruleFIB();
 
             state._fsp--;
 
              current =iv_ruleFIB; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFIB1441); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFIB1487); 
 
             }
 
@@ -1595,7 +1690,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFIB"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:682:1: ruleFIB returns [EObject current=null] : (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:718:1: ruleFIB returns [EObject current=null] : (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ ) ;
     public final EObject ruleFIB() throws RecognitionException {
         EObject current = null;
 
@@ -1607,31 +1702,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:685:28: ( (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:686:1: (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:721:28: ( (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:722:1: (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:686:1: (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:686:3: otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:722:1: (otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+ )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:722:3: otherlv_0= '@fib' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) ( (lv_answers_3_0= RULE_STRING ) )+
             {
-            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFIB1478); 
+            otherlv_0=(Token)match(input,22,FOLLOW_22_in_ruleFIB1524); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getFIBAccess().getFibKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:690:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt10=2;
-            int LA10_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:726:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt12=2;
+            int LA12_0 = input.LA(1);
 
-            if ( (LA10_0==20) ) {
-                alt10=1;
+            if ( (LA12_0==20) ) {
+                alt12=1;
             }
-            switch (alt10) {
+            switch (alt12) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:691:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:727:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:691:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:692:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:727:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:728:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleFIB1496); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleFIB1542); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getFIBAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -1650,13 +1745,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:705:3: ( (lv_question_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:706:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:741:3: ( (lv_question_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:742:1: (lv_question_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:706:1: (lv_question_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:707:3: lv_question_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:742:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:743:3: lv_question_2_0= RULE_STRING
             {
-            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFIB1527); 
+            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFIB1573); 
 
             			newLeafNode(lv_question_2_0, grammarAccess.getFIBAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1676,26 +1771,26 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:723:2: ( (lv_answers_3_0= RULE_STRING ) )+
-            int cnt11=0;
-            loop11:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:759:2: ( (lv_answers_3_0= RULE_STRING ) )+
+            int cnt13=0;
+            loop13:
             do {
-                int alt11=2;
-                int LA11_0 = input.LA(1);
+                int alt13=2;
+                int LA13_0 = input.LA(1);
 
-                if ( (LA11_0==RULE_STRING) ) {
-                    alt11=1;
+                if ( (LA13_0==RULE_STRING) ) {
+                    alt13=1;
                 }
 
 
-                switch (alt11) {
+                switch (alt13) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:724:1: (lv_answers_3_0= RULE_STRING )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:760:1: (lv_answers_3_0= RULE_STRING )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:724:1: (lv_answers_3_0= RULE_STRING )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:725:3: lv_answers_3_0= RULE_STRING
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:760:1: (lv_answers_3_0= RULE_STRING )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:761:3: lv_answers_3_0= RULE_STRING
             	    {
-            	    lv_answers_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFIB1549); 
+            	    lv_answers_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFIB1595); 
 
             	    			newLeafNode(lv_answers_3_0, grammarAccess.getFIBAccess().getAnswersSTRINGTerminalRuleCall_3_0()); 
             	    		
@@ -1717,12 +1812,12 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt11 >= 1 ) break loop11;
+            	    if ( cnt13 >= 1 ) break loop13;
                         EarlyExitException eee =
-                            new EarlyExitException(11, input);
+                            new EarlyExitException(13, input);
                         throw eee;
                 }
-                cnt11++;
+                cnt13++;
             } while (true);
 
 
@@ -1746,7 +1841,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDefinition"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:749:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:785:1: entryRuleDefinition returns [EObject current=null] : iv_ruleDefinition= ruleDefinition EOF ;
     public final EObject entryRuleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -1754,17 +1849,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:750:2: (iv_ruleDefinition= ruleDefinition EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:751:2: iv_ruleDefinition= ruleDefinition EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:786:2: (iv_ruleDefinition= ruleDefinition EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:787:2: iv_ruleDefinition= ruleDefinition EOF
             {
              newCompositeNode(grammarAccess.getDefinitionRule()); 
-            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition1591);
+            pushFollow(FOLLOW_ruleDefinition_in_entryRuleDefinition1637);
             iv_ruleDefinition=ruleDefinition();
 
             state._fsp--;
 
              current =iv_ruleDefinition; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition1601); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleDefinition1647); 
 
             }
 
@@ -1782,7 +1877,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDefinition"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:758:1: ruleDefinition returns [EObject current=null] : (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:794:1: ruleDefinition returns [EObject current=null] : (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
     public final EObject ruleDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -1796,31 +1891,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:761:28: ( (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:762:1: (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:797:28: ( (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:798:1: (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:762:1: (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:762:3: otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:798:1: (otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:798:3: otherlv_0= '@definition' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_term_2_0= RULE_STRING ) ) ( (lv_definition_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
             {
-            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleDefinition1638); 
+            otherlv_0=(Token)match(input,23,FOLLOW_23_in_ruleDefinition1684); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDefinitionAccess().getDefinitionKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:766:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt12=2;
-            int LA12_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:802:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt14=2;
+            int LA14_0 = input.LA(1);
 
-            if ( (LA12_0==20) ) {
-                alt12=1;
+            if ( (LA14_0==20) ) {
+                alt14=1;
             }
-            switch (alt12) {
+            switch (alt14) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:767:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:803:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:767:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:768:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:803:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:804:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleDefinition1656); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleDefinition1702); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getDefinitionAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -1839,13 +1934,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:781:3: ( (lv_term_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:782:1: (lv_term_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:817:3: ( (lv_term_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:818:1: (lv_term_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:782:1: (lv_term_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:783:3: lv_term_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:818:1: (lv_term_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:819:3: lv_term_2_0= RULE_STRING
             {
-            lv_term_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDefinition1687); 
+            lv_term_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDefinition1733); 
 
             			newLeafNode(lv_term_2_0, grammarAccess.getDefinitionAccess().getTermSTRINGTerminalRuleCall_2_0()); 
             		
@@ -1865,13 +1960,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:799:2: ( (lv_definition_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:800:1: (lv_definition_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:835:2: ( (lv_definition_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:836:1: (lv_definition_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:800:1: (lv_definition_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:801:3: lv_definition_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:836:1: (lv_definition_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:837:3: lv_definition_3_0= RULE_STRING
             {
-            lv_definition_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDefinition1709); 
+            lv_definition_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleDefinition1755); 
 
             			newLeafNode(lv_definition_3_0, grammarAccess.getDefinitionAccess().getDefinitionSTRINGTerminalRuleCall_3_0()); 
             		
@@ -1891,24 +1986,24 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:817:2: ( (lv_cmap_4_0= ruleCMap ) )?
-            int alt13=2;
-            int LA13_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:853:2: ( (lv_cmap_4_0= ruleCMap ) )?
+            int alt15=2;
+            int LA15_0 = input.LA(1);
 
-            if ( (LA13_0==53) ) {
-                alt13=1;
+            if ( (LA15_0==53) ) {
+                alt15=1;
             }
-            switch (alt13) {
+            switch (alt15) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:818:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:854:1: (lv_cmap_4_0= ruleCMap )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:818:1: (lv_cmap_4_0= ruleCMap )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:819:3: lv_cmap_4_0= ruleCMap
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:854:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:855:3: lv_cmap_4_0= ruleCMap
                     {
                      
                     	        newCompositeNode(grammarAccess.getDefinitionAccess().getCmapCMapParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCMap_in_ruleDefinition1735);
+                    pushFollow(FOLLOW_ruleCMap_in_ruleDefinition1781);
                     lv_cmap_4_0=ruleCMap();
 
                     state._fsp--;
@@ -1954,7 +2049,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCharacter"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:843:1: entryRuleCharacter returns [EObject current=null] : iv_ruleCharacter= ruleCharacter EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:879:1: entryRuleCharacter returns [EObject current=null] : iv_ruleCharacter= ruleCharacter EOF ;
     public final EObject entryRuleCharacter() throws RecognitionException {
         EObject current = null;
 
@@ -1962,17 +2057,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:844:2: (iv_ruleCharacter= ruleCharacter EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:845:2: iv_ruleCharacter= ruleCharacter EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:880:2: (iv_ruleCharacter= ruleCharacter EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:881:2: iv_ruleCharacter= ruleCharacter EOF
             {
              newCompositeNode(grammarAccess.getCharacterRule()); 
-            pushFollow(FOLLOW_ruleCharacter_in_entryRuleCharacter1772);
+            pushFollow(FOLLOW_ruleCharacter_in_entryRuleCharacter1818);
             iv_ruleCharacter=ruleCharacter();
 
             state._fsp--;
 
              current =iv_ruleCharacter; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCharacter1782); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCharacter1828); 
 
             }
 
@@ -1990,7 +2085,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCharacter"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:852:1: ruleCharacter returns [EObject current=null] : (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:888:1: ruleCharacter returns [EObject current=null] : (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
     public final EObject ruleCharacter() throws RecognitionException {
         EObject current = null;
 
@@ -2004,31 +2099,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:855:28: ( (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:856:1: (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:891:28: ( (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:892:1: (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:856:1: (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:856:3: otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:892:1: (otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:892:3: otherlv_0= '@character' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_character_2_0= RULE_STRING ) ) ( (lv_estimate_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
             {
-            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleCharacter1819); 
+            otherlv_0=(Token)match(input,24,FOLLOW_24_in_ruleCharacter1865); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCharacterAccess().getCharacterKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:860:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt14=2;
-            int LA14_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:896:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt16=2;
+            int LA16_0 = input.LA(1);
 
-            if ( (LA14_0==20) ) {
-                alt14=1;
+            if ( (LA16_0==20) ) {
+                alt16=1;
             }
-            switch (alt14) {
+            switch (alt16) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:861:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:897:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:861:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:862:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:897:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:898:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleCharacter1837); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleCharacter1883); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getCharacterAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -2047,13 +2142,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:875:3: ( (lv_character_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:876:1: (lv_character_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:911:3: ( (lv_character_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:912:1: (lv_character_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:876:1: (lv_character_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:877:3: lv_character_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:912:1: (lv_character_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:913:3: lv_character_2_0= RULE_STRING
             {
-            lv_character_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCharacter1868); 
+            lv_character_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCharacter1914); 
 
             			newLeafNode(lv_character_2_0, grammarAccess.getCharacterAccess().getCharacterSTRINGTerminalRuleCall_2_0()); 
             		
@@ -2073,13 +2168,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:893:2: ( (lv_estimate_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:894:1: (lv_estimate_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:929:2: ( (lv_estimate_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:930:1: (lv_estimate_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:894:1: (lv_estimate_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:895:3: lv_estimate_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:930:1: (lv_estimate_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:931:3: lv_estimate_3_0= RULE_STRING
             {
-            lv_estimate_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCharacter1890); 
+            lv_estimate_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCharacter1936); 
 
             			newLeafNode(lv_estimate_3_0, grammarAccess.getCharacterAccess().getEstimateSTRINGTerminalRuleCall_3_0()); 
             		
@@ -2099,24 +2194,24 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:911:2: ( (lv_cmap_4_0= ruleCMap ) )?
-            int alt15=2;
-            int LA15_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:947:2: ( (lv_cmap_4_0= ruleCMap ) )?
+            int alt17=2;
+            int LA17_0 = input.LA(1);
 
-            if ( (LA15_0==53) ) {
-                alt15=1;
+            if ( (LA17_0==53) ) {
+                alt17=1;
             }
-            switch (alt15) {
+            switch (alt17) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:912:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:948:1: (lv_cmap_4_0= ruleCMap )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:912:1: (lv_cmap_4_0= ruleCMap )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:913:3: lv_cmap_4_0= ruleCMap
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:948:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:949:3: lv_cmap_4_0= ruleCMap
                     {
                      
                     	        newCompositeNode(grammarAccess.getCharacterAccess().getCmapCMapParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCMap_in_ruleCharacter1916);
+                    pushFollow(FOLLOW_ruleCMap_in_ruleCharacter1962);
                     lv_cmap_4_0=ruleCMap();
 
                     state._fsp--;
@@ -2162,7 +2257,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTeacherNote"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:937:1: entryRuleTeacherNote returns [EObject current=null] : iv_ruleTeacherNote= ruleTeacherNote EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:973:1: entryRuleTeacherNote returns [EObject current=null] : iv_ruleTeacherNote= ruleTeacherNote EOF ;
     public final EObject entryRuleTeacherNote() throws RecognitionException {
         EObject current = null;
 
@@ -2170,17 +2265,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:938:2: (iv_ruleTeacherNote= ruleTeacherNote EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:939:2: iv_ruleTeacherNote= ruleTeacherNote EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:974:2: (iv_ruleTeacherNote= ruleTeacherNote EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:975:2: iv_ruleTeacherNote= ruleTeacherNote EOF
             {
              newCompositeNode(grammarAccess.getTeacherNoteRule()); 
-            pushFollow(FOLLOW_ruleTeacherNote_in_entryRuleTeacherNote1953);
+            pushFollow(FOLLOW_ruleTeacherNote_in_entryRuleTeacherNote1999);
             iv_ruleTeacherNote=ruleTeacherNote();
 
             state._fsp--;
 
              current =iv_ruleTeacherNote; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTeacherNote1963); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTeacherNote2009); 
 
             }
 
@@ -2198,7 +2293,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTeacherNote"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:946:1: ruleTeacherNote returns [EObject current=null] : (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:982:1: ruleTeacherNote returns [EObject current=null] : (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) ;
     public final EObject ruleTeacherNote() throws RecognitionException {
         EObject current = null;
 
@@ -2212,31 +2307,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:949:28: ( (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:950:1: (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:985:28: ( (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:986:1: (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:950:1: (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:950:3: otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:986:1: (otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:986:3: otherlv_0= '@tn' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? ( (lv_note_3_0= RULE_STRING ) ) ( (lv_cmap_4_0= ruleCMap ) )?
             {
-            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleTeacherNote2000); 
+            otherlv_0=(Token)match(input,25,FOLLOW_25_in_ruleTeacherNote2046); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTeacherNoteAccess().getTnKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:954:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt16=2;
-            int LA16_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:990:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt18=2;
+            int LA18_0 = input.LA(1);
 
-            if ( (LA16_0==20) ) {
-                alt16=1;
+            if ( (LA18_0==20) ) {
+                alt18=1;
             }
-            switch (alt16) {
+            switch (alt18) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:955:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:991:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:955:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:956:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:991:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:992:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleTeacherNote2018); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleTeacherNote2064); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getTeacherNoteAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -2255,25 +2350,25 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:969:3: ( (lv_caption_2_0= RULE_STRING ) )?
-            int alt17=2;
-            int LA17_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1005:3: ( (lv_caption_2_0= RULE_STRING ) )?
+            int alt19=2;
+            int LA19_0 = input.LA(1);
 
-            if ( (LA17_0==RULE_STRING) ) {
-                int LA17_1 = input.LA(2);
+            if ( (LA19_0==RULE_STRING) ) {
+                int LA19_1 = input.LA(2);
 
-                if ( (LA17_1==RULE_STRING) ) {
-                    alt17=1;
+                if ( (LA19_1==RULE_STRING) ) {
+                    alt19=1;
                 }
             }
-            switch (alt17) {
+            switch (alt19) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:970:1: (lv_caption_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1006:1: (lv_caption_2_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:970:1: (lv_caption_2_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:971:3: lv_caption_2_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1006:1: (lv_caption_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1007:3: lv_caption_2_0= RULE_STRING
                     {
-                    lv_caption_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTeacherNote2049); 
+                    lv_caption_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTeacherNote2095); 
 
                     			newLeafNode(lv_caption_2_0, grammarAccess.getTeacherNoteAccess().getCaptionSTRINGTerminalRuleCall_2_0()); 
                     		
@@ -2296,13 +2391,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:987:3: ( (lv_note_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:988:1: (lv_note_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1023:3: ( (lv_note_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1024:1: (lv_note_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:988:1: (lv_note_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:989:3: lv_note_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1024:1: (lv_note_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1025:3: lv_note_3_0= RULE_STRING
             {
-            lv_note_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTeacherNote2072); 
+            lv_note_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTeacherNote2118); 
 
             			newLeafNode(lv_note_3_0, grammarAccess.getTeacherNoteAccess().getNoteSTRINGTerminalRuleCall_3_0()); 
             		
@@ -2322,24 +2417,24 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1005:2: ( (lv_cmap_4_0= ruleCMap ) )?
-            int alt18=2;
-            int LA18_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1041:2: ( (lv_cmap_4_0= ruleCMap ) )?
+            int alt20=2;
+            int LA20_0 = input.LA(1);
 
-            if ( (LA18_0==53) ) {
-                alt18=1;
+            if ( (LA20_0==53) ) {
+                alt20=1;
             }
-            switch (alt18) {
+            switch (alt20) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1006:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1042:1: (lv_cmap_4_0= ruleCMap )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1006:1: (lv_cmap_4_0= ruleCMap )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1007:3: lv_cmap_4_0= ruleCMap
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1042:1: (lv_cmap_4_0= ruleCMap )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1043:3: lv_cmap_4_0= ruleCMap
                     {
                      
                     	        newCompositeNode(grammarAccess.getTeacherNoteAccess().getCmapCMapParserRuleCall_4_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleCMap_in_ruleTeacherNote2098);
+                    pushFollow(FOLLOW_ruleCMap_in_ruleTeacherNote2144);
                     lv_cmap_4_0=ruleCMap();
 
                     state._fsp--;
@@ -2385,7 +2480,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMatching"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1031:1: entryRuleMatching returns [EObject current=null] : iv_ruleMatching= ruleMatching EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1067:1: entryRuleMatching returns [EObject current=null] : iv_ruleMatching= ruleMatching EOF ;
     public final EObject entryRuleMatching() throws RecognitionException {
         EObject current = null;
 
@@ -2393,17 +2488,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1032:2: (iv_ruleMatching= ruleMatching EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1033:2: iv_ruleMatching= ruleMatching EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1068:2: (iv_ruleMatching= ruleMatching EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1069:2: iv_ruleMatching= ruleMatching EOF
             {
              newCompositeNode(grammarAccess.getMatchingRule()); 
-            pushFollow(FOLLOW_ruleMatching_in_entryRuleMatching2135);
+            pushFollow(FOLLOW_ruleMatching_in_entryRuleMatching2181);
             iv_ruleMatching=ruleMatching();
 
             state._fsp--;
 
              current =iv_ruleMatching; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMatching2145); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMatching2191); 
 
             }
 
@@ -2421,7 +2516,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMatching"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1040:1: ruleMatching returns [EObject current=null] : (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1076:1: ruleMatching returns [EObject current=null] : (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' ) ;
     public final EObject ruleMatching() throws RecognitionException {
         EObject current = null;
 
@@ -2439,31 +2534,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1043:28: ( (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1044:1: (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1079:28: ( (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1080:1: (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1044:1: (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1044:3: otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1080:1: (otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1080:3: otherlv_0= '@match' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )? ( (lv_question_3_0= RULE_STRING ) )? otherlv_4= '{' ( (lv_pairs_5_0= ruleMatchPair ) )+ ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )? otherlv_7= '}'
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleMatching2182); 
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleMatching2228); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMatchingAccess().getMatchKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1048:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt19=2;
-            int LA19_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1084:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt21=2;
+            int LA21_0 = input.LA(1);
 
-            if ( (LA19_0==20) ) {
-                alt19=1;
+            if ( (LA21_0==20) ) {
+                alt21=1;
             }
-            switch (alt19) {
+            switch (alt21) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1049:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1085:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1049:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1050:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1085:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1086:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleMatching2200); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleMatching2246); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getMatchingAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -2482,21 +2577,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1063:3: ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )?
-            int alt20=2;
-            int LA20_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1099:3: ( (lv_skipReverseQuestion_2_0= 'skip_reverse_question' ) )?
+            int alt22=2;
+            int LA22_0 = input.LA(1);
 
-            if ( (LA20_0==27) ) {
-                alt20=1;
+            if ( (LA22_0==27) ) {
+                alt22=1;
             }
-            switch (alt20) {
+            switch (alt22) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1064:1: (lv_skipReverseQuestion_2_0= 'skip_reverse_question' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1100:1: (lv_skipReverseQuestion_2_0= 'skip_reverse_question' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1064:1: (lv_skipReverseQuestion_2_0= 'skip_reverse_question' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1065:3: lv_skipReverseQuestion_2_0= 'skip_reverse_question'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1100:1: (lv_skipReverseQuestion_2_0= 'skip_reverse_question' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1101:3: lv_skipReverseQuestion_2_0= 'skip_reverse_question'
                     {
-                    lv_skipReverseQuestion_2_0=(Token)match(input,27,FOLLOW_27_in_ruleMatching2232); 
+                    lv_skipReverseQuestion_2_0=(Token)match(input,27,FOLLOW_27_in_ruleMatching2278); 
 
                             newLeafNode(lv_skipReverseQuestion_2_0, grammarAccess.getMatchingAccess().getSkipReverseQuestionSkip_reverse_questionKeyword_2_0());
                         
@@ -2515,21 +2610,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1078:3: ( (lv_question_3_0= RULE_STRING ) )?
-            int alt21=2;
-            int LA21_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1114:3: ( (lv_question_3_0= RULE_STRING ) )?
+            int alt23=2;
+            int LA23_0 = input.LA(1);
 
-            if ( (LA21_0==RULE_STRING) ) {
-                alt21=1;
+            if ( (LA23_0==RULE_STRING) ) {
+                alt23=1;
             }
-            switch (alt21) {
+            switch (alt23) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1079:1: (lv_question_3_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1115:1: (lv_question_3_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1079:1: (lv_question_3_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1080:3: lv_question_3_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1115:1: (lv_question_3_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1116:3: lv_question_3_0= RULE_STRING
                     {
-                    lv_question_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatching2263); 
+                    lv_question_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatching2309); 
 
                     			newLeafNode(lv_question_3_0, grammarAccess.getMatchingAccess().getQuestionSTRINGTerminalRuleCall_3_0()); 
                     		
@@ -2552,33 +2647,33 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleMatching2281); 
+            otherlv_4=(Token)match(input,28,FOLLOW_28_in_ruleMatching2327); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMatchingAccess().getLeftCurlyBracketKeyword_4());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1100:1: ( (lv_pairs_5_0= ruleMatchPair ) )+
-            int cnt22=0;
-            loop22:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1136:1: ( (lv_pairs_5_0= ruleMatchPair ) )+
+            int cnt24=0;
+            loop24:
             do {
-                int alt22=2;
-                int LA22_0 = input.LA(1);
+                int alt24=2;
+                int LA24_0 = input.LA(1);
 
-                if ( (LA22_0==RULE_STRING) ) {
-                    alt22=1;
+                if ( (LA24_0==RULE_STRING) ) {
+                    alt24=1;
                 }
 
 
-                switch (alt22) {
+                switch (alt24) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1101:1: (lv_pairs_5_0= ruleMatchPair )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1137:1: (lv_pairs_5_0= ruleMatchPair )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1101:1: (lv_pairs_5_0= ruleMatchPair )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1102:3: lv_pairs_5_0= ruleMatchPair
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1137:1: (lv_pairs_5_0= ruleMatchPair )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1138:3: lv_pairs_5_0= ruleMatchPair
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getMatchingAccess().getPairsMatchPairParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleMatchPair_in_ruleMatching2302);
+            	    pushFollow(FOLLOW_ruleMatchPair_in_ruleMatching2348);
             	    lv_pairs_5_0=ruleMatchPair();
 
             	    state._fsp--;
@@ -2602,32 +2697,32 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt22 >= 1 ) break loop22;
+            	    if ( cnt24 >= 1 ) break loop24;
                         EarlyExitException eee =
-                            new EarlyExitException(22, input);
+                            new EarlyExitException(24, input);
                         throw eee;
                 }
-                cnt22++;
+                cnt24++;
             } while (true);
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1118:3: ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )?
-            int alt23=2;
-            int LA23_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1154:3: ( (lv_mcqConfig_6_0= ruleMatchMCQConfig ) )?
+            int alt25=2;
+            int LA25_0 = input.LA(1);
 
-            if ( (LA23_0==31) ) {
-                alt23=1;
+            if ( (LA25_0==31) ) {
+                alt25=1;
             }
-            switch (alt23) {
+            switch (alt25) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1119:1: (lv_mcqConfig_6_0= ruleMatchMCQConfig )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1155:1: (lv_mcqConfig_6_0= ruleMatchMCQConfig )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1119:1: (lv_mcqConfig_6_0= ruleMatchMCQConfig )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1120:3: lv_mcqConfig_6_0= ruleMatchMCQConfig
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1155:1: (lv_mcqConfig_6_0= ruleMatchMCQConfig )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1156:3: lv_mcqConfig_6_0= ruleMatchMCQConfig
                     {
                      
                     	        newCompositeNode(grammarAccess.getMatchingAccess().getMcqConfigMatchMCQConfigParserRuleCall_6_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleMatchMCQConfig_in_ruleMatching2324);
+                    pushFollow(FOLLOW_ruleMatchMCQConfig_in_ruleMatching2370);
                     lv_mcqConfig_6_0=ruleMatchMCQConfig();
 
                     state._fsp--;
@@ -2652,7 +2747,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,29,FOLLOW_29_in_ruleMatching2337); 
+            otherlv_7=(Token)match(input,29,FOLLOW_29_in_ruleMatching2383); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getMatchingAccess().getRightCurlyBracketKeyword_7());
                 
@@ -2677,7 +2772,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMatchPair"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1148:1: entryRuleMatchPair returns [EObject current=null] : iv_ruleMatchPair= ruleMatchPair EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1184:1: entryRuleMatchPair returns [EObject current=null] : iv_ruleMatchPair= ruleMatchPair EOF ;
     public final EObject entryRuleMatchPair() throws RecognitionException {
         EObject current = null;
 
@@ -2685,17 +2780,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1149:2: (iv_ruleMatchPair= ruleMatchPair EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1150:2: iv_ruleMatchPair= ruleMatchPair EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1185:2: (iv_ruleMatchPair= ruleMatchPair EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1186:2: iv_ruleMatchPair= ruleMatchPair EOF
             {
              newCompositeNode(grammarAccess.getMatchPairRule()); 
-            pushFollow(FOLLOW_ruleMatchPair_in_entryRuleMatchPair2373);
+            pushFollow(FOLLOW_ruleMatchPair_in_entryRuleMatchPair2419);
             iv_ruleMatchPair=ruleMatchPair();
 
             state._fsp--;
 
              current =iv_ruleMatchPair; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMatchPair2383); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMatchPair2429); 
 
             }
 
@@ -2713,7 +2808,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMatchPair"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1157:1: ruleMatchPair returns [EObject current=null] : ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1193:1: ruleMatchPair returns [EObject current=null] : ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) ) ;
     public final EObject ruleMatchPair() throws RecognitionException {
         EObject current = null;
 
@@ -2724,19 +2819,19 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1160:28: ( ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1161:1: ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1196:28: ( ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1197:1: ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1161:1: ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1161:2: ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1197:1: ( ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1197:2: ( (lv_matchQuestion_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_matchAnswer_2_0= RULE_STRING ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1161:2: ( (lv_matchQuestion_0_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1162:1: (lv_matchQuestion_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1197:2: ( (lv_matchQuestion_0_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1198:1: (lv_matchQuestion_0_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1162:1: (lv_matchQuestion_0_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1163:3: lv_matchQuestion_0_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1198:1: (lv_matchQuestion_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1199:3: lv_matchQuestion_0_0= RULE_STRING
             {
-            lv_matchQuestion_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchPair2425); 
+            lv_matchQuestion_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchPair2471); 
 
             			newLeafNode(lv_matchQuestion_0_0, grammarAccess.getMatchPairAccess().getMatchQuestionSTRINGTerminalRuleCall_0_0()); 
             		
@@ -2756,17 +2851,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMatchPair2442); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleMatchPair2488); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMatchPairAccess().getEqualsSignKeyword_1());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1183:1: ( (lv_matchAnswer_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1184:1: (lv_matchAnswer_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1219:1: ( (lv_matchAnswer_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1220:1: (lv_matchAnswer_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1184:1: (lv_matchAnswer_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1185:3: lv_matchAnswer_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1220:1: (lv_matchAnswer_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1221:3: lv_matchAnswer_2_0= RULE_STRING
             {
-            lv_matchAnswer_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchPair2459); 
+            lv_matchAnswer_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchPair2505); 
 
             			newLeafNode(lv_matchAnswer_2_0, grammarAccess.getMatchPairAccess().getMatchAnswerSTRINGTerminalRuleCall_2_0()); 
             		
@@ -2807,7 +2902,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMatchMCQConfig"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1209:1: entryRuleMatchMCQConfig returns [EObject current=null] : iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1245:1: entryRuleMatchMCQConfig returns [EObject current=null] : iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF ;
     public final EObject entryRuleMatchMCQConfig() throws RecognitionException {
         EObject current = null;
 
@@ -2815,17 +2910,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1210:2: (iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1211:2: iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1246:2: (iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1247:2: iv_ruleMatchMCQConfig= ruleMatchMCQConfig EOF
             {
              newCompositeNode(grammarAccess.getMatchMCQConfigRule()); 
-            pushFollow(FOLLOW_ruleMatchMCQConfig_in_entryRuleMatchMCQConfig2500);
+            pushFollow(FOLLOW_ruleMatchMCQConfig_in_entryRuleMatchMCQConfig2546);
             iv_ruleMatchMCQConfig=ruleMatchMCQConfig();
 
             state._fsp--;
 
              current =iv_ruleMatchMCQConfig; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMatchMCQConfig2510); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMatchMCQConfig2556); 
 
             }
 
@@ -2843,7 +2938,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMatchMCQConfig"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1218:1: ruleMatchMCQConfig returns [EObject current=null] : (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1254:1: ruleMatchMCQConfig returns [EObject current=null] : (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' ) ;
     public final EObject ruleMatchMCQConfig() throws RecognitionException {
         EObject current = null;
 
@@ -2862,31 +2957,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1221:28: ( (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1222:1: (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1257:28: ( (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1258:1: (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1222:1: (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1222:3: otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1258:1: (otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1258:3: otherlv_0= '@mcq_config' otherlv_1= '{' otherlv_2= '@forwardCaption' ( (lv_forwardCaption_3_0= RULE_STRING ) ) (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )? (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )? (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )? otherlv_10= '}'
             {
-            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleMatchMCQConfig2547); 
+            otherlv_0=(Token)match(input,31,FOLLOW_31_in_ruleMatchMCQConfig2593); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMatchMCQConfigAccess().getMcq_configKeyword_0());
                 
-            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleMatchMCQConfig2559); 
+            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleMatchMCQConfig2605); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getMatchMCQConfigAccess().getLeftCurlyBracketKeyword_1());
                 
-            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleMatchMCQConfig2571); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleMatchMCQConfig2617); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getMatchMCQConfigAccess().getForwardCaptionKeyword_2());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1234:1: ( (lv_forwardCaption_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1235:1: (lv_forwardCaption_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1270:1: ( (lv_forwardCaption_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1271:1: (lv_forwardCaption_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1235:1: (lv_forwardCaption_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1236:3: lv_forwardCaption_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1271:1: (lv_forwardCaption_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1272:3: lv_forwardCaption_3_0= RULE_STRING
             {
-            lv_forwardCaption_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2588); 
+            lv_forwardCaption_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2634); 
 
             			newLeafNode(lv_forwardCaption_3_0, grammarAccess.getMatchMCQConfigAccess().getForwardCaptionSTRINGTerminalRuleCall_3_0()); 
             		
@@ -2906,28 +3001,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1252:2: (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )?
-            int alt24=2;
-            int LA24_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1288:2: (otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) ) )?
+            int alt26=2;
+            int LA26_0 = input.LA(1);
 
-            if ( (LA24_0==33) ) {
-                alt24=1;
+            if ( (LA26_0==33) ) {
+                alt26=1;
             }
-            switch (alt24) {
+            switch (alt26) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1252:4: otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1288:4: otherlv_4= '@reverseCaption' ( (lv_reverseCaption_5_0= RULE_STRING ) )
                     {
-                    otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleMatchMCQConfig2606); 
+                    otherlv_4=(Token)match(input,33,FOLLOW_33_in_ruleMatchMCQConfig2652); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getMatchMCQConfigAccess().getReverseCaptionKeyword_4_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1256:1: ( (lv_reverseCaption_5_0= RULE_STRING ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1257:1: (lv_reverseCaption_5_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1292:1: ( (lv_reverseCaption_5_0= RULE_STRING ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1293:1: (lv_reverseCaption_5_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1257:1: (lv_reverseCaption_5_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1258:3: lv_reverseCaption_5_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1293:1: (lv_reverseCaption_5_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1294:3: lv_reverseCaption_5_0= RULE_STRING
                     {
-                    lv_reverseCaption_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2623); 
+                    lv_reverseCaption_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2669); 
 
                     			newLeafNode(lv_reverseCaption_5_0, grammarAccess.getMatchMCQConfigAccess().getReverseCaptionSTRINGTerminalRuleCall_4_1_0()); 
                     		
@@ -2953,28 +3048,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1274:4: (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )?
-            int alt25=2;
-            int LA25_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1310:4: (otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) ) )?
+            int alt27=2;
+            int LA27_0 = input.LA(1);
 
-            if ( (LA25_0==34) ) {
-                alt25=1;
+            if ( (LA27_0==34) ) {
+                alt27=1;
             }
-            switch (alt25) {
+            switch (alt27) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1274:6: otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1310:6: otherlv_6= '@numOptionsToShow' ( (lv_numOptionsToShow_7_0= RULE_INT ) )
                     {
-                    otherlv_6=(Token)match(input,34,FOLLOW_34_in_ruleMatchMCQConfig2643); 
+                    otherlv_6=(Token)match(input,34,FOLLOW_34_in_ruleMatchMCQConfig2689); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowKeyword_5_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1278:1: ( (lv_numOptionsToShow_7_0= RULE_INT ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1279:1: (lv_numOptionsToShow_7_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1314:1: ( (lv_numOptionsToShow_7_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1315:1: (lv_numOptionsToShow_7_0= RULE_INT )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1279:1: (lv_numOptionsToShow_7_0= RULE_INT )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1280:3: lv_numOptionsToShow_7_0= RULE_INT
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1315:1: (lv_numOptionsToShow_7_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1316:3: lv_numOptionsToShow_7_0= RULE_INT
                     {
-                    lv_numOptionsToShow_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMatchMCQConfig2660); 
+                    lv_numOptionsToShow_7_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMatchMCQConfig2706); 
 
                     			newLeafNode(lv_numOptionsToShow_7_0, grammarAccess.getMatchMCQConfigAccess().getNumOptionsToShowINTTerminalRuleCall_5_1_0()); 
                     		
@@ -3000,28 +3095,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1296:4: (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )?
-            int alt26=2;
-            int LA26_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1332:4: (otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) ) )?
+            int alt28=2;
+            int LA28_0 = input.LA(1);
 
-            if ( (LA26_0==35) ) {
-                alt26=1;
+            if ( (LA28_0==35) ) {
+                alt28=1;
             }
-            switch (alt26) {
+            switch (alt28) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1296:6: otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1332:6: otherlv_8= '@numOptionsPerRow' ( (lv_numOptionsPerRow_9_0= RULE_INT ) )
                     {
-                    otherlv_8=(Token)match(input,35,FOLLOW_35_in_ruleMatchMCQConfig2680); 
+                    otherlv_8=(Token)match(input,35,FOLLOW_35_in_ruleMatchMCQConfig2726); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowKeyword_6_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1300:1: ( (lv_numOptionsPerRow_9_0= RULE_INT ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1301:1: (lv_numOptionsPerRow_9_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1336:1: ( (lv_numOptionsPerRow_9_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1337:1: (lv_numOptionsPerRow_9_0= RULE_INT )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1301:1: (lv_numOptionsPerRow_9_0= RULE_INT )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1302:3: lv_numOptionsPerRow_9_0= RULE_INT
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1337:1: (lv_numOptionsPerRow_9_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1338:3: lv_numOptionsPerRow_9_0= RULE_INT
                     {
-                    lv_numOptionsPerRow_9_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMatchMCQConfig2697); 
+                    lv_numOptionsPerRow_9_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMatchMCQConfig2743); 
 
                     			newLeafNode(lv_numOptionsPerRow_9_0, grammarAccess.getMatchMCQConfigAccess().getNumOptionsPerRowINTTerminalRuleCall_6_1_0()); 
                     		
@@ -3047,7 +3142,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_10=(Token)match(input,29,FOLLOW_29_in_ruleMatchMCQConfig2716); 
+            otherlv_10=(Token)match(input,29,FOLLOW_29_in_ruleMatchMCQConfig2762); 
 
                 	newLeafNode(otherlv_10, grammarAccess.getMatchMCQConfigAccess().getRightCurlyBracketKeyword_7());
                 
@@ -3072,7 +3167,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEvent"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1330:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1366:1: entryRuleEvent returns [EObject current=null] : iv_ruleEvent= ruleEvent EOF ;
     public final EObject entryRuleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -3080,17 +3175,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1331:2: (iv_ruleEvent= ruleEvent EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1332:2: iv_ruleEvent= ruleEvent EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1367:2: (iv_ruleEvent= ruleEvent EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1368:2: iv_ruleEvent= ruleEvent EOF
             {
              newCompositeNode(grammarAccess.getEventRule()); 
-            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent2752);
+            pushFollow(FOLLOW_ruleEvent_in_entryRuleEvent2798);
             iv_ruleEvent=ruleEvent();
 
             state._fsp--;
 
              current =iv_ruleEvent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent2762); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEvent2808); 
 
             }
 
@@ -3108,7 +3203,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEvent"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1339:1: ruleEvent returns [EObject current=null] : (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1375:1: ruleEvent returns [EObject current=null] : (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) ) ;
     public final EObject ruleEvent() throws RecognitionException {
         EObject current = null;
 
@@ -3120,31 +3215,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1342:28: ( (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1343:1: (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1378:28: ( (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1379:1: (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1343:1: (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1343:3: otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1379:1: (otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1379:3: otherlv_0= '@event' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_event_2_0= RULE_STRING ) ) ( (lv_time_3_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleEvent2799); 
+            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleEvent2845); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEventAccess().getEventKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1347:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt27=2;
-            int LA27_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1383:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt29=2;
+            int LA29_0 = input.LA(1);
 
-            if ( (LA27_0==20) ) {
-                alt27=1;
+            if ( (LA29_0==20) ) {
+                alt29=1;
             }
-            switch (alt27) {
+            switch (alt29) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1348:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1384:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1348:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1349:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1384:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1385:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleEvent2817); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleEvent2863); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getEventAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -3163,13 +3258,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1362:3: ( (lv_event_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1363:1: (lv_event_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1398:3: ( (lv_event_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1399:1: (lv_event_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1363:1: (lv_event_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1364:3: lv_event_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1399:1: (lv_event_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1400:3: lv_event_2_0= RULE_STRING
             {
-            lv_event_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent2848); 
+            lv_event_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent2894); 
 
             			newLeafNode(lv_event_2_0, grammarAccess.getEventAccess().getEventSTRINGTerminalRuleCall_2_0()); 
             		
@@ -3189,13 +3284,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1380:2: ( (lv_time_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1381:1: (lv_time_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1416:2: ( (lv_time_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1417:1: (lv_time_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1381:1: (lv_time_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1382:3: lv_time_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1417:1: (lv_time_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1418:3: lv_time_3_0= RULE_STRING
             {
-            lv_time_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent2870); 
+            lv_time_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEvent2916); 
 
             			newLeafNode(lv_time_3_0, grammarAccess.getEventAccess().getTimeSTRINGTerminalRuleCall_3_0()); 
             		
@@ -3236,7 +3331,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTrueFalse"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1406:1: entryRuleTrueFalse returns [EObject current=null] : iv_ruleTrueFalse= ruleTrueFalse EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1442:1: entryRuleTrueFalse returns [EObject current=null] : iv_ruleTrueFalse= ruleTrueFalse EOF ;
     public final EObject entryRuleTrueFalse() throws RecognitionException {
         EObject current = null;
 
@@ -3244,17 +3339,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1407:2: (iv_ruleTrueFalse= ruleTrueFalse EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1408:2: iv_ruleTrueFalse= ruleTrueFalse EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1443:2: (iv_ruleTrueFalse= ruleTrueFalse EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1444:2: iv_ruleTrueFalse= ruleTrueFalse EOF
             {
              newCompositeNode(grammarAccess.getTrueFalseRule()); 
-            pushFollow(FOLLOW_ruleTrueFalse_in_entryRuleTrueFalse2911);
+            pushFollow(FOLLOW_ruleTrueFalse_in_entryRuleTrueFalse2957);
             iv_ruleTrueFalse=ruleTrueFalse();
 
             state._fsp--;
 
              current =iv_ruleTrueFalse; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleTrueFalse2921); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleTrueFalse2967); 
 
             }
 
@@ -3272,7 +3367,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTrueFalse"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1415:1: ruleTrueFalse returns [EObject current=null] : (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1451:1: ruleTrueFalse returns [EObject current=null] : (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? ) ;
     public final EObject ruleTrueFalse() throws RecognitionException {
         EObject current = null;
 
@@ -3285,31 +3380,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1418:28: ( (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1419:1: (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1454:28: ( (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1455:1: (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1419:1: (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1419:3: otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1455:1: (otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1455:3: otherlv_0= '@true_false' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_statement_2_0= RULE_STRING ) ) ( (lv_truthValue_3_0= RULE_BOOL ) ) ( (lv_justification_4_0= RULE_STRING ) )?
             {
-            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleTrueFalse2958); 
+            otherlv_0=(Token)match(input,37,FOLLOW_37_in_ruleTrueFalse3004); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getTrueFalseAccess().getTrue_falseKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1423:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt28=2;
-            int LA28_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1459:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt30=2;
+            int LA30_0 = input.LA(1);
 
-            if ( (LA28_0==20) ) {
-                alt28=1;
+            if ( (LA30_0==20) ) {
+                alt30=1;
             }
-            switch (alt28) {
+            switch (alt30) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1424:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1460:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1424:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1425:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1460:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1461:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleTrueFalse2976); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleTrueFalse3022); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getTrueFalseAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -3328,13 +3423,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1438:3: ( (lv_statement_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1439:1: (lv_statement_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1474:3: ( (lv_statement_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1475:1: (lv_statement_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1439:1: (lv_statement_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1440:3: lv_statement_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1475:1: (lv_statement_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1476:3: lv_statement_2_0= RULE_STRING
             {
-            lv_statement_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrueFalse3007); 
+            lv_statement_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrueFalse3053); 
 
             			newLeafNode(lv_statement_2_0, grammarAccess.getTrueFalseAccess().getStatementSTRINGTerminalRuleCall_2_0()); 
             		
@@ -3354,13 +3449,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1456:2: ( (lv_truthValue_3_0= RULE_BOOL ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1457:1: (lv_truthValue_3_0= RULE_BOOL )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1492:2: ( (lv_truthValue_3_0= RULE_BOOL ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1493:1: (lv_truthValue_3_0= RULE_BOOL )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1457:1: (lv_truthValue_3_0= RULE_BOOL )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1458:3: lv_truthValue_3_0= RULE_BOOL
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1493:1: (lv_truthValue_3_0= RULE_BOOL )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1494:3: lv_truthValue_3_0= RULE_BOOL
             {
-            lv_truthValue_3_0=(Token)match(input,RULE_BOOL,FOLLOW_RULE_BOOL_in_ruleTrueFalse3029); 
+            lv_truthValue_3_0=(Token)match(input,RULE_BOOL,FOLLOW_RULE_BOOL_in_ruleTrueFalse3075); 
 
             			newLeafNode(lv_truthValue_3_0, grammarAccess.getTrueFalseAccess().getTruthValueBOOLTerminalRuleCall_3_0()); 
             		
@@ -3380,21 +3475,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1474:2: ( (lv_justification_4_0= RULE_STRING ) )?
-            int alt29=2;
-            int LA29_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1510:2: ( (lv_justification_4_0= RULE_STRING ) )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
 
-            if ( (LA29_0==RULE_STRING) ) {
-                alt29=1;
+            if ( (LA31_0==RULE_STRING) ) {
+                alt31=1;
             }
-            switch (alt29) {
+            switch (alt31) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1475:1: (lv_justification_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1511:1: (lv_justification_4_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1475:1: (lv_justification_4_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1476:3: lv_justification_4_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1511:1: (lv_justification_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1512:3: lv_justification_4_0= RULE_STRING
                     {
-                    lv_justification_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrueFalse3051); 
+                    lv_justification_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleTrueFalse3097); 
 
                     			newLeafNode(lv_justification_4_0, grammarAccess.getTrueFalseAccess().getJustificationSTRINGTerminalRuleCall_4_0()); 
                     		
@@ -3438,7 +3533,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleChemEquation"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1500:1: entryRuleChemEquation returns [EObject current=null] : iv_ruleChemEquation= ruleChemEquation EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1536:1: entryRuleChemEquation returns [EObject current=null] : iv_ruleChemEquation= ruleChemEquation EOF ;
     public final EObject entryRuleChemEquation() throws RecognitionException {
         EObject current = null;
 
@@ -3446,17 +3541,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1501:2: (iv_ruleChemEquation= ruleChemEquation EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1502:2: iv_ruleChemEquation= ruleChemEquation EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1537:2: (iv_ruleChemEquation= ruleChemEquation EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1538:2: iv_ruleChemEquation= ruleChemEquation EOF
             {
              newCompositeNode(grammarAccess.getChemEquationRule()); 
-            pushFollow(FOLLOW_ruleChemEquation_in_entryRuleChemEquation3093);
+            pushFollow(FOLLOW_ruleChemEquation_in_entryRuleChemEquation3139);
             iv_ruleChemEquation=ruleChemEquation();
 
             state._fsp--;
 
              current =iv_ruleChemEquation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleChemEquation3103); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChemEquation3149); 
 
             }
 
@@ -3474,7 +3569,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChemEquation"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1509:1: ruleChemEquation returns [EObject current=null] : (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1545:1: ruleChemEquation returns [EObject current=null] : (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' ) ;
     public final EObject ruleChemEquation() throws RecognitionException {
         EObject current = null;
 
@@ -3492,31 +3587,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1512:28: ( (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1513:1: (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1548:28: ( (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1549:1: (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1513:1: (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1513:3: otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1549:1: (otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1549:3: otherlv_0= '@chem_equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_description_2_0= RULE_STRING ) )? otherlv_3= '{' ( (lv_reactants_4_0= RULE_STRING ) ) otherlv_5= '>' ( (lv_produces_6_0= RULE_STRING ) )? otherlv_7= '>' ( (lv_products_8_0= RULE_STRING ) ) otherlv_9= '}'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleChemEquation3140); 
+            otherlv_0=(Token)match(input,38,FOLLOW_38_in_ruleChemEquation3186); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getChemEquationAccess().getChem_equationKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1517:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt30=2;
-            int LA30_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1553:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            if ( (LA30_0==20) ) {
-                alt30=1;
+            if ( (LA32_0==20) ) {
+                alt32=1;
             }
-            switch (alt30) {
+            switch (alt32) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1518:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1554:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1518:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1519:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1554:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1555:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleChemEquation3158); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleChemEquation3204); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getChemEquationAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -3535,21 +3630,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1532:3: ( (lv_description_2_0= RULE_STRING ) )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1568:3: ( (lv_description_2_0= RULE_STRING ) )?
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA31_0==RULE_STRING) ) {
-                alt31=1;
+            if ( (LA33_0==RULE_STRING) ) {
+                alt33=1;
             }
-            switch (alt31) {
+            switch (alt33) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1533:1: (lv_description_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1569:1: (lv_description_2_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1533:1: (lv_description_2_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1534:3: lv_description_2_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1569:1: (lv_description_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1570:3: lv_description_2_0= RULE_STRING
                     {
-                    lv_description_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3189); 
+                    lv_description_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3235); 
 
                     			newLeafNode(lv_description_2_0, grammarAccess.getChemEquationAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); 
                     		
@@ -3572,17 +3667,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleChemEquation3207); 
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleChemEquation3253); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getChemEquationAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1554:1: ( (lv_reactants_4_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1555:1: (lv_reactants_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1590:1: ( (lv_reactants_4_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1591:1: (lv_reactants_4_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1555:1: (lv_reactants_4_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1556:3: lv_reactants_4_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1591:1: (lv_reactants_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1592:3: lv_reactants_4_0= RULE_STRING
             {
-            lv_reactants_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3224); 
+            lv_reactants_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3270); 
 
             			newLeafNode(lv_reactants_4_0, grammarAccess.getChemEquationAccess().getReactantsSTRINGTerminalRuleCall_4_0()); 
             		
@@ -3602,25 +3697,25 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,39,FOLLOW_39_in_ruleChemEquation3241); 
+            otherlv_5=(Token)match(input,39,FOLLOW_39_in_ruleChemEquation3287); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_5());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1576:1: ( (lv_produces_6_0= RULE_STRING ) )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1612:1: ( (lv_produces_6_0= RULE_STRING ) )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA32_0==RULE_STRING) ) {
-                alt32=1;
+            if ( (LA34_0==RULE_STRING) ) {
+                alt34=1;
             }
-            switch (alt32) {
+            switch (alt34) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1577:1: (lv_produces_6_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1613:1: (lv_produces_6_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1577:1: (lv_produces_6_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1578:3: lv_produces_6_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1613:1: (lv_produces_6_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1614:3: lv_produces_6_0= RULE_STRING
                     {
-                    lv_produces_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3258); 
+                    lv_produces_6_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3304); 
 
                     			newLeafNode(lv_produces_6_0, grammarAccess.getChemEquationAccess().getProducesSTRINGTerminalRuleCall_6_0()); 
                     		
@@ -3643,17 +3738,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,39,FOLLOW_39_in_ruleChemEquation3276); 
+            otherlv_7=(Token)match(input,39,FOLLOW_39_in_ruleChemEquation3322); 
 
                 	newLeafNode(otherlv_7, grammarAccess.getChemEquationAccess().getGreaterThanSignKeyword_7());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1598:1: ( (lv_products_8_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1599:1: (lv_products_8_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1634:1: ( (lv_products_8_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1635:1: (lv_products_8_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1599:1: (lv_products_8_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1600:3: lv_products_8_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1635:1: (lv_products_8_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1636:3: lv_products_8_0= RULE_STRING
             {
-            lv_products_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3293); 
+            lv_products_8_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemEquation3339); 
 
             			newLeafNode(lv_products_8_0, grammarAccess.getChemEquationAccess().getProductsSTRINGTerminalRuleCall_8_0()); 
             		
@@ -3673,7 +3768,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleChemEquation3310); 
+            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleChemEquation3356); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getChemEquationAccess().getRightCurlyBracketKeyword_9());
                 
@@ -3698,7 +3793,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleChemCompound"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1628:1: entryRuleChemCompound returns [EObject current=null] : iv_ruleChemCompound= ruleChemCompound EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1664:1: entryRuleChemCompound returns [EObject current=null] : iv_ruleChemCompound= ruleChemCompound EOF ;
     public final EObject entryRuleChemCompound() throws RecognitionException {
         EObject current = null;
 
@@ -3706,17 +3801,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1629:2: (iv_ruleChemCompound= ruleChemCompound EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1630:2: iv_ruleChemCompound= ruleChemCompound EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1665:2: (iv_ruleChemCompound= ruleChemCompound EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1666:2: iv_ruleChemCompound= ruleChemCompound EOF
             {
              newCompositeNode(grammarAccess.getChemCompoundRule()); 
-            pushFollow(FOLLOW_ruleChemCompound_in_entryRuleChemCompound3346);
+            pushFollow(FOLLOW_ruleChemCompound_in_entryRuleChemCompound3392);
             iv_ruleChemCompound=ruleChemCompound();
 
             state._fsp--;
 
              current =iv_ruleChemCompound; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleChemCompound3356); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChemCompound3402); 
 
             }
 
@@ -3734,7 +3829,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleChemCompound"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1637:1: ruleChemCompound returns [EObject current=null] : (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1673:1: ruleChemCompound returns [EObject current=null] : (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? ) ;
     public final EObject ruleChemCompound() throws RecognitionException {
         EObject current = null;
 
@@ -3747,31 +3842,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1640:28: ( (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1641:1: (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1676:28: ( (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1677:1: (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1641:1: (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1641:3: otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1677:1: (otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1677:3: otherlv_0= '@chem_compound' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_symbol_2_0= RULE_STRING ) ) ( (lv_chemicalName_3_0= RULE_STRING ) ) ( (lv_commonName_4_0= RULE_STRING ) )?
             {
-            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleChemCompound3393); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleChemCompound3439); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getChemCompoundAccess().getChem_compoundKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1645:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1681:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA33_0==20) ) {
-                alt33=1;
+            if ( (LA35_0==20) ) {
+                alt35=1;
             }
-            switch (alt33) {
+            switch (alt35) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1646:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1682:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1646:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1647:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1682:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1683:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleChemCompound3411); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleChemCompound3457); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getChemCompoundAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -3790,13 +3885,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1660:3: ( (lv_symbol_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1661:1: (lv_symbol_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1696:3: ( (lv_symbol_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1697:1: (lv_symbol_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1661:1: (lv_symbol_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1662:3: lv_symbol_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1697:1: (lv_symbol_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1698:3: lv_symbol_2_0= RULE_STRING
             {
-            lv_symbol_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3442); 
+            lv_symbol_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3488); 
 
             			newLeafNode(lv_symbol_2_0, grammarAccess.getChemCompoundAccess().getSymbolSTRINGTerminalRuleCall_2_0()); 
             		
@@ -3816,13 +3911,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1678:2: ( (lv_chemicalName_3_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1679:1: (lv_chemicalName_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1714:2: ( (lv_chemicalName_3_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1715:1: (lv_chemicalName_3_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1679:1: (lv_chemicalName_3_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1680:3: lv_chemicalName_3_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1715:1: (lv_chemicalName_3_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1716:3: lv_chemicalName_3_0= RULE_STRING
             {
-            lv_chemicalName_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3464); 
+            lv_chemicalName_3_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3510); 
 
             			newLeafNode(lv_chemicalName_3_0, grammarAccess.getChemCompoundAccess().getChemicalNameSTRINGTerminalRuleCall_3_0()); 
             		
@@ -3842,21 +3937,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1696:2: ( (lv_commonName_4_0= RULE_STRING ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1732:2: ( (lv_commonName_4_0= RULE_STRING ) )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA34_0==RULE_STRING) ) {
-                alt34=1;
+            if ( (LA36_0==RULE_STRING) ) {
+                alt36=1;
             }
-            switch (alt34) {
+            switch (alt36) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1697:1: (lv_commonName_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1733:1: (lv_commonName_4_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1697:1: (lv_commonName_4_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1698:3: lv_commonName_4_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1733:1: (lv_commonName_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1734:3: lv_commonName_4_0= RULE_STRING
                     {
-                    lv_commonName_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3486); 
+                    lv_commonName_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleChemCompound3532); 
 
                     			newLeafNode(lv_commonName_4_0, grammarAccess.getChemCompoundAccess().getCommonNameSTRINGTerminalRuleCall_4_0()); 
                     		
@@ -3900,7 +3995,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleSpellbee"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1722:1: entryRuleSpellbee returns [EObject current=null] : iv_ruleSpellbee= ruleSpellbee EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1758:1: entryRuleSpellbee returns [EObject current=null] : iv_ruleSpellbee= ruleSpellbee EOF ;
     public final EObject entryRuleSpellbee() throws RecognitionException {
         EObject current = null;
 
@@ -3908,17 +4003,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1723:2: (iv_ruleSpellbee= ruleSpellbee EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1724:2: iv_ruleSpellbee= ruleSpellbee EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1759:2: (iv_ruleSpellbee= ruleSpellbee EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1760:2: iv_ruleSpellbee= ruleSpellbee EOF
             {
              newCompositeNode(grammarAccess.getSpellbeeRule()); 
-            pushFollow(FOLLOW_ruleSpellbee_in_entryRuleSpellbee3528);
+            pushFollow(FOLLOW_ruleSpellbee_in_entryRuleSpellbee3574);
             iv_ruleSpellbee=ruleSpellbee();
 
             state._fsp--;
 
              current =iv_ruleSpellbee; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleSpellbee3538); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleSpellbee3584); 
 
             }
 
@@ -3936,7 +4031,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSpellbee"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1731:1: ruleSpellbee returns [EObject current=null] : (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1767:1: ruleSpellbee returns [EObject current=null] : (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ) ;
     public final EObject ruleSpellbee() throws RecognitionException {
         EObject current = null;
 
@@ -3947,31 +4042,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1734:28: ( (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1735:1: (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1770:28: ( (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1771:1: (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1735:1: (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1735:3: otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1771:1: (otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1771:3: otherlv_0= '@spellbee' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_word_2_0= RULE_STRING ) )
             {
-            otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleSpellbee3575); 
+            otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleSpellbee3621); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getSpellbeeAccess().getSpellbeeKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1739:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1775:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt37=2;
+            int LA37_0 = input.LA(1);
 
-            if ( (LA35_0==20) ) {
-                alt35=1;
+            if ( (LA37_0==20) ) {
+                alt37=1;
             }
-            switch (alt35) {
+            switch (alt37) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1740:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1776:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1740:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1741:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1776:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1777:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleSpellbee3593); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleSpellbee3639); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getSpellbeeAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -3990,13 +4085,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1754:3: ( (lv_word_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1755:1: (lv_word_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1790:3: ( (lv_word_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1791:1: (lv_word_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1755:1: (lv_word_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1756:3: lv_word_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1791:1: (lv_word_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1792:3: lv_word_2_0= RULE_STRING
             {
-            lv_word_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpellbee3624); 
+            lv_word_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleSpellbee3670); 
 
             			newLeafNode(lv_word_2_0, grammarAccess.getSpellbeeAccess().getWordSTRINGTerminalRuleCall_2_0()); 
             		
@@ -4037,7 +4132,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleImageLabel"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1780:1: entryRuleImageLabel returns [EObject current=null] : iv_ruleImageLabel= ruleImageLabel EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1816:1: entryRuleImageLabel returns [EObject current=null] : iv_ruleImageLabel= ruleImageLabel EOF ;
     public final EObject entryRuleImageLabel() throws RecognitionException {
         EObject current = null;
 
@@ -4045,17 +4140,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1781:2: (iv_ruleImageLabel= ruleImageLabel EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1782:2: iv_ruleImageLabel= ruleImageLabel EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1817:2: (iv_ruleImageLabel= ruleImageLabel EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1818:2: iv_ruleImageLabel= ruleImageLabel EOF
             {
              newCompositeNode(grammarAccess.getImageLabelRule()); 
-            pushFollow(FOLLOW_ruleImageLabel_in_entryRuleImageLabel3665);
+            pushFollow(FOLLOW_ruleImageLabel_in_entryRuleImageLabel3711);
             iv_ruleImageLabel=ruleImageLabel();
 
             state._fsp--;
 
              current =iv_ruleImageLabel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleImageLabel3675); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleImageLabel3721); 
 
             }
 
@@ -4073,7 +4168,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleImageLabel"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1789:1: ruleImageLabel returns [EObject current=null] : (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1825:1: ruleImageLabel returns [EObject current=null] : (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' ) ;
     public final EObject ruleImageLabel() throws RecognitionException {
         EObject current = null;
 
@@ -4093,31 +4188,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1792:28: ( (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1793:1: (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1828:28: ( (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1829:1: (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1793:1: (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1793:3: otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1829:1: (otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1829:3: otherlv_0= '@image_label' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_caption_2_0= RULE_STRING ) )? otherlv_3= '{' otherlv_4= 'imageName' ( (lv_imageName_5_0= RULE_STRING ) ) ( (lv_hotspots_6_0= ruleHotSpot ) ) (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )* otherlv_9= '}'
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleImageLabel3712); 
+            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleImageLabel3758); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getImageLabelAccess().getImage_labelKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1797:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1833:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt38=2;
+            int LA38_0 = input.LA(1);
 
-            if ( (LA36_0==20) ) {
-                alt36=1;
+            if ( (LA38_0==20) ) {
+                alt38=1;
             }
-            switch (alt36) {
+            switch (alt38) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1798:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1834:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1798:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1799:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1834:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1835:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleImageLabel3730); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleImageLabel3776); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getImageLabelAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -4136,21 +4231,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1812:3: ( (lv_caption_2_0= RULE_STRING ) )?
-            int alt37=2;
-            int LA37_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1848:3: ( (lv_caption_2_0= RULE_STRING ) )?
+            int alt39=2;
+            int LA39_0 = input.LA(1);
 
-            if ( (LA37_0==RULE_STRING) ) {
-                alt37=1;
+            if ( (LA39_0==RULE_STRING) ) {
+                alt39=1;
             }
-            switch (alt37) {
+            switch (alt39) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1813:1: (lv_caption_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1849:1: (lv_caption_2_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1813:1: (lv_caption_2_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1814:3: lv_caption_2_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1849:1: (lv_caption_2_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1850:3: lv_caption_2_0= RULE_STRING
                     {
-                    lv_caption_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImageLabel3761); 
+                    lv_caption_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImageLabel3807); 
 
                     			newLeafNode(lv_caption_2_0, grammarAccess.getImageLabelAccess().getCaptionSTRINGTerminalRuleCall_2_0()); 
                     		
@@ -4173,21 +4268,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleImageLabel3779); 
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleImageLabel3825); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getImageLabelAccess().getLeftCurlyBracketKeyword_3());
                 
-            otherlv_4=(Token)match(input,43,FOLLOW_43_in_ruleImageLabel3791); 
+            otherlv_4=(Token)match(input,43,FOLLOW_43_in_ruleImageLabel3837); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getImageLabelAccess().getImageNameKeyword_4());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1838:1: ( (lv_imageName_5_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1839:1: (lv_imageName_5_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1874:1: ( (lv_imageName_5_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1875:1: (lv_imageName_5_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1839:1: (lv_imageName_5_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1840:3: lv_imageName_5_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1875:1: (lv_imageName_5_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1876:3: lv_imageName_5_0= RULE_STRING
             {
-            lv_imageName_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImageLabel3808); 
+            lv_imageName_5_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleImageLabel3854); 
 
             			newLeafNode(lv_imageName_5_0, grammarAccess.getImageLabelAccess().getImageNameSTRINGTerminalRuleCall_5_0()); 
             		
@@ -4207,16 +4302,16 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1856:2: ( (lv_hotspots_6_0= ruleHotSpot ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1857:1: (lv_hotspots_6_0= ruleHotSpot )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1892:2: ( (lv_hotspots_6_0= ruleHotSpot ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1893:1: (lv_hotspots_6_0= ruleHotSpot )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1857:1: (lv_hotspots_6_0= ruleHotSpot )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1858:3: lv_hotspots_6_0= ruleHotSpot
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1893:1: (lv_hotspots_6_0= ruleHotSpot )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1894:3: lv_hotspots_6_0= ruleHotSpot
             {
              
             	        newCompositeNode(grammarAccess.getImageLabelAccess().getHotspotsHotSpotParserRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleHotSpot_in_ruleImageLabel3834);
+            pushFollow(FOLLOW_ruleHotSpot_in_ruleImageLabel3880);
             lv_hotspots_6_0=ruleHotSpot();
 
             state._fsp--;
@@ -4238,35 +4333,35 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1874:2: (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )*
-            loop38:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1910:2: (otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) ) )*
+            loop40:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA38_0==44) ) {
-                    alt38=1;
+                if ( (LA40_0==44) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt40) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1874:4: otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1910:4: otherlv_7= ',' ( (lv_hotspots_8_0= ruleHotSpot ) )
             	    {
-            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleImageLabel3847); 
+            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleImageLabel3893); 
 
             	        	newLeafNode(otherlv_7, grammarAccess.getImageLabelAccess().getCommaKeyword_7_0());
             	        
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1878:1: ( (lv_hotspots_8_0= ruleHotSpot ) )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1879:1: (lv_hotspots_8_0= ruleHotSpot )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1914:1: ( (lv_hotspots_8_0= ruleHotSpot ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1915:1: (lv_hotspots_8_0= ruleHotSpot )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1879:1: (lv_hotspots_8_0= ruleHotSpot )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1880:3: lv_hotspots_8_0= ruleHotSpot
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1915:1: (lv_hotspots_8_0= ruleHotSpot )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1916:3: lv_hotspots_8_0= ruleHotSpot
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getImageLabelAccess().getHotspotsHotSpotParserRuleCall_7_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleHotSpot_in_ruleImageLabel3868);
+            	    pushFollow(FOLLOW_ruleHotSpot_in_ruleImageLabel3914);
             	    lv_hotspots_8_0=ruleHotSpot();
 
             	    state._fsp--;
@@ -4293,11 +4388,11 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop40;
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleImageLabel3882); 
+            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleImageLabel3928); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getImageLabelAccess().getRightCurlyBracketKeyword_8());
                 
@@ -4322,7 +4417,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleHotSpot"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1908:1: entryRuleHotSpot returns [EObject current=null] : iv_ruleHotSpot= ruleHotSpot EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1944:1: entryRuleHotSpot returns [EObject current=null] : iv_ruleHotSpot= ruleHotSpot EOF ;
     public final EObject entryRuleHotSpot() throws RecognitionException {
         EObject current = null;
 
@@ -4330,17 +4425,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1909:2: (iv_ruleHotSpot= ruleHotSpot EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1910:2: iv_ruleHotSpot= ruleHotSpot EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1945:2: (iv_ruleHotSpot= ruleHotSpot EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1946:2: iv_ruleHotSpot= ruleHotSpot EOF
             {
              newCompositeNode(grammarAccess.getHotSpotRule()); 
-            pushFollow(FOLLOW_ruleHotSpot_in_entryRuleHotSpot3918);
+            pushFollow(FOLLOW_ruleHotSpot_in_entryRuleHotSpot3964);
             iv_ruleHotSpot=ruleHotSpot();
 
             state._fsp--;
 
              current =iv_ruleHotSpot; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleHotSpot3928); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleHotSpot3974); 
 
             }
 
@@ -4358,7 +4453,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHotSpot"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1917:1: ruleHotSpot returns [EObject current=null] : ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1953:1: ruleHotSpot returns [EObject current=null] : ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) ) ;
     public final EObject ruleHotSpot() throws RecognitionException {
         EObject current = null;
 
@@ -4371,19 +4466,19 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1920:28: ( ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1921:1: ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1956:28: ( ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1957:1: ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1921:1: ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1921:2: ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1957:1: ( ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1957:2: ( (lv_x_0_0= RULE_INT ) ) otherlv_1= ',' ( (lv_y_2_0= RULE_INT ) ) otherlv_3= '=' ( (lv_label_4_0= RULE_STRING ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1921:2: ( (lv_x_0_0= RULE_INT ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1922:1: (lv_x_0_0= RULE_INT )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1957:2: ( (lv_x_0_0= RULE_INT ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1958:1: (lv_x_0_0= RULE_INT )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1922:1: (lv_x_0_0= RULE_INT )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1923:3: lv_x_0_0= RULE_INT
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1958:1: (lv_x_0_0= RULE_INT )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1959:3: lv_x_0_0= RULE_INT
             {
-            lv_x_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleHotSpot3970); 
+            lv_x_0_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleHotSpot4016); 
 
             			newLeafNode(lv_x_0_0, grammarAccess.getHotSpotAccess().getXINTTerminalRuleCall_0_0()); 
             		
@@ -4403,17 +4498,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,44,FOLLOW_44_in_ruleHotSpot3987); 
+            otherlv_1=(Token)match(input,44,FOLLOW_44_in_ruleHotSpot4033); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getHotSpotAccess().getCommaKeyword_1());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1943:1: ( (lv_y_2_0= RULE_INT ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1944:1: (lv_y_2_0= RULE_INT )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1979:1: ( (lv_y_2_0= RULE_INT ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1980:1: (lv_y_2_0= RULE_INT )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1944:1: (lv_y_2_0= RULE_INT )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1945:3: lv_y_2_0= RULE_INT
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1980:1: (lv_y_2_0= RULE_INT )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1981:3: lv_y_2_0= RULE_INT
             {
-            lv_y_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleHotSpot4004); 
+            lv_y_2_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleHotSpot4050); 
 
             			newLeafNode(lv_y_2_0, grammarAccess.getHotSpotAccess().getYINTTerminalRuleCall_2_0()); 
             		
@@ -4433,17 +4528,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleHotSpot4021); 
+            otherlv_3=(Token)match(input,30,FOLLOW_30_in_ruleHotSpot4067); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getHotSpotAccess().getEqualsSignKeyword_3());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1965:1: ( (lv_label_4_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1966:1: (lv_label_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2001:1: ( (lv_label_4_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2002:1: (lv_label_4_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1966:1: (lv_label_4_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1967:3: lv_label_4_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2002:1: (lv_label_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2003:3: lv_label_4_0= RULE_STRING
             {
-            lv_label_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHotSpot4038); 
+            lv_label_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleHotSpot4084); 
 
             			newLeafNode(lv_label_4_0, grammarAccess.getHotSpotAccess().getLabelSTRINGTerminalRuleCall_4_0()); 
             		
@@ -4484,7 +4579,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEquation"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1991:1: entryRuleEquation returns [EObject current=null] : iv_ruleEquation= ruleEquation EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2027:1: entryRuleEquation returns [EObject current=null] : iv_ruleEquation= ruleEquation EOF ;
     public final EObject entryRuleEquation() throws RecognitionException {
         EObject current = null;
 
@@ -4492,17 +4587,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1992:2: (iv_ruleEquation= ruleEquation EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:1993:2: iv_ruleEquation= ruleEquation EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2028:2: (iv_ruleEquation= ruleEquation EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2029:2: iv_ruleEquation= ruleEquation EOF
             {
              newCompositeNode(grammarAccess.getEquationRule()); 
-            pushFollow(FOLLOW_ruleEquation_in_entryRuleEquation4079);
+            pushFollow(FOLLOW_ruleEquation_in_entryRuleEquation4125);
             iv_ruleEquation=ruleEquation();
 
             state._fsp--;
 
              current =iv_ruleEquation; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEquation4089); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEquation4135); 
 
             }
 
@@ -4520,7 +4615,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEquation"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2000:1: ruleEquation returns [EObject current=null] : (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2036:1: ruleEquation returns [EObject current=null] : (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' ) ;
     public final EObject ruleEquation() throws RecognitionException {
         EObject current = null;
 
@@ -4540,31 +4635,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2003:28: ( (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2004:1: (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2039:28: ( (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2040:1: (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2004:1: (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2004:3: otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2040:1: (otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2040:3: otherlv_0= '@equation' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_equation_2_0= RULE_STRING ) ) otherlv_3= '{' ( (lv_description_4_0= RULE_STRING ) )? otherlv_5= 'where' ( (lv_symbols_6_0= ruleEqSymbol ) ) (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )* otherlv_9= '}'
             {
-            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleEquation4126); 
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruleEquation4172); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEquationAccess().getEquationKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2008:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2044:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA39_0==20) ) {
-                alt39=1;
+            if ( (LA41_0==20) ) {
+                alt41=1;
             }
-            switch (alt39) {
+            switch (alt41) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2009:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2045:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2009:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2010:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2045:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2046:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleEquation4144); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleEquation4190); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getEquationAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -4583,13 +4678,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2023:3: ( (lv_equation_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2024:1: (lv_equation_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2059:3: ( (lv_equation_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2060:1: (lv_equation_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2024:1: (lv_equation_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2025:3: lv_equation_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2060:1: (lv_equation_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2061:3: lv_equation_2_0= RULE_STRING
             {
-            lv_equation_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEquation4175); 
+            lv_equation_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEquation4221); 
 
             			newLeafNode(lv_equation_2_0, grammarAccess.getEquationAccess().getEquationSTRINGTerminalRuleCall_2_0()); 
             		
@@ -4609,25 +4704,25 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleEquation4192); 
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleEquation4238); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getEquationAccess().getLeftCurlyBracketKeyword_3());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2045:1: ( (lv_description_4_0= RULE_STRING ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2081:1: ( (lv_description_4_0= RULE_STRING ) )?
+            int alt42=2;
+            int LA42_0 = input.LA(1);
 
-            if ( (LA40_0==RULE_STRING) ) {
-                alt40=1;
+            if ( (LA42_0==RULE_STRING) ) {
+                alt42=1;
             }
-            switch (alt40) {
+            switch (alt42) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2046:1: (lv_description_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2082:1: (lv_description_4_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2046:1: (lv_description_4_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2047:3: lv_description_4_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2082:1: (lv_description_4_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2083:3: lv_description_4_0= RULE_STRING
                     {
-                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEquation4209); 
+                    lv_description_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEquation4255); 
 
                     			newLeafNode(lv_description_4_0, grammarAccess.getEquationAccess().getDescriptionSTRINGTerminalRuleCall_4_0()); 
                     		
@@ -4650,20 +4745,20 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_5=(Token)match(input,46,FOLLOW_46_in_ruleEquation4227); 
+            otherlv_5=(Token)match(input,46,FOLLOW_46_in_ruleEquation4273); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getEquationAccess().getWhereKeyword_5());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2067:1: ( (lv_symbols_6_0= ruleEqSymbol ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2068:1: (lv_symbols_6_0= ruleEqSymbol )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2103:1: ( (lv_symbols_6_0= ruleEqSymbol ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2104:1: (lv_symbols_6_0= ruleEqSymbol )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2068:1: (lv_symbols_6_0= ruleEqSymbol )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2069:3: lv_symbols_6_0= ruleEqSymbol
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2104:1: (lv_symbols_6_0= ruleEqSymbol )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2105:3: lv_symbols_6_0= ruleEqSymbol
             {
              
             	        newCompositeNode(grammarAccess.getEquationAccess().getSymbolsEqSymbolParserRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleEqSymbol_in_ruleEquation4248);
+            pushFollow(FOLLOW_ruleEqSymbol_in_ruleEquation4294);
             lv_symbols_6_0=ruleEqSymbol();
 
             state._fsp--;
@@ -4685,35 +4780,35 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2085:2: (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )*
-            loop41:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2121:2: (otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) ) )*
+            loop43:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt43=2;
+                int LA43_0 = input.LA(1);
 
-                if ( (LA41_0==44) ) {
-                    alt41=1;
+                if ( (LA43_0==44) ) {
+                    alt43=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt43) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2085:4: otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2121:4: otherlv_7= ',' ( (lv_symbols_8_0= ruleEqSymbol ) )
             	    {
-            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleEquation4261); 
+            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleEquation4307); 
 
             	        	newLeafNode(otherlv_7, grammarAccess.getEquationAccess().getCommaKeyword_7_0());
             	        
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2089:1: ( (lv_symbols_8_0= ruleEqSymbol ) )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2090:1: (lv_symbols_8_0= ruleEqSymbol )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2125:1: ( (lv_symbols_8_0= ruleEqSymbol ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2126:1: (lv_symbols_8_0= ruleEqSymbol )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2090:1: (lv_symbols_8_0= ruleEqSymbol )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2091:3: lv_symbols_8_0= ruleEqSymbol
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2126:1: (lv_symbols_8_0= ruleEqSymbol )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2127:3: lv_symbols_8_0= ruleEqSymbol
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getEquationAccess().getSymbolsEqSymbolParserRuleCall_7_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleEqSymbol_in_ruleEquation4282);
+            	    pushFollow(FOLLOW_ruleEqSymbol_in_ruleEquation4328);
             	    lv_symbols_8_0=ruleEqSymbol();
 
             	    state._fsp--;
@@ -4740,11 +4835,11 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop41;
+            	    break loop43;
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleEquation4296); 
+            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleEquation4342); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getEquationAccess().getRightCurlyBracketKeyword_8());
                 
@@ -4769,7 +4864,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleEqSymbol"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2119:1: entryRuleEqSymbol returns [EObject current=null] : iv_ruleEqSymbol= ruleEqSymbol EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2155:1: entryRuleEqSymbol returns [EObject current=null] : iv_ruleEqSymbol= ruleEqSymbol EOF ;
     public final EObject entryRuleEqSymbol() throws RecognitionException {
         EObject current = null;
 
@@ -4777,17 +4872,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2120:2: (iv_ruleEqSymbol= ruleEqSymbol EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2121:2: iv_ruleEqSymbol= ruleEqSymbol EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2156:2: (iv_ruleEqSymbol= ruleEqSymbol EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2157:2: iv_ruleEqSymbol= ruleEqSymbol EOF
             {
              newCompositeNode(grammarAccess.getEqSymbolRule()); 
-            pushFollow(FOLLOW_ruleEqSymbol_in_entryRuleEqSymbol4332);
+            pushFollow(FOLLOW_ruleEqSymbol_in_entryRuleEqSymbol4378);
             iv_ruleEqSymbol=ruleEqSymbol();
 
             state._fsp--;
 
              current =iv_ruleEqSymbol; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleEqSymbol4342); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleEqSymbol4388); 
 
             }
 
@@ -4805,7 +4900,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleEqSymbol"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2128:1: ruleEqSymbol returns [EObject current=null] : ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2164:1: ruleEqSymbol returns [EObject current=null] : ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) ) ;
     public final EObject ruleEqSymbol() throws RecognitionException {
         EObject current = null;
 
@@ -4816,19 +4911,19 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2131:28: ( ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2132:1: ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2167:28: ( ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2168:1: ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2132:1: ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2132:2: ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2168:1: ( ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2168:2: ( (lv_symbol_0_0= RULE_STRING ) ) otherlv_1= '=' ( (lv_description_2_0= RULE_STRING ) )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2132:2: ( (lv_symbol_0_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2133:1: (lv_symbol_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2168:2: ( (lv_symbol_0_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2169:1: (lv_symbol_0_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2133:1: (lv_symbol_0_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2134:3: lv_symbol_0_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2169:1: (lv_symbol_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2170:3: lv_symbol_0_0= RULE_STRING
             {
-            lv_symbol_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEqSymbol4384); 
+            lv_symbol_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEqSymbol4430); 
 
             			newLeafNode(lv_symbol_0_0, grammarAccess.getEqSymbolAccess().getSymbolSTRINGTerminalRuleCall_0_0()); 
             		
@@ -4848,17 +4943,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleEqSymbol4401); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleEqSymbol4447); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEqSymbolAccess().getEqualsSignKeyword_1());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2154:1: ( (lv_description_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2155:1: (lv_description_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2190:1: ( (lv_description_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2191:1: (lv_description_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2155:1: (lv_description_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2156:3: lv_description_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2191:1: (lv_description_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2192:3: lv_description_2_0= RULE_STRING
             {
-            lv_description_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEqSymbol4418); 
+            lv_description_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleEqSymbol4464); 
 
             			newLeafNode(lv_description_2_0, grammarAccess.getEqSymbolAccess().getDescriptionSTRINGTerminalRuleCall_2_0()); 
             		
@@ -4899,7 +4994,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleRefToContext"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2180:1: entryRuleRefToContext returns [EObject current=null] : iv_ruleRefToContext= ruleRefToContext EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2216:1: entryRuleRefToContext returns [EObject current=null] : iv_ruleRefToContext= ruleRefToContext EOF ;
     public final EObject entryRuleRefToContext() throws RecognitionException {
         EObject current = null;
 
@@ -4907,17 +5002,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2181:2: (iv_ruleRefToContext= ruleRefToContext EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2182:2: iv_ruleRefToContext= ruleRefToContext EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2217:2: (iv_ruleRefToContext= ruleRefToContext EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2218:2: iv_ruleRefToContext= ruleRefToContext EOF
             {
              newCompositeNode(grammarAccess.getRefToContextRule()); 
-            pushFollow(FOLLOW_ruleRefToContext_in_entryRuleRefToContext4459);
+            pushFollow(FOLLOW_ruleRefToContext_in_entryRuleRefToContext4505);
             iv_ruleRefToContext=ruleRefToContext();
 
             state._fsp--;
 
              current =iv_ruleRefToContext; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleRefToContext4469); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleRefToContext4515); 
 
             }
 
@@ -4935,7 +5030,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRefToContext"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2189:1: ruleRefToContext returns [EObject current=null] : (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2225:1: ruleRefToContext returns [EObject current=null] : (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) ;
     public final EObject ruleRefToContext() throws RecognitionException {
         EObject current = null;
 
@@ -4951,31 +5046,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2192:28: ( (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2193:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2228:28: ( (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2193:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2193:3: otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:3: otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleRefToContext4506); 
+            otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleRefToContext4552); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRefToContextAccess().getRtcKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2197:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt42=2;
-            int LA42_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2233:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt44=2;
+            int LA44_0 = input.LA(1);
 
-            if ( (LA42_0==20) ) {
-                alt42=1;
+            if ( (LA44_0==20) ) {
+                alt44=1;
             }
-            switch (alt42) {
+            switch (alt44) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2198:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2234:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2198:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2199:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2234:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2235:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleRefToContext4524); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleRefToContext4570); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getRefToContextAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -4994,21 +5089,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleRefToContext4550); 
+            otherlv_2=(Token)match(input,28,FOLLOW_28_in_ruleRefToContext4596); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getRefToContextAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,48,FOLLOW_48_in_ruleRefToContext4562); 
+            otherlv_3=(Token)match(input,48,FOLLOW_48_in_ruleRefToContext4608); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getRefToContextAccess().getContextKeyword_3());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2220:1: ( (lv_context_4_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2221:1: (lv_context_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2256:1: ( (lv_context_4_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2257:1: (lv_context_4_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2221:1: (lv_context_4_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2222:3: lv_context_4_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2257:1: (lv_context_4_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2258:3: lv_context_4_0= RULE_STRING
             {
-            lv_context_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRefToContext4579); 
+            lv_context_4_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleRefToContext4625); 
 
             			newLeafNode(lv_context_4_0, grammarAccess.getRefToContextAccess().getContextSTRINGTerminalRuleCall_4_0()); 
             		
@@ -5028,29 +5123,29 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2238:2: ( (lv_questions_5_0= ruleQuestionAnswer ) )+
-            int cnt43=0;
-            loop43:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2274:2: ( (lv_questions_5_0= ruleQuestionAnswer ) )+
+            int cnt45=0;
+            loop45:
             do {
-                int alt43=2;
-                int LA43_0 = input.LA(1);
+                int alt45=2;
+                int LA45_0 = input.LA(1);
 
-                if ( (LA43_0==21) ) {
-                    alt43=1;
+                if ( (LA45_0==21) ) {
+                    alt45=1;
                 }
 
 
-                switch (alt43) {
+                switch (alt45) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2239:1: (lv_questions_5_0= ruleQuestionAnswer )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_questions_5_0= ruleQuestionAnswer )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2239:1: (lv_questions_5_0= ruleQuestionAnswer )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2240:3: lv_questions_5_0= ruleQuestionAnswer
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_questions_5_0= ruleQuestionAnswer )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2276:3: lv_questions_5_0= ruleQuestionAnswer
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getRefToContextAccess().getQuestionsQuestionAnswerParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4605);
+            	    pushFollow(FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4651);
             	    lv_questions_5_0=ruleQuestionAnswer();
 
             	    state._fsp--;
@@ -5074,15 +5169,15 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt43 >= 1 ) break loop43;
+            	    if ( cnt45 >= 1 ) break loop45;
                         EarlyExitException eee =
-                            new EarlyExitException(43, input);
+                            new EarlyExitException(45, input);
                         throw eee;
                 }
-                cnt43++;
+                cnt45++;
             } while (true);
 
-            otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleRefToContext4618); 
+            otherlv_6=(Token)match(input,29,FOLLOW_29_in_ruleRefToContext4664); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getRefToContextAccess().getRightCurlyBracketKeyword_6());
                 
@@ -5107,7 +5202,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleMultiChoice"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2268:1: entryRuleMultiChoice returns [EObject current=null] : iv_ruleMultiChoice= ruleMultiChoice EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2304:1: entryRuleMultiChoice returns [EObject current=null] : iv_ruleMultiChoice= ruleMultiChoice EOF ;
     public final EObject entryRuleMultiChoice() throws RecognitionException {
         EObject current = null;
 
@@ -5115,17 +5210,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2269:2: (iv_ruleMultiChoice= ruleMultiChoice EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2270:2: iv_ruleMultiChoice= ruleMultiChoice EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2305:2: (iv_ruleMultiChoice= ruleMultiChoice EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2306:2: iv_ruleMultiChoice= ruleMultiChoice EOF
             {
              newCompositeNode(grammarAccess.getMultiChoiceRule()); 
-            pushFollow(FOLLOW_ruleMultiChoice_in_entryRuleMultiChoice4654);
+            pushFollow(FOLLOW_ruleMultiChoice_in_entryRuleMultiChoice4700);
             iv_ruleMultiChoice=ruleMultiChoice();
 
             state._fsp--;
 
              current =iv_ruleMultiChoice; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiChoice4664); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMultiChoice4710); 
 
             }
 
@@ -5143,7 +5238,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiChoice"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2277:1: ruleMultiChoice returns [EObject current=null] : (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2313:1: ruleMultiChoice returns [EObject current=null] : (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' ) ;
     public final EObject ruleMultiChoice() throws RecognitionException {
         EObject current = null;
 
@@ -5170,31 +5265,31 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2280:28: ( (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2281:1: (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2316:28: ( (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2317:1: (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2281:1: (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2281:3: otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2317:1: (otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2317:3: otherlv_0= '@multi_choice' ( (lv_hideFromView_1_0= 'hide' ) )? ( (lv_question_2_0= RULE_STRING ) ) otherlv_3= '{' otherlv_4= '@options' otherlv_5= '{' ( (lv_options_6_0= ruleOption ) ) (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )* otherlv_9= '}' (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )? (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )? (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )? otherlv_16= '}'
             {
-            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleMultiChoice4701); 
+            otherlv_0=(Token)match(input,49,FOLLOW_49_in_ruleMultiChoice4747); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getMultiChoiceAccess().getMulti_choiceKeyword_0());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2285:1: ( (lv_hideFromView_1_0= 'hide' ) )?
-            int alt44=2;
-            int LA44_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2321:1: ( (lv_hideFromView_1_0= 'hide' ) )?
+            int alt46=2;
+            int LA46_0 = input.LA(1);
 
-            if ( (LA44_0==20) ) {
-                alt44=1;
+            if ( (LA46_0==20) ) {
+                alt46=1;
             }
-            switch (alt44) {
+            switch (alt46) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2286:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2322:1: (lv_hideFromView_1_0= 'hide' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2286:1: (lv_hideFromView_1_0= 'hide' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2287:3: lv_hideFromView_1_0= 'hide'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2322:1: (lv_hideFromView_1_0= 'hide' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2323:3: lv_hideFromView_1_0= 'hide'
                     {
-                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleMultiChoice4719); 
+                    lv_hideFromView_1_0=(Token)match(input,20,FOLLOW_20_in_ruleMultiChoice4765); 
 
                             newLeafNode(lv_hideFromView_1_0, grammarAccess.getMultiChoiceAccess().getHideFromViewHideKeyword_1_0());
                         
@@ -5213,13 +5308,13 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2300:3: ( (lv_question_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2301:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2336:3: ( (lv_question_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2337:1: (lv_question_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2301:1: (lv_question_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2302:3: lv_question_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2337:1: (lv_question_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2338:3: lv_question_2_0= RULE_STRING
             {
-            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultiChoice4750); 
+            lv_question_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultiChoice4796); 
 
             			newLeafNode(lv_question_2_0, grammarAccess.getMultiChoiceAccess().getQuestionSTRINGTerminalRuleCall_2_0()); 
             		
@@ -5239,28 +5334,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleMultiChoice4767); 
+            otherlv_3=(Token)match(input,28,FOLLOW_28_in_ruleMultiChoice4813); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_3());
                 
-            otherlv_4=(Token)match(input,50,FOLLOW_50_in_ruleMultiChoice4779); 
+            otherlv_4=(Token)match(input,50,FOLLOW_50_in_ruleMultiChoice4825); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getMultiChoiceAccess().getOptionsKeyword_4());
                 
-            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleMultiChoice4791); 
+            otherlv_5=(Token)match(input,28,FOLLOW_28_in_ruleMultiChoice4837); 
 
                 	newLeafNode(otherlv_5, grammarAccess.getMultiChoiceAccess().getLeftCurlyBracketKeyword_5());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2330:1: ( (lv_options_6_0= ruleOption ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2331:1: (lv_options_6_0= ruleOption )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2366:1: ( (lv_options_6_0= ruleOption ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2367:1: (lv_options_6_0= ruleOption )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2331:1: (lv_options_6_0= ruleOption )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2332:3: lv_options_6_0= ruleOption
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2367:1: (lv_options_6_0= ruleOption )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2368:3: lv_options_6_0= ruleOption
             {
              
             	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_6_0()); 
             	    
-            pushFollow(FOLLOW_ruleOption_in_ruleMultiChoice4812);
+            pushFollow(FOLLOW_ruleOption_in_ruleMultiChoice4858);
             lv_options_6_0=ruleOption();
 
             state._fsp--;
@@ -5282,35 +5377,35 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2348:2: (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )*
-            loop45:
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2384:2: (otherlv_7= ',' ( (lv_options_8_0= ruleOption ) ) )*
+            loop47:
             do {
-                int alt45=2;
-                int LA45_0 = input.LA(1);
+                int alt47=2;
+                int LA47_0 = input.LA(1);
 
-                if ( (LA45_0==44) ) {
-                    alt45=1;
+                if ( (LA47_0==44) ) {
+                    alt47=1;
                 }
 
 
-                switch (alt45) {
+                switch (alt47) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2348:4: otherlv_7= ',' ( (lv_options_8_0= ruleOption ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2384:4: otherlv_7= ',' ( (lv_options_8_0= ruleOption ) )
             	    {
-            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleMultiChoice4825); 
+            	    otherlv_7=(Token)match(input,44,FOLLOW_44_in_ruleMultiChoice4871); 
 
             	        	newLeafNode(otherlv_7, grammarAccess.getMultiChoiceAccess().getCommaKeyword_7_0());
             	        
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2352:1: ( (lv_options_8_0= ruleOption ) )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2353:1: (lv_options_8_0= ruleOption )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2388:1: ( (lv_options_8_0= ruleOption ) )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2389:1: (lv_options_8_0= ruleOption )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2353:1: (lv_options_8_0= ruleOption )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2354:3: lv_options_8_0= ruleOption
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2389:1: (lv_options_8_0= ruleOption )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2390:3: lv_options_8_0= ruleOption
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getMultiChoiceAccess().getOptionsOptionParserRuleCall_7_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleOption_in_ruleMultiChoice4846);
+            	    pushFollow(FOLLOW_ruleOption_in_ruleMultiChoice4892);
             	    lv_options_8_0=ruleOption();
 
             	    state._fsp--;
@@ -5337,36 +5432,36 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop45;
+            	    break loop47;
                 }
             } while (true);
 
-            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleMultiChoice4860); 
+            otherlv_9=(Token)match(input,29,FOLLOW_29_in_ruleMultiChoice4906); 
 
                 	newLeafNode(otherlv_9, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_8());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2374:1: (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )?
-            int alt46=2;
-            int LA46_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2410:1: (otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) ) )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
 
-            if ( (LA46_0==34) ) {
-                alt46=1;
+            if ( (LA48_0==34) ) {
+                alt48=1;
             }
-            switch (alt46) {
+            switch (alt48) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2374:3: otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2410:3: otherlv_10= '@numOptionsToShow' ( (lv_numOptionsToShow_11_0= RULE_INT ) )
                     {
-                    otherlv_10=(Token)match(input,34,FOLLOW_34_in_ruleMultiChoice4873); 
+                    otherlv_10=(Token)match(input,34,FOLLOW_34_in_ruleMultiChoice4919); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getMultiChoiceAccess().getNumOptionsToShowKeyword_9_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2378:1: ( (lv_numOptionsToShow_11_0= RULE_INT ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2379:1: (lv_numOptionsToShow_11_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2414:1: ( (lv_numOptionsToShow_11_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2415:1: (lv_numOptionsToShow_11_0= RULE_INT )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2379:1: (lv_numOptionsToShow_11_0= RULE_INT )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2380:3: lv_numOptionsToShow_11_0= RULE_INT
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2415:1: (lv_numOptionsToShow_11_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2416:3: lv_numOptionsToShow_11_0= RULE_INT
                     {
-                    lv_numOptionsToShow_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMultiChoice4890); 
+                    lv_numOptionsToShow_11_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMultiChoice4936); 
 
                     			newLeafNode(lv_numOptionsToShow_11_0, grammarAccess.getMultiChoiceAccess().getNumOptionsToShowINTTerminalRuleCall_9_1_0()); 
                     		
@@ -5392,28 +5487,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2396:4: (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )?
-            int alt47=2;
-            int LA47_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2432:4: (otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) ) )?
+            int alt49=2;
+            int LA49_0 = input.LA(1);
 
-            if ( (LA47_0==35) ) {
-                alt47=1;
+            if ( (LA49_0==35) ) {
+                alt49=1;
             }
-            switch (alt47) {
+            switch (alt49) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2396:6: otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2432:6: otherlv_12= '@numOptionsPerRow' ( (lv_numOptionsPerRow_13_0= RULE_INT ) )
                     {
-                    otherlv_12=(Token)match(input,35,FOLLOW_35_in_ruleMultiChoice4910); 
+                    otherlv_12=(Token)match(input,35,FOLLOW_35_in_ruleMultiChoice4956); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowKeyword_10_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2400:1: ( (lv_numOptionsPerRow_13_0= RULE_INT ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2401:1: (lv_numOptionsPerRow_13_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2436:1: ( (lv_numOptionsPerRow_13_0= RULE_INT ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2437:1: (lv_numOptionsPerRow_13_0= RULE_INT )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2401:1: (lv_numOptionsPerRow_13_0= RULE_INT )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2402:3: lv_numOptionsPerRow_13_0= RULE_INT
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2437:1: (lv_numOptionsPerRow_13_0= RULE_INT )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2438:3: lv_numOptionsPerRow_13_0= RULE_INT
                     {
-                    lv_numOptionsPerRow_13_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMultiChoice4927); 
+                    lv_numOptionsPerRow_13_0=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_ruleMultiChoice4973); 
 
                     			newLeafNode(lv_numOptionsPerRow_13_0, grammarAccess.getMultiChoiceAccess().getNumOptionsPerRowINTTerminalRuleCall_10_1_0()); 
                     		
@@ -5439,28 +5534,28 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2418:4: (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2454:4: (otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) ) )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA48_0==51) ) {
-                alt48=1;
+            if ( (LA50_0==51) ) {
+                alt50=1;
             }
-            switch (alt48) {
+            switch (alt50) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2418:6: otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2454:6: otherlv_14= '@explanation' ( (lv_explanation_15_0= RULE_STRING ) )
                     {
-                    otherlv_14=(Token)match(input,51,FOLLOW_51_in_ruleMultiChoice4947); 
+                    otherlv_14=(Token)match(input,51,FOLLOW_51_in_ruleMultiChoice4993); 
 
                         	newLeafNode(otherlv_14, grammarAccess.getMultiChoiceAccess().getExplanationKeyword_11_0());
                         
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2422:1: ( (lv_explanation_15_0= RULE_STRING ) )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2423:1: (lv_explanation_15_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2458:1: ( (lv_explanation_15_0= RULE_STRING ) )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2459:1: (lv_explanation_15_0= RULE_STRING )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2423:1: (lv_explanation_15_0= RULE_STRING )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2424:3: lv_explanation_15_0= RULE_STRING
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2459:1: (lv_explanation_15_0= RULE_STRING )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2460:3: lv_explanation_15_0= RULE_STRING
                     {
-                    lv_explanation_15_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultiChoice4964); 
+                    lv_explanation_15_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleMultiChoice5010); 
 
                     			newLeafNode(lv_explanation_15_0, grammarAccess.getMultiChoiceAccess().getExplanationSTRINGTerminalRuleCall_11_1_0()); 
                     		
@@ -5486,7 +5581,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_16=(Token)match(input,29,FOLLOW_29_in_ruleMultiChoice4983); 
+            otherlv_16=(Token)match(input,29,FOLLOW_29_in_ruleMultiChoice5029); 
 
                 	newLeafNode(otherlv_16, grammarAccess.getMultiChoiceAccess().getRightCurlyBracketKeyword_12());
                 
@@ -5511,7 +5606,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleOption"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2452:1: entryRuleOption returns [EObject current=null] : iv_ruleOption= ruleOption EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2488:1: entryRuleOption returns [EObject current=null] : iv_ruleOption= ruleOption EOF ;
     public final EObject entryRuleOption() throws RecognitionException {
         EObject current = null;
 
@@ -5519,17 +5614,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2453:2: (iv_ruleOption= ruleOption EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2454:2: iv_ruleOption= ruleOption EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2489:2: (iv_ruleOption= ruleOption EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2490:2: iv_ruleOption= ruleOption EOF
             {
              newCompositeNode(grammarAccess.getOptionRule()); 
-            pushFollow(FOLLOW_ruleOption_in_entryRuleOption5019);
+            pushFollow(FOLLOW_ruleOption_in_entryRuleOption5065);
             iv_ruleOption=ruleOption();
 
             state._fsp--;
 
              current =iv_ruleOption; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOption5029); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOption5075); 
 
             }
 
@@ -5547,7 +5642,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOption"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2461:1: ruleOption returns [EObject current=null] : ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2497:1: ruleOption returns [EObject current=null] : ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? ) ;
     public final EObject ruleOption() throws RecognitionException {
         EObject current = null;
 
@@ -5557,19 +5652,19 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2464:28: ( ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2465:1: ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2500:28: ( ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2501:1: ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2465:1: ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2465:2: ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )?
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2501:1: ( ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )? )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2501:2: ( (lv_optionValue_0_0= RULE_STRING ) ) ( (lv_correctOption_1_0= 'correct' ) )?
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2465:2: ( (lv_optionValue_0_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2466:1: (lv_optionValue_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2501:2: ( (lv_optionValue_0_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2502:1: (lv_optionValue_0_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2466:1: (lv_optionValue_0_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2467:3: lv_optionValue_0_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2502:1: (lv_optionValue_0_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2503:3: lv_optionValue_0_0= RULE_STRING
             {
-            lv_optionValue_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleOption5071); 
+            lv_optionValue_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleOption5117); 
 
             			newLeafNode(lv_optionValue_0_0, grammarAccess.getOptionAccess().getOptionValueSTRINGTerminalRuleCall_0_0()); 
             		
@@ -5589,21 +5684,21 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2483:2: ( (lv_correctOption_1_0= 'correct' ) )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2519:2: ( (lv_correctOption_1_0= 'correct' ) )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA49_0==52) ) {
-                alt49=1;
+            if ( (LA51_0==52) ) {
+                alt51=1;
             }
-            switch (alt49) {
+            switch (alt51) {
                 case 1 :
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2484:1: (lv_correctOption_1_0= 'correct' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2520:1: (lv_correctOption_1_0= 'correct' )
                     {
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2484:1: (lv_correctOption_1_0= 'correct' )
-                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2485:3: lv_correctOption_1_0= 'correct'
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2520:1: (lv_correctOption_1_0= 'correct' )
+                    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2521:3: lv_correctOption_1_0= 'correct'
                     {
-                    lv_correctOption_1_0=(Token)match(input,52,FOLLOW_52_in_ruleOption5094); 
+                    lv_correctOption_1_0=(Token)match(input,52,FOLLOW_52_in_ruleOption5140); 
 
                             newLeafNode(lv_correctOption_1_0, grammarAccess.getOptionAccess().getCorrectOptionCorrectKeyword_1_0());
                         
@@ -5643,7 +5738,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleCMap"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2506:1: entryRuleCMap returns [EObject current=null] : iv_ruleCMap= ruleCMap EOF ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2542:1: entryRuleCMap returns [EObject current=null] : iv_ruleCMap= ruleCMap EOF ;
     public final EObject entryRuleCMap() throws RecognitionException {
         EObject current = null;
 
@@ -5651,17 +5746,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2507:2: (iv_ruleCMap= ruleCMap EOF )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2508:2: iv_ruleCMap= ruleCMap EOF
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2543:2: (iv_ruleCMap= ruleCMap EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2544:2: iv_ruleCMap= ruleCMap EOF
             {
              newCompositeNode(grammarAccess.getCMapRule()); 
-            pushFollow(FOLLOW_ruleCMap_in_entryRuleCMap5144);
+            pushFollow(FOLLOW_ruleCMap_in_entryRuleCMap5190);
             iv_ruleCMap=ruleCMap();
 
             state._fsp--;
 
              current =iv_ruleCMap; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleCMap5154); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleCMap5200); 
 
             }
 
@@ -5679,7 +5774,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleCMap"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2515:1: ruleCMap returns [EObject current=null] : (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2551:1: ruleCMap returns [EObject current=null] : (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' ) ;
     public final EObject ruleCMap() throws RecognitionException {
         EObject current = null;
 
@@ -5691,27 +5786,27 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2518:28: ( (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2519:1: (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2554:28: ( (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2555:1: (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2519:1: (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2519:3: otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2555:1: (otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2555:3: otherlv_0= 'cmap' otherlv_1= '{' ( (lv_content_2_0= RULE_STRING ) ) otherlv_3= '}'
             {
-            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleCMap5191); 
+            otherlv_0=(Token)match(input,53,FOLLOW_53_in_ruleCMap5237); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getCMapAccess().getCmapKeyword_0());
                 
-            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleCMap5203); 
+            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleCMap5249); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getCMapAccess().getLeftCurlyBracketKeyword_1());
                 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2527:1: ( (lv_content_2_0= RULE_STRING ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2528:1: (lv_content_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2563:1: ( (lv_content_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2564:1: (lv_content_2_0= RULE_STRING )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2528:1: (lv_content_2_0= RULE_STRING )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2529:3: lv_content_2_0= RULE_STRING
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2564:1: (lv_content_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2565:3: lv_content_2_0= RULE_STRING
             {
-            lv_content_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCMap5220); 
+            lv_content_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleCMap5266); 
 
             			newLeafNode(lv_content_2_0, grammarAccess.getCMapAccess().getContentSTRINGTerminalRuleCall_2_0()); 
             		
@@ -5731,7 +5826,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleCMap5237); 
+            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleCMap5283); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getCMapAccess().getRightCurlyBracketKeyword_3());
                 
@@ -5753,6 +5848,119 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleCMap"
+
+
+    // $ANTLR start "entryRuleScript"
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2593:1: entryRuleScript returns [EObject current=null] : iv_ruleScript= ruleScript EOF ;
+    public final EObject entryRuleScript() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleScript = null;
+
+
+        try {
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2594:2: (iv_ruleScript= ruleScript EOF )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2595:2: iv_ruleScript= ruleScript EOF
+            {
+             newCompositeNode(grammarAccess.getScriptRule()); 
+            pushFollow(FOLLOW_ruleScript_in_entryRuleScript5319);
+            iv_ruleScript=ruleScript();
+
+            state._fsp--;
+
+             current =iv_ruleScript; 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleScript5329); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleScript"
+
+
+    // $ANTLR start "ruleScript"
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2602:1: ruleScript returns [EObject current=null] : (otherlv_0= 'script' otherlv_1= '{' ( (lv_scriptBody_2_0= RULE_STRING ) ) otherlv_3= '}' ) ;
+    public final EObject ruleScript() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token lv_scriptBody_2_0=null;
+        Token otherlv_3=null;
+
+         enterRule(); 
+            
+        try {
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2605:28: ( (otherlv_0= 'script' otherlv_1= '{' ( (lv_scriptBody_2_0= RULE_STRING ) ) otherlv_3= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2606:1: (otherlv_0= 'script' otherlv_1= '{' ( (lv_scriptBody_2_0= RULE_STRING ) ) otherlv_3= '}' )
+            {
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2606:1: (otherlv_0= 'script' otherlv_1= '{' ( (lv_scriptBody_2_0= RULE_STRING ) ) otherlv_3= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2606:3: otherlv_0= 'script' otherlv_1= '{' ( (lv_scriptBody_2_0= RULE_STRING ) ) otherlv_3= '}'
+            {
+            otherlv_0=(Token)match(input,54,FOLLOW_54_in_ruleScript5366); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getScriptAccess().getScriptKeyword_0());
+                
+            otherlv_1=(Token)match(input,28,FOLLOW_28_in_ruleScript5378); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getScriptAccess().getLeftCurlyBracketKeyword_1());
+                
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2614:1: ( (lv_scriptBody_2_0= RULE_STRING ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2615:1: (lv_scriptBody_2_0= RULE_STRING )
+            {
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2615:1: (lv_scriptBody_2_0= RULE_STRING )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2616:3: lv_scriptBody_2_0= RULE_STRING
+            {
+            lv_scriptBody_2_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleScript5395); 
+
+            			newLeafNode(lv_scriptBody_2_0, grammarAccess.getScriptAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+            		
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getScriptRule());
+            	        }
+                   		setWithLastConsumed(
+                   			current, 
+                   			"scriptBody",
+                    		lv_scriptBody_2_0, 
+                    		"STRING");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,29,FOLLOW_29_in_ruleScript5412); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getScriptAccess().getRightCurlyBracketKeyword_3());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleScript"
 
     // Delegated rules
 
@@ -5778,203 +5986,211 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_17_in_ruleChapterDetails501 = new BitSet(new long[]{0x0000000000000020L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleChapterDetails518 = new BitSet(new long[]{0x0000000000040000L});
     public static final BitSet FOLLOW_18_in_ruleChapterDetails535 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChapterDetails552 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleNotesElement_in_entryRuleNotesElement593 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleNotesElement603 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWordMeaning_in_ruleNotesElement650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQuestionAnswer_in_ruleNotesElement677 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFIB_in_ruleNotesElement704 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleDefinition_in_ruleNotesElement731 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCharacter_in_ruleNotesElement758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTeacherNote_in_ruleNotesElement785 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatching_in_ruleNotesElement812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_ruleNotesElement839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrueFalse_in_ruleNotesElement866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChemEquation_in_ruleNotesElement893 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChemCompound_in_ruleNotesElement920 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpellbee_in_ruleNotesElement947 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImageLabel_in_ruleNotesElement974 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquation_in_ruleNotesElement1001 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefToContext_in_ruleNotesElement1028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiChoice_in_ruleNotesElement1055 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleWordMeaning_in_entryRuleWordMeaning1090 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleWordMeaning1100 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_19_in_ruleWordMeaning1137 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleWordMeaning1155 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleWordMeaning1186 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleWordMeaning1208 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleQuestionAnswer_in_entryRuleQuestionAnswer1249 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleQuestionAnswer1259 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_ruleQuestionAnswer1296 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleQuestionAnswer1314 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestionAnswer1345 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestionAnswer1367 = new BitSet(new long[]{0x0020000000000012L});
-    public static final BitSet FOLLOW_ruleCMap_in_ruleQuestionAnswer1394 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFIB_in_entryRuleFIB1431 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFIB1441 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_ruleFIB1478 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleFIB1496 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFIB1527 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleFIB1549 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition1591 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition1601 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_ruleDefinition1638 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleDefinition1656 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDefinition1687 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleDefinition1709 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_ruleCMap_in_ruleDefinition1735 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCharacter_in_entryRuleCharacter1772 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCharacter1782 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_ruleCharacter1819 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleCharacter1837 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleCharacter1868 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleCharacter1890 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_ruleCMap_in_ruleCharacter1916 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTeacherNote_in_entryRuleTeacherNote1953 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTeacherNote1963 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleTeacherNote2000 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleTeacherNote2018 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTeacherNote2049 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTeacherNote2072 = new BitSet(new long[]{0x0020000000000002L});
-    public static final BitSet FOLLOW_ruleCMap_in_ruleTeacherNote2098 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatching_in_entryRuleMatching2135 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMatching2145 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleMatching2182 = new BitSet(new long[]{0x0000000018100010L});
-    public static final BitSet FOLLOW_20_in_ruleMatching2200 = new BitSet(new long[]{0x0000000018000010L});
-    public static final BitSet FOLLOW_27_in_ruleMatching2232 = new BitSet(new long[]{0x0000000010000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatching2263 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleMatching2281 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleMatchPair_in_ruleMatching2302 = new BitSet(new long[]{0x00000000A0000010L});
-    public static final BitSet FOLLOW_ruleMatchMCQConfig_in_ruleMatching2324 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMatching2337 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatchPair_in_entryRuleMatchPair2373 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMatchPair2383 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchPair2425 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleMatchPair2442 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchPair2459 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMatchMCQConfig_in_entryRuleMatchMCQConfig2500 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMatchMCQConfig2510 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_31_in_ruleMatchMCQConfig2547 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleMatchMCQConfig2559 = new BitSet(new long[]{0x0000000100000000L});
-    public static final BitSet FOLLOW_32_in_ruleMatchMCQConfig2571 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2588 = new BitSet(new long[]{0x0000000E20000000L});
-    public static final BitSet FOLLOW_33_in_ruleMatchMCQConfig2606 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2623 = new BitSet(new long[]{0x0000000C20000000L});
-    public static final BitSet FOLLOW_34_in_ruleMatchMCQConfig2643 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleMatchMCQConfig2660 = new BitSet(new long[]{0x0000000820000000L});
-    public static final BitSet FOLLOW_35_in_ruleMatchMCQConfig2680 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleMatchMCQConfig2697 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMatchMCQConfig2716 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent2752 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEvent2762 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleEvent2799 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleEvent2817 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent2848 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent2870 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleTrueFalse_in_entryRuleTrueFalse2911 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleTrueFalse2921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_37_in_ruleTrueFalse2958 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleTrueFalse2976 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrueFalse3007 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_BOOL_in_ruleTrueFalse3029 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrueFalse3051 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChemEquation_in_entryRuleChemEquation3093 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleChemEquation3103 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_ruleChemEquation3140 = new BitSet(new long[]{0x0000000010100010L});
-    public static final BitSet FOLLOW_20_in_ruleChemEquation3158 = new BitSet(new long[]{0x0000000010000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3189 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleChemEquation3207 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3224 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleChemEquation3241 = new BitSet(new long[]{0x0000008000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3258 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_39_in_ruleChemEquation3276 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3293 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleChemEquation3310 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleChemCompound_in_entryRuleChemCompound3346 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleChemCompound3356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleChemCompound3393 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleChemCompound3411 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3442 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3464 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3486 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleSpellbee_in_entryRuleSpellbee3528 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleSpellbee3538 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleSpellbee3575 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleSpellbee3593 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpellbee3624 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleImageLabel_in_entryRuleImageLabel3665 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleImageLabel3675 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleImageLabel3712 = new BitSet(new long[]{0x0000000010100010L});
-    public static final BitSet FOLLOW_20_in_ruleImageLabel3730 = new BitSet(new long[]{0x0000000010000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImageLabel3761 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleImageLabel3779 = new BitSet(new long[]{0x0000080000000000L});
-    public static final BitSet FOLLOW_43_in_ruleImageLabel3791 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleImageLabel3808 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleHotSpot_in_ruleImageLabel3834 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_44_in_ruleImageLabel3847 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_ruleHotSpot_in_ruleImageLabel3868 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_29_in_ruleImageLabel3882 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleHotSpot_in_entryRuleHotSpot3918 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleHotSpot3928 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleHotSpot3970 = new BitSet(new long[]{0x0000100000000000L});
-    public static final BitSet FOLLOW_44_in_ruleHotSpot3987 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleHotSpot4004 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleHotSpot4021 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleHotSpot4038 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEquation_in_entryRuleEquation4079 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEquation4089 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruleEquation4126 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleEquation4144 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEquation4175 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleEquation4192 = new BitSet(new long[]{0x0000400000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEquation4209 = new BitSet(new long[]{0x0000400000000000L});
-    public static final BitSet FOLLOW_46_in_ruleEquation4227 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleEqSymbol_in_ruleEquation4248 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_44_in_ruleEquation4261 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleEqSymbol_in_ruleEquation4282 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_29_in_ruleEquation4296 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleEqSymbol_in_entryRuleEqSymbol4332 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleEqSymbol4342 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEqSymbol4384 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_ruleEqSymbol4401 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleEqSymbol4418 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleRefToContext_in_entryRuleRefToContext4459 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleRefToContext4469 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleRefToContext4506 = new BitSet(new long[]{0x0000000010100000L});
-    public static final BitSet FOLLOW_20_in_ruleRefToContext4524 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleRefToContext4550 = new BitSet(new long[]{0x0001000000000000L});
-    public static final BitSet FOLLOW_48_in_ruleRefToContext4562 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRefToContext4579 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4605 = new BitSet(new long[]{0x0000000020200000L});
-    public static final BitSet FOLLOW_29_in_ruleRefToContext4618 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMultiChoice_in_entryRuleMultiChoice4654 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMultiChoice4664 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleMultiChoice4701 = new BitSet(new long[]{0x0000000000100010L});
-    public static final BitSet FOLLOW_20_in_ruleMultiChoice4719 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultiChoice4750 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleMultiChoice4767 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_50_in_ruleMultiChoice4779 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleMultiChoice4791 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleOption_in_ruleMultiChoice4812 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_44_in_ruleMultiChoice4825 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleOption_in_ruleMultiChoice4846 = new BitSet(new long[]{0x0000100020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMultiChoice4860 = new BitSet(new long[]{0x0008000C20000000L});
-    public static final BitSet FOLLOW_34_in_ruleMultiChoice4873 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleMultiChoice4890 = new BitSet(new long[]{0x0008000820000000L});
-    public static final BitSet FOLLOW_35_in_ruleMultiChoice4910 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_ruleMultiChoice4927 = new BitSet(new long[]{0x0008000020000000L});
-    public static final BitSet FOLLOW_51_in_ruleMultiChoice4947 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultiChoice4964 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleMultiChoice4983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOption_in_entryRuleOption5019 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOption5029 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleOption5071 = new BitSet(new long[]{0x0010000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleOption5094 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleCMap_in_entryRuleCMap5144 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleCMap5154 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleCMap5191 = new BitSet(new long[]{0x0000000010000000L});
-    public static final BitSet FOLLOW_28_in_ruleCMap5203 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleCMap5220 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleCMap5237 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChapterDetails552 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleScript_in_ruleChapterDetails578 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleNotesElement_in_entryRuleNotesElement615 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleNotesElement625 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWordMeaning_in_ruleNotesElement673 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleQuestionAnswer_in_ruleNotesElement700 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleFIB_in_ruleNotesElement727 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleDefinition_in_ruleNotesElement754 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleCharacter_in_ruleNotesElement781 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleTeacherNote_in_ruleNotesElement808 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleMatching_in_ruleNotesElement835 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_ruleNotesElement862 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleTrueFalse_in_ruleNotesElement889 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleChemEquation_in_ruleNotesElement916 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleChemCompound_in_ruleNotesElement943 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleSpellbee_in_ruleNotesElement970 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleImageLabel_in_ruleNotesElement997 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleEquation_in_ruleNotesElement1024 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleRefToContext_in_ruleNotesElement1051 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleMultiChoice_in_ruleNotesElement1078 = new BitSet(new long[]{0x0040000000000002L});
+    public static final BitSet FOLLOW_ruleScript_in_ruleNotesElement1099 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleWordMeaning_in_entryRuleWordMeaning1136 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleWordMeaning1146 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_19_in_ruleWordMeaning1183 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleWordMeaning1201 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleWordMeaning1232 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleWordMeaning1254 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleQuestionAnswer_in_entryRuleQuestionAnswer1295 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleQuestionAnswer1305 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_ruleQuestionAnswer1342 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleQuestionAnswer1360 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestionAnswer1391 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleQuestionAnswer1413 = new BitSet(new long[]{0x0020000000000012L});
+    public static final BitSet FOLLOW_ruleCMap_in_ruleQuestionAnswer1440 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFIB_in_entryRuleFIB1477 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFIB1487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_ruleFIB1524 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleFIB1542 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFIB1573 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFIB1595 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_ruleDefinition_in_entryRuleDefinition1637 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleDefinition1647 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_ruleDefinition1684 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleDefinition1702 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDefinition1733 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleDefinition1755 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_ruleCMap_in_ruleDefinition1781 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCharacter_in_entryRuleCharacter1818 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCharacter1828 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_ruleCharacter1865 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleCharacter1883 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleCharacter1914 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleCharacter1936 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_ruleCMap_in_ruleCharacter1962 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTeacherNote_in_entryRuleTeacherNote1999 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTeacherNote2009 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleTeacherNote2046 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleTeacherNote2064 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTeacherNote2095 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTeacherNote2118 = new BitSet(new long[]{0x0020000000000002L});
+    public static final BitSet FOLLOW_ruleCMap_in_ruleTeacherNote2144 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMatching_in_entryRuleMatching2181 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMatching2191 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleMatching2228 = new BitSet(new long[]{0x0000000018100010L});
+    public static final BitSet FOLLOW_20_in_ruleMatching2246 = new BitSet(new long[]{0x0000000018000010L});
+    public static final BitSet FOLLOW_27_in_ruleMatching2278 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatching2309 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleMatching2327 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleMatchPair_in_ruleMatching2348 = new BitSet(new long[]{0x00000000A0000010L});
+    public static final BitSet FOLLOW_ruleMatchMCQConfig_in_ruleMatching2370 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMatching2383 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMatchPair_in_entryRuleMatchPair2419 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMatchPair2429 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchPair2471 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleMatchPair2488 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchPair2505 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMatchMCQConfig_in_entryRuleMatchMCQConfig2546 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMatchMCQConfig2556 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_ruleMatchMCQConfig2593 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleMatchMCQConfig2605 = new BitSet(new long[]{0x0000000100000000L});
+    public static final BitSet FOLLOW_32_in_ruleMatchMCQConfig2617 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2634 = new BitSet(new long[]{0x0000000E20000000L});
+    public static final BitSet FOLLOW_33_in_ruleMatchMCQConfig2652 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMatchMCQConfig2669 = new BitSet(new long[]{0x0000000C20000000L});
+    public static final BitSet FOLLOW_34_in_ruleMatchMCQConfig2689 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleMatchMCQConfig2706 = new BitSet(new long[]{0x0000000820000000L});
+    public static final BitSet FOLLOW_35_in_ruleMatchMCQConfig2726 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleMatchMCQConfig2743 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMatchMCQConfig2762 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEvent_in_entryRuleEvent2798 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEvent2808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_36_in_ruleEvent2845 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleEvent2863 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent2894 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEvent2916 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleTrueFalse_in_entryRuleTrueFalse2957 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleTrueFalse2967 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_ruleTrueFalse3004 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleTrueFalse3022 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrueFalse3053 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_BOOL_in_ruleTrueFalse3075 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleTrueFalse3097 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChemEquation_in_entryRuleChemEquation3139 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChemEquation3149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleChemEquation3186 = new BitSet(new long[]{0x0000000010100010L});
+    public static final BitSet FOLLOW_20_in_ruleChemEquation3204 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3235 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleChemEquation3253 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3270 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleChemEquation3287 = new BitSet(new long[]{0x0000008000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3304 = new BitSet(new long[]{0x0000008000000000L});
+    public static final BitSet FOLLOW_39_in_ruleChemEquation3322 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemEquation3339 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleChemEquation3356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleChemCompound_in_entryRuleChemCompound3392 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChemCompound3402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_40_in_ruleChemCompound3439 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleChemCompound3457 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3488 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3510 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleChemCompound3532 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleSpellbee_in_entryRuleSpellbee3574 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleSpellbee3584 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_41_in_ruleSpellbee3621 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleSpellbee3639 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleSpellbee3670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleImageLabel_in_entryRuleImageLabel3711 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleImageLabel3721 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleImageLabel3758 = new BitSet(new long[]{0x0000000010100010L});
+    public static final BitSet FOLLOW_20_in_ruleImageLabel3776 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleImageLabel3807 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleImageLabel3825 = new BitSet(new long[]{0x0000080000000000L});
+    public static final BitSet FOLLOW_43_in_ruleImageLabel3837 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleImageLabel3854 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleHotSpot_in_ruleImageLabel3880 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_44_in_ruleImageLabel3893 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_ruleHotSpot_in_ruleImageLabel3914 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_29_in_ruleImageLabel3928 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleHotSpot_in_entryRuleHotSpot3964 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleHotSpot3974 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleHotSpot4016 = new BitSet(new long[]{0x0000100000000000L});
+    public static final BitSet FOLLOW_44_in_ruleHotSpot4033 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleHotSpot4050 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleHotSpot4067 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleHotSpot4084 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEquation_in_entryRuleEquation4125 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEquation4135 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_45_in_ruleEquation4172 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleEquation4190 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEquation4221 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleEquation4238 = new BitSet(new long[]{0x0000400000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEquation4255 = new BitSet(new long[]{0x0000400000000000L});
+    public static final BitSet FOLLOW_46_in_ruleEquation4273 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleEqSymbol_in_ruleEquation4294 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_44_in_ruleEquation4307 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleEqSymbol_in_ruleEquation4328 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_29_in_ruleEquation4342 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleEqSymbol_in_entryRuleEqSymbol4378 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleEqSymbol4388 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEqSymbol4430 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleEqSymbol4447 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleEqSymbol4464 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleRefToContext_in_entryRuleRefToContext4505 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleRefToContext4515 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleRefToContext4552 = new BitSet(new long[]{0x0000000010100000L});
+    public static final BitSet FOLLOW_20_in_ruleRefToContext4570 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleRefToContext4596 = new BitSet(new long[]{0x0001000000000000L});
+    public static final BitSet FOLLOW_48_in_ruleRefToContext4608 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRefToContext4625 = new BitSet(new long[]{0x0000000000200000L});
+    public static final BitSet FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4651 = new BitSet(new long[]{0x0000000020200000L});
+    public static final BitSet FOLLOW_29_in_ruleRefToContext4664 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMultiChoice_in_entryRuleMultiChoice4700 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMultiChoice4710 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleMultiChoice4747 = new BitSet(new long[]{0x0000000000100010L});
+    public static final BitSet FOLLOW_20_in_ruleMultiChoice4765 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultiChoice4796 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleMultiChoice4813 = new BitSet(new long[]{0x0004000000000000L});
+    public static final BitSet FOLLOW_50_in_ruleMultiChoice4825 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleMultiChoice4837 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleOption_in_ruleMultiChoice4858 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_44_in_ruleMultiChoice4871 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleOption_in_ruleMultiChoice4892 = new BitSet(new long[]{0x0000100020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMultiChoice4906 = new BitSet(new long[]{0x0008000C20000000L});
+    public static final BitSet FOLLOW_34_in_ruleMultiChoice4919 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleMultiChoice4936 = new BitSet(new long[]{0x0008000820000000L});
+    public static final BitSet FOLLOW_35_in_ruleMultiChoice4956 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_ruleMultiChoice4973 = new BitSet(new long[]{0x0008000020000000L});
+    public static final BitSet FOLLOW_51_in_ruleMultiChoice4993 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleMultiChoice5010 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleMultiChoice5029 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOption_in_entryRuleOption5065 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOption5075 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleOption5117 = new BitSet(new long[]{0x0010000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleOption5140 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleCMap_in_entryRuleCMap5190 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleCMap5200 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleCMap5237 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleCMap5249 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleCMap5266 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleCMap5283 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleScript_in_entryRuleScript5319 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleScript5329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleScript5366 = new BitSet(new long[]{0x0000000010000000L});
+    public static final BitSet FOLLOW_28_in_ruleScript5378 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleScript5395 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleScript5412 = new BitSet(new long[]{0x0000000000000002L});
 
 }

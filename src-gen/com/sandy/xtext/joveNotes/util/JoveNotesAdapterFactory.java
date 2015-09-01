@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
+import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -228,6 +229,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCMap(CMap object)
       {
         return createCMapAdapter();
+      }
+      @Override
+      public Adapter caseScript(Script object)
+      {
+        return createScriptAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -637,6 +643,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCMapAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.Script <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.Script
+   * @generated
+   */
+  public Adapter createScriptAdapter()
   {
     return null;
   }

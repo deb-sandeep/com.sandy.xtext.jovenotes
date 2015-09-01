@@ -103,14 +103,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cChapterNameKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cChapterNameAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cChapterNameSTRINGTerminalRuleCall_8_0 = (RuleCall)cChapterNameAssignment_8.eContents().get(0);
+		private final Assignment cScriptAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cScriptScriptParserRuleCall_9_0 = (RuleCall)cScriptAssignment_9.eContents().get(0);
 		
 		//ChapterDetails:
 		//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//	"chapterName" chapterName=STRING;
+		//	"chapterName" chapterName=STRING script=Script?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//"chapterName" chapterName=STRING
+		//"chapterName" chapterName=STRING script=Script?
 		public Group getGroup() { return cGroup; }
 
 		//testPaper="@test_paper"?
@@ -154,84 +156,103 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STRING
 		public RuleCall getChapterNameSTRINGTerminalRuleCall_8_0() { return cChapterNameSTRINGTerminalRuleCall_8_0; }
+
+		//script=Script?
+		public Assignment getScriptAssignment_9() { return cScriptAssignment_9; }
+
+		//Script
+		public RuleCall getScriptScriptParserRuleCall_9_0() { return cScriptScriptParserRuleCall_9_0; }
 	}
 
 	public class NotesElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotesElement");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cWordMeaningParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cQuestionAnswerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cFIBParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDefinitionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cCharacterParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
-		private final RuleCall cTeacherNoteParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
-		private final RuleCall cMatchingParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
-		private final RuleCall cEventParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cTrueFalseParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cChemEquationParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cChemCompoundParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cSpellbeeParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cImageLabelParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cEquationParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cRefToContextParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cMultiChoiceParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
+		private final RuleCall cWordMeaningParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
+		private final RuleCall cQuestionAnswerParserRuleCall_0_1 = (RuleCall)cAlternatives_0.eContents().get(1);
+		private final RuleCall cFIBParserRuleCall_0_2 = (RuleCall)cAlternatives_0.eContents().get(2);
+		private final RuleCall cDefinitionParserRuleCall_0_3 = (RuleCall)cAlternatives_0.eContents().get(3);
+		private final RuleCall cCharacterParserRuleCall_0_4 = (RuleCall)cAlternatives_0.eContents().get(4);
+		private final RuleCall cTeacherNoteParserRuleCall_0_5 = (RuleCall)cAlternatives_0.eContents().get(5);
+		private final RuleCall cMatchingParserRuleCall_0_6 = (RuleCall)cAlternatives_0.eContents().get(6);
+		private final RuleCall cEventParserRuleCall_0_7 = (RuleCall)cAlternatives_0.eContents().get(7);
+		private final RuleCall cTrueFalseParserRuleCall_0_8 = (RuleCall)cAlternatives_0.eContents().get(8);
+		private final RuleCall cChemEquationParserRuleCall_0_9 = (RuleCall)cAlternatives_0.eContents().get(9);
+		private final RuleCall cChemCompoundParserRuleCall_0_10 = (RuleCall)cAlternatives_0.eContents().get(10);
+		private final RuleCall cSpellbeeParserRuleCall_0_11 = (RuleCall)cAlternatives_0.eContents().get(11);
+		private final RuleCall cImageLabelParserRuleCall_0_12 = (RuleCall)cAlternatives_0.eContents().get(12);
+		private final RuleCall cEquationParserRuleCall_0_13 = (RuleCall)cAlternatives_0.eContents().get(13);
+		private final RuleCall cRefToContextParserRuleCall_0_14 = (RuleCall)cAlternatives_0.eContents().get(14);
+		private final RuleCall cMultiChoiceParserRuleCall_0_15 = (RuleCall)cAlternatives_0.eContents().get(15);
+		private final Assignment cScriptAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cScriptScriptParserRuleCall_1_0 = (RuleCall)cScriptAssignment_1.eContents().get(0);
 		
 		//NotesElement:
-		//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice;
+		//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
+		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?;
 		@Override public ParserRule getRule() { return rule; }
+
+		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?
+		public Group getGroup() { return cGroup; }
 
 		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
 		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice
-		public Alternatives getAlternatives() { return cAlternatives; }
+		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//WordMeaning
-		public RuleCall getWordMeaningParserRuleCall_0() { return cWordMeaningParserRuleCall_0; }
+		public RuleCall getWordMeaningParserRuleCall_0_0() { return cWordMeaningParserRuleCall_0_0; }
 
 		//QuestionAnswer
-		public RuleCall getQuestionAnswerParserRuleCall_1() { return cQuestionAnswerParserRuleCall_1; }
+		public RuleCall getQuestionAnswerParserRuleCall_0_1() { return cQuestionAnswerParserRuleCall_0_1; }
 
 		//FIB
-		public RuleCall getFIBParserRuleCall_2() { return cFIBParserRuleCall_2; }
+		public RuleCall getFIBParserRuleCall_0_2() { return cFIBParserRuleCall_0_2; }
 
 		//Definition
-		public RuleCall getDefinitionParserRuleCall_3() { return cDefinitionParserRuleCall_3; }
+		public RuleCall getDefinitionParserRuleCall_0_3() { return cDefinitionParserRuleCall_0_3; }
 
 		//Character
-		public RuleCall getCharacterParserRuleCall_4() { return cCharacterParserRuleCall_4; }
+		public RuleCall getCharacterParserRuleCall_0_4() { return cCharacterParserRuleCall_0_4; }
 
 		//TeacherNote
-		public RuleCall getTeacherNoteParserRuleCall_5() { return cTeacherNoteParserRuleCall_5; }
+		public RuleCall getTeacherNoteParserRuleCall_0_5() { return cTeacherNoteParserRuleCall_0_5; }
 
 		//Matching
-		public RuleCall getMatchingParserRuleCall_6() { return cMatchingParserRuleCall_6; }
+		public RuleCall getMatchingParserRuleCall_0_6() { return cMatchingParserRuleCall_0_6; }
 
 		//Event
-		public RuleCall getEventParserRuleCall_7() { return cEventParserRuleCall_7; }
+		public RuleCall getEventParserRuleCall_0_7() { return cEventParserRuleCall_0_7; }
 
 		//TrueFalse
-		public RuleCall getTrueFalseParserRuleCall_8() { return cTrueFalseParserRuleCall_8; }
+		public RuleCall getTrueFalseParserRuleCall_0_8() { return cTrueFalseParserRuleCall_0_8; }
 
 		//ChemEquation
-		public RuleCall getChemEquationParserRuleCall_9() { return cChemEquationParserRuleCall_9; }
+		public RuleCall getChemEquationParserRuleCall_0_9() { return cChemEquationParserRuleCall_0_9; }
 
 		//ChemCompound
-		public RuleCall getChemCompoundParserRuleCall_10() { return cChemCompoundParserRuleCall_10; }
+		public RuleCall getChemCompoundParserRuleCall_0_10() { return cChemCompoundParserRuleCall_0_10; }
 
 		//Spellbee
-		public RuleCall getSpellbeeParserRuleCall_11() { return cSpellbeeParserRuleCall_11; }
+		public RuleCall getSpellbeeParserRuleCall_0_11() { return cSpellbeeParserRuleCall_0_11; }
 
 		//ImageLabel
-		public RuleCall getImageLabelParserRuleCall_12() { return cImageLabelParserRuleCall_12; }
+		public RuleCall getImageLabelParserRuleCall_0_12() { return cImageLabelParserRuleCall_0_12; }
 
 		//Equation
-		public RuleCall getEquationParserRuleCall_13() { return cEquationParserRuleCall_13; }
+		public RuleCall getEquationParserRuleCall_0_13() { return cEquationParserRuleCall_0_13; }
 
 		//RefToContext
-		public RuleCall getRefToContextParserRuleCall_14() { return cRefToContextParserRuleCall_14; }
+		public RuleCall getRefToContextParserRuleCall_0_14() { return cRefToContextParserRuleCall_0_14; }
 
 		//MultiChoice
-		public RuleCall getMultiChoiceParserRuleCall_15() { return cMultiChoiceParserRuleCall_15; }
+		public RuleCall getMultiChoiceParserRuleCall_0_15() { return cMultiChoiceParserRuleCall_0_15; }
+
+		//script=Script?
+		public Assignment getScriptAssignment_1() { return cScriptAssignment_1; }
+
+		//Script
+		public RuleCall getScriptScriptParserRuleCall_1_0() { return cScriptScriptParserRuleCall_1_0; }
 	}
 
 	public class WordMeaningElements extends AbstractParserRuleElementFinder {
@@ -1403,6 +1424,38 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
+
+	public class ScriptElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Script");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cScriptKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cScriptBodyAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cScriptBodySTRINGTerminalRuleCall_2_0 = (RuleCall)cScriptBodyAssignment_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//Script:
+		//	"script" "{" scriptBody=STRING "}";
+		@Override public ParserRule getRule() { return rule; }
+
+		//"script" "{" scriptBody=STRING "}"
+		public Group getGroup() { return cGroup; }
+
+		//"script"
+		public Keyword getScriptKeyword_0() { return cScriptKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//scriptBody=STRING
+		public Assignment getScriptBodyAssignment_2() { return cScriptBodyAssignment_2; }
+
+		//STRING
+		public RuleCall getScriptBodySTRINGTerminalRuleCall_2_0() { return cScriptBodySTRINGTerminalRuleCall_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
+	}
 	
 	
 	private final JoveNotesElements pJoveNotes;
@@ -1431,6 +1484,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final MultiChoiceElements pMultiChoice;
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
+	private final ScriptElements pScript;
 	private final TerminalRule tBOOL;
 	
 	private final Grammar grammar;
@@ -1468,6 +1522,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pMultiChoice = new MultiChoiceElements();
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
+		this.pScript = new ScriptElements();
 		this.tBOOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOL");
 	}
 	
@@ -1520,7 +1575,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ChapterDetails:
 	//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-	//	"chapterName" chapterName=STRING;
+	//	"chapterName" chapterName=STRING script=Script?;
 	public ChapterDetailsElements getChapterDetailsAccess() {
 		return pChapterDetails;
 	}
@@ -1530,8 +1585,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//NotesElement:
-	//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice;
+	//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
+	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?;
 	public NotesElementElements getNotesElementAccess() {
 		return pNotesElement;
 	}
@@ -1765,6 +1820,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCMapRule() {
 		return getCMapAccess().getRule();
+	}
+
+	//Script:
+	//	"script" "{" scriptBody=STRING "}";
+	public ScriptElements getScriptAccess() {
+		return pScript;
+	}
+	
+	public ParserRule getScriptRule() {
+		return getScriptAccess().getRule();
 	}
 
 	//terminal BOOL:
