@@ -315,17 +315,17 @@ ruleChapterDetails returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getChapterDetailsAccess().getScriptScriptParserRuleCall_9_0()); 
+	        newCompositeNode(grammarAccess.getChapterDetailsAccess().getScriptBodyScriptBodyParserRuleCall_9_0()); 
 	    }
-		lv_script_9_0=ruleScript		{
+		lv_scriptBody_9_0=ruleScriptBody		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getChapterDetailsRule());
 	        }
        		set(
        			$current, 
-       			"script",
-        		lv_script_9_0, 
-        		"Script");
+       			"scriptBody",
+        		lv_scriptBody_9_0, 
+        		"ScriptBody");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2603,9 +2603,9 @@ ruleScript returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(	otherlv_0='script' 
+(	otherlv_0='script_expressions' 
     {
-    	newLeafNode(otherlv_0, grammarAccess.getScriptAccess().getScriptKeyword_0());
+    	newLeafNode(otherlv_0, grammarAccess.getScriptAccess().getScript_expressionsKeyword_0());
     }
 	otherlv_1='{' 
     {
@@ -2613,13 +2613,165 @@ ruleScript returns [EObject current=null]
     }
 (
 (
-		lv_scriptBody_2_0=RULE_STRING
+		{ 
+	        newCompositeNode(grammarAccess.getScriptAccess().getEvalVarsEvalVarParserRuleCall_2_0()); 
+	    }
+		lv_evalVars_2_0=ruleEvalVar		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getScriptRule());
+	        }
+       		add(
+       			$current, 
+       			"evalVars",
+        		lv_evalVars_2_0, 
+        		"EvalVar");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)(	otherlv_3=',' 
+    {
+    	newLeafNode(otherlv_3, grammarAccess.getScriptAccess().getCommaKeyword_3_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getScriptAccess().getEvalVarsEvalVarParserRuleCall_3_1_0()); 
+	    }
+		lv_evalVars_4_0=ruleEvalVar		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getScriptRule());
+	        }
+       		add(
+       			$current, 
+       			"evalVars",
+        		lv_evalVars_4_0, 
+        		"EvalVar");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))*	otherlv_5='}' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getScriptAccess().getRightCurlyBracketKeyword_4());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getScriptAccess().getScriptBodyScriptBodyParserRuleCall_5_0()); 
+	    }
+		lv_scriptBody_6_0=ruleScriptBody		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getScriptRule());
+	        }
+       		set(
+       			$current, 
+       			"scriptBody",
+        		lv_scriptBody_6_0, 
+        		"ScriptBody");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+)?)
+;
+
+
+
+
+
+// Entry rule entryRuleEvalVar
+entryRuleEvalVar returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getEvalVarRule()); }
+	 iv_ruleEvalVar=ruleEvalVar 
+	 { $current=$iv_ruleEvalVar.current; } 
+	 EOF 
+;
+
+// Rule EvalVar
+ruleEvalVar returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+(
+		lv_varName_0_0=RULE_STRING
 		{
-			newLeafNode(lv_scriptBody_2_0, grammarAccess.getScriptAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_varName_0_0, grammarAccess.getEvalVarAccess().getVarNameSTRINGTerminalRuleCall_0_0()); 
 		}
 		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getScriptRule());
+	            $current = createModelElement(grammarAccess.getEvalVarRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"varName",
+        		lv_varName_0_0, 
+        		"STRING");
+	    }
+
+)
+)	otherlv_1='=' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getEvalVarAccess().getEqualsSignKeyword_1());
+    }
+(
+(
+		lv_varExpression_2_0=RULE_STRING
+		{
+			newLeafNode(lv_varExpression_2_0, grammarAccess.getEvalVarAccess().getVarExpressionSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getEvalVarRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"varExpression",
+        		lv_varExpression_2_0, 
+        		"STRING");
+	    }
+
+)
+))
+;
+
+
+
+
+
+// Entry rule entryRuleScriptBody
+entryRuleScriptBody returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getScriptBodyRule()); }
+	 iv_ruleScriptBody=ruleScriptBody 
+	 { $current=$iv_ruleScriptBody.current; } 
+	 EOF 
+;
+
+// Rule ScriptBody
+ruleScriptBody returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='script' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getScriptBodyAccess().getScriptKeyword_0());
+    }
+	otherlv_1='{' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getScriptBodyAccess().getLeftCurlyBracketKeyword_1());
+    }
+(
+(
+		lv_scriptBody_2_0=RULE_STRING
+		{
+			newLeafNode(lv_scriptBody_2_0, grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getScriptBodyRule());
 	        }
        		setWithLastConsumed(
        			$current, 
@@ -2631,7 +2783,7 @@ ruleScript returns [EObject current=null]
 )
 )	otherlv_3='}' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getScriptAccess().getRightCurlyBracketKeyword_3());
+    	newLeafNode(otherlv_3, grammarAccess.getScriptBodyAccess().getRightCurlyBracketKeyword_3());
     }
 )
 ;

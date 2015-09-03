@@ -19,7 +19,7 @@ ChapterDetails:
     'subject'       subjectName   = STRING
     'chapterNumber' chapterNumber = INT '.' subChapterNumber = INT
     'chapterName'   chapterName   = STRING
-    ( script = Script )?
+    ( scriptBody = ScriptBody )?
 ;
 
 NotesElement: (
@@ -183,6 +183,17 @@ Option:
 CMap: 'cmap' '{' content = STRING '}' ;
 
 Script:
+    'script_expressions' '{'
+        ( evalVars += EvalVar )( ',' evalVars += EvalVar )*
+    '}'
+    ( scriptBody = ScriptBody )?
+;
+
+EvalVar:
+    varName = STRING '=' varExpression = STRING
+;
+
+ScriptBody:
     'script' '{'
         scriptBody = STRING
     '}'

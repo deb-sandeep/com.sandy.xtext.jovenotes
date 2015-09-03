@@ -9,6 +9,7 @@ import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
+import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
@@ -25,6 +26,7 @@ import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -300,6 +302,20 @@ public class JoveNotesSwitch<T> extends Switch<T>
       {
         Script script = (Script)theEObject;
         T result = caseScript(script);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.EVAL_VAR:
+      {
+        EvalVar evalVar = (EvalVar)theEObject;
+        T result = caseEvalVar(evalVar);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.SCRIPT_BODY:
+      {
+        ScriptBody scriptBody = (ScriptBody)theEObject;
+        T result = caseScriptBody(scriptBody);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -735,6 +751,38 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseScript(Script object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Eval Var</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Eval Var</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEvalVar(EvalVar object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Script Body</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Script Body</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseScriptBody(ScriptBody object)
   {
     return null;
   }

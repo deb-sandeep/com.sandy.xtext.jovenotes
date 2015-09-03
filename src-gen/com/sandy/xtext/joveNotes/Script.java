@@ -2,6 +2,8 @@
  */
 package com.sandy.xtext.joveNotes;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.Script#getEvalVars <em>Eval Vars</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}</li>
  * </ul>
  * </p>
@@ -23,29 +26,45 @@ import org.eclipse.emf.ecore.EObject;
 public interface Script extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Script Body</b></em>' attribute.
+   * Returns the value of the '<em><b>Eval Vars</b></em>' containment reference list.
+   * The list contents are of type {@link com.sandy.xtext.joveNotes.EvalVar}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Script Body</em>' attribute isn't clear,
+   * If the meaning of the '<em>Eval Vars</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Script Body</em>' attribute.
-   * @see #setScriptBody(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScript_ScriptBody()
-   * @model
+   * @return the value of the '<em>Eval Vars</em>' containment reference list.
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScript_EvalVars()
+   * @model containment="true"
    * @generated
    */
-  String getScriptBody();
+  EList<EvalVar> getEvalVars();
 
   /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}' attribute.
+   * Returns the value of the '<em><b>Script Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Script Body</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Script Body</em>' containment reference.
+   * @see #setScriptBody(ScriptBody)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScript_ScriptBody()
+   * @model containment="true"
+   * @generated
+   */
+  ScriptBody getScriptBody();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Script Body</em>' attribute.
+   * @param value the new value of the '<em>Script Body</em>' containment reference.
    * @see #getScriptBody()
    * @generated
    */
-  void setScriptBody(String value);
+  void setScriptBody(ScriptBody value);
 
 } // Script

@@ -195,13 +195,13 @@ public interface JoveNotesPackage extends EPackage
   int CHAPTER_DETAILS__CHAPTER_NAME = 4;
 
   /**
-   * The feature id for the '<em><b>Script</b></em>' containment reference.
+   * The feature id for the '<em><b>Script Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SCRIPT = 5;
+  int CHAPTER_DETAILS__SCRIPT_BODY = 5;
 
   /**
    * The number of structural features of the '<em>Chapter Details</em>' class.
@@ -1506,13 +1506,22 @@ public interface JoveNotesPackage extends EPackage
   int SCRIPT = 26;
 
   /**
-   * The feature id for the '<em><b>Script Body</b></em>' attribute.
+   * The feature id for the '<em><b>Eval Vars</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SCRIPT__SCRIPT_BODY = 0;
+  int SCRIPT__EVAL_VARS = 0;
+
+  /**
+   * The feature id for the '<em><b>Script Body</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCRIPT__SCRIPT_BODY = 1;
 
   /**
    * The number of structural features of the '<em>Script</em>' class.
@@ -1521,7 +1530,72 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SCRIPT_FEATURE_COUNT = 1;
+  int SCRIPT_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl <em>Eval Var</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.EvalVarImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
+   * @generated
+   */
+  int EVAL_VAR = 27;
+
+  /**
+   * The feature id for the '<em><b>Var Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVAL_VAR__VAR_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Var Expression</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVAL_VAR__VAR_EXPRESSION = 1;
+
+  /**
+   * The number of structural features of the '<em>Eval Var</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EVAL_VAR_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ScriptBodyImpl <em>Script Body</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.ScriptBodyImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
+   * @generated
+   */
+  int SCRIPT_BODY = 28;
+
+  /**
+   * The feature id for the '<em><b>Script Body</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCRIPT_BODY__SCRIPT_BODY = 0;
+
+  /**
+   * The number of structural features of the '<em>Script Body</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SCRIPT_BODY_FEATURE_COUNT = 1;
 
 
   /**
@@ -1665,15 +1739,15 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getChapterDetails_ChapterName();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.ChapterDetails#getScript <em>Script</em>}'.
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody <em>Script Body</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Script</em>'.
-   * @see com.sandy.xtext.joveNotes.ChapterDetails#getScript()
+   * @return the meta object for the containment reference '<em>Script Body</em>'.
+   * @see com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody()
    * @see #getChapterDetails()
    * @generated
    */
-  EReference getChapterDetails_Script();
+  EReference getChapterDetails_ScriptBody();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.NotesElement <em>Notes Element</em>}'.
@@ -2598,15 +2672,79 @@ public interface JoveNotesPackage extends EPackage
   EClass getScript();
 
   /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.sandy.xtext.joveNotes.Script#getEvalVars <em>Eval Vars</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Script Body</em>'.
+   * @return the meta object for the containment reference list '<em>Eval Vars</em>'.
+   * @see com.sandy.xtext.joveNotes.Script#getEvalVars()
+   * @see #getScript()
+   * @generated
+   */
+  EReference getScript_EvalVars();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script Body</em>'.
    * @see com.sandy.xtext.joveNotes.Script#getScriptBody()
    * @see #getScript()
    * @generated
    */
-  EAttribute getScript_ScriptBody();
+  EReference getScript_ScriptBody();
+
+  /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.EvalVar <em>Eval Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Eval Var</em>'.
+   * @see com.sandy.xtext.joveNotes.EvalVar
+   * @generated
+   */
+  EClass getEvalVar();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.EvalVar#getVarName <em>Var Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Var Name</em>'.
+   * @see com.sandy.xtext.joveNotes.EvalVar#getVarName()
+   * @see #getEvalVar()
+   * @generated
+   */
+  EAttribute getEvalVar_VarName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.EvalVar#getVarExpression <em>Var Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Var Expression</em>'.
+   * @see com.sandy.xtext.joveNotes.EvalVar#getVarExpression()
+   * @see #getEvalVar()
+   * @generated
+   */
+  EAttribute getEvalVar_VarExpression();
+
+  /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.ScriptBody <em>Script Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Script Body</em>'.
+   * @see com.sandy.xtext.joveNotes.ScriptBody
+   * @generated
+   */
+  EClass getScriptBody();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ScriptBody#getScriptBody <em>Script Body</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Script Body</em>'.
+   * @see com.sandy.xtext.joveNotes.ScriptBody#getScriptBody()
+   * @see #getScriptBody()
+   * @generated
+   */
+  EAttribute getScriptBody_ScriptBody();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -2742,12 +2880,12 @@ public interface JoveNotesPackage extends EPackage
     EAttribute CHAPTER_DETAILS__CHAPTER_NAME = eINSTANCE.getChapterDetails_ChapterName();
 
     /**
-     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Script Body</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference CHAPTER_DETAILS__SCRIPT = eINSTANCE.getChapterDetails_Script();
+    EReference CHAPTER_DETAILS__SCRIPT_BODY = eINSTANCE.getChapterDetails_ScriptBody();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.NotesElementImpl <em>Notes Element</em>}' class.
@@ -3486,12 +3624,64 @@ public interface JoveNotesPackage extends EPackage
     EClass SCRIPT = eINSTANCE.getScript();
 
     /**
+     * The meta object literal for the '<em><b>Eval Vars</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SCRIPT__EVAL_VARS = eINSTANCE.getScript_EvalVars();
+
+    /**
+     * The meta object literal for the '<em><b>Script Body</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SCRIPT__SCRIPT_BODY = eINSTANCE.getScript_ScriptBody();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl <em>Eval Var</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.EvalVarImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
+     * @generated
+     */
+    EClass EVAL_VAR = eINSTANCE.getEvalVar();
+
+    /**
+     * The meta object literal for the '<em><b>Var Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVAL_VAR__VAR_NAME = eINSTANCE.getEvalVar_VarName();
+
+    /**
+     * The meta object literal for the '<em><b>Var Expression</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVAL_VAR__VAR_EXPRESSION = eINSTANCE.getEvalVar_VarExpression();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.ScriptBodyImpl <em>Script Body</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.ScriptBodyImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
+     * @generated
+     */
+    EClass SCRIPT_BODY = eINSTANCE.getScriptBody();
+
+    /**
      * The meta object literal for the '<em><b>Script Body</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SCRIPT__SCRIPT_BODY = eINSTANCE.getScript_ScriptBody();
+    EAttribute SCRIPT_BODY__SCRIPT_BODY = eINSTANCE.getScriptBody_ScriptBody();
 
   }
 

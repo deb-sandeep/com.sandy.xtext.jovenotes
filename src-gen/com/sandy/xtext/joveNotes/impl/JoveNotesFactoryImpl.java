@@ -9,6 +9,7 @@ import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
+import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
@@ -26,6 +27,7 @@ import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -118,6 +120,8 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       case JoveNotesPackage.SCRIPT: return createScript();
+      case JoveNotesPackage.EVAL_VAR: return createEvalVar();
+      case JoveNotesPackage.SCRIPT_BODY: return createScriptBody();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -418,6 +422,28 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     ScriptImpl script = new ScriptImpl();
     return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EvalVar createEvalVar()
+  {
+    EvalVarImpl evalVar = new EvalVarImpl();
+    return evalVar;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public ScriptBody createScriptBody()
+  {
+    ScriptBodyImpl scriptBody = new ScriptBodyImpl();
+    return scriptBody;
   }
 
   /**

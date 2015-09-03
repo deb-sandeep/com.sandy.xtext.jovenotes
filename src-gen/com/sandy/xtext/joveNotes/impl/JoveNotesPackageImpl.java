@@ -9,6 +9,7 @@ import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
+import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
@@ -25,6 +26,7 @@ import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -235,6 +237,20 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
   private EClass scriptEClass = null;
 
   /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass evalVarEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass scriptBodyEClass = null;
+
+  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -432,7 +448,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getChapterDetails_Script()
+  public EReference getChapterDetails_ScriptBody()
   {
     return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(5);
   }
@@ -1302,9 +1318,69 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getScript_ScriptBody()
+  public EReference getScript_EvalVars()
   {
-    return (EAttribute)scriptEClass.getEStructuralFeatures().get(0);
+    return (EReference)scriptEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getScript_ScriptBody()
+  {
+    return (EReference)scriptEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getEvalVar()
+  {
+    return evalVarEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEvalVar_VarName()
+  {
+    return (EAttribute)evalVarEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEvalVar_VarExpression()
+  {
+    return (EAttribute)evalVarEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getScriptBody()
+  {
+    return scriptBodyEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getScriptBody_ScriptBody()
+  {
+    return (EAttribute)scriptBodyEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1352,7 +1428,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NUMBER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__SUB_CHAPTER_NUMBER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NAME);
-    createEReference(chapterDetailsEClass, CHAPTER_DETAILS__SCRIPT);
+    createEReference(chapterDetailsEClass, CHAPTER_DETAILS__SCRIPT_BODY);
 
     notesElementEClass = createEClass(NOTES_ELEMENT);
     createEReference(notesElementEClass, NOTES_ELEMENT__SCRIPT);
@@ -1463,7 +1539,15 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(cMapEClass, CMAP__CONTENT);
 
     scriptEClass = createEClass(SCRIPT);
-    createEAttribute(scriptEClass, SCRIPT__SCRIPT_BODY);
+    createEReference(scriptEClass, SCRIPT__EVAL_VARS);
+    createEReference(scriptEClass, SCRIPT__SCRIPT_BODY);
+
+    evalVarEClass = createEClass(EVAL_VAR);
+    createEAttribute(evalVarEClass, EVAL_VAR__VAR_NAME);
+    createEAttribute(evalVarEClass, EVAL_VAR__VAR_EXPRESSION);
+
+    scriptBodyEClass = createEClass(SCRIPT_BODY);
+    createEAttribute(scriptBodyEClass, SCRIPT_BODY__SCRIPT_BODY);
   }
 
   /**
@@ -1528,7 +1612,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getChapterDetails_ChapterNumber(), ecorePackage.getEInt(), "chapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_SubChapterNumber(), ecorePackage.getEInt(), "subChapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_ChapterName(), ecorePackage.getEString(), "chapterName", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getChapterDetails_Script(), this.getScript(), null, "script", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getChapterDetails_ScriptBody(), this.getScriptBody(), null, "scriptBody", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notesElementEClass, NotesElement.class, "NotesElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getNotesElement_Script(), this.getScript(), null, "script", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1639,7 +1723,15 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getCMap_Content(), ecorePackage.getEString(), "content", null, 0, 1, CMap.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(scriptEClass, Script.class, "Script", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getScript_ScriptBody(), ecorePackage.getEString(), "scriptBody", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScript_EvalVars(), this.getEvalVar(), null, "evalVars", null, 0, -1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getScript_ScriptBody(), this.getScriptBody(), null, "scriptBody", null, 0, 1, Script.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(evalVarEClass, EvalVar.class, "EvalVar", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getEvalVar_VarName(), ecorePackage.getEString(), "varName", null, 0, 1, EvalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvalVar_VarExpression(), ecorePackage.getEString(), "varExpression", null, 0, 1, EvalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(scriptBodyEClass, ScriptBody.class, "ScriptBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getScriptBody_ScriptBody(), ecorePackage.getEString(), "scriptBody", null, 0, 1, ScriptBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

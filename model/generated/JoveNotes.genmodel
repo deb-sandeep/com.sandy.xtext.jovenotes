@@ -22,7 +22,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subChapterNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterName"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChapterDetails/script"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChapterDetails/scriptBody"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//NotesElement">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//NotesElement/script"/>
@@ -133,7 +133,15 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//CMap/content"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Script">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Script/scriptBody"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Script/evalVars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Script/scriptBody"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//EvalVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EvalVar/varName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EvalVar/varExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ScriptBody">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ScriptBody/scriptBody"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -4,7 +4,7 @@ package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
-import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterNumber <em>Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubChapterNumber <em>Sub Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterName <em>Chapter Name</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getScriptBody <em>Script Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -136,14 +136,14 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   protected String chapterName = CHAPTER_NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * The cached value of the '{@link #getScriptBody() <em>Script Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getScript()
+   * @see #getScriptBody()
    * @generated
    * @ordered
    */
-  protected Script script;
+  protected ScriptBody scriptBody;
 
   /**
    * <!-- begin-user-doc -->
@@ -286,9 +286,9 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public Script getScript()
+  public ScriptBody getScriptBody()
   {
-    return script;
+    return scriptBody;
   }
 
   /**
@@ -296,13 +296,13 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  public NotificationChain basicSetScriptBody(ScriptBody newScriptBody, NotificationChain msgs)
   {
-    Script oldScript = script;
-    script = newScript;
+    ScriptBody oldScriptBody = scriptBody;
+    scriptBody = newScriptBody;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__SCRIPT, oldScript, newScript);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY, oldScriptBody, newScriptBody);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -313,20 +313,20 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setScript(Script newScript)
+  public void setScriptBody(ScriptBody newScriptBody)
   {
-    if (newScript != script)
+    if (newScriptBody != scriptBody)
     {
       NotificationChain msgs = null;
-      if (script != null)
-        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.CHAPTER_DETAILS__SCRIPT, null, msgs);
-      if (newScript != null)
-        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.CHAPTER_DETAILS__SCRIPT, null, msgs);
-      msgs = basicSetScript(newScript, msgs);
+      if (scriptBody != null)
+        msgs = ((InternalEObject)scriptBody).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY, null, msgs);
+      if (newScriptBody != null)
+        msgs = ((InternalEObject)newScriptBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY, null, msgs);
+      msgs = basicSetScriptBody(newScriptBody, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__SCRIPT, newScript, newScript));
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY, newScriptBody, newScriptBody));
   }
 
   /**
@@ -339,8 +339,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT:
-        return basicSetScript(null, msgs);
+      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY:
+        return basicSetScriptBody(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -365,8 +365,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
         return getSubChapterNumber();
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NAME:
         return getChapterName();
-      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT:
-        return getScript();
+      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY:
+        return getScriptBody();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -396,8 +396,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NAME:
         setChapterName((String)newValue);
         return;
-      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT:
-        setScript((Script)newValue);
+      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY:
+        setScriptBody((ScriptBody)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -428,8 +428,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NAME:
         setChapterName(CHAPTER_NAME_EDEFAULT);
         return;
-      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT:
-        setScript((Script)null);
+      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY:
+        setScriptBody((ScriptBody)null);
         return;
     }
     super.eUnset(featureID);
@@ -455,8 +455,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
         return subChapterNumber != SUB_CHAPTER_NUMBER_EDEFAULT;
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NAME:
         return CHAPTER_NAME_EDEFAULT == null ? chapterName != null : !CHAPTER_NAME_EDEFAULT.equals(chapterName);
-      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT:
-        return script != null;
+      case JoveNotesPackage.CHAPTER_DETAILS__SCRIPT_BODY:
+        return scriptBody != null;
     }
     return super.eIsSet(featureID);
   }

@@ -266,6 +266,24 @@ public interface JoveNotesFactory extends EFactory
   Script createScript();
 
   /**
+   * Returns a new object of class '<em>Eval Var</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Eval Var</em>'.
+   * @generated
+   */
+  EvalVar createEvalVar();
+
+  /**
+   * Returns a new object of class '<em>Script Body</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Script Body</em>'.
+   * @generated
+   */
+  ScriptBody createScriptBody();
+
+  /**
    * Returns the package supported by this factory.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

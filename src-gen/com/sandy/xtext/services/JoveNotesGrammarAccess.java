@@ -103,16 +103,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cChapterNameKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cChapterNameAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cChapterNameSTRINGTerminalRuleCall_8_0 = (RuleCall)cChapterNameAssignment_8.eContents().get(0);
-		private final Assignment cScriptAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cScriptScriptParserRuleCall_9_0 = (RuleCall)cScriptAssignment_9.eContents().get(0);
+		private final Assignment cScriptBodyAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cScriptBodyScriptBodyParserRuleCall_9_0 = (RuleCall)cScriptBodyAssignment_9.eContents().get(0);
 		
 		//ChapterDetails:
 		//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//	"chapterName" chapterName=STRING script=Script?;
+		//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//"chapterName" chapterName=STRING script=Script?
+		//"chapterName" chapterName=STRING scriptBody=ScriptBody?
 		public Group getGroup() { return cGroup; }
 
 		//testPaper="@test_paper"?
@@ -157,11 +157,11 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getChapterNameSTRINGTerminalRuleCall_8_0() { return cChapterNameSTRINGTerminalRuleCall_8_0; }
 
-		//script=Script?
-		public Assignment getScriptAssignment_9() { return cScriptAssignment_9; }
+		//scriptBody=ScriptBody?
+		public Assignment getScriptBodyAssignment_9() { return cScriptBodyAssignment_9; }
 
-		//Script
-		public RuleCall getScriptScriptParserRuleCall_9_0() { return cScriptScriptParserRuleCall_9_0; }
+		//ScriptBody
+		public RuleCall getScriptBodyScriptBodyParserRuleCall_9_0() { return cScriptBodyScriptBodyParserRuleCall_9_0; }
 	}
 
 	public class NotesElementElements extends AbstractParserRuleElementFinder {
@@ -1428,13 +1428,101 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	public class ScriptElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Script");
 		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cScript_expressionsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEvalVarsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cEvalVarsEvalVarParserRuleCall_2_0 = (RuleCall)cEvalVarsAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCommaKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cEvalVarsAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cEvalVarsEvalVarParserRuleCall_3_1_0 = (RuleCall)cEvalVarsAssignment_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cScriptBodyAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cScriptBodyScriptBodyParserRuleCall_5_0 = (RuleCall)cScriptBodyAssignment_5.eContents().get(0);
+		
+		//Script:
+		//	"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?;
+		@Override public ParserRule getRule() { return rule; }
+
+		//"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?
+		public Group getGroup() { return cGroup; }
+
+		//"script_expressions"
+		public Keyword getScript_expressionsKeyword_0() { return cScript_expressionsKeyword_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+
+		//evalVars+=EvalVar
+		public Assignment getEvalVarsAssignment_2() { return cEvalVarsAssignment_2; }
+
+		//EvalVar
+		public RuleCall getEvalVarsEvalVarParserRuleCall_2_0() { return cEvalVarsEvalVarParserRuleCall_2_0; }
+
+		//("," evalVars+=EvalVar)*
+		public Group getGroup_3() { return cGroup_3; }
+
+		//","
+		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
+
+		//evalVars+=EvalVar
+		public Assignment getEvalVarsAssignment_3_1() { return cEvalVarsAssignment_3_1; }
+
+		//EvalVar
+		public RuleCall getEvalVarsEvalVarParserRuleCall_3_1_0() { return cEvalVarsEvalVarParserRuleCall_3_1_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+
+		//scriptBody=ScriptBody?
+		public Assignment getScriptBodyAssignment_5() { return cScriptBodyAssignment_5; }
+
+		//ScriptBody
+		public RuleCall getScriptBodyScriptBodyParserRuleCall_5_0() { return cScriptBodyScriptBodyParserRuleCall_5_0; }
+	}
+
+	public class EvalVarElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EvalVar");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cVarNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cVarNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cVarNameAssignment_0.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cVarExpressionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVarExpressionSTRINGTerminalRuleCall_2_0 = (RuleCall)cVarExpressionAssignment_2.eContents().get(0);
+		
+		//EvalVar:
+		//	varName=STRING "=" varExpression=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//varName=STRING "=" varExpression=STRING
+		public Group getGroup() { return cGroup; }
+
+		//varName=STRING
+		public Assignment getVarNameAssignment_0() { return cVarNameAssignment_0; }
+
+		//STRING
+		public RuleCall getVarNameSTRINGTerminalRuleCall_0_0() { return cVarNameSTRINGTerminalRuleCall_0_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+
+		//varExpression=STRING
+		public Assignment getVarExpressionAssignment_2() { return cVarExpressionAssignment_2; }
+
+		//STRING
+		public RuleCall getVarExpressionSTRINGTerminalRuleCall_2_0() { return cVarExpressionSTRINGTerminalRuleCall_2_0; }
+	}
+
+	public class ScriptBodyElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScriptBody");
+		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScriptKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cScriptBodyAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cScriptBodySTRINGTerminalRuleCall_2_0 = (RuleCall)cScriptBodyAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//Script:
+		//ScriptBody:
 		//	"script" "{" scriptBody=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
@@ -1485,6 +1573,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
 	private final ScriptElements pScript;
+	private final EvalVarElements pEvalVar;
+	private final ScriptBodyElements pScriptBody;
 	private final TerminalRule tBOOL;
 	
 	private final Grammar grammar;
@@ -1523,6 +1613,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
 		this.pScript = new ScriptElements();
+		this.pEvalVar = new EvalVarElements();
+		this.pScriptBody = new ScriptBodyElements();
 		this.tBOOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOL");
 	}
 	
@@ -1575,7 +1667,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//ChapterDetails:
 	//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-	//	"chapterName" chapterName=STRING script=Script?;
+	//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 	public ChapterDetailsElements getChapterDetailsAccess() {
 		return pChapterDetails;
 	}
@@ -1823,13 +1915,33 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Script:
-	//	"script" "{" scriptBody=STRING "}";
+	//	"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?;
 	public ScriptElements getScriptAccess() {
 		return pScript;
 	}
 	
 	public ParserRule getScriptRule() {
 		return getScriptAccess().getRule();
+	}
+
+	//EvalVar:
+	//	varName=STRING "=" varExpression=STRING;
+	public EvalVarElements getEvalVarAccess() {
+		return pEvalVar;
+	}
+	
+	public ParserRule getEvalVarRule() {
+		return getEvalVarAccess().getRule();
+	}
+
+	//ScriptBody:
+	//	"script" "{" scriptBody=STRING "}";
+	public ScriptBodyElements getScriptBodyAccess() {
+		return pScriptBody;
+	}
+	
+	public ParserRule getScriptBodyRule() {
+		return getScriptBodyAccess().getRule();
 	}
 
 	//terminal BOOL:

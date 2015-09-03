@@ -9,6 +9,7 @@ import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
+import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
@@ -25,6 +26,7 @@ import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -234,6 +236,16 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseScript(Script object)
       {
         return createScriptAdapter();
+      }
+      @Override
+      public Adapter caseEvalVar(EvalVar object)
+      {
+        return createEvalVarAdapter();
+      }
+      @Override
+      public Adapter caseScriptBody(ScriptBody object)
+      {
+        return createScriptBodyAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -658,6 +670,36 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createScriptAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.EvalVar <em>Eval Var</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.EvalVar
+   * @generated
+   */
+  public Adapter createEvalVarAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.ScriptBody <em>Script Body</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.ScriptBody
+   * @generated
+   */
+  public Adapter createScriptBodyAdapter()
   {
     return null;
   }

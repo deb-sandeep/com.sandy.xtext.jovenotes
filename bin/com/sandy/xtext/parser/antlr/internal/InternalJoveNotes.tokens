@@ -35,7 +35,8 @@
 'correct'=52
 'hide'=20
 'imageName'=43
-'script'=54
+'script'=55
+'script_expressions'=54
 'skip_reverse_question'=27
 'subject'=15
 'where'=46
@@ -92,3 +93,4 @@ T__51=51
 T__52=52
 T__53=53
 T__54=54
+T__55=55

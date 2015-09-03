@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterNumber <em>Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubChapterNumber <em>Sub Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterName <em>Chapter Name</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody <em>Script Body</em>}</li>
  * </ul>
  * </p>
  *
@@ -158,29 +158,29 @@ public interface ChapterDetails extends EObject
   void setChapterName(String value);
 
   /**
-   * Returns the value of the '<em><b>Script</b></em>' containment reference.
+   * Returns the value of the '<em><b>Script Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Script Body</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Script</em>' containment reference.
-   * @see #setScript(Script)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails_Script()
+   * @return the value of the '<em>Script Body</em>' containment reference.
+   * @see #setScriptBody(ScriptBody)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails_ScriptBody()
    * @model containment="true"
    * @generated
    */
-  Script getScript();
+  ScriptBody getScriptBody();
 
   /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChapterDetails#getScript <em>Script</em>}' containment reference.
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody <em>Script Body</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Script</em>' containment reference.
-   * @see #getScript()
+   * @param value the new value of the '<em>Script Body</em>' containment reference.
+   * @see #getScriptBody()
    * @generated
    */
-  void setScript(Script value);
+  void setScriptBody(ScriptBody value);
 
 } // ChapterDetails

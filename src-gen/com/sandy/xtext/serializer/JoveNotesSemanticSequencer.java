@@ -12,6 +12,7 @@ import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
+import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
@@ -27,6 +28,7 @@ import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
+import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
@@ -112,6 +114,9 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					return; 
 				}
 				else break;
+			case JoveNotesPackage.EVAL_VAR:
+				sequence_EvalVar(context, (EvalVar) semanticObject); 
+				return; 
 			case JoveNotesPackage.EVENT:
 				if(context == grammarAccess.getEventRule()) {
 					sequence_Event(context, (Event) semanticObject); 
@@ -203,6 +208,9 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case JoveNotesPackage.SCRIPT:
 				sequence_Script(context, (Script) semanticObject); 
 				return; 
+			case JoveNotesPackage.SCRIPT_BODY:
+				sequence_ScriptBody(context, (ScriptBody) semanticObject); 
+				return; 
 			case JoveNotesPackage.SPELLBEE:
 				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_Spellbee(context, (Spellbee) semanticObject); 
@@ -271,7 +279,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         chapterNumber=INT 
 	 *         subChapterNumber=INT 
 	 *         chapterName=STRING 
-	 *         script=Script?
+	 *         scriptBody=ScriptBody?
 	 *     )
 	 */
 	protected void sequence_ChapterDetails(EObject context, ChapterDetails semanticObject) {
@@ -399,6 +407,25 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_Equation_NotesElement(EObject context, Equation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (varName=STRING varExpression=STRING)
+	 */
+	protected void sequence_EvalVar(EObject context, EvalVar semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_NAME));
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_EXPRESSION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_EXPRESSION));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getEvalVarAccess().getVarNameSTRINGTerminalRuleCall_0_0(), semanticObject.getVarName());
+		feeder.accept(grammarAccess.getEvalVarAccess().getVarExpressionSTRINGTerminalRuleCall_2_0(), semanticObject.getVarExpression());
+		feeder.finish();
 	}
 	
 	
@@ -676,15 +703,24 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 * Constraint:
 	 *     scriptBody=STRING
 	 */
-	protected void sequence_Script(EObject context, Script semanticObject) {
+	protected void sequence_ScriptBody(EObject context, ScriptBody semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT__SCRIPT_BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.SCRIPT__SCRIPT_BODY));
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT_BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT_BODY));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getScriptAccess().getScriptBodySTRINGTerminalRuleCall_2_0(), semanticObject.getScriptBody());
+		feeder.accept(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0(), semanticObject.getScriptBody());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (evalVars+=EvalVar evalVars+=EvalVar* scriptBody=ScriptBody?)
+	 */
+	protected void sequence_Script(EObject context, Script semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
