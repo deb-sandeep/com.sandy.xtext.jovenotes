@@ -1378,7 +1378,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getScriptBody_ScriptBody()
+  public EAttribute getScriptBody_Script()
   {
     return (EAttribute)scriptBodyEClass.getEStructuralFeatures().get(0);
   }
@@ -1547,7 +1547,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(evalVarEClass, EVAL_VAR__VAR_EXPRESSION);
 
     scriptBodyEClass = createEClass(SCRIPT_BODY);
-    createEAttribute(scriptBodyEClass, SCRIPT_BODY__SCRIPT_BODY);
+    createEAttribute(scriptBodyEClass, SCRIPT_BODY__SCRIPT);
   }
 
   /**
@@ -1731,7 +1731,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getEvalVar_VarExpression(), ecorePackage.getEString(), "varExpression", null, 0, 1, EvalVar.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(scriptBodyEClass, ScriptBody.class, "ScriptBody", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getScriptBody_ScriptBody(), ecorePackage.getEString(), "scriptBody", null, 0, 1, ScriptBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getScriptBody_Script(), ecorePackage.getEString(), "script", null, 0, 1, ScriptBody.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);

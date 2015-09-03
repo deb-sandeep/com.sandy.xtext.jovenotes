@@ -1580,13 +1580,13 @@ public interface JoveNotesPackage extends EPackage
   int SCRIPT_BODY = 28;
 
   /**
-   * The feature id for the '<em><b>Script Body</b></em>' attribute.
+   * The feature id for the '<em><b>Script</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SCRIPT_BODY__SCRIPT_BODY = 0;
+  int SCRIPT_BODY__SCRIPT = 0;
 
   /**
    * The number of structural features of the '<em>Script Body</em>' class.
@@ -2736,15 +2736,15 @@ public interface JoveNotesPackage extends EPackage
   EClass getScriptBody();
 
   /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ScriptBody#getScriptBody <em>Script Body</em>}'.
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ScriptBody#getScript <em>Script</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Script Body</em>'.
-   * @see com.sandy.xtext.joveNotes.ScriptBody#getScriptBody()
+   * @return the meta object for the attribute '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.ScriptBody#getScript()
    * @see #getScriptBody()
    * @generated
    */
-  EAttribute getScriptBody_ScriptBody();
+  EAttribute getScriptBody_Script();
 
   /**
    * Returns the factory that creates the instances of the model.
@@ -3676,12 +3676,12 @@ public interface JoveNotesPackage extends EPackage
     EClass SCRIPT_BODY = eINSTANCE.getScriptBody();
 
     /**
-     * The meta object literal for the '<em><b>Script Body</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Script</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute SCRIPT_BODY__SCRIPT_BODY = eINSTANCE.getScriptBody_ScriptBody();
+    EAttribute SCRIPT_BODY__SCRIPT = eINSTANCE.getScriptBody_Script();
 
   }
 

@@ -141,7 +141,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EvalVar/varExpression"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ScriptBody">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ScriptBody/scriptBody"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ScriptBody/script"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

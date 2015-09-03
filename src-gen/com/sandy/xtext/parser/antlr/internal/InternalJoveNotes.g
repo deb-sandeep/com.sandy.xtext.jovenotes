@@ -2765,9 +2765,9 @@ ruleScriptBody returns [EObject current=null]
     }
 (
 (
-		lv_scriptBody_2_0=RULE_STRING
+		lv_script_2_0=RULE_STRING
 		{
-			newLeafNode(lv_scriptBody_2_0, grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0()); 
+			newLeafNode(lv_script_2_0, grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0()); 
 		}
 		{
 	        if ($current==null) {
@@ -2775,8 +2775,8 @@ ruleScriptBody returns [EObject current=null]
 	        }
        		setWithLastConsumed(
        			$current, 
-       			"scriptBody",
-        		lv_scriptBody_2_0, 
+       			"script",
+        		lv_script_2_0, 
         		"STRING");
 	    }
 

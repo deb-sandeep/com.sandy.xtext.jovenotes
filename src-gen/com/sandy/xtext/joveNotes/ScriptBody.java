@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.ScriptBody#getScriptBody <em>Script Body</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ScriptBody#getScript <em>Script</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface ScriptBody extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Script Body</b></em>' attribute.
+   * Returns the value of the '<em><b>Script</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Script Body</em>' attribute isn't clear,
+   * If the meaning of the '<em>Script</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Script Body</em>' attribute.
-   * @see #setScriptBody(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScriptBody_ScriptBody()
+   * @return the value of the '<em>Script</em>' attribute.
+   * @see #setScript(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScriptBody_Script()
    * @model
    * @generated
    */
-  String getScriptBody();
+  String getScript();
 
   /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ScriptBody#getScriptBody <em>Script Body</em>}' attribute.
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ScriptBody#getScript <em>Script</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Script Body</em>' attribute.
-   * @see #getScriptBody()
+   * @param value the new value of the '<em>Script</em>' attribute.
+   * @see #getScript()
    * @generated
    */
-  void setScriptBody(String value);
+  void setScript(String value);
 
 } // ScriptBody

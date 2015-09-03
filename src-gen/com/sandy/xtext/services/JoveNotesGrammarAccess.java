@@ -1518,15 +1518,15 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScriptKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cScriptBodyAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cScriptBodySTRINGTerminalRuleCall_2_0 = (RuleCall)cScriptBodyAssignment_2.eContents().get(0);
+		private final Assignment cScriptAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cScriptSTRINGTerminalRuleCall_2_0 = (RuleCall)cScriptAssignment_2.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ScriptBody:
-		//	"script" "{" scriptBody=STRING "}";
+		//	"script" "{" script=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"script" "{" scriptBody=STRING "}"
+		//"script" "{" script=STRING "}"
 		public Group getGroup() { return cGroup; }
 
 		//"script"
@@ -1535,11 +1535,11 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//scriptBody=STRING
-		public Assignment getScriptBodyAssignment_2() { return cScriptBodyAssignment_2; }
+		//script=STRING
+		public Assignment getScriptAssignment_2() { return cScriptAssignment_2; }
 
 		//STRING
-		public RuleCall getScriptBodySTRINGTerminalRuleCall_2_0() { return cScriptBodySTRINGTerminalRuleCall_2_0; }
+		public RuleCall getScriptSTRINGTerminalRuleCall_2_0() { return cScriptSTRINGTerminalRuleCall_2_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
@@ -1935,7 +1935,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ScriptBody:
-	//	"script" "{" scriptBody=STRING "}";
+	//	"script" "{" script=STRING "}";
 	public ScriptBodyElements getScriptBodyAccess() {
 		return pScriptBody;
 	}

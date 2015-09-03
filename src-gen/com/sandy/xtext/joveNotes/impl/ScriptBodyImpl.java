@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptBodyImpl#getScriptBody <em>Script Body</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptBodyImpl#getScript <em>Script</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +28,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements ScriptBody
 {
   /**
-   * The default value of the '{@link #getScriptBody() <em>Script Body</em>}' attribute.
+   * The default value of the '{@link #getScript() <em>Script</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getScriptBody()
+   * @see #getScript()
    * @generated
    * @ordered
    */
-  protected static final String SCRIPT_BODY_EDEFAULT = null;
+  protected static final String SCRIPT_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getScriptBody() <em>Script Body</em>}' attribute.
+   * The cached value of the '{@link #getScript() <em>Script</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getScriptBody()
+   * @see #getScript()
    * @generated
    * @ordered
    */
-  protected String scriptBody = SCRIPT_BODY_EDEFAULT;
+  protected String script = SCRIPT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +73,9 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getScriptBody()
+  public String getScript()
   {
-    return scriptBody;
+    return script;
   }
 
   /**
@@ -83,12 +83,12 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setScriptBody(String newScriptBody)
+  public void setScript(String newScript)
   {
-    String oldScriptBody = scriptBody;
-    scriptBody = newScriptBody;
+    String oldScript = script;
+    script = newScript;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.SCRIPT_BODY__SCRIPT_BODY, oldScriptBody, scriptBody));
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.SCRIPT_BODY__SCRIPT, oldScript, script));
   }
 
   /**
@@ -101,8 +101,8 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
   {
     switch (featureID)
     {
-      case JoveNotesPackage.SCRIPT_BODY__SCRIPT_BODY:
-        return getScriptBody();
+      case JoveNotesPackage.SCRIPT_BODY__SCRIPT:
+        return getScript();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +117,8 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
   {
     switch (featureID)
     {
-      case JoveNotesPackage.SCRIPT_BODY__SCRIPT_BODY:
-        setScriptBody((String)newValue);
+      case JoveNotesPackage.SCRIPT_BODY__SCRIPT:
+        setScript((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +134,8 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
   {
     switch (featureID)
     {
-      case JoveNotesPackage.SCRIPT_BODY__SCRIPT_BODY:
-        setScriptBody(SCRIPT_BODY_EDEFAULT);
+      case JoveNotesPackage.SCRIPT_BODY__SCRIPT:
+        setScript(SCRIPT_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +151,8 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
   {
     switch (featureID)
     {
-      case JoveNotesPackage.SCRIPT_BODY__SCRIPT_BODY:
-        return SCRIPT_BODY_EDEFAULT == null ? scriptBody != null : !SCRIPT_BODY_EDEFAULT.equals(scriptBody);
+      case JoveNotesPackage.SCRIPT_BODY__SCRIPT:
+        return SCRIPT_EDEFAULT == null ? script != null : !SCRIPT_EDEFAULT.equals(script);
     }
     return super.eIsSet(featureID);
   }
@@ -168,8 +168,8 @@ public class ScriptBodyImpl extends MinimalEObjectImpl.Container implements Scri
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (scriptBody: ");
-    result.append(scriptBody);
+    result.append(" (script: ");
+    result.append(script);
     result.append(')');
     return result.toString();
   }

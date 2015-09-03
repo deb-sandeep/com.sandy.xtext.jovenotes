@@ -701,16 +701,16 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     scriptBody=STRING
+	 *     script=STRING
 	 */
 	protected void sequence_ScriptBody(EObject context, ScriptBody semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT_BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT_BODY));
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getScriptBodyAccess().getScriptBodySTRINGTerminalRuleCall_2_0(), semanticObject.getScriptBody());
+		feeder.accept(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0(), semanticObject.getScript());
 		feeder.finish();
 	}
 	
