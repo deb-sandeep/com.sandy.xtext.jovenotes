@@ -122,8 +122,8 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RefToContext" eSuperTypes="#//NotesElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="context" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="questions" upperBound="-1"
-        eType="#//QuestionAnswer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notesElements" upperBound="-1"
+        eType="#//NotesElement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MultiChoice" eSuperTypes="#//NotesElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="question" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

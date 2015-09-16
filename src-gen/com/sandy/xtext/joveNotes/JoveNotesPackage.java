@@ -1331,13 +1331,13 @@ public interface JoveNotesPackage extends EPackage
   int REF_TO_CONTEXT__CONTEXT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Questions</b></em>' containment reference list.
+   * The feature id for the '<em><b>Notes Elements</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT__QUESTIONS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int REF_TO_CONTEXT__NOTES_ELEMENTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Ref To Context</em>' class.
@@ -2533,15 +2533,15 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getRefToContext_Context();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.sandy.xtext.joveNotes.RefToContext#getQuestions <em>Questions</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.sandy.xtext.joveNotes.RefToContext#getNotesElements <em>Notes Elements</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Questions</em>'.
-   * @see com.sandy.xtext.joveNotes.RefToContext#getQuestions()
+   * @return the meta object for the containment reference list '<em>Notes Elements</em>'.
+   * @see com.sandy.xtext.joveNotes.RefToContext#getNotesElements()
    * @see #getRefToContext()
    * @generated
    */
-  EReference getRefToContext_Questions();
+  EReference getRefToContext_NotesElements();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.MultiChoice <em>Multi Choice</em>}'.
@@ -3512,12 +3512,12 @@ public interface JoveNotesPackage extends EPackage
     EAttribute REF_TO_CONTEXT__CONTEXT = eINSTANCE.getRefToContext_Context();
 
     /**
-     * The meta object literal for the '<em><b>Questions</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Notes Elements</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REF_TO_CONTEXT__QUESTIONS = eINSTANCE.getRefToContext_Questions();
+    EReference REF_TO_CONTEXT__NOTES_ELEMENTS = eINSTANCE.getRefToContext_NotesElements();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl <em>Multi Choice</em>}' class.

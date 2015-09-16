@@ -116,7 +116,7 @@
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//RefToContext">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//RefToContext/context"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//RefToContext/questions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//RefToContext/notesElements"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//MultiChoice">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/question"/>

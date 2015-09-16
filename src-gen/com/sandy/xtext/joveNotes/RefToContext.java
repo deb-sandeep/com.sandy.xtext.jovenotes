@@ -13,7 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getContext <em>Context</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getQuestions <em>Questions</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -50,19 +50,19 @@ public interface RefToContext extends NotesElement
   void setContext(String value);
 
   /**
-   * Returns the value of the '<em><b>Questions</b></em>' containment reference list.
-   * The list contents are of type {@link com.sandy.xtext.joveNotes.QuestionAnswer}.
+   * Returns the value of the '<em><b>Notes Elements</b></em>' containment reference list.
+   * The list contents are of type {@link com.sandy.xtext.joveNotes.NotesElement}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Questions</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Notes Elements</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Questions</em>' containment reference list.
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getRefToContext_Questions()
+   * @return the value of the '<em>Notes Elements</em>' containment reference list.
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getRefToContext_NotesElements()
    * @model containment="true"
    * @generated
    */
-  EList<QuestionAnswer> getQuestions();
+  EList<NotesElement> getNotesElements();
 
 } // RefToContext

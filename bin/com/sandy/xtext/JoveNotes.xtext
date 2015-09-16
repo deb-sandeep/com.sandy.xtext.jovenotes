@@ -160,7 +160,7 @@ EqSymbol:
 RefToContext:
     '@rtc' (hideFromView = 'hide')? '{'
         'context' context = STRING
-        ( questions += QuestionAnswer )+
+        ( notesElements += NotesElement )+
     '}'
 ;
 

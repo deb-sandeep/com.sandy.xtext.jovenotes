@@ -1188,7 +1188,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRefToContext_Questions()
+  public EReference getRefToContext_NotesElements()
   {
     return (EReference)refToContextEClass.getEStructuralFeatures().get(1);
   }
@@ -1522,7 +1522,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     refToContextEClass = createEClass(REF_TO_CONTEXT);
     createEAttribute(refToContextEClass, REF_TO_CONTEXT__CONTEXT);
-    createEReference(refToContextEClass, REF_TO_CONTEXT__QUESTIONS);
+    createEReference(refToContextEClass, REF_TO_CONTEXT__NOTES_ELEMENTS);
 
     multiChoiceEClass = createEClass(MULTI_CHOICE);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__QUESTION);
@@ -1706,7 +1706,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(refToContextEClass, RefToContext.class, "RefToContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getRefToContext_Context(), ecorePackage.getEString(), "context", null, 0, 1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRefToContext_Questions(), this.getQuestionAnswer(), null, "questions", null, 0, -1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefToContext_NotesElements(), this.getNotesElement(), null, "notesElements", null, 0, -1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(multiChoiceEClass, MultiChoice.class, "MultiChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getMultiChoice_Question(), ecorePackage.getEString(), "question", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

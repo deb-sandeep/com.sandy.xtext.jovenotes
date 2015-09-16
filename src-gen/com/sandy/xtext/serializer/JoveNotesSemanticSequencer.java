@@ -620,7 +620,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? context=STRING questions+=QuestionAnswer+ script=Script?)
+	 *     (hideFromView='hide'? context=STRING notesElements+=NotesElement+ script=Script?)
 	 */
 	protected void sequence_NotesElement_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -692,7 +692,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? context=STRING questions+=QuestionAnswer+)
+	 *     (hideFromView='hide'? context=STRING notesElements+=NotesElement+)
 	 */
 	protected void sequence_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

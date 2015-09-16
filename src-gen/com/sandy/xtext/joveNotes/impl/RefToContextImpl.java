@@ -3,7 +3,7 @@
 package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
-import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.NotesElement;
 import com.sandy.xtext.joveNotes.RefToContext;
 
 import java.util.Collection;
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getContext <em>Context</em>}</li>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getQuestions <em>Questions</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
  * </p>
  *
@@ -58,14 +58,14 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
   protected String context = CONTEXT_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getQuestions() <em>Questions</em>}' containment reference list.
+   * The cached value of the '{@link #getNotesElements() <em>Notes Elements</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getQuestions()
+   * @see #getNotesElements()
    * @generated
    * @ordered
    */
-  protected EList<QuestionAnswer> questions;
+  protected EList<NotesElement> notesElements;
 
   /**
    * <!-- begin-user-doc -->
@@ -116,13 +116,13 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<QuestionAnswer> getQuestions()
+  public EList<NotesElement> getNotesElements()
   {
-    if (questions == null)
+    if (notesElements == null)
     {
-      questions = new EObjectContainmentEList<QuestionAnswer>(QuestionAnswer.class, this, JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS);
+      notesElements = new EObjectContainmentEList<NotesElement>(NotesElement.class, this, JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS);
     }
-    return questions;
+    return notesElements;
   }
 
   /**
@@ -135,8 +135,8 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
   {
     switch (featureID)
     {
-      case JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS:
-        return ((InternalEList<?>)getQuestions()).basicRemove(otherEnd, msgs);
+      case JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS:
+        return ((InternalEList<?>)getNotesElements()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -153,8 +153,8 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
     {
       case JoveNotesPackage.REF_TO_CONTEXT__CONTEXT:
         return getContext();
-      case JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS:
-        return getQuestions();
+      case JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS:
+        return getNotesElements();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -173,9 +173,9 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
       case JoveNotesPackage.REF_TO_CONTEXT__CONTEXT:
         setContext((String)newValue);
         return;
-      case JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS:
-        getQuestions().clear();
-        getQuestions().addAll((Collection<? extends QuestionAnswer>)newValue);
+      case JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS:
+        getNotesElements().clear();
+        getNotesElements().addAll((Collection<? extends NotesElement>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -194,8 +194,8 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
       case JoveNotesPackage.REF_TO_CONTEXT__CONTEXT:
         setContext(CONTEXT_EDEFAULT);
         return;
-      case JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS:
-        getQuestions().clear();
+      case JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS:
+        getNotesElements().clear();
         return;
     }
     super.eUnset(featureID);
@@ -213,8 +213,8 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
     {
       case JoveNotesPackage.REF_TO_CONTEXT__CONTEXT:
         return CONTEXT_EDEFAULT == null ? context != null : !CONTEXT_EDEFAULT.equals(context);
-      case JoveNotesPackage.REF_TO_CONTEXT__QUESTIONS:
-        return questions != null && !questions.isEmpty();
+      case JoveNotesPackage.REF_TO_CONTEXT__NOTES_ELEMENTS:
+        return notesElements != null && !notesElements.isEmpty();
     }
     return super.eIsSet(featureID);
   }

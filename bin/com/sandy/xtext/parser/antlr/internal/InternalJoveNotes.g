@@ -2274,17 +2274,17 @@ ruleRefToContext returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRefToContextAccess().getQuestionsQuestionAnswerParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getRefToContextAccess().getNotesElementsNotesElementParserRuleCall_5_0()); 
 	    }
-		lv_questions_5_0=ruleQuestionAnswer		{
+		lv_notesElements_5_0=ruleNotesElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRefToContextRule());
 	        }
        		add(
        			$current, 
-       			"questions",
-        		lv_questions_5_0, 
-        		"QuestionAnswer");
+       			"notesElements",
+        		lv_notesElements_5_0, 
+        		"NotesElement");
 	        afterParserOrEnumRuleCall();
 	    }
 

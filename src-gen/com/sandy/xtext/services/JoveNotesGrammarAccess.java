@@ -1195,15 +1195,15 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cContextKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cContextAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cContextSTRINGTerminalRuleCall_4_0 = (RuleCall)cContextAssignment_4.eContents().get(0);
-		private final Assignment cQuestionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cQuestionsQuestionAnswerParserRuleCall_5_0 = (RuleCall)cQuestionsAssignment_5.eContents().get(0);
+		private final Assignment cNotesElementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cNotesElementsNotesElementParserRuleCall_5_0 = (RuleCall)cNotesElementsAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//RefToContext:
-		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}";
+		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}"
+		//"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@rtc"
@@ -1227,11 +1227,11 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getContextSTRINGTerminalRuleCall_4_0() { return cContextSTRINGTerminalRuleCall_4_0; }
 
-		//questions+=QuestionAnswer+
-		public Assignment getQuestionsAssignment_5() { return cQuestionsAssignment_5; }
+		//notesElements+=NotesElement+
+		public Assignment getNotesElementsAssignment_5() { return cNotesElementsAssignment_5; }
 
-		//QuestionAnswer
-		public RuleCall getQuestionsQuestionAnswerParserRuleCall_5_0() { return cQuestionsQuestionAnswerParserRuleCall_5_0; }
+		//NotesElement
+		public RuleCall getNotesElementsNotesElementParserRuleCall_5_0() { return cNotesElementsNotesElementParserRuleCall_5_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -1873,7 +1873,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefToContext:
-	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING questions+=QuestionAnswer+ "}";
+	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}";
 	public RefToContextElements getRefToContextAccess() {
 		return pRefToContext;
 	}

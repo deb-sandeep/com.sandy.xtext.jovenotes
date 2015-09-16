@@ -5031,7 +5031,7 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleRefToContext"
-    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2225:1: ruleRefToContext returns [EObject current=null] : (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) ;
+    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2225:1: ruleRefToContext returns [EObject current=null] : (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_notesElements_5_0= ruleNotesElement ) )+ otherlv_6= '}' ) ;
     public final EObject ruleRefToContext() throws RecognitionException {
         EObject current = null;
 
@@ -5041,17 +5041,17 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token lv_context_4_0=null;
         Token otherlv_6=null;
-        EObject lv_questions_5_0 = null;
+        EObject lv_notesElements_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2228:28: ( (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' ) )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2228:28: ( (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_notesElements_5_0= ruleNotesElement ) )+ otherlv_6= '}' ) )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_notesElements_5_0= ruleNotesElement ) )+ otherlv_6= '}' )
             {
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}' )
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:3: otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_questions_5_0= ruleQuestionAnswer ) )+ otherlv_6= '}'
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:1: (otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_notesElements_5_0= ruleNotesElement ) )+ otherlv_6= '}' )
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2229:3: otherlv_0= '@rtc' ( (lv_hideFromView_1_0= 'hide' ) )? otherlv_2= '{' otherlv_3= 'context' ( (lv_context_4_0= RULE_STRING ) ) ( (lv_notesElements_5_0= ruleNotesElement ) )+ otherlv_6= '}'
             {
             otherlv_0=(Token)match(input,47,FOLLOW_47_in_ruleRefToContext4552); 
 
@@ -5124,30 +5124,30 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2274:2: ( (lv_questions_5_0= ruleQuestionAnswer ) )+
+            // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2274:2: ( (lv_notesElements_5_0= ruleNotesElement ) )+
             int cnt45=0;
             loop45:
             do {
                 int alt45=2;
                 int LA45_0 = input.LA(1);
 
-                if ( (LA45_0==21) ) {
+                if ( (LA45_0==19||(LA45_0>=21 && LA45_0<=26)||(LA45_0>=36 && LA45_0<=38)||(LA45_0>=40 && LA45_0<=42)||LA45_0==45||LA45_0==47||LA45_0==49) ) {
                     alt45=1;
                 }
 
 
                 switch (alt45) {
             	case 1 :
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_questions_5_0= ruleQuestionAnswer )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_notesElements_5_0= ruleNotesElement )
             	    {
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_questions_5_0= ruleQuestionAnswer )
-            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2276:3: lv_questions_5_0= ruleQuestionAnswer
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2275:1: (lv_notesElements_5_0= ruleNotesElement )
+            	    // ../com.sandy.xtext.jovenotes/src-gen/com/sandy/xtext/parser/antlr/internal/InternalJoveNotes.g:2276:3: lv_notesElements_5_0= ruleNotesElement
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getRefToContextAccess().getQuestionsQuestionAnswerParserRuleCall_5_0()); 
+            	    	        newCompositeNode(grammarAccess.getRefToContextAccess().getNotesElementsNotesElementParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4651);
-            	    lv_questions_5_0=ruleQuestionAnswer();
+            	    pushFollow(FOLLOW_ruleNotesElement_in_ruleRefToContext4651);
+            	    lv_notesElements_5_0=ruleNotesElement();
 
             	    state._fsp--;
 
@@ -5157,9 +5157,9 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
             	    	        }
             	           		add(
             	           			current, 
-            	           			"questions",
-            	            		lv_questions_5_0, 
-            	            		"QuestionAnswer");
+            	           			"notesElements",
+            	            		lv_notesElements_5_0, 
+            	            		"NotesElement");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -6510,8 +6510,8 @@ public class InternalJoveNotesParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20_in_ruleRefToContext4570 = new BitSet(new long[]{0x0000000010000000L});
     public static final BitSet FOLLOW_28_in_ruleRefToContext4596 = new BitSet(new long[]{0x0001000000000000L});
     public static final BitSet FOLLOW_48_in_ruleRefToContext4608 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_STRING_in_ruleRefToContext4625 = new BitSet(new long[]{0x0000000000200000L});
-    public static final BitSet FOLLOW_ruleQuestionAnswer_in_ruleRefToContext4651 = new BitSet(new long[]{0x0000000020200000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleRefToContext4625 = new BitSet(new long[]{0x0002A77007E80000L});
+    public static final BitSet FOLLOW_ruleNotesElement_in_ruleRefToContext4651 = new BitSet(new long[]{0x0002A77027E80000L});
     public static final BitSet FOLLOW_29_in_ruleRefToContext4664 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMultiChoice_in_entryRuleMultiChoice4700 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleMultiChoice4710 = new BitSet(new long[]{0x0000000000000002L});
