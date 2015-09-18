@@ -223,31 +223,13 @@ public interface JoveNotesPackage extends EPackage
   int NOTES_ELEMENT = 3;
 
   /**
-   * The feature id for the '<em><b>Script</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NOTES_ELEMENT__SCRIPT = 0;
-
-  /**
-   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int NOTES_ELEMENT__HIDE_FROM_VIEW = 1;
-
-  /**
    * The number of structural features of the '<em>Notes Element</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int NOTES_ELEMENT_FEATURE_COUNT = 2;
+  int NOTES_ELEMENT_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl <em>Word Meaning</em>}' class.
@@ -266,7 +248,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_MEANING__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int WORD_MEANING__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -275,7 +257,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_MEANING__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int WORD_MEANING__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Word</b></em>' attribute.
@@ -284,7 +266,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_MEANING__WORD = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int WORD_MEANING__WORD = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Meaning</b></em>' attribute.
@@ -293,7 +275,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_MEANING__MEANING = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int WORD_MEANING__MEANING = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Word Meaning</em>' class.
@@ -302,7 +284,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int WORD_MEANING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int WORD_MEANING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl <em>Question Answer</em>}' class.
@@ -321,7 +303,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int QUESTION_ANSWER__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -330,7 +312,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int QUESTION_ANSWER__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -339,7 +321,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int QUESTION_ANSWER__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Answer Parts</b></em>' attribute list.
@@ -348,7 +330,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__ANSWER_PARTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int QUESTION_ANSWER__ANSWER_PARTS = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -357,7 +339,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int QUESTION_ANSWER__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Question Answer</em>' class.
@@ -366,7 +348,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int QUESTION_ANSWER_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int QUESTION_ANSWER_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.FIBImpl <em>FIB</em>}' class.
@@ -385,7 +367,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIB__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int FIB__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -394,7 +376,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIB__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int FIB__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -403,7 +385,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIB__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int FIB__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Answers</b></em>' attribute list.
@@ -412,7 +394,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIB__ANSWERS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int FIB__ANSWERS = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>FIB</em>' class.
@@ -421,7 +403,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIB_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int FIB_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.DefinitionImpl <em>Definition</em>}' class.
@@ -440,7 +422,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int DEFINITION__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -449,7 +431,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int DEFINITION__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Term</b></em>' attribute.
@@ -458,7 +440,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION__TERM = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int DEFINITION__TERM = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Definition</b></em>' attribute.
@@ -467,7 +449,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION__DEFINITION = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int DEFINITION__DEFINITION = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -476,7 +458,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int DEFINITION__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Definition</em>' class.
@@ -485,7 +467,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DEFINITION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int DEFINITION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.CharacterImpl <em>Character</em>}' class.
@@ -504,7 +486,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int CHARACTER__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -513,7 +495,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int CHARACTER__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Character</b></em>' attribute.
@@ -522,7 +504,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER__CHARACTER = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int CHARACTER__CHARACTER = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Estimate</b></em>' attribute.
@@ -531,7 +513,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER__ESTIMATE = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int CHARACTER__ESTIMATE = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -540,7 +522,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int CHARACTER__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Character</em>' class.
@@ -549,7 +531,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHARACTER_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int CHARACTER_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl <em>Teacher Note</em>}' class.
@@ -568,7 +550,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int TEACHER_NOTE__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -577,7 +559,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int TEACHER_NOTE__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -586,7 +568,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__CAPTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int TEACHER_NOTE__CAPTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Note</b></em>' attribute.
@@ -595,7 +577,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__NOTE = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int TEACHER_NOTE__NOTE = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Cmap</b></em>' containment reference.
@@ -604,7 +586,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int TEACHER_NOTE__CMAP = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Teacher Note</em>' class.
@@ -613,7 +595,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEACHER_NOTE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int TEACHER_NOTE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchingImpl <em>Matching</em>}' class.
@@ -632,7 +614,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int MATCHING__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -641,7 +623,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int MATCHING__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Skip Reverse Question</b></em>' attribute.
@@ -650,7 +632,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__SKIP_REVERSE_QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int MATCHING__SKIP_REVERSE_QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -659,7 +641,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int MATCHING__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Pairs</b></em>' containment reference list.
@@ -668,7 +650,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__PAIRS = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int MATCHING__PAIRS = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Mcq Config</b></em>' containment reference.
@@ -677,7 +659,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING__MCQ_CONFIG = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int MATCHING__MCQ_CONFIG = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Matching</em>' class.
@@ -686,7 +668,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
+  int MATCHING_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl <em>Match Pair</em>}' class.
@@ -797,7 +779,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int EVENT__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -806,7 +788,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int EVENT__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Event</b></em>' attribute.
@@ -815,7 +797,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__EVENT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int EVENT__EVENT = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Time</b></em>' attribute.
@@ -824,7 +806,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT__TIME = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int EVENT__TIME = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Event</em>' class.
@@ -833,7 +815,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EVENT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int EVENT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl <em>True False</em>}' class.
@@ -852,7 +834,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int TRUE_FALSE__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -861,7 +843,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int TRUE_FALSE__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Statement</b></em>' attribute.
@@ -870,7 +852,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE__STATEMENT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int TRUE_FALSE__STATEMENT = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Truth Value</b></em>' attribute.
@@ -879,7 +861,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE__TRUTH_VALUE = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int TRUE_FALSE__TRUTH_VALUE = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Justification</b></em>' attribute.
@@ -888,7 +870,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE__JUSTIFICATION = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int TRUE_FALSE__JUSTIFICATION = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>True False</em>' class.
@@ -897,7 +879,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TRUE_FALSE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int TRUE_FALSE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl <em>Chem Equation</em>}' class.
@@ -916,7 +898,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int CHEM_EQUATION__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -925,7 +907,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int CHEM_EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -934,7 +916,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int CHEM_EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Reactants</b></em>' attribute.
@@ -943,7 +925,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__REACTANTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int CHEM_EQUATION__REACTANTS = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Produces</b></em>' attribute.
@@ -952,7 +934,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__PRODUCES = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int CHEM_EQUATION__PRODUCES = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Products</b></em>' attribute.
@@ -961,7 +943,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION__PRODUCTS = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int CHEM_EQUATION__PRODUCTS = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The number of structural features of the '<em>Chem Equation</em>' class.
@@ -970,7 +952,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
+  int CHEM_EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl <em>Chem Compound</em>}' class.
@@ -989,7 +971,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int CHEM_COMPOUND__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -998,7 +980,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int CHEM_COMPOUND__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Symbol</b></em>' attribute.
@@ -1007,7 +989,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND__SYMBOL = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int CHEM_COMPOUND__SYMBOL = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Chemical Name</b></em>' attribute.
@@ -1016,7 +998,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND__CHEMICAL_NAME = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int CHEM_COMPOUND__CHEMICAL_NAME = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Common Name</b></em>' attribute.
@@ -1025,7 +1007,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND__COMMON_NAME = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int CHEM_COMPOUND__COMMON_NAME = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Chem Compound</em>' class.
@@ -1034,7 +1016,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHEM_COMPOUND_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int CHEM_COMPOUND_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.SpellbeeImpl <em>Spellbee</em>}' class.
@@ -1053,7 +1035,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPELLBEE__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int SPELLBEE__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1062,7 +1044,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPELLBEE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int SPELLBEE__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Word</b></em>' attribute.
@@ -1071,7 +1053,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPELLBEE__WORD = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int SPELLBEE__WORD = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Spellbee</em>' class.
@@ -1080,7 +1062,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SPELLBEE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int SPELLBEE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl <em>Image Label</em>}' class.
@@ -1099,7 +1081,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int IMAGE_LABEL__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1108,7 +1090,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int IMAGE_LABEL__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Caption</b></em>' attribute.
@@ -1117,7 +1099,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL__CAPTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int IMAGE_LABEL__CAPTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Image Name</b></em>' attribute.
@@ -1126,7 +1108,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL__IMAGE_NAME = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int IMAGE_LABEL__IMAGE_NAME = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Hotspots</b></em>' containment reference list.
@@ -1135,7 +1117,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL__HOTSPOTS = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int IMAGE_LABEL__HOTSPOTS = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Image Label</em>' class.
@@ -1144,7 +1126,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int IMAGE_LABEL_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int IMAGE_LABEL_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl <em>Hot Spot</em>}' class.
@@ -1209,7 +1191,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int EQUATION__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1218,7 +1200,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int EQUATION__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Equation</b></em>' attribute.
@@ -1227,7 +1209,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION__EQUATION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int EQUATION__EQUATION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1236,7 +1218,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int EQUATION__DESCRIPTION = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Symbols</b></em>' containment reference list.
@@ -1245,7 +1227,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION__SYMBOLS = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int EQUATION__SYMBOLS = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Equation</em>' class.
@@ -1254,7 +1236,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int EQUATION_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.EqSymbolImpl <em>Eq Symbol</em>}' class.
@@ -1310,7 +1292,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int REF_TO_CONTEXT__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1319,7 +1301,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int REF_TO_CONTEXT__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Context</b></em>' attribute.
@@ -1328,16 +1310,16 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT__CONTEXT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int REF_TO_CONTEXT__CONTEXT = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
-   * The feature id for the '<em><b>Notes Elements</b></em>' containment reference list.
+   * The feature id for the '<em><b>Rtc Element</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT__NOTES_ELEMENTS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int REF_TO_CONTEXT__RTC_ELEMENT = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Ref To Context</em>' class.
@@ -1346,7 +1328,26 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int REF_TO_CONTEXT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int REF_TO_CONTEXT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.RTCElementImpl <em>RTC Element</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.RTCElementImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getRTCElement()
+   * @generated
+   */
+  int RTC_ELEMENT = 23;
+
+  /**
+   * The number of structural features of the '<em>RTC Element</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int RTC_ELEMENT_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl <em>Multi Choice</em>}' class.
@@ -1356,7 +1357,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getMultiChoice()
    * @generated
    */
-  int MULTI_CHOICE = 23;
+  int MULTI_CHOICE = 24;
 
   /**
    * The feature id for the '<em><b>Script</b></em>' containment reference.
@@ -1365,7 +1366,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__SCRIPT = NOTES_ELEMENT__SCRIPT;
+  int MULTI_CHOICE__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Hide From View</b></em>' attribute.
@@ -1374,7 +1375,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__HIDE_FROM_VIEW = NOTES_ELEMENT__HIDE_FROM_VIEW;
+  int MULTI_CHOICE__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Question</b></em>' attribute.
@@ -1383,7 +1384,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 0;
+  int MULTI_CHOICE__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Options</b></em>' containment reference list.
@@ -1392,7 +1393,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__OPTIONS = NOTES_ELEMENT_FEATURE_COUNT + 1;
+  int MULTI_CHOICE__OPTIONS = NOTES_ELEMENT_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Num Options To Show</b></em>' attribute.
@@ -1401,7 +1402,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__NUM_OPTIONS_TO_SHOW = NOTES_ELEMENT_FEATURE_COUNT + 2;
+  int MULTI_CHOICE__NUM_OPTIONS_TO_SHOW = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Num Options Per Row</b></em>' attribute.
@@ -1410,7 +1411,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__NUM_OPTIONS_PER_ROW = NOTES_ELEMENT_FEATURE_COUNT + 3;
+  int MULTI_CHOICE__NUM_OPTIONS_PER_ROW = NOTES_ELEMENT_FEATURE_COUNT + 5;
 
   /**
    * The feature id for the '<em><b>Explanation</b></em>' attribute.
@@ -1419,7 +1420,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE__EXPLANATION = NOTES_ELEMENT_FEATURE_COUNT + 4;
+  int MULTI_CHOICE__EXPLANATION = NOTES_ELEMENT_FEATURE_COUNT + 6;
 
   /**
    * The number of structural features of the '<em>Multi Choice</em>' class.
@@ -1428,7 +1429,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MULTI_CHOICE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 5;
+  int MULTI_CHOICE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 7;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.
@@ -1438,7 +1439,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getOption()
    * @generated
    */
-  int OPTION = 24;
+  int OPTION = 25;
 
   /**
    * The feature id for the '<em><b>Option Value</b></em>' attribute.
@@ -1475,7 +1476,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCMap()
    * @generated
    */
-  int CMAP = 25;
+  int CMAP = 26;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1503,7 +1504,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScript()
    * @generated
    */
-  int SCRIPT = 26;
+  int SCRIPT = 27;
 
   /**
    * The feature id for the '<em><b>Eval Vars</b></em>' containment reference list.
@@ -1540,7 +1541,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
    * @generated
    */
-  int EVAL_VAR = 27;
+  int EVAL_VAR = 28;
 
   /**
    * The feature id for the '<em><b>Var Name</b></em>' attribute.
@@ -1577,7 +1578,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
    * @generated
    */
-  int SCRIPT_BODY = 28;
+  int SCRIPT_BODY = 29;
 
   /**
    * The feature id for the '<em><b>Script</b></em>' attribute.
@@ -1760,28 +1761,6 @@ public interface JoveNotesPackage extends EPackage
   EClass getNotesElement();
 
   /**
-   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.NotesElement#getScript <em>Script</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Script</em>'.
-   * @see com.sandy.xtext.joveNotes.NotesElement#getScript()
-   * @see #getNotesElement()
-   * @generated
-   */
-  EReference getNotesElement_Script();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.NotesElement#getHideFromView <em>Hide From View</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Hide From View</em>'.
-   * @see com.sandy.xtext.joveNotes.NotesElement#getHideFromView()
-   * @see #getNotesElement()
-   * @generated
-   */
-  EAttribute getNotesElement_HideFromView();
-
-  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.WordMeaning <em>Word Meaning</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1790,6 +1769,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getWordMeaning();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.WordMeaning#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.WordMeaning#getScript()
+   * @see #getWordMeaning()
+   * @generated
+   */
+  EReference getWordMeaning_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.WordMeaning#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.WordMeaning#getHideFromView()
+   * @see #getWordMeaning()
+   * @generated
+   */
+  EAttribute getWordMeaning_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.WordMeaning#getWord <em>Word</em>}'.
@@ -1822,6 +1823,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getQuestionAnswer();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.QuestionAnswer#getScript()
+   * @see #getQuestionAnswer()
+   * @generated
+   */
+  EReference getQuestionAnswer_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.QuestionAnswer#getHideFromView()
+   * @see #getQuestionAnswer()
+   * @generated
+   */
+  EAttribute getQuestionAnswer_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.QuestionAnswer#getQuestion <em>Question</em>}'.
@@ -1867,6 +1890,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getFIB();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.FIB#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.FIB#getScript()
+   * @see #getFIB()
+   * @generated
+   */
+  EReference getFIB_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.FIB#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.FIB#getHideFromView()
+   * @see #getFIB()
+   * @generated
+   */
+  EAttribute getFIB_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.FIB#getQuestion <em>Question</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1897,6 +1942,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Definition#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Definition#getScript()
+   * @see #getDefinition()
+   * @generated
+   */
+  EReference getDefinition_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Definition#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Definition#getHideFromView()
+   * @see #getDefinition()
+   * @generated
+   */
+  EAttribute getDefinition_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Definition#getTerm <em>Term</em>}'.
@@ -1942,6 +2009,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getCharacter();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Character#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Character#getScript()
+   * @see #getCharacter()
+   * @generated
+   */
+  EReference getCharacter_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Character#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Character#getHideFromView()
+   * @see #getCharacter()
+   * @generated
+   */
+  EAttribute getCharacter_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Character#getCharacter <em>Character</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1985,6 +2074,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getTeacherNote();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.TeacherNote#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.TeacherNote#getScript()
+   * @see #getTeacherNote()
+   * @generated
+   */
+  EReference getTeacherNote_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TeacherNote#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.TeacherNote#getHideFromView()
+   * @see #getTeacherNote()
+   * @generated
+   */
+  EAttribute getTeacherNote_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TeacherNote#getCaption <em>Caption</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2026,6 +2137,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getMatching();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Matching#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Matching#getScript()
+   * @see #getMatching()
+   * @generated
+   */
+  EReference getMatching_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Matching#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Matching#getHideFromView()
+   * @see #getMatching()
+   * @generated
+   */
+  EAttribute getMatching_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Matching#getSkipReverseQuestion <em>Skip Reverse Question</em>}'.
@@ -2168,6 +2301,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getEvent();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Event#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Event#getScript()
+   * @see #getEvent()
+   * @generated
+   */
+  EReference getEvent_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Event#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Event#getHideFromView()
+   * @see #getEvent()
+   * @generated
+   */
+  EAttribute getEvent_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Event#getEvent <em>Event</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2198,6 +2353,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getTrueFalse();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.TrueFalse#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.TrueFalse#getScript()
+   * @see #getTrueFalse()
+   * @generated
+   */
+  EReference getTrueFalse_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TrueFalse#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.TrueFalse#getHideFromView()
+   * @see #getTrueFalse()
+   * @generated
+   */
+  EAttribute getTrueFalse_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.TrueFalse#getStatement <em>Statement</em>}'.
@@ -2241,6 +2418,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getChemEquation();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.ChemEquation#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemEquation#getScript()
+   * @see #getChemEquation()
+   * @generated
+   */
+  EReference getChemEquation_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemEquation#getHideFromView()
+   * @see #getChemEquation()
+   * @generated
+   */
+  EAttribute getChemEquation_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemEquation#getDescription <em>Description</em>}'.
@@ -2297,6 +2496,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getChemCompound();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.ChemCompound#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemCompound#getScript()
+   * @see #getChemCompound()
+   * @generated
+   */
+  EReference getChemCompound_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemCompound#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.ChemCompound#getHideFromView()
+   * @see #getChemCompound()
+   * @generated
+   */
+  EAttribute getChemCompound_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChemCompound#getSymbol <em>Symbol</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2340,6 +2561,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getSpellbee();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Spellbee#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Spellbee#getScript()
+   * @see #getSpellbee()
+   * @generated
+   */
+  EReference getSpellbee_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Spellbee#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Spellbee#getHideFromView()
+   * @see #getSpellbee()
+   * @generated
+   */
+  EAttribute getSpellbee_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Spellbee#getWord <em>Word</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2359,6 +2602,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getImageLabel();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.ImageLabel#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.ImageLabel#getScript()
+   * @see #getImageLabel()
+   * @generated
+   */
+  EReference getImageLabel_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ImageLabel#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.ImageLabel#getHideFromView()
+   * @see #getImageLabel()
+   * @generated
+   */
+  EAttribute getImageLabel_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ImageLabel#getCaption <em>Caption</em>}'.
@@ -2447,6 +2712,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getEquation();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Equation#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Equation#getScript()
+   * @see #getEquation()
+   * @generated
+   */
+  EReference getEquation_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Equation#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Equation#getHideFromView()
+   * @see #getEquation()
+   * @generated
+   */
+  EAttribute getEquation_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Equation#getEquation <em>Equation</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2522,6 +2809,28 @@ public interface JoveNotesPackage extends EPackage
   EClass getRefToContext();
 
   /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.RefToContext#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.RefToContext#getScript()
+   * @see #getRefToContext()
+   * @generated
+   */
+  EReference getRefToContext_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.RefToContext#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.RefToContext#getHideFromView()
+   * @see #getRefToContext()
+   * @generated
+   */
+  EAttribute getRefToContext_HideFromView();
+
+  /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.RefToContext#getContext <em>Context</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2533,15 +2842,25 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getRefToContext_Context();
 
   /**
-   * Returns the meta object for the containment reference list '{@link com.sandy.xtext.joveNotes.RefToContext#getNotesElements <em>Notes Elements</em>}'.
+   * Returns the meta object for the containment reference list '{@link com.sandy.xtext.joveNotes.RefToContext#getRtcElement <em>Rtc Element</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Notes Elements</em>'.
-   * @see com.sandy.xtext.joveNotes.RefToContext#getNotesElements()
+   * @return the meta object for the containment reference list '<em>Rtc Element</em>'.
+   * @see com.sandy.xtext.joveNotes.RefToContext#getRtcElement()
    * @see #getRefToContext()
    * @generated
    */
-  EReference getRefToContext_NotesElements();
+  EReference getRefToContext_RtcElement();
+
+  /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.RTCElement <em>RTC Element</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>RTC Element</em>'.
+   * @see com.sandy.xtext.joveNotes.RTCElement
+   * @generated
+   */
+  EClass getRTCElement();
 
   /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.MultiChoice <em>Multi Choice</em>}'.
@@ -2552,6 +2871,28 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getMultiChoice();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.MultiChoice#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.MultiChoice#getScript()
+   * @see #getMultiChoice()
+   * @generated
+   */
+  EReference getMultiChoice_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MultiChoice#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.MultiChoice#getHideFromView()
+   * @see #getMultiChoice()
+   * @generated
+   */
+  EAttribute getMultiChoice_HideFromView();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.MultiChoice#getQuestion <em>Question</em>}'.
@@ -2898,22 +3239,6 @@ public interface JoveNotesPackage extends EPackage
     EClass NOTES_ELEMENT = eINSTANCE.getNotesElement();
 
     /**
-     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference NOTES_ELEMENT__SCRIPT = eINSTANCE.getNotesElement_Script();
-
-    /**
-     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute NOTES_ELEMENT__HIDE_FROM_VIEW = eINSTANCE.getNotesElement_HideFromView();
-
-    /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl <em>Word Meaning</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -2922,6 +3247,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass WORD_MEANING = eINSTANCE.getWordMeaning();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference WORD_MEANING__SCRIPT = eINSTANCE.getWordMeaning_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute WORD_MEANING__HIDE_FROM_VIEW = eINSTANCE.getWordMeaning_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Word</b></em>' attribute feature.
@@ -2948,6 +3289,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass QUESTION_ANSWER = eINSTANCE.getQuestionAnswer();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference QUESTION_ANSWER__SCRIPT = eINSTANCE.getQuestionAnswer_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute QUESTION_ANSWER__HIDE_FROM_VIEW = eINSTANCE.getQuestionAnswer_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
@@ -2984,6 +3341,22 @@ public interface JoveNotesPackage extends EPackage
     EClass FIB = eINSTANCE.getFIB();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIB__SCRIPT = eINSTANCE.getFIB_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FIB__HIDE_FROM_VIEW = eINSTANCE.getFIB_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3008,6 +3381,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass DEFINITION = eINSTANCE.getDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DEFINITION__SCRIPT = eINSTANCE.getDefinition_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DEFINITION__HIDE_FROM_VIEW = eINSTANCE.getDefinition_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Term</b></em>' attribute feature.
@@ -3044,6 +3433,22 @@ public interface JoveNotesPackage extends EPackage
     EClass CHARACTER = eINSTANCE.getCharacter();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHARACTER__SCRIPT = eINSTANCE.getCharacter_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHARACTER__HIDE_FROM_VIEW = eINSTANCE.getCharacter_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Character</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3078,6 +3483,22 @@ public interface JoveNotesPackage extends EPackage
     EClass TEACHER_NOTE = eINSTANCE.getTeacherNote();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TEACHER_NOTE__SCRIPT = eINSTANCE.getTeacherNote_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TEACHER_NOTE__HIDE_FROM_VIEW = eINSTANCE.getTeacherNote_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Caption</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3110,6 +3531,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass MATCHING = eINSTANCE.getMatching();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MATCHING__SCRIPT = eINSTANCE.getMatching_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MATCHING__HIDE_FROM_VIEW = eINSTANCE.getMatching_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Skip Reverse Question</b></em>' attribute feature.
@@ -3222,6 +3659,22 @@ public interface JoveNotesPackage extends EPackage
     EClass EVENT = eINSTANCE.getEvent();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EVENT__SCRIPT = eINSTANCE.getEvent_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EVENT__HIDE_FROM_VIEW = eINSTANCE.getEvent_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Event</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3246,6 +3699,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass TRUE_FALSE = eINSTANCE.getTrueFalse();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference TRUE_FALSE__SCRIPT = eINSTANCE.getTrueFalse_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute TRUE_FALSE__HIDE_FROM_VIEW = eINSTANCE.getTrueFalse_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Statement</b></em>' attribute feature.
@@ -3280,6 +3749,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass CHEM_EQUATION = eINSTANCE.getChemEquation();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHEM_EQUATION__SCRIPT = eINSTANCE.getChemEquation_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHEM_EQUATION__HIDE_FROM_VIEW = eINSTANCE.getChemEquation_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
@@ -3324,6 +3809,22 @@ public interface JoveNotesPackage extends EPackage
     EClass CHEM_COMPOUND = eINSTANCE.getChemCompound();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CHEM_COMPOUND__SCRIPT = eINSTANCE.getChemCompound_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHEM_COMPOUND__HIDE_FROM_VIEW = eINSTANCE.getChemCompound_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Symbol</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3358,6 +3859,22 @@ public interface JoveNotesPackage extends EPackage
     EClass SPELLBEE = eINSTANCE.getSpellbee();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SPELLBEE__SCRIPT = eINSTANCE.getSpellbee_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SPELLBEE__HIDE_FROM_VIEW = eINSTANCE.getSpellbee_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Word</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3374,6 +3891,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass IMAGE_LABEL = eINSTANCE.getImageLabel();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference IMAGE_LABEL__SCRIPT = eINSTANCE.getImageLabel_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute IMAGE_LABEL__HIDE_FROM_VIEW = eINSTANCE.getImageLabel_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Caption</b></em>' attribute feature.
@@ -3444,6 +3977,22 @@ public interface JoveNotesPackage extends EPackage
     EClass EQUATION = eINSTANCE.getEquation();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EQUATION__SCRIPT = eINSTANCE.getEquation_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EQUATION__HIDE_FROM_VIEW = eINSTANCE.getEquation_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Equation</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3504,6 +4053,22 @@ public interface JoveNotesPackage extends EPackage
     EClass REF_TO_CONTEXT = eINSTANCE.getRefToContext();
 
     /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference REF_TO_CONTEXT__SCRIPT = eINSTANCE.getRefToContext_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute REF_TO_CONTEXT__HIDE_FROM_VIEW = eINSTANCE.getRefToContext_HideFromView();
+
+    /**
      * The meta object literal for the '<em><b>Context</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3512,12 +4077,22 @@ public interface JoveNotesPackage extends EPackage
     EAttribute REF_TO_CONTEXT__CONTEXT = eINSTANCE.getRefToContext_Context();
 
     /**
-     * The meta object literal for the '<em><b>Notes Elements</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Rtc Element</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference REF_TO_CONTEXT__NOTES_ELEMENTS = eINSTANCE.getRefToContext_NotesElements();
+    EReference REF_TO_CONTEXT__RTC_ELEMENT = eINSTANCE.getRefToContext_RtcElement();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.RTCElementImpl <em>RTC Element</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.RTCElementImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getRTCElement()
+     * @generated
+     */
+    EClass RTC_ELEMENT = eINSTANCE.getRTCElement();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl <em>Multi Choice</em>}' class.
@@ -3528,6 +4103,22 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass MULTI_CHOICE = eINSTANCE.getMultiChoice();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MULTI_CHOICE__SCRIPT = eINSTANCE.getMultiChoice_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute MULTI_CHOICE__HIDE_FROM_VIEW = eINSTANCE.getMultiChoice_HideFromView();
 
     /**
      * The meta object literal for the '<em><b>Question</b></em>' attribute feature.

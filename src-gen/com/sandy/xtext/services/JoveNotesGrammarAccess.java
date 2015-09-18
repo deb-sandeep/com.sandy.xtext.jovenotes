@@ -1195,15 +1195,15 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cContextKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cContextAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cContextSTRINGTerminalRuleCall_4_0 = (RuleCall)cContextAssignment_4.eContents().get(0);
-		private final Assignment cNotesElementsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cNotesElementsNotesElementParserRuleCall_5_0 = (RuleCall)cNotesElementsAssignment_5.eContents().get(0);
+		private final Assignment cRtcElementAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cRtcElementRTCElementParserRuleCall_5_0 = (RuleCall)cRtcElementAssignment_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//RefToContext:
-		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}";
+		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}"
+		//"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"@rtc"
@@ -1227,14 +1227,88 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getContextSTRINGTerminalRuleCall_4_0() { return cContextSTRINGTerminalRuleCall_4_0; }
 
-		//notesElements+=NotesElement+
-		public Assignment getNotesElementsAssignment_5() { return cNotesElementsAssignment_5; }
+		//rtcElement+=RTCElement+
+		public Assignment getRtcElementAssignment_5() { return cRtcElementAssignment_5; }
 
-		//NotesElement
-		public RuleCall getNotesElementsNotesElementParserRuleCall_5_0() { return cNotesElementsNotesElementParserRuleCall_5_0; }
+		//RTCElement
+		public RuleCall getRtcElementRTCElementParserRuleCall_5_0() { return cRtcElementRTCElementParserRuleCall_5_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class RTCElementElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RTCElement");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cWordMeaningParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cQuestionAnswerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cFIBParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cDefinitionParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cCharacterParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cTeacherNoteParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
+		private final RuleCall cMatchingParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
+		private final RuleCall cEventParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
+		private final RuleCall cTrueFalseParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cChemEquationParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cChemCompoundParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cSpellbeeParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cImageLabelParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cEquationParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cMultiChoiceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		
+		//RTCElement:
+		//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
+		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice;
+		@Override public ParserRule getRule() { return rule; }
+
+		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
+		//| ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//WordMeaning
+		public RuleCall getWordMeaningParserRuleCall_0() { return cWordMeaningParserRuleCall_0; }
+
+		//QuestionAnswer
+		public RuleCall getQuestionAnswerParserRuleCall_1() { return cQuestionAnswerParserRuleCall_1; }
+
+		//FIB
+		public RuleCall getFIBParserRuleCall_2() { return cFIBParserRuleCall_2; }
+
+		//Definition
+		public RuleCall getDefinitionParserRuleCall_3() { return cDefinitionParserRuleCall_3; }
+
+		//Character
+		public RuleCall getCharacterParserRuleCall_4() { return cCharacterParserRuleCall_4; }
+
+		//TeacherNote
+		public RuleCall getTeacherNoteParserRuleCall_5() { return cTeacherNoteParserRuleCall_5; }
+
+		//Matching
+		public RuleCall getMatchingParserRuleCall_6() { return cMatchingParserRuleCall_6; }
+
+		//Event
+		public RuleCall getEventParserRuleCall_7() { return cEventParserRuleCall_7; }
+
+		//TrueFalse
+		public RuleCall getTrueFalseParserRuleCall_8() { return cTrueFalseParserRuleCall_8; }
+
+		//ChemEquation
+		public RuleCall getChemEquationParserRuleCall_9() { return cChemEquationParserRuleCall_9; }
+
+		//ChemCompound
+		public RuleCall getChemCompoundParserRuleCall_10() { return cChemCompoundParserRuleCall_10; }
+
+		//Spellbee
+		public RuleCall getSpellbeeParserRuleCall_11() { return cSpellbeeParserRuleCall_11; }
+
+		//ImageLabel
+		public RuleCall getImageLabelParserRuleCall_12() { return cImageLabelParserRuleCall_12; }
+
+		//Equation
+		public RuleCall getEquationParserRuleCall_13() { return cEquationParserRuleCall_13; }
+
+		//MultiChoice
+		public RuleCall getMultiChoiceParserRuleCall_14() { return cMultiChoiceParserRuleCall_14; }
 	}
 
 	public class MultiChoiceElements extends AbstractParserRuleElementFinder {
@@ -1569,6 +1643,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final EquationElements pEquation;
 	private final EqSymbolElements pEqSymbol;
 	private final RefToContextElements pRefToContext;
+	private final RTCElementElements pRTCElement;
 	private final MultiChoiceElements pMultiChoice;
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
@@ -1609,6 +1684,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pEquation = new EquationElements();
 		this.pEqSymbol = new EqSymbolElements();
 		this.pRefToContext = new RefToContextElements();
+		this.pRTCElement = new RTCElementElements();
 		this.pMultiChoice = new MultiChoiceElements();
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
@@ -1873,13 +1949,24 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefToContext:
-	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING notesElements+=NotesElement+ "}";
+	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}";
 	public RefToContextElements getRefToContextAccess() {
 		return pRefToContext;
 	}
 	
 	public ParserRule getRefToContextRule() {
 		return getRefToContextAccess().getRule();
+	}
+
+	//RTCElement:
+	//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
+	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice;
+	public RTCElementElements getRTCElementAccess() {
+		return pRTCElement;
+	}
+	
+	public ParserRule getRTCElementRule() {
+		return getRTCElementAccess().getRule();
 	}
 
 	//MultiChoice:

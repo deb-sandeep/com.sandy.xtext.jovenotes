@@ -5,6 +5,7 @@ package com.sandy.xtext.joveNotes.impl;
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.Script;
 
 import java.util.Collection;
 
@@ -27,6 +28,8 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getAnswerParts <em>Answer Parts</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getCmap <em>Cmap</em>}</li>
@@ -37,6 +40,36 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  */
 public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnswer
 {
+  /**
+   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getScript()
+   * @generated
+   * @ordered
+   */
+  protected Script script;
+
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -96,6 +129,77 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.QUESTION_ANSWER;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Script getScript()
+  {
+    return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  {
+    Script oldScript = script;
+    script = newScript;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.QUESTION_ANSWER__SCRIPT, oldScript, newScript);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScript(Script newScript)
+  {
+    if (newScript != script)
+    {
+      NotificationChain msgs = null;
+      if (script != null)
+        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.QUESTION_ANSWER__SCRIPT, null, msgs);
+      if (newScript != null)
+        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.QUESTION_ANSWER__SCRIPT, null, msgs);
+      msgs = basicSetScript(newScript, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.QUESTION_ANSWER__SCRIPT, newScript, newScript));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.QUESTION_ANSWER__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
   }
 
   /**
@@ -193,6 +297,8 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     switch (featureID)
     {
+      case JoveNotesPackage.QUESTION_ANSWER__SCRIPT:
+        return basicSetScript(null, msgs);
       case JoveNotesPackage.QUESTION_ANSWER__CMAP:
         return basicSetCmap(null, msgs);
     }
@@ -209,6 +315,10 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     switch (featureID)
     {
+      case JoveNotesPackage.QUESTION_ANSWER__SCRIPT:
+        return getScript();
+      case JoveNotesPackage.QUESTION_ANSWER__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         return getQuestion();
       case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
@@ -230,6 +340,12 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     switch (featureID)
     {
+      case JoveNotesPackage.QUESTION_ANSWER__SCRIPT:
+        setScript((Script)newValue);
+        return;
+      case JoveNotesPackage.QUESTION_ANSWER__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         setQuestion((String)newValue);
         return;
@@ -254,6 +370,12 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     switch (featureID)
     {
+      case JoveNotesPackage.QUESTION_ANSWER__SCRIPT:
+        setScript((Script)null);
+        return;
+      case JoveNotesPackage.QUESTION_ANSWER__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
@@ -277,6 +399,10 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     switch (featureID)
     {
+      case JoveNotesPackage.QUESTION_ANSWER__SCRIPT:
+        return script != null;
+      case JoveNotesPackage.QUESTION_ANSWER__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.QUESTION_ANSWER__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.QUESTION_ANSWER__ANSWER_PARTS:
@@ -298,7 +424,9 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (question: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", question: ");
     result.append(question);
     result.append(", answerParts: ");
     result.append(answerParts);

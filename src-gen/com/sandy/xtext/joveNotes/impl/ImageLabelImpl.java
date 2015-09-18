@@ -5,6 +5,7 @@ package com.sandy.xtext.joveNotes.impl;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.Script;
 
 import java.util.Collection;
 
@@ -28,6 +29,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getCaption <em>Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getImageName <em>Image Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getHotspots <em>Hotspots</em>}</li>
@@ -38,6 +41,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
 {
+  /**
+   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getScript()
+   * @generated
+   * @ordered
+   */
+  protected Script script;
+
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -114,6 +147,77 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  public Script getScript()
+  {
+    return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  {
+    Script oldScript = script;
+    script = newScript;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.IMAGE_LABEL__SCRIPT, oldScript, newScript);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScript(Script newScript)
+  {
+    if (newScript != script)
+    {
+      NotificationChain msgs = null;
+      if (script != null)
+        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.IMAGE_LABEL__SCRIPT, null, msgs);
+      if (newScript != null)
+        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.IMAGE_LABEL__SCRIPT, null, msgs);
+      msgs = basicSetScript(newScript, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.IMAGE_LABEL__SCRIPT, newScript, newScript));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.IMAGE_LABEL__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getCaption()
   {
     return caption;
@@ -179,6 +283,8 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     switch (featureID)
     {
+      case JoveNotesPackage.IMAGE_LABEL__SCRIPT:
+        return basicSetScript(null, msgs);
       case JoveNotesPackage.IMAGE_LABEL__HOTSPOTS:
         return ((InternalEList<?>)getHotspots()).basicRemove(otherEnd, msgs);
     }
@@ -195,6 +301,10 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     switch (featureID)
     {
+      case JoveNotesPackage.IMAGE_LABEL__SCRIPT:
+        return getScript();
+      case JoveNotesPackage.IMAGE_LABEL__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.IMAGE_LABEL__CAPTION:
         return getCaption();
       case JoveNotesPackage.IMAGE_LABEL__IMAGE_NAME:
@@ -216,6 +326,12 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     switch (featureID)
     {
+      case JoveNotesPackage.IMAGE_LABEL__SCRIPT:
+        setScript((Script)newValue);
+        return;
+      case JoveNotesPackage.IMAGE_LABEL__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.IMAGE_LABEL__CAPTION:
         setCaption((String)newValue);
         return;
@@ -240,6 +356,12 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     switch (featureID)
     {
+      case JoveNotesPackage.IMAGE_LABEL__SCRIPT:
+        setScript((Script)null);
+        return;
+      case JoveNotesPackage.IMAGE_LABEL__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.IMAGE_LABEL__CAPTION:
         setCaption(CAPTION_EDEFAULT);
         return;
@@ -263,6 +385,10 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     switch (featureID)
     {
+      case JoveNotesPackage.IMAGE_LABEL__SCRIPT:
+        return script != null;
+      case JoveNotesPackage.IMAGE_LABEL__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.IMAGE_LABEL__CAPTION:
         return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
       case JoveNotesPackage.IMAGE_LABEL__IMAGE_NAME:
@@ -284,7 +410,9 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (caption: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", caption: ");
     result.append(caption);
     result.append(", imageName: ");
     result.append(imageName);

@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.NotesElement;
 import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.RTCElement;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.ScriptBody;
@@ -133,6 +134,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         WordMeaning wordMeaning = (WordMeaning)theEObject;
         T result = caseWordMeaning(wordMeaning);
         if (result == null) result = caseNotesElement(wordMeaning);
+        if (result == null) result = caseRTCElement(wordMeaning);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -141,6 +143,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         QuestionAnswer questionAnswer = (QuestionAnswer)theEObject;
         T result = caseQuestionAnswer(questionAnswer);
         if (result == null) result = caseNotesElement(questionAnswer);
+        if (result == null) result = caseRTCElement(questionAnswer);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -149,6 +152,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         FIB fib = (FIB)theEObject;
         T result = caseFIB(fib);
         if (result == null) result = caseNotesElement(fib);
+        if (result == null) result = caseRTCElement(fib);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -157,6 +161,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Definition definition = (Definition)theEObject;
         T result = caseDefinition(definition);
         if (result == null) result = caseNotesElement(definition);
+        if (result == null) result = caseRTCElement(definition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -165,6 +170,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         com.sandy.xtext.joveNotes.Character character = (com.sandy.xtext.joveNotes.Character)theEObject;
         T result = caseCharacter(character);
         if (result == null) result = caseNotesElement(character);
+        if (result == null) result = caseRTCElement(character);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -173,6 +179,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         TeacherNote teacherNote = (TeacherNote)theEObject;
         T result = caseTeacherNote(teacherNote);
         if (result == null) result = caseNotesElement(teacherNote);
+        if (result == null) result = caseRTCElement(teacherNote);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -181,6 +188,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Matching matching = (Matching)theEObject;
         T result = caseMatching(matching);
         if (result == null) result = caseNotesElement(matching);
+        if (result == null) result = caseRTCElement(matching);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -203,6 +211,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Event event = (Event)theEObject;
         T result = caseEvent(event);
         if (result == null) result = caseNotesElement(event);
+        if (result == null) result = caseRTCElement(event);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -211,6 +220,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         TrueFalse trueFalse = (TrueFalse)theEObject;
         T result = caseTrueFalse(trueFalse);
         if (result == null) result = caseNotesElement(trueFalse);
+        if (result == null) result = caseRTCElement(trueFalse);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -219,6 +229,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         ChemEquation chemEquation = (ChemEquation)theEObject;
         T result = caseChemEquation(chemEquation);
         if (result == null) result = caseNotesElement(chemEquation);
+        if (result == null) result = caseRTCElement(chemEquation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -227,6 +238,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         ChemCompound chemCompound = (ChemCompound)theEObject;
         T result = caseChemCompound(chemCompound);
         if (result == null) result = caseNotesElement(chemCompound);
+        if (result == null) result = caseRTCElement(chemCompound);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -235,6 +247,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Spellbee spellbee = (Spellbee)theEObject;
         T result = caseSpellbee(spellbee);
         if (result == null) result = caseNotesElement(spellbee);
+        if (result == null) result = caseRTCElement(spellbee);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -243,6 +256,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         ImageLabel imageLabel = (ImageLabel)theEObject;
         T result = caseImageLabel(imageLabel);
         if (result == null) result = caseNotesElement(imageLabel);
+        if (result == null) result = caseRTCElement(imageLabel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -258,6 +272,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Equation equation = (Equation)theEObject;
         T result = caseEquation(equation);
         if (result == null) result = caseNotesElement(equation);
+        if (result == null) result = caseRTCElement(equation);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -276,11 +291,19 @@ public class JoveNotesSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case JoveNotesPackage.RTC_ELEMENT:
+      {
+        RTCElement rtcElement = (RTCElement)theEObject;
+        T result = caseRTCElement(rtcElement);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case JoveNotesPackage.MULTI_CHOICE:
       {
         MultiChoice multiChoice = (MultiChoice)theEObject;
         T result = caseMultiChoice(multiChoice);
         if (result == null) result = caseNotesElement(multiChoice);
+        if (result == null) result = caseRTCElement(multiChoice);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -687,6 +710,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseRefToContext(RefToContext object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>RTC Element</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>RTC Element</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRTCElement(RTCElement object)
   {
     return null;
   }

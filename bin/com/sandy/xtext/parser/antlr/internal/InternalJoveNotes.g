@@ -2274,17 +2274,17 @@ ruleRefToContext returns [EObject current=null]
 )(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getRefToContextAccess().getNotesElementsNotesElementParserRuleCall_5_0()); 
+	        newCompositeNode(grammarAccess.getRefToContextAccess().getRtcElementRTCElementParserRuleCall_5_0()); 
 	    }
-		lv_notesElements_5_0=ruleNotesElement		{
+		lv_rtcElement_5_0=ruleRTCElement		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getRefToContextRule());
 	        }
        		add(
        			$current, 
-       			"notesElements",
-        		lv_notesElements_5_0, 
-        		"NotesElement");
+       			"rtcElement",
+        		lv_rtcElement_5_0, 
+        		"RTCElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2292,6 +2292,176 @@ ruleRefToContext returns [EObject current=null]
 )+	otherlv_6='}' 
     {
     	newLeafNode(otherlv_6, grammarAccess.getRefToContextAccess().getRightCurlyBracketKeyword_6());
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRuleRTCElement
+entryRuleRTCElement returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getRTCElementRule()); }
+	 iv_ruleRTCElement=ruleRTCElement 
+	 { $current=$iv_ruleRTCElement.current; } 
+	 EOF 
+;
+
+// Rule RTCElement
+ruleRTCElement returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getWordMeaningParserRuleCall_0()); 
+    }
+    this_WordMeaning_0=ruleWordMeaning
+    { 
+        $current = $this_WordMeaning_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getQuestionAnswerParserRuleCall_1()); 
+    }
+    this_QuestionAnswer_1=ruleQuestionAnswer
+    { 
+        $current = $this_QuestionAnswer_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getFIBParserRuleCall_2()); 
+    }
+    this_FIB_2=ruleFIB
+    { 
+        $current = $this_FIB_2.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getDefinitionParserRuleCall_3()); 
+    }
+    this_Definition_3=ruleDefinition
+    { 
+        $current = $this_Definition_3.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getCharacterParserRuleCall_4()); 
+    }
+    this_Character_4=ruleCharacter
+    { 
+        $current = $this_Character_4.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getTeacherNoteParserRuleCall_5()); 
+    }
+    this_TeacherNote_5=ruleTeacherNote
+    { 
+        $current = $this_TeacherNote_5.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getMatchingParserRuleCall_6()); 
+    }
+    this_Matching_6=ruleMatching
+    { 
+        $current = $this_Matching_6.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getEventParserRuleCall_7()); 
+    }
+    this_Event_7=ruleEvent
+    { 
+        $current = $this_Event_7.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getTrueFalseParserRuleCall_8()); 
+    }
+    this_TrueFalse_8=ruleTrueFalse
+    { 
+        $current = $this_TrueFalse_8.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getChemEquationParserRuleCall_9()); 
+    }
+    this_ChemEquation_9=ruleChemEquation
+    { 
+        $current = $this_ChemEquation_9.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getChemCompoundParserRuleCall_10()); 
+    }
+    this_ChemCompound_10=ruleChemCompound
+    { 
+        $current = $this_ChemCompound_10.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getSpellbeeParserRuleCall_11()); 
+    }
+    this_Spellbee_11=ruleSpellbee
+    { 
+        $current = $this_Spellbee_11.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_12()); 
+    }
+    this_ImageLabel_12=ruleImageLabel
+    { 
+        $current = $this_ImageLabel_12.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_13()); 
+    }
+    this_Equation_13=ruleEquation
+    { 
+        $current = $this_Equation_13.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_14()); 
+    }
+    this_MultiChoice_14=ruleMultiChoice
+    { 
+        $current = $this_MultiChoice_14.current; 
+        afterParserOrEnumRuleCall();
     }
 )
 ;

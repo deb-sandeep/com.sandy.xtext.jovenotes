@@ -25,6 +25,7 @@ import com.sandy.xtext.joveNotes.NotesElement;
 import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.RTCElement;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.ScriptBody;
@@ -116,6 +117,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.EQUATION: return createEquation();
       case JoveNotesPackage.EQ_SYMBOL: return createEqSymbol();
       case JoveNotesPackage.REF_TO_CONTEXT: return createRefToContext();
+      case JoveNotesPackage.RTC_ELEMENT: return createRTCElement();
       case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
@@ -378,6 +380,17 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     RefToContextImpl refToContext = new RefToContextImpl();
     return refToContext;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RTCElement createRTCElement()
+  {
+    RTCElementImpl rtcElement = new RTCElementImpl();
+    return rtcElement;
   }
 
   /**

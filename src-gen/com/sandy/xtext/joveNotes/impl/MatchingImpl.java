@@ -6,6 +6,7 @@ import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MatchMCQConfig;
 import com.sandy.xtext.joveNotes.MatchPair;
 import com.sandy.xtext.joveNotes.Matching;
+import com.sandy.xtext.joveNotes.Script;
 
 import java.util.Collection;
 
@@ -29,6 +30,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getSkipReverseQuestion <em>Skip Reverse Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getPairs <em>Pairs</em>}</li>
@@ -40,6 +43,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MatchingImpl extends NotesElementImpl implements Matching
 {
+  /**
+   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getScript()
+   * @generated
+   * @ordered
+   */
+  protected Script script;
+
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getSkipReverseQuestion() <em>Skip Reverse Question</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -119,6 +152,77 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.MATCHING;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Script getScript()
+  {
+    return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  {
+    Script oldScript = script;
+    script = newScript;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__SCRIPT, oldScript, newScript);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScript(Script newScript)
+  {
+    if (newScript != script)
+    {
+      NotificationChain msgs = null;
+      if (script != null)
+        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MATCHING__SCRIPT, null, msgs);
+      if (newScript != null)
+        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MATCHING__SCRIPT, null, msgs);
+      msgs = basicSetScript(newScript, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__SCRIPT, newScript, newScript));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MATCHING__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
   }
 
   /**
@@ -239,6 +343,8 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SCRIPT:
+        return basicSetScript(null, msgs);
       case JoveNotesPackage.MATCHING__PAIRS:
         return ((InternalEList<?>)getPairs()).basicRemove(otherEnd, msgs);
       case JoveNotesPackage.MATCHING__MCQ_CONFIG:
@@ -257,6 +363,10 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SCRIPT:
+        return getScript();
+      case JoveNotesPackage.MATCHING__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
         return getSkipReverseQuestion();
       case JoveNotesPackage.MATCHING__QUESTION:
@@ -280,6 +390,12 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SCRIPT:
+        setScript((Script)newValue);
+        return;
+      case JoveNotesPackage.MATCHING__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
         setSkipReverseQuestion((String)newValue);
         return;
@@ -307,6 +423,12 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SCRIPT:
+        setScript((Script)null);
+        return;
+      case JoveNotesPackage.MATCHING__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
         setSkipReverseQuestion(SKIP_REVERSE_QUESTION_EDEFAULT);
         return;
@@ -333,6 +455,10 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MATCHING__SCRIPT:
+        return script != null;
+      case JoveNotesPackage.MATCHING__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.MATCHING__SKIP_REVERSE_QUESTION:
         return SKIP_REVERSE_QUESTION_EDEFAULT == null ? skipReverseQuestion != null : !SKIP_REVERSE_QUESTION_EDEFAULT.equals(skipReverseQuestion);
       case JoveNotesPackage.MATCHING__QUESTION:
@@ -356,7 +482,9 @@ public class MatchingImpl extends NotesElementImpl implements Matching
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (skipReverseQuestion: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", skipReverseQuestion: ");
     result.append(skipReverseQuestion);
     result.append(", question: ");
     result.append(question);

@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.NotesElement;
 import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.RTCElement;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.ScriptBody;
@@ -216,6 +217,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseRefToContext(RefToContext object)
       {
         return createRefToContextAdapter();
+      }
+      @Override
+      public Adapter caseRTCElement(RTCElement object)
+      {
+        return createRTCElementAdapter();
       }
       @Override
       public Adapter caseMultiChoice(MultiChoice object)
@@ -610,6 +616,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createRefToContextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.RTCElement <em>RTC Element</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.RTCElement
+   * @generated
+   */
+  public Adapter createRTCElementAdapter()
   {
     return null;
   }

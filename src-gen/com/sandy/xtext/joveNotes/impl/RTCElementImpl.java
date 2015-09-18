@@ -3,7 +3,7 @@
 package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
-import com.sandy.xtext.joveNotes.NotesElement;
+import com.sandy.xtext.joveNotes.RTCElement;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -11,21 +11,21 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Notes Element</b></em>'.
+ * An implementation of the model object '<em><b>RTC Element</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * </p>
  *
  * @generated
  */
-public class NotesElementImpl extends MinimalEObjectImpl.Container implements NotesElement
+public class RTCElementImpl extends MinimalEObjectImpl.Container implements RTCElement
 {
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected NotesElementImpl()
+  protected RTCElementImpl()
   {
     super();
   }
@@ -38,7 +38,7 @@ public class NotesElementImpl extends MinimalEObjectImpl.Container implements No
   @Override
   protected EClass eStaticClass()
   {
-    return JoveNotesPackage.Literals.NOTES_ELEMENT;
+    return JoveNotesPackage.Literals.RTC_ELEMENT;
   }
 
-} //NotesElementImpl
+} //RTCElementImpl

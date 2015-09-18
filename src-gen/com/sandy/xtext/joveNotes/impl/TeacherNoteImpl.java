@@ -4,6 +4,7 @@ package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
+import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.TeacherNote;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -21,6 +22,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getCaption <em>Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getNote <em>Note</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getCmap <em>Cmap</em>}</li>
@@ -31,6 +34,36 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
 {
+  /**
+   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getScript()
+   * @generated
+   * @ordered
+   */
+  protected Script script;
+
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getCaption() <em>Caption</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -100,6 +133,77 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.TEACHER_NOTE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Script getScript()
+  {
+    return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  {
+    Script oldScript = script;
+    script = newScript;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.TEACHER_NOTE__SCRIPT, oldScript, newScript);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScript(Script newScript)
+  {
+    if (newScript != script)
+    {
+      NotificationChain msgs = null;
+      if (script != null)
+        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.TEACHER_NOTE__SCRIPT, null, msgs);
+      if (newScript != null)
+        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.TEACHER_NOTE__SCRIPT, null, msgs);
+      msgs = basicSetScript(newScript, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.TEACHER_NOTE__SCRIPT, newScript, newScript));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.TEACHER_NOTE__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
   }
 
   /**
@@ -206,6 +310,8 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__SCRIPT:
+        return basicSetScript(null, msgs);
       case JoveNotesPackage.TEACHER_NOTE__CMAP:
         return basicSetCmap(null, msgs);
     }
@@ -222,6 +328,10 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__SCRIPT:
+        return getScript();
+      case JoveNotesPackage.TEACHER_NOTE__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.TEACHER_NOTE__CAPTION:
         return getCaption();
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
@@ -242,6 +352,12 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__SCRIPT:
+        setScript((Script)newValue);
+        return;
+      case JoveNotesPackage.TEACHER_NOTE__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.TEACHER_NOTE__CAPTION:
         setCaption((String)newValue);
         return;
@@ -265,6 +381,12 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__SCRIPT:
+        setScript((Script)null);
+        return;
+      case JoveNotesPackage.TEACHER_NOTE__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.TEACHER_NOTE__CAPTION:
         setCaption(CAPTION_EDEFAULT);
         return;
@@ -288,6 +410,10 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     switch (featureID)
     {
+      case JoveNotesPackage.TEACHER_NOTE__SCRIPT:
+        return script != null;
+      case JoveNotesPackage.TEACHER_NOTE__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.TEACHER_NOTE__CAPTION:
         return CAPTION_EDEFAULT == null ? caption != null : !CAPTION_EDEFAULT.equals(caption);
       case JoveNotesPackage.TEACHER_NOTE__NOTE:
@@ -309,7 +435,9 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (caption: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", caption: ");
     result.append(caption);
     result.append(", note: ");
     result.append(note);

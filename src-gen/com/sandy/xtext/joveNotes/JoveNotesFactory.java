@@ -230,6 +230,15 @@ public interface JoveNotesFactory extends EFactory
   RefToContext createRefToContext();
 
   /**
+   * Returns a new object of class '<em>RTC Element</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>RTC Element</em>'.
+   * @generated
+   */
+  RTCElement createRTCElement();
+
+  /**
    * Returns a new object of class '<em>Multi Choice</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

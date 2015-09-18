@@ -62,7 +62,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_ChapterDetails(context, (ChapterDetails) semanticObject); 
 				return; 
 			case JoveNotesPackage.CHARACTER:
-				if(context == grammarAccess.getCharacterRule()) {
+				if(context == grammarAccess.getCharacterRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Character(context, (com.sandy.xtext.joveNotes.Character) semanticObject); 
 					return; 
 				}
@@ -72,7 +73,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else break;
 			case JoveNotesPackage.CHEM_COMPOUND:
-				if(context == grammarAccess.getChemCompoundRule()) {
+				if(context == grammarAccess.getChemCompoundRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ChemCompound(context, (ChemCompound) semanticObject); 
 					return; 
 				}
@@ -82,7 +84,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else break;
 			case JoveNotesPackage.CHEM_EQUATION:
-				if(context == grammarAccess.getChemEquationRule()) {
+				if(context == grammarAccess.getChemEquationRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ChemEquation(context, (ChemEquation) semanticObject); 
 					return; 
 				}
@@ -92,7 +95,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else break;
 			case JoveNotesPackage.DEFINITION:
-				if(context == grammarAccess.getDefinitionRule()) {
+				if(context == grammarAccess.getDefinitionRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Definition(context, (Definition) semanticObject); 
 					return; 
 				}
@@ -105,7 +109,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_EqSymbol(context, (EqSymbol) semanticObject); 
 				return; 
 			case JoveNotesPackage.EQUATION:
-				if(context == grammarAccess.getEquationRule()) {
+				if(context == grammarAccess.getEquationRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Equation(context, (Equation) semanticObject); 
 					return; 
 				}
@@ -118,7 +123,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_EvalVar(context, (EvalVar) semanticObject); 
 				return; 
 			case JoveNotesPackage.EVENT:
-				if(context == grammarAccess.getEventRule()) {
+				if(context == grammarAccess.getEventRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Event(context, (Event) semanticObject); 
 					return; 
 				}
@@ -128,7 +134,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else break;
 			case JoveNotesPackage.FIB:
-				if(context == grammarAccess.getFIBRule()) {
+				if(context == grammarAccess.getFIBRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_FIB(context, (FIB) semanticObject); 
 					return; 
 				}
@@ -141,7 +148,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_HotSpot(context, (HotSpot) semanticObject); 
 				return; 
 			case JoveNotesPackage.IMAGE_LABEL:
-				if(context == grammarAccess.getImageLabelRule()) {
+				if(context == grammarAccess.getImageLabelRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ImageLabel(context, (ImageLabel) semanticObject); 
 					return; 
 				}
@@ -160,7 +168,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_MatchPair(context, (MatchPair) semanticObject); 
 				return; 
 			case JoveNotesPackage.MATCHING:
-				if(context == grammarAccess.getMatchingRule()) {
+				if(context == grammarAccess.getMatchingRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Matching(context, (Matching) semanticObject); 
 					return; 
 				}
@@ -170,7 +179,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else break;
 			case JoveNotesPackage.MULTI_CHOICE:
-				if(context == grammarAccess.getMultiChoiceRule()) {
+				if(context == grammarAccess.getMultiChoiceRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_MultiChoice(context, (MultiChoice) semanticObject); 
 					return; 
 				}
@@ -190,7 +200,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_QuestionAnswer(context, (QuestionAnswer) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getQuestionAnswerRule()) {
+				else if(context == grammarAccess.getQuestionAnswerRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_QuestionAnswer(context, (QuestionAnswer) semanticObject); 
 					return; 
 				}
@@ -216,7 +227,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getSpellbeeRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getSpellbeeRule()) {
 					sequence_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}
@@ -226,7 +238,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_TeacherNote(context, (TeacherNote) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getTeacherNoteRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getTeacherNoteRule()) {
 					sequence_TeacherNote(context, (TeacherNote) semanticObject); 
 					return; 
 				}
@@ -236,7 +249,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_TrueFalse(context, (TrueFalse) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getTrueFalseRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getTrueFalseRule()) {
 					sequence_TrueFalse(context, (TrueFalse) semanticObject); 
 					return; 
 				}
@@ -246,7 +260,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_WordMeaning(context, (WordMeaning) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getWordMeaningRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getWordMeaningRule()) {
 					sequence_WordMeaning(context, (WordMeaning) semanticObject); 
 					return; 
 				}
@@ -620,7 +635,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? context=STRING notesElements+=NotesElement+ script=Script?)
+	 *     (hideFromView='hide'? context=STRING rtcElement+=RTCElement+ script=Script?)
 	 */
 	protected void sequence_NotesElement_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -692,7 +707,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Constraint:
-	 *     (hideFromView='hide'? context=STRING notesElements+=NotesElement+)
+	 *     (hideFromView='hide'? context=STRING rtcElement+=RTCElement+)
 	 */
 	protected void sequence_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

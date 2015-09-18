@@ -5,6 +5,7 @@ package com.sandy.xtext.joveNotes.impl;
 import com.sandy.xtext.joveNotes.JoveNotesPackage;
 import com.sandy.xtext.joveNotes.MultiChoice;
 import com.sandy.xtext.joveNotes.Option;
+import com.sandy.xtext.joveNotes.Script;
 
 import java.util.Collection;
 
@@ -28,6 +29,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MultiChoiceImpl#getNumOptionsToShow <em>Num Options To Show</em>}</li>
@@ -40,6 +43,36 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
 {
+  /**
+   * The cached value of the '{@link #getScript() <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getScript()
+   * @generated
+   * @ordered
+   */
+  protected Script script;
+
+  /**
+   * The default value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected static final String HIDE_FROM_VIEW_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getHideFromView() <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHideFromView()
+   * @generated
+   * @ordered
+   */
+  protected String hideFromView = HIDE_FROM_VIEW_EDEFAULT;
+
   /**
    * The default value of the '{@link #getQuestion() <em>Question</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -149,6 +182,77 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.MULTI_CHOICE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Script getScript()
+  {
+    return script;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetScript(Script newScript, NotificationChain msgs)
+  {
+    Script oldScript = script;
+    script = newScript;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MULTI_CHOICE__SCRIPT, oldScript, newScript);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setScript(Script newScript)
+  {
+    if (newScript != script)
+    {
+      NotificationChain msgs = null;
+      if (script != null)
+        msgs = ((InternalEObject)script).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MULTI_CHOICE__SCRIPT, null, msgs);
+      if (newScript != null)
+        msgs = ((InternalEObject)newScript).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - JoveNotesPackage.MULTI_CHOICE__SCRIPT, null, msgs);
+      msgs = basicSetScript(newScript, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MULTI_CHOICE__SCRIPT, newScript, newScript));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getHideFromView()
+  {
+    return hideFromView;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHideFromView(String newHideFromView)
+  {
+    String oldHideFromView = hideFromView;
+    hideFromView = newHideFromView;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.MULTI_CHOICE__HIDE_FROM_VIEW, oldHideFromView, hideFromView));
   }
 
   /**
@@ -267,6 +371,8 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MULTI_CHOICE__SCRIPT:
+        return basicSetScript(null, msgs);
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
         return ((InternalEList<?>)getOptions()).basicRemove(otherEnd, msgs);
     }
@@ -283,6 +389,10 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MULTI_CHOICE__SCRIPT:
+        return getScript();
+      case JoveNotesPackage.MULTI_CHOICE__HIDE_FROM_VIEW:
+        return getHideFromView();
       case JoveNotesPackage.MULTI_CHOICE__QUESTION:
         return getQuestion();
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
@@ -308,6 +418,12 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MULTI_CHOICE__SCRIPT:
+        setScript((Script)newValue);
+        return;
+      case JoveNotesPackage.MULTI_CHOICE__HIDE_FROM_VIEW:
+        setHideFromView((String)newValue);
+        return;
       case JoveNotesPackage.MULTI_CHOICE__QUESTION:
         setQuestion((String)newValue);
         return;
@@ -338,6 +454,12 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MULTI_CHOICE__SCRIPT:
+        setScript((Script)null);
+        return;
+      case JoveNotesPackage.MULTI_CHOICE__HIDE_FROM_VIEW:
+        setHideFromView(HIDE_FROM_VIEW_EDEFAULT);
+        return;
       case JoveNotesPackage.MULTI_CHOICE__QUESTION:
         setQuestion(QUESTION_EDEFAULT);
         return;
@@ -367,6 +489,10 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
   {
     switch (featureID)
     {
+      case JoveNotesPackage.MULTI_CHOICE__SCRIPT:
+        return script != null;
+      case JoveNotesPackage.MULTI_CHOICE__HIDE_FROM_VIEW:
+        return HIDE_FROM_VIEW_EDEFAULT == null ? hideFromView != null : !HIDE_FROM_VIEW_EDEFAULT.equals(hideFromView);
       case JoveNotesPackage.MULTI_CHOICE__QUESTION:
         return QUESTION_EDEFAULT == null ? question != null : !QUESTION_EDEFAULT.equals(question);
       case JoveNotesPackage.MULTI_CHOICE__OPTIONS:
@@ -392,7 +518,9 @@ public class MultiChoiceImpl extends NotesElementImpl implements MultiChoice
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (question: ");
+    result.append(" (hideFromView: ");
+    result.append(hideFromView);
+    result.append(", question: ");
     result.append(question);
     result.append(", numOptionsToShow: ");
     result.append(numOptionsToShow);

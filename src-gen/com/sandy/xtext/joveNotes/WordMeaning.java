@@ -11,6 +11,8 @@ package com.sandy.xtext.joveNotes;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getScript <em>Script</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getWord <em>Word</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getMeaning <em>Meaning</em>}</li>
  * </ul>
@@ -20,8 +22,60 @@ package com.sandy.xtext.joveNotes;
  * @model
  * @generated
  */
-public interface WordMeaning extends NotesElement
+public interface WordMeaning extends NotesElement, RTCElement
 {
+  /**
+   * Returns the value of the '<em><b>Script</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Script</em>' containment reference.
+   * @see #setScript(Script)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getWordMeaning_Script()
+   * @model containment="true"
+   * @generated
+   */
+  Script getScript();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.WordMeaning#getScript <em>Script</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Script</em>' containment reference.
+   * @see #getScript()
+   * @generated
+   */
+  void setScript(Script value);
+
+  /**
+   * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hide From View</em>' attribute.
+   * @see #setHideFromView(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getWordMeaning_HideFromView()
+   * @model
+   * @generated
+   */
+  String getHideFromView();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.WordMeaning#getHideFromView <em>Hide From View</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Hide From View</em>' attribute.
+   * @see #getHideFromView()
+   * @generated
+   */
+  void setHideFromView(String value);
+
   /**
    * Returns the value of the '<em><b>Word</b></em>' attribute.
    * <!-- begin-user-doc -->

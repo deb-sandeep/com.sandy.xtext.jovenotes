@@ -160,8 +160,26 @@ EqSymbol:
 RefToContext:
     '@rtc' (hideFromView = 'hide')? '{'
         'context' context = STRING
-        ( notesElements += NotesElement )+
+        ( rtcElement += RTCElement )+
     '}'
+;
+
+RTCElement: 
+    WordMeaning    | 
+    QuestionAnswer | 
+    FIB            |
+    Definition     |
+    Character      |
+    TeacherNote    |
+    Matching       |
+    Event          |
+    TrueFalse      |
+    ChemEquation   |
+    ChemCompound   |
+    Spellbee       |
+    ImageLabel     |
+    Equation       |
+    MultiChoice 
 ;
 
 MultiChoice:

@@ -24,6 +24,7 @@ import com.sandy.xtext.joveNotes.NotesElement;
 import com.sandy.xtext.joveNotes.Option;
 import com.sandy.xtext.joveNotes.ProcessingHints;
 import com.sandy.xtext.joveNotes.QuestionAnswer;
+import com.sandy.xtext.joveNotes.RTCElement;
 import com.sandy.xtext.joveNotes.RefToContext;
 import com.sandy.xtext.joveNotes.Script;
 import com.sandy.xtext.joveNotes.ScriptBody;
@@ -207,6 +208,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * @generated
    */
   private EClass refToContextEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass rtcElementEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -468,26 +476,6 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getNotesElement_Script()
-  {
-    return (EReference)notesElementEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getNotesElement_HideFromView()
-  {
-    return (EAttribute)notesElementEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getWordMeaning()
   {
     return wordMeaningEClass;
@@ -498,9 +486,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getWordMeaning_Script()
+  {
+    return (EReference)wordMeaningEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getWordMeaning_HideFromView()
+  {
+    return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getWordMeaning_Word()
   {
-    return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -510,7 +518,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    */
   public EAttribute getWordMeaning_Meaning()
   {
-    return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -528,9 +536,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQuestionAnswer_Question()
+  public EReference getQuestionAnswer_Script()
   {
-    return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(0);
+    return (EReference)questionAnswerEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -538,7 +546,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getQuestionAnswer_AnswerParts()
+  public EAttribute getQuestionAnswer_HideFromView()
   {
     return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(1);
   }
@@ -548,9 +556,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getQuestionAnswer_Question()
+  {
+    return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getQuestionAnswer_AnswerParts()
+  {
+    return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getQuestionAnswer_Cmap()
   {
-    return (EReference)questionAnswerEClass.getEStructuralFeatures().get(2);
+    return (EReference)questionAnswerEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -568,9 +596,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getFIB_Script()
+  {
+    return (EReference)fibEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFIB_HideFromView()
+  {
+    return (EAttribute)fibEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getFIB_Question()
   {
-    return (EAttribute)fibEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)fibEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -580,7 +628,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    */
   public EAttribute getFIB_Answers()
   {
-    return (EAttribute)fibEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)fibEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -598,9 +646,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDefinition_Term()
+  public EReference getDefinition_Script()
   {
-    return (EAttribute)definitionEClass.getEStructuralFeatures().get(0);
+    return (EReference)definitionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -608,7 +656,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getDefinition_Definition()
+  public EAttribute getDefinition_HideFromView()
   {
     return (EAttribute)definitionEClass.getEStructuralFeatures().get(1);
   }
@@ -618,9 +666,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getDefinition_Term()
+  {
+    return (EAttribute)definitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getDefinition_Definition()
+  {
+    return (EAttribute)definitionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getDefinition_Cmap()
   {
-    return (EReference)definitionEClass.getEStructuralFeatures().get(2);
+    return (EReference)definitionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -638,9 +706,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCharacter_Character()
+  public EReference getCharacter_Script()
   {
-    return (EAttribute)characterEClass.getEStructuralFeatures().get(0);
+    return (EReference)characterEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -648,7 +716,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getCharacter_Estimate()
+  public EAttribute getCharacter_HideFromView()
   {
     return (EAttribute)characterEClass.getEStructuralFeatures().get(1);
   }
@@ -658,9 +726,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getCharacter_Character()
+  {
+    return (EAttribute)characterEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getCharacter_Estimate()
+  {
+    return (EAttribute)characterEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getCharacter_Cmap()
   {
-    return (EReference)characterEClass.getEStructuralFeatures().get(2);
+    return (EReference)characterEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -678,9 +766,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTeacherNote_Caption()
+  public EReference getTeacherNote_Script()
   {
-    return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(0);
+    return (EReference)teacherNoteEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -688,7 +776,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTeacherNote_Note()
+  public EAttribute getTeacherNote_HideFromView()
   {
     return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(1);
   }
@@ -698,9 +786,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getTeacherNote_Caption()
+  {
+    return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTeacherNote_Note()
+  {
+    return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getTeacherNote_Cmap()
   {
-    return (EReference)teacherNoteEClass.getEStructuralFeatures().get(2);
+    return (EReference)teacherNoteEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -718,9 +826,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMatching_SkipReverseQuestion()
+  public EReference getMatching_Script()
   {
-    return (EAttribute)matchingEClass.getEStructuralFeatures().get(0);
+    return (EReference)matchingEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -728,7 +836,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMatching_Question()
+  public EAttribute getMatching_HideFromView()
   {
     return (EAttribute)matchingEClass.getEStructuralFeatures().get(1);
   }
@@ -738,9 +846,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMatching_SkipReverseQuestion()
+  {
+    return (EAttribute)matchingEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMatching_Question()
+  {
+    return (EAttribute)matchingEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMatching_Pairs()
   {
-    return (EReference)matchingEClass.getEStructuralFeatures().get(2);
+    return (EReference)matchingEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -750,7 +878,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    */
   public EReference getMatching_McqConfig()
   {
-    return (EReference)matchingEClass.getEStructuralFeatures().get(3);
+    return (EReference)matchingEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -848,9 +976,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getEvent_Script()
+  {
+    return (EReference)eventEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEvent_HideFromView()
+  {
+    return (EAttribute)eventEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getEvent_Event()
   {
-    return (EAttribute)eventEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)eventEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -860,7 +1008,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    */
   public EAttribute getEvent_Time()
   {
-    return (EAttribute)eventEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)eventEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -878,9 +1026,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTrueFalse_Statement()
+  public EReference getTrueFalse_Script()
   {
-    return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(0);
+    return (EReference)trueFalseEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -888,7 +1036,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTrueFalse_TruthValue()
+  public EAttribute getTrueFalse_HideFromView()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(1);
   }
@@ -898,9 +1046,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getTrueFalse_Justification()
+  public EAttribute getTrueFalse_Statement()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTrueFalse_TruthValue()
+  {
+    return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getTrueFalse_Justification()
+  {
+    return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -918,9 +1086,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Description()
+  public EReference getChemEquation_Script()
   {
-    return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(0);
+    return (EReference)chemEquationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -928,7 +1096,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Reactants()
+  public EAttribute getChemEquation_HideFromView()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(1);
   }
@@ -938,7 +1106,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Produces()
+  public EAttribute getChemEquation_Description()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(2);
   }
@@ -948,9 +1116,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemEquation_Products()
+  public EAttribute getChemEquation_Reactants()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChemEquation_Produces()
+  {
+    return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChemEquation_Products()
+  {
+    return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -968,9 +1156,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemCompound_Symbol()
+  public EReference getChemCompound_Script()
   {
-    return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(0);
+    return (EReference)chemCompoundEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -978,7 +1166,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemCompound_ChemicalName()
+  public EAttribute getChemCompound_HideFromView()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(1);
   }
@@ -988,9 +1176,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChemCompound_CommonName()
+  public EAttribute getChemCompound_Symbol()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChemCompound_ChemicalName()
+  {
+    return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getChemCompound_CommonName()
+  {
+    return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1008,9 +1216,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getSpellbee_Script()
+  {
+    return (EReference)spellbeeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSpellbee_HideFromView()
+  {
+    return (EAttribute)spellbeeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getSpellbee_Word()
   {
-    return (EAttribute)spellbeeEClass.getEStructuralFeatures().get(0);
+    return (EAttribute)spellbeeEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -1028,9 +1256,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageLabel_Caption()
+  public EReference getImageLabel_Script()
   {
-    return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(0);
+    return (EReference)imageLabelEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1038,7 +1266,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getImageLabel_ImageName()
+  public EAttribute getImageLabel_HideFromView()
   {
     return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(1);
   }
@@ -1048,9 +1276,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getImageLabel_Caption()
+  {
+    return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getImageLabel_ImageName()
+  {
+    return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getImageLabel_Hotspots()
   {
-    return (EReference)imageLabelEClass.getEStructuralFeatures().get(2);
+    return (EReference)imageLabelEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1108,9 +1356,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEquation_Equation()
+  public EReference getEquation_Script()
   {
-    return (EAttribute)equationEClass.getEStructuralFeatures().get(0);
+    return (EReference)equationEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1118,7 +1366,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getEquation_Description()
+  public EAttribute getEquation_HideFromView()
   {
     return (EAttribute)equationEClass.getEStructuralFeatures().get(1);
   }
@@ -1128,9 +1376,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getEquation_Equation()
+  {
+    return (EAttribute)equationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getEquation_Description()
+  {
+    return (EAttribute)equationEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getEquation_Symbols()
   {
-    return (EReference)equationEClass.getEStructuralFeatures().get(2);
+    return (EReference)equationEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1178,9 +1446,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getRefToContext_Context()
+  public EReference getRefToContext_Script()
   {
-    return (EAttribute)refToContextEClass.getEStructuralFeatures().get(0);
+    return (EReference)refToContextEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1188,9 +1456,39 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getRefToContext_NotesElements()
+  public EAttribute getRefToContext_HideFromView()
   {
-    return (EReference)refToContextEClass.getEStructuralFeatures().get(1);
+    return (EAttribute)refToContextEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getRefToContext_Context()
+  {
+    return (EAttribute)refToContextEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getRefToContext_RtcElement()
+  {
+    return (EReference)refToContextEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getRTCElement()
+  {
+    return rtcElementEClass;
   }
 
   /**
@@ -1208,27 +1506,27 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMultiChoice_Script()
+  {
+    return (EReference)multiChoiceEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiChoice_HideFromView()
+  {
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getMultiChoice_Question()
-  {
-    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getMultiChoice_Options()
-  {
-    return (EReference)multiChoiceEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getMultiChoice_NumOptionsToShow()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(2);
   }
@@ -1238,9 +1536,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getMultiChoice_Options()
+  {
+    return (EReference)multiChoiceEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiChoice_NumOptionsToShow()
+  {
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EAttribute getMultiChoice_NumOptionsPerRow()
   {
-    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1250,7 +1568,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    */
   public EAttribute getMultiChoice_Explanation()
   {
-    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1431,38 +1749,50 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEReference(chapterDetailsEClass, CHAPTER_DETAILS__SCRIPT_BODY);
 
     notesElementEClass = createEClass(NOTES_ELEMENT);
-    createEReference(notesElementEClass, NOTES_ELEMENT__SCRIPT);
-    createEAttribute(notesElementEClass, NOTES_ELEMENT__HIDE_FROM_VIEW);
 
     wordMeaningEClass = createEClass(WORD_MEANING);
+    createEReference(wordMeaningEClass, WORD_MEANING__SCRIPT);
+    createEAttribute(wordMeaningEClass, WORD_MEANING__HIDE_FROM_VIEW);
     createEAttribute(wordMeaningEClass, WORD_MEANING__WORD);
     createEAttribute(wordMeaningEClass, WORD_MEANING__MEANING);
 
     questionAnswerEClass = createEClass(QUESTION_ANSWER);
+    createEReference(questionAnswerEClass, QUESTION_ANSWER__SCRIPT);
+    createEAttribute(questionAnswerEClass, QUESTION_ANSWER__HIDE_FROM_VIEW);
     createEAttribute(questionAnswerEClass, QUESTION_ANSWER__QUESTION);
     createEAttribute(questionAnswerEClass, QUESTION_ANSWER__ANSWER_PARTS);
     createEReference(questionAnswerEClass, QUESTION_ANSWER__CMAP);
 
     fibEClass = createEClass(FIB);
+    createEReference(fibEClass, FIB__SCRIPT);
+    createEAttribute(fibEClass, FIB__HIDE_FROM_VIEW);
     createEAttribute(fibEClass, FIB__QUESTION);
     createEAttribute(fibEClass, FIB__ANSWERS);
 
     definitionEClass = createEClass(DEFINITION);
+    createEReference(definitionEClass, DEFINITION__SCRIPT);
+    createEAttribute(definitionEClass, DEFINITION__HIDE_FROM_VIEW);
     createEAttribute(definitionEClass, DEFINITION__TERM);
     createEAttribute(definitionEClass, DEFINITION__DEFINITION);
     createEReference(definitionEClass, DEFINITION__CMAP);
 
     characterEClass = createEClass(CHARACTER);
+    createEReference(characterEClass, CHARACTER__SCRIPT);
+    createEAttribute(characterEClass, CHARACTER__HIDE_FROM_VIEW);
     createEAttribute(characterEClass, CHARACTER__CHARACTER);
     createEAttribute(characterEClass, CHARACTER__ESTIMATE);
     createEReference(characterEClass, CHARACTER__CMAP);
 
     teacherNoteEClass = createEClass(TEACHER_NOTE);
+    createEReference(teacherNoteEClass, TEACHER_NOTE__SCRIPT);
+    createEAttribute(teacherNoteEClass, TEACHER_NOTE__HIDE_FROM_VIEW);
     createEAttribute(teacherNoteEClass, TEACHER_NOTE__CAPTION);
     createEAttribute(teacherNoteEClass, TEACHER_NOTE__NOTE);
     createEReference(teacherNoteEClass, TEACHER_NOTE__CMAP);
 
     matchingEClass = createEClass(MATCHING);
+    createEReference(matchingEClass, MATCHING__SCRIPT);
+    createEAttribute(matchingEClass, MATCHING__HIDE_FROM_VIEW);
     createEAttribute(matchingEClass, MATCHING__SKIP_REVERSE_QUESTION);
     createEAttribute(matchingEClass, MATCHING__QUESTION);
     createEReference(matchingEClass, MATCHING__PAIRS);
@@ -1479,29 +1809,41 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(matchMCQConfigEClass, MATCH_MCQ_CONFIG__NUM_OPTIONS_PER_ROW);
 
     eventEClass = createEClass(EVENT);
+    createEReference(eventEClass, EVENT__SCRIPT);
+    createEAttribute(eventEClass, EVENT__HIDE_FROM_VIEW);
     createEAttribute(eventEClass, EVENT__EVENT);
     createEAttribute(eventEClass, EVENT__TIME);
 
     trueFalseEClass = createEClass(TRUE_FALSE);
+    createEReference(trueFalseEClass, TRUE_FALSE__SCRIPT);
+    createEAttribute(trueFalseEClass, TRUE_FALSE__HIDE_FROM_VIEW);
     createEAttribute(trueFalseEClass, TRUE_FALSE__STATEMENT);
     createEAttribute(trueFalseEClass, TRUE_FALSE__TRUTH_VALUE);
     createEAttribute(trueFalseEClass, TRUE_FALSE__JUSTIFICATION);
 
     chemEquationEClass = createEClass(CHEM_EQUATION);
+    createEReference(chemEquationEClass, CHEM_EQUATION__SCRIPT);
+    createEAttribute(chemEquationEClass, CHEM_EQUATION__HIDE_FROM_VIEW);
     createEAttribute(chemEquationEClass, CHEM_EQUATION__DESCRIPTION);
     createEAttribute(chemEquationEClass, CHEM_EQUATION__REACTANTS);
     createEAttribute(chemEquationEClass, CHEM_EQUATION__PRODUCES);
     createEAttribute(chemEquationEClass, CHEM_EQUATION__PRODUCTS);
 
     chemCompoundEClass = createEClass(CHEM_COMPOUND);
+    createEReference(chemCompoundEClass, CHEM_COMPOUND__SCRIPT);
+    createEAttribute(chemCompoundEClass, CHEM_COMPOUND__HIDE_FROM_VIEW);
     createEAttribute(chemCompoundEClass, CHEM_COMPOUND__SYMBOL);
     createEAttribute(chemCompoundEClass, CHEM_COMPOUND__CHEMICAL_NAME);
     createEAttribute(chemCompoundEClass, CHEM_COMPOUND__COMMON_NAME);
 
     spellbeeEClass = createEClass(SPELLBEE);
+    createEReference(spellbeeEClass, SPELLBEE__SCRIPT);
+    createEAttribute(spellbeeEClass, SPELLBEE__HIDE_FROM_VIEW);
     createEAttribute(spellbeeEClass, SPELLBEE__WORD);
 
     imageLabelEClass = createEClass(IMAGE_LABEL);
+    createEReference(imageLabelEClass, IMAGE_LABEL__SCRIPT);
+    createEAttribute(imageLabelEClass, IMAGE_LABEL__HIDE_FROM_VIEW);
     createEAttribute(imageLabelEClass, IMAGE_LABEL__CAPTION);
     createEAttribute(imageLabelEClass, IMAGE_LABEL__IMAGE_NAME);
     createEReference(imageLabelEClass, IMAGE_LABEL__HOTSPOTS);
@@ -1512,6 +1854,8 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(hotSpotEClass, HOT_SPOT__LABEL);
 
     equationEClass = createEClass(EQUATION);
+    createEReference(equationEClass, EQUATION__SCRIPT);
+    createEAttribute(equationEClass, EQUATION__HIDE_FROM_VIEW);
     createEAttribute(equationEClass, EQUATION__EQUATION);
     createEAttribute(equationEClass, EQUATION__DESCRIPTION);
     createEReference(equationEClass, EQUATION__SYMBOLS);
@@ -1521,10 +1865,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(eqSymbolEClass, EQ_SYMBOL__DESCRIPTION);
 
     refToContextEClass = createEClass(REF_TO_CONTEXT);
+    createEReference(refToContextEClass, REF_TO_CONTEXT__SCRIPT);
+    createEAttribute(refToContextEClass, REF_TO_CONTEXT__HIDE_FROM_VIEW);
     createEAttribute(refToContextEClass, REF_TO_CONTEXT__CONTEXT);
-    createEReference(refToContextEClass, REF_TO_CONTEXT__NOTES_ELEMENTS);
+    createEReference(refToContextEClass, REF_TO_CONTEXT__RTC_ELEMENT);
+
+    rtcElementEClass = createEClass(RTC_ELEMENT);
 
     multiChoiceEClass = createEClass(MULTI_CHOICE);
+    createEReference(multiChoiceEClass, MULTI_CHOICE__SCRIPT);
+    createEAttribute(multiChoiceEClass, MULTI_CHOICE__HIDE_FROM_VIEW);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__QUESTION);
     createEReference(multiChoiceEClass, MULTI_CHOICE__OPTIONS);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__NUM_OPTIONS_TO_SHOW);
@@ -1580,21 +1930,36 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     // Add supertypes to classes
     wordMeaningEClass.getESuperTypes().add(this.getNotesElement());
+    wordMeaningEClass.getESuperTypes().add(this.getRTCElement());
     questionAnswerEClass.getESuperTypes().add(this.getNotesElement());
+    questionAnswerEClass.getESuperTypes().add(this.getRTCElement());
     fibEClass.getESuperTypes().add(this.getNotesElement());
+    fibEClass.getESuperTypes().add(this.getRTCElement());
     definitionEClass.getESuperTypes().add(this.getNotesElement());
+    definitionEClass.getESuperTypes().add(this.getRTCElement());
     characterEClass.getESuperTypes().add(this.getNotesElement());
+    characterEClass.getESuperTypes().add(this.getRTCElement());
     teacherNoteEClass.getESuperTypes().add(this.getNotesElement());
+    teacherNoteEClass.getESuperTypes().add(this.getRTCElement());
     matchingEClass.getESuperTypes().add(this.getNotesElement());
+    matchingEClass.getESuperTypes().add(this.getRTCElement());
     eventEClass.getESuperTypes().add(this.getNotesElement());
+    eventEClass.getESuperTypes().add(this.getRTCElement());
     trueFalseEClass.getESuperTypes().add(this.getNotesElement());
+    trueFalseEClass.getESuperTypes().add(this.getRTCElement());
     chemEquationEClass.getESuperTypes().add(this.getNotesElement());
+    chemEquationEClass.getESuperTypes().add(this.getRTCElement());
     chemCompoundEClass.getESuperTypes().add(this.getNotesElement());
+    chemCompoundEClass.getESuperTypes().add(this.getRTCElement());
     spellbeeEClass.getESuperTypes().add(this.getNotesElement());
+    spellbeeEClass.getESuperTypes().add(this.getRTCElement());
     imageLabelEClass.getESuperTypes().add(this.getNotesElement());
+    imageLabelEClass.getESuperTypes().add(this.getRTCElement());
     equationEClass.getESuperTypes().add(this.getNotesElement());
+    equationEClass.getESuperTypes().add(this.getRTCElement());
     refToContextEClass.getESuperTypes().add(this.getNotesElement());
     multiChoiceEClass.getESuperTypes().add(this.getNotesElement());
+    multiChoiceEClass.getESuperTypes().add(this.getRTCElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(joveNotesEClass, JoveNotes.class, "JoveNotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1615,38 +1980,50 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEReference(getChapterDetails_ScriptBody(), this.getScriptBody(), null, "scriptBody", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(notesElementEClass, NotesElement.class, "NotesElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getNotesElement_Script(), this.getScript(), null, "script", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getNotesElement_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, NotesElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(wordMeaningEClass, WordMeaning.class, "WordMeaning", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getWordMeaning_Script(), this.getScript(), null, "script", null, 0, 1, WordMeaning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getWordMeaning_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, WordMeaning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getWordMeaning_Word(), ecorePackage.getEString(), "word", null, 0, 1, WordMeaning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getWordMeaning_Meaning(), ecorePackage.getEString(), "meaning", null, 0, 1, WordMeaning.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(questionAnswerEClass, QuestionAnswer.class, "QuestionAnswer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getQuestionAnswer_Script(), this.getScript(), null, "script", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getQuestionAnswer_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQuestionAnswer_Question(), ecorePackage.getEString(), "question", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getQuestionAnswer_AnswerParts(), ecorePackage.getEString(), "answerParts", null, 0, -1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getQuestionAnswer_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, QuestionAnswer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(fibEClass, com.sandy.xtext.joveNotes.FIB.class, "FIB", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFIB_Script(), this.getScript(), null, "script", null, 0, 1, com.sandy.xtext.joveNotes.FIB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFIB_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, com.sandy.xtext.joveNotes.FIB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFIB_Question(), ecorePackage.getEString(), "question", null, 0, 1, com.sandy.xtext.joveNotes.FIB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFIB_Answers(), ecorePackage.getEString(), "answers", null, 0, -1, com.sandy.xtext.joveNotes.FIB.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(definitionEClass, Definition.class, "Definition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getDefinition_Script(), this.getScript(), null, "script", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDefinition_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDefinition_Term(), ecorePackage.getEString(), "term", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDefinition_Definition(), ecorePackage.getEString(), "definition", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDefinition_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, Definition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(characterEClass, com.sandy.xtext.joveNotes.Character.class, "Character", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCharacter_Script(), this.getScript(), null, "script", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getCharacter_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCharacter_Character(), ecorePackage.getEString(), "character", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getCharacter_Estimate(), ecorePackage.getEString(), "estimate", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getCharacter_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, com.sandy.xtext.joveNotes.Character.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(teacherNoteEClass, TeacherNote.class, "TeacherNote", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTeacherNote_Script(), this.getScript(), null, "script", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTeacherNote_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTeacherNote_Caption(), ecorePackage.getEString(), "caption", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTeacherNote_Note(), ecorePackage.getEString(), "note", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTeacherNote_Cmap(), this.getCMap(), null, "cmap", null, 0, 1, TeacherNote.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(matchingEClass, Matching.class, "Matching", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMatching_Script(), this.getScript(), null, "script", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMatching_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMatching_SkipReverseQuestion(), ecorePackage.getEString(), "skipReverseQuestion", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMatching_Question(), ecorePackage.getEString(), "question", null, 0, 1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMatching_Pairs(), this.getMatchPair(), null, "pairs", null, 0, -1, Matching.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1663,29 +2040,41 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getMatchMCQConfig_NumOptionsPerRow(), ecorePackage.getEInt(), "numOptionsPerRow", null, 0, 1, MatchMCQConfig.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(eventEClass, Event.class, "Event", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEvent_Script(), this.getScript(), null, "script", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEvent_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvent_Event(), ecorePackage.getEString(), "event", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEvent_Time(), ecorePackage.getEString(), "time", null, 0, 1, Event.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(trueFalseEClass, TrueFalse.class, "TrueFalse", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getTrueFalse_Script(), this.getScript(), null, "script", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTrueFalse_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTrueFalse_Statement(), ecorePackage.getEString(), "statement", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTrueFalse_TruthValue(), ecorePackage.getEString(), "truthValue", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTrueFalse_Justification(), ecorePackage.getEString(), "justification", null, 0, 1, TrueFalse.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chemEquationEClass, ChemEquation.class, "ChemEquation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getChemEquation_Script(), this.getScript(), null, "script", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChemEquation_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemEquation_Description(), ecorePackage.getEString(), "description", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemEquation_Reactants(), ecorePackage.getEString(), "reactants", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemEquation_Produces(), ecorePackage.getEString(), "produces", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemEquation_Products(), ecorePackage.getEString(), "products", null, 0, 1, ChemEquation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chemCompoundEClass, ChemCompound.class, "ChemCompound", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getChemCompound_Script(), this.getScript(), null, "script", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChemCompound_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemCompound_Symbol(), ecorePackage.getEString(), "symbol", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemCompound_ChemicalName(), ecorePackage.getEString(), "chemicalName", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChemCompound_CommonName(), ecorePackage.getEString(), "commonName", null, 0, 1, ChemCompound.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(spellbeeEClass, Spellbee.class, "Spellbee", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSpellbee_Script(), this.getScript(), null, "script", null, 0, 1, Spellbee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSpellbee_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Spellbee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getSpellbee_Word(), ecorePackage.getEString(), "word", null, 0, 1, Spellbee.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(imageLabelEClass, ImageLabel.class, "ImageLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getImageLabel_Script(), this.getScript(), null, "script", null, 0, 1, ImageLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getImageLabel_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, ImageLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageLabel_Caption(), ecorePackage.getEString(), "caption", null, 0, 1, ImageLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getImageLabel_ImageName(), ecorePackage.getEString(), "imageName", null, 0, 1, ImageLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getImageLabel_Hotspots(), this.getHotSpot(), null, "hotspots", null, 0, -1, ImageLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1696,6 +2085,8 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getHotSpot_Label(), ecorePackage.getEString(), "label", null, 0, 1, HotSpot.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(equationEClass, Equation.class, "Equation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getEquation_Script(), this.getScript(), null, "script", null, 0, 1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getEquation_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEquation_Equation(), ecorePackage.getEString(), "equation", null, 0, 1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getEquation_Description(), ecorePackage.getEString(), "description", null, 0, 1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getEquation_Symbols(), this.getEqSymbol(), null, "symbols", null, 0, -1, Equation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1705,10 +2096,16 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getEqSymbol_Description(), ecorePackage.getEString(), "description", null, 0, 1, EqSymbol.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(refToContextEClass, RefToContext.class, "RefToContext", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getRefToContext_Script(), this.getScript(), null, "script", null, 0, 1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getRefToContext_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getRefToContext_Context(), ecorePackage.getEString(), "context", null, 0, 1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getRefToContext_NotesElements(), this.getNotesElement(), null, "notesElements", null, 0, -1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getRefToContext_RtcElement(), this.getRTCElement(), null, "rtcElement", null, 0, -1, RefToContext.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(rtcElementEClass, RTCElement.class, "RTCElement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(multiChoiceEClass, MultiChoice.class, "MultiChoice", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiChoice_Script(), this.getScript(), null, "script", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiChoice_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiChoice_Question(), ecorePackage.getEString(), "question", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getMultiChoice_Options(), this.getOption(), null, "options", null, 0, -1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiChoice_NumOptionsToShow(), ecorePackage.getEInt(), "numOptionsToShow", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
