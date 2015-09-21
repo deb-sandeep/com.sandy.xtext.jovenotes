@@ -1251,18 +1251,17 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTrueFalseParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
 		private final RuleCall cChemEquationParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
 		private final RuleCall cChemCompoundParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cSpellbeeParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cImageLabelParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cEquationParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cMultiChoiceParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cImageLabelParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cEquationParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cMultiChoiceParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
 		
 		//RTCElement:
 		//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice;
+		//	ChemEquation | ChemCompound | ImageLabel | Equation | MultiChoice;
 		@Override public ParserRule getRule() { return rule; }
 
 		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice
+		//| ChemCompound | ImageLabel | Equation | MultiChoice
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//WordMeaning
@@ -1298,17 +1297,14 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//ChemCompound
 		public RuleCall getChemCompoundParserRuleCall_10() { return cChemCompoundParserRuleCall_10; }
 
-		//Spellbee
-		public RuleCall getSpellbeeParserRuleCall_11() { return cSpellbeeParserRuleCall_11; }
-
 		//ImageLabel
-		public RuleCall getImageLabelParserRuleCall_12() { return cImageLabelParserRuleCall_12; }
+		public RuleCall getImageLabelParserRuleCall_11() { return cImageLabelParserRuleCall_11; }
 
 		//Equation
-		public RuleCall getEquationParserRuleCall_13() { return cEquationParserRuleCall_13; }
+		public RuleCall getEquationParserRuleCall_12() { return cEquationParserRuleCall_12; }
 
 		//MultiChoice
-		public RuleCall getMultiChoiceParserRuleCall_14() { return cMultiChoiceParserRuleCall_14; }
+		public RuleCall getMultiChoiceParserRuleCall_13() { return cMultiChoiceParserRuleCall_13; }
 	}
 
 	public class MultiChoiceElements extends AbstractParserRuleElementFinder {
@@ -1960,7 +1956,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//RTCElement:
 	//	WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | MultiChoice;
+	//	ChemEquation | ChemCompound | ImageLabel | Equation | MultiChoice;
 	public RTCElementElements getRTCElementAccess() {
 		return pRTCElement;
 	}

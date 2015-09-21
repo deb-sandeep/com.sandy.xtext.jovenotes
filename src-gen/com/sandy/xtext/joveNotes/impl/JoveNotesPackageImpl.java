@@ -1952,7 +1952,6 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     chemCompoundEClass.getESuperTypes().add(this.getNotesElement());
     chemCompoundEClass.getESuperTypes().add(this.getRTCElement());
     spellbeeEClass.getESuperTypes().add(this.getNotesElement());
-    spellbeeEClass.getESuperTypes().add(this.getRTCElement());
     imageLabelEClass.getESuperTypes().add(this.getNotesElement());
     imageLabelEClass.getESuperTypes().add(this.getRTCElement());
     equationEClass.getESuperTypes().add(this.getNotesElement());

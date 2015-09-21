@@ -21,7 +21,7 @@ package com.sandy.xtext.joveNotes;
  * @model
  * @generated
  */
-public interface Spellbee extends NotesElement, RTCElement
+public interface Spellbee extends NotesElement
 {
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.

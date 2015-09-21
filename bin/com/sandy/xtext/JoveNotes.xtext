@@ -176,7 +176,6 @@ RTCElement:
     TrueFalse      |
     ChemEquation   |
     ChemCompound   |
-    Spellbee       |
     ImageLabel     |
     Equation       |
     MultiChoice 

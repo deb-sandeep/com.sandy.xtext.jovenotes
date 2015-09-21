@@ -227,8 +227,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 					sequence_NotesElement_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}
-				else if(context == grammarAccess.getRTCElementRule() ||
-				   context == grammarAccess.getSpellbeeRule()) {
+				else if(context == grammarAccess.getSpellbeeRule()) {
 					sequence_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}

@@ -247,7 +247,6 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Spellbee spellbee = (Spellbee)theEObject;
         T result = caseSpellbee(spellbee);
         if (result == null) result = caseNotesElement(spellbee);
-        if (result == null) result = caseRTCElement(spellbee);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

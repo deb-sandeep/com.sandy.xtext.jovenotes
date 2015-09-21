@@ -125,7 +125,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="chemicalName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="commonName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Spellbee" eSuperTypes="#//NotesElement #//RTCElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Spellbee" eSuperTypes="#//NotesElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="script" eType="#//Script"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="hideFromView" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

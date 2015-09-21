@@ -2426,41 +2426,31 @@ ruleRTCElement returns [EObject current=null]
 
     |
     { 
-        newCompositeNode(grammarAccess.getRTCElementAccess().getSpellbeeParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_11()); 
     }
-    this_Spellbee_11=ruleSpellbee
+    this_ImageLabel_11=ruleImageLabel
     { 
-        $current = $this_Spellbee_11.current; 
+        $current = $this_ImageLabel_11.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getRTCElementAccess().getImageLabelParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_12()); 
     }
-    this_ImageLabel_12=ruleImageLabel
+    this_Equation_12=ruleEquation
     { 
-        $current = $this_ImageLabel_12.current; 
+        $current = $this_Equation_12.current; 
         afterParserOrEnumRuleCall();
     }
 
     |
     { 
-        newCompositeNode(grammarAccess.getRTCElementAccess().getEquationParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_13()); 
     }
-    this_Equation_13=ruleEquation
+    this_MultiChoice_13=ruleMultiChoice
     { 
-        $current = $this_Equation_13.current; 
-        afterParserOrEnumRuleCall();
-    }
-
-    |
-    { 
-        newCompositeNode(grammarAccess.getRTCElementAccess().getMultiChoiceParserRuleCall_14()); 
-    }
-    this_MultiChoice_14=ruleMultiChoice
-    { 
-        $current = $this_MultiChoice_14.current; 
+        $current = $this_MultiChoice_13.current; 
         afterParserOrEnumRuleCall();
     }
 )
