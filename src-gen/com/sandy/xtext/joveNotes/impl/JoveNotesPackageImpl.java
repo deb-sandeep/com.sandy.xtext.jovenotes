@@ -11,6 +11,7 @@ import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
 import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
+import com.sandy.xtext.joveNotes.Exercise;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
 import com.sandy.xtext.joveNotes.JoveNotes;
@@ -228,6 +229,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass exerciseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass optionEClass = null;
 
   /**
@@ -416,7 +424,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_SubjectName()
+  public EAttribute getChapterDetails_ExerciseBank()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(1);
   }
@@ -426,7 +434,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_ChapterNumber()
+  public EAttribute getChapterDetails_SubjectName()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(2);
   }
@@ -436,7 +444,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_SubChapterNumber()
+  public EAttribute getChapterDetails_ChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(3);
   }
@@ -446,7 +454,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_ChapterName()
+  public EAttribute getChapterDetails_SubChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(4);
   }
@@ -456,9 +464,19 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getChapterDetails_ChapterName()
+  {
+    return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getChapterDetails_ScriptBody()
   {
-    return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(5);
+    return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1576,6 +1594,76 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getExercise()
+  {
+    return exerciseEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getExercise_Script()
+  {
+    return (EReference)exerciseEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExercise_HideFromView()
+  {
+    return (EAttribute)exerciseEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExercise_Marks()
+  {
+    return (EAttribute)exerciseEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExercise_Question()
+  {
+    return (EAttribute)exerciseEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExercise_Hints()
+  {
+    return (EAttribute)exerciseEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getExercise_Answer()
+  {
+    return (EAttribute)exerciseEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getOption()
   {
     return optionEClass;
@@ -1742,6 +1830,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     chapterDetailsEClass = createEClass(CHAPTER_DETAILS);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__TEST_PAPER);
+    createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__EXERCISE_BANK);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__SUBJECT_NAME);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NUMBER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__SUB_CHAPTER_NUMBER);
@@ -1881,6 +1970,14 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__NUM_OPTIONS_PER_ROW);
     createEAttribute(multiChoiceEClass, MULTI_CHOICE__EXPLANATION);
 
+    exerciseEClass = createEClass(EXERCISE);
+    createEReference(exerciseEClass, EXERCISE__SCRIPT);
+    createEAttribute(exerciseEClass, EXERCISE__HIDE_FROM_VIEW);
+    createEAttribute(exerciseEClass, EXERCISE__MARKS);
+    createEAttribute(exerciseEClass, EXERCISE__QUESTION);
+    createEAttribute(exerciseEClass, EXERCISE__HINTS);
+    createEAttribute(exerciseEClass, EXERCISE__ANSWER);
+
     optionEClass = createEClass(OPTION);
     createEAttribute(optionEClass, OPTION__OPTION_VALUE);
     createEAttribute(optionEClass, OPTION__CORRECT_OPTION);
@@ -1959,6 +2056,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     refToContextEClass.getESuperTypes().add(this.getNotesElement());
     multiChoiceEClass.getESuperTypes().add(this.getNotesElement());
     multiChoiceEClass.getESuperTypes().add(this.getRTCElement());
+    exerciseEClass.getESuperTypes().add(this.getNotesElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(joveNotesEClass, JoveNotes.class, "JoveNotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1972,6 +2070,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(chapterDetailsEClass, ChapterDetails.class, "ChapterDetails", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getChapterDetails_TestPaper(), ecorePackage.getEString(), "testPaper", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChapterDetails_ExerciseBank(), ecorePackage.getEString(), "exerciseBank", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_SubjectName(), ecorePackage.getEString(), "subjectName", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_ChapterNumber(), ecorePackage.getEInt(), "chapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_SubChapterNumber(), ecorePackage.getEInt(), "subChapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2110,6 +2209,14 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getMultiChoice_NumOptionsToShow(), ecorePackage.getEInt(), "numOptionsToShow", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiChoice_NumOptionsPerRow(), ecorePackage.getEInt(), "numOptionsPerRow", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getMultiChoice_Explanation(), ecorePackage.getEString(), "explanation", null, 0, 1, MultiChoice.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(exerciseEClass, Exercise.class, "Exercise", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getExercise_Script(), this.getScript(), null, "script", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExercise_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExercise_Marks(), ecorePackage.getEInt(), "marks", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExercise_Question(), ecorePackage.getEString(), "question", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExercise_Hints(), ecorePackage.getEString(), "hints", null, 0, -1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getExercise_Answer(), ecorePackage.getEString(), "answer", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOption_OptionValue(), ecorePackage.getEString(), "optionValue", null, 0, 1, Option.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

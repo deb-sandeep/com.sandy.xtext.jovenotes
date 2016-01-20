@@ -14,6 +14,7 @@ import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
 import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
+import com.sandy.xtext.joveNotes.Exercise;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
@@ -130,6 +131,16 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Event_NotesElement(context, (Event) semanticObject); 
+					return; 
+				}
+				else break;
+			case JoveNotesPackage.EXERCISE:
+				if(context == grammarAccess.getExerciseRule()) {
+					sequence_Exercise(context, (Exercise) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getNotesElementRule()) {
+					sequence_Exercise_NotesElement(context, (Exercise) semanticObject); 
 					return; 
 				}
 				else break;
@@ -289,6 +300,7 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 * Constraint:
 	 *     (
 	 *         testPaper='@test_paper'? 
+	 *         exerciseBank='@exercise_bank'? 
 	 *         subjectName=STRING 
 	 *         chapterNumber=INT 
 	 *         subChapterNumber=INT 
@@ -457,6 +469,31 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     (hideFromView='hide'? event=STRING time=STRING script=Script?)
 	 */
 	protected void sequence_Event_NotesElement(EObject context, Event semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (hideFromView='hide'? marks=INT question=STRING hints+=STRING* answer=STRING)
+	 */
+	protected void sequence_Exercise(EObject context, Exercise semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         hideFromView='hide'? 
+	 *         marks=INT 
+	 *         question=STRING 
+	 *         hints+=STRING* 
+	 *         answer=STRING 
+	 *         script=Script?
+	 *     )
+	 */
+	protected void sequence_Exercise_NotesElement(EObject context, Exercise semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

@@ -11,6 +11,7 @@ import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
 import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
+import com.sandy.xtext.joveNotes.Exercise;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
@@ -303,6 +304,14 @@ public class JoveNotesSwitch<T> extends Switch<T>
         T result = caseMultiChoice(multiChoice);
         if (result == null) result = caseNotesElement(multiChoice);
         if (result == null) result = caseRTCElement(multiChoice);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.EXERCISE:
+      {
+        Exercise exercise = (Exercise)theEObject;
+        T result = caseExercise(exercise);
+        if (result == null) result = caseNotesElement(exercise);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -741,6 +750,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseMultiChoice(MultiChoice object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Exercise</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Exercise</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExercise(Exercise object)
   {
     return null;
   }

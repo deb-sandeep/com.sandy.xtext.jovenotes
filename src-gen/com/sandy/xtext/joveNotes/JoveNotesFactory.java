@@ -248,6 +248,15 @@ public interface JoveNotesFactory extends EFactory
   MultiChoice createMultiChoice();
 
   /**
+   * Returns a new object of class '<em>Exercise</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Exercise</em>'.
+   * @generated
+   */
+  Exercise createExercise();
+
+  /**
    * Returns a new object of class '<em>Option</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

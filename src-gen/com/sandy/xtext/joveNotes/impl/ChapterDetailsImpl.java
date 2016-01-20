@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getTestPaper <em>Test Paper</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubjectName <em>Subject Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterNumber <em>Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubChapterNumber <em>Sub Chapter Number</em>}</li>
@@ -54,6 +55,26 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * @ordered
    */
   protected String testPaper = TEST_PAPER_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getExerciseBank() <em>Exercise Bank</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExerciseBank()
+   * @generated
+   * @ordered
+   */
+  protected static final String EXERCISE_BANK_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getExerciseBank() <em>Exercise Bank</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getExerciseBank()
+   * @generated
+   * @ordered
+   */
+  protected String exerciseBank = EXERCISE_BANK_EDEFAULT;
 
   /**
    * The default value of the '{@link #getSubjectName() <em>Subject Name</em>}' attribute.
@@ -187,6 +208,29 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     testPaper = newTestPaper;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER, oldTestPaper, testPaper));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getExerciseBank()
+  {
+    return exerciseBank;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setExerciseBank(String newExerciseBank)
+  {
+    String oldExerciseBank = exerciseBank;
+    exerciseBank = newExerciseBank;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK, oldExerciseBank, exerciseBank));
   }
 
   /**
@@ -357,6 +401,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     {
       case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
         return getTestPaper();
+      case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
+        return getExerciseBank();
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
         return getSubjectName();
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NUMBER:
@@ -383,6 +429,9 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     {
       case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
         setTestPaper((String)newValue);
+        return;
+      case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
+        setExerciseBank((String)newValue);
         return;
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
         setSubjectName((String)newValue);
@@ -416,6 +465,9 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
       case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
         setTestPaper(TEST_PAPER_EDEFAULT);
         return;
+      case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
+        setExerciseBank(EXERCISE_BANK_EDEFAULT);
+        return;
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
         setSubjectName(SUBJECT_NAME_EDEFAULT);
         return;
@@ -447,6 +499,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     {
       case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
         return TEST_PAPER_EDEFAULT == null ? testPaper != null : !TEST_PAPER_EDEFAULT.equals(testPaper);
+      case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
+        return EXERCISE_BANK_EDEFAULT == null ? exerciseBank != null : !EXERCISE_BANK_EDEFAULT.equals(exerciseBank);
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
         return SUBJECT_NAME_EDEFAULT == null ? subjectName != null : !SUBJECT_NAME_EDEFAULT.equals(subjectName);
       case JoveNotesPackage.CHAPTER_DETAILS__CHAPTER_NUMBER:
@@ -474,6 +528,8 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (testPaper: ");
     result.append(testPaper);
+    result.append(", exerciseBank: ");
+    result.append(exerciseBank);
     result.append(", subjectName: ");
     result.append(subjectName);
     result.append(", chapterNumber: ");

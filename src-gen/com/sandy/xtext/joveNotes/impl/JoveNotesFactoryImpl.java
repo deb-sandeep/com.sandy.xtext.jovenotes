@@ -11,6 +11,7 @@ import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
 import com.sandy.xtext.joveNotes.EvalVar;
 import com.sandy.xtext.joveNotes.Event;
+import com.sandy.xtext.joveNotes.Exercise;
 import com.sandy.xtext.joveNotes.FIB;
 import com.sandy.xtext.joveNotes.HotSpot;
 import com.sandy.xtext.joveNotes.ImageLabel;
@@ -119,6 +120,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.REF_TO_CONTEXT: return createRefToContext();
       case JoveNotesPackage.RTC_ELEMENT: return createRTCElement();
       case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
+      case JoveNotesPackage.EXERCISE: return createExercise();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       case JoveNotesPackage.SCRIPT: return createScript();
@@ -402,6 +404,17 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     MultiChoiceImpl multiChoice = new MultiChoiceImpl();
     return multiChoice;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Exercise createExercise()
+  {
+    ExerciseImpl exercise = new ExerciseImpl();
+    return exercise;
   }
 
   /**

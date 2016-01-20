@@ -15,7 +15,8 @@ ProcessingHints:
 ;
 
 ChapterDetails:
-    ( testPaper = '@test_paper' )?
+    ( testPaper    = '@test_paper' )?
+    ( exerciseBank = '@exercise_bank' )?
     'subject'       subjectName   = STRING
     'chapterNumber' chapterNumber = INT '.' subChapterNumber = INT
     'chapterName'   chapterName   = STRING
@@ -38,7 +39,8 @@ NotesElement: (
     ImageLabel     |
     Equation       |
     RefToContext   |
-    MultiChoice )
+    MultiChoice    |
+    Exercise )
     ( script = Script )?
 ;
 
@@ -190,6 +192,14 @@ MultiChoice:
         ( '@numOptionsPerRow' numOptionsPerRow = INT )?
         ( '@explanation' explanation = STRING )?
     '}'
+;
+
+Exercise:
+    '@exercise' ( hideFromView = 'hide' )?
+                ( 'marks' '=' marks = INT )
+                ( question = STRING )
+                ( 'hints' '{' ( hints += STRING )+ '}' )?
+                ( 'answer' answer = STRING )
 ;
 
 Option:

@@ -159,13 +159,22 @@ public interface JoveNotesPackage extends EPackage
   int CHAPTER_DETAILS__TEST_PAPER = 0;
 
   /**
+   * The feature id for the '<em><b>Exercise Bank</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CHAPTER_DETAILS__EXERCISE_BANK = 1;
+
+  /**
    * The feature id for the '<em><b>Subject Name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SUBJECT_NAME = 1;
+  int CHAPTER_DETAILS__SUBJECT_NAME = 2;
 
   /**
    * The feature id for the '<em><b>Chapter Number</b></em>' attribute.
@@ -174,7 +183,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__CHAPTER_NUMBER = 2;
+  int CHAPTER_DETAILS__CHAPTER_NUMBER = 3;
 
   /**
    * The feature id for the '<em><b>Sub Chapter Number</b></em>' attribute.
@@ -183,7 +192,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SUB_CHAPTER_NUMBER = 3;
+  int CHAPTER_DETAILS__SUB_CHAPTER_NUMBER = 4;
 
   /**
    * The feature id for the '<em><b>Chapter Name</b></em>' attribute.
@@ -192,7 +201,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__CHAPTER_NAME = 4;
+  int CHAPTER_DETAILS__CHAPTER_NAME = 5;
 
   /**
    * The feature id for the '<em><b>Script Body</b></em>' containment reference.
@@ -201,7 +210,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SCRIPT_BODY = 5;
+  int CHAPTER_DETAILS__SCRIPT_BODY = 6;
 
   /**
    * The number of structural features of the '<em>Chapter Details</em>' class.
@@ -210,7 +219,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS_FEATURE_COUNT = 6;
+  int CHAPTER_DETAILS_FEATURE_COUNT = 7;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.NotesElementImpl <em>Notes Element</em>}' class.
@@ -1432,6 +1441,79 @@ public interface JoveNotesPackage extends EPackage
   int MULTI_CHOICE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 7;
 
   /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl <em>Exercise</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.ExerciseImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getExercise()
+   * @generated
+   */
+  int EXERCISE = 25;
+
+  /**
+   * The feature id for the '<em><b>Script</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Marks</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__MARKS = NOTES_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Question</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__QUESTION = NOTES_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Hints</b></em>' attribute list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__HINTS = NOTES_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Answer</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE__ANSWER = NOTES_ELEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The number of structural features of the '<em>Exercise</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int EXERCISE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 6;
+
+  /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1439,7 +1521,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getOption()
    * @generated
    */
-  int OPTION = 25;
+  int OPTION = 26;
 
   /**
    * The feature id for the '<em><b>Option Value</b></em>' attribute.
@@ -1476,7 +1558,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCMap()
    * @generated
    */
-  int CMAP = 26;
+  int CMAP = 27;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1504,7 +1586,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScript()
    * @generated
    */
-  int SCRIPT = 27;
+  int SCRIPT = 28;
 
   /**
    * The feature id for the '<em><b>Eval Vars</b></em>' containment reference list.
@@ -1541,7 +1623,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
    * @generated
    */
-  int EVAL_VAR = 28;
+  int EVAL_VAR = 29;
 
   /**
    * The feature id for the '<em><b>Var Name</b></em>' attribute.
@@ -1578,7 +1660,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
    * @generated
    */
-  int SCRIPT_BODY = 29;
+  int SCRIPT_BODY = 30;
 
   /**
    * The feature id for the '<em><b>Script</b></em>' attribute.
@@ -1694,6 +1776,17 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EAttribute getChapterDetails_TestPaper();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Exercise Bank</em>'.
+   * @see com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank()
+   * @see #getChapterDetails()
+   * @generated
+   */
+  EAttribute getChapterDetails_ExerciseBank();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubjectName <em>Subject Name</em>}'.
@@ -2950,6 +3043,82 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getMultiChoice_Explanation();
 
   /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.Exercise <em>Exercise</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Exercise</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise
+   * @generated
+   */
+  EClass getExercise();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.Exercise#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getScript()
+   * @see #getExercise()
+   * @generated
+   */
+  EReference getExercise_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Exercise#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getHideFromView()
+   * @see #getExercise()
+   * @generated
+   */
+  EAttribute getExercise_HideFromView();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Exercise#getMarks <em>Marks</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Marks</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getMarks()
+   * @see #getExercise()
+   * @generated
+   */
+  EAttribute getExercise_Marks();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Exercise#getQuestion <em>Question</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Question</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getQuestion()
+   * @see #getExercise()
+   * @generated
+   */
+  EAttribute getExercise_Question();
+
+  /**
+   * Returns the meta object for the attribute list '{@link com.sandy.xtext.joveNotes.Exercise#getHints <em>Hints</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute list '<em>Hints</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getHints()
+   * @see #getExercise()
+   * @generated
+   */
+  EAttribute getExercise_Hints();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.Exercise#getAnswer <em>Answer</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Answer</em>'.
+   * @see com.sandy.xtext.joveNotes.Exercise#getAnswer()
+   * @see #getExercise()
+   * @generated
+   */
+  EAttribute getExercise_Answer();
+
+  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.Option <em>Option</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3187,6 +3356,14 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute CHAPTER_DETAILS__TEST_PAPER = eINSTANCE.getChapterDetails_TestPaper();
+
+    /**
+     * The meta object literal for the '<em><b>Exercise Bank</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CHAPTER_DETAILS__EXERCISE_BANK = eINSTANCE.getChapterDetails_ExerciseBank();
 
     /**
      * The meta object literal for the '<em><b>Subject Name</b></em>' attribute feature.
@@ -4159,6 +4336,64 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute MULTI_CHOICE__EXPLANATION = eINSTANCE.getMultiChoice_Explanation();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl <em>Exercise</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.ExerciseImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getExercise()
+     * @generated
+     */
+    EClass EXERCISE = eINSTANCE.getExercise();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference EXERCISE__SCRIPT = eINSTANCE.getExercise_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXERCISE__HIDE_FROM_VIEW = eINSTANCE.getExercise_HideFromView();
+
+    /**
+     * The meta object literal for the '<em><b>Marks</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXERCISE__MARKS = eINSTANCE.getExercise_Marks();
+
+    /**
+     * The meta object literal for the '<em><b>Question</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXERCISE__QUESTION = eINSTANCE.getExercise_Question();
+
+    /**
+     * The meta object literal for the '<em><b>Hints</b></em>' attribute list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXERCISE__HINTS = eINSTANCE.getExercise_Hints();
+
+    /**
+     * The meta object literal for the '<em><b>Answer</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute EXERCISE__ANSWER = eINSTANCE.getExercise_Answer();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.

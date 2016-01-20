@@ -91,28 +91,30 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cTestPaperAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cTestPaperTest_paperKeyword_0_0 = (Keyword)cTestPaperAssignment_0.eContents().get(0);
-		private final Keyword cSubjectKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSubjectNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSubjectNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cSubjectNameAssignment_2.eContents().get(0);
-		private final Keyword cChapterNumberKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cChapterNumberAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cChapterNumberINTTerminalRuleCall_4_0 = (RuleCall)cChapterNumberAssignment_4.eContents().get(0);
-		private final Keyword cFullStopKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cSubChapterNumberAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cSubChapterNumberINTTerminalRuleCall_6_0 = (RuleCall)cSubChapterNumberAssignment_6.eContents().get(0);
-		private final Keyword cChapterNameKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cChapterNameAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cChapterNameSTRINGTerminalRuleCall_8_0 = (RuleCall)cChapterNameAssignment_8.eContents().get(0);
-		private final Assignment cScriptBodyAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cScriptBodyScriptBodyParserRuleCall_9_0 = (RuleCall)cScriptBodyAssignment_9.eContents().get(0);
+		private final Assignment cExerciseBankAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cExerciseBankExercise_bankKeyword_1_0 = (Keyword)cExerciseBankAssignment_1.eContents().get(0);
+		private final Keyword cSubjectKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSubjectNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSubjectNameSTRINGTerminalRuleCall_3_0 = (RuleCall)cSubjectNameAssignment_3.eContents().get(0);
+		private final Keyword cChapterNumberKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cChapterNumberAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cChapterNumberINTTerminalRuleCall_5_0 = (RuleCall)cChapterNumberAssignment_5.eContents().get(0);
+		private final Keyword cFullStopKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cSubChapterNumberAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cSubChapterNumberINTTerminalRuleCall_7_0 = (RuleCall)cSubChapterNumberAssignment_7.eContents().get(0);
+		private final Keyword cChapterNameKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cChapterNameAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cChapterNameSTRINGTerminalRuleCall_9_0 = (RuleCall)cChapterNameAssignment_9.eContents().get(0);
+		private final Assignment cScriptBodyAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cScriptBodyScriptBodyParserRuleCall_10_0 = (RuleCall)cScriptBodyAssignment_10.eContents().get(0);
 		
 		//ChapterDetails:
-		//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
+		//	testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
+		//	"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-		//"chapterName" chapterName=STRING scriptBody=ScriptBody?
+		//testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
+		//"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?
 		public Group getGroup() { return cGroup; }
 
 		//testPaper="@test_paper"?
@@ -121,47 +123,53 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//"@test_paper"
 		public Keyword getTestPaperTest_paperKeyword_0_0() { return cTestPaperTest_paperKeyword_0_0; }
 
+		//exerciseBank="@exercise_bank"?
+		public Assignment getExerciseBankAssignment_1() { return cExerciseBankAssignment_1; }
+
+		//"@exercise_bank"
+		public Keyword getExerciseBankExercise_bankKeyword_1_0() { return cExerciseBankExercise_bankKeyword_1_0; }
+
 		//"subject"
-		public Keyword getSubjectKeyword_1() { return cSubjectKeyword_1; }
+		public Keyword getSubjectKeyword_2() { return cSubjectKeyword_2; }
 
 		//subjectName=STRING
-		public Assignment getSubjectNameAssignment_2() { return cSubjectNameAssignment_2; }
+		public Assignment getSubjectNameAssignment_3() { return cSubjectNameAssignment_3; }
 
 		//STRING
-		public RuleCall getSubjectNameSTRINGTerminalRuleCall_2_0() { return cSubjectNameSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getSubjectNameSTRINGTerminalRuleCall_3_0() { return cSubjectNameSTRINGTerminalRuleCall_3_0; }
 
 		//"chapterNumber"
-		public Keyword getChapterNumberKeyword_3() { return cChapterNumberKeyword_3; }
+		public Keyword getChapterNumberKeyword_4() { return cChapterNumberKeyword_4; }
 
 		//chapterNumber=INT
-		public Assignment getChapterNumberAssignment_4() { return cChapterNumberAssignment_4; }
+		public Assignment getChapterNumberAssignment_5() { return cChapterNumberAssignment_5; }
 
 		//INT
-		public RuleCall getChapterNumberINTTerminalRuleCall_4_0() { return cChapterNumberINTTerminalRuleCall_4_0; }
+		public RuleCall getChapterNumberINTTerminalRuleCall_5_0() { return cChapterNumberINTTerminalRuleCall_5_0; }
 
 		//"."
-		public Keyword getFullStopKeyword_5() { return cFullStopKeyword_5; }
+		public Keyword getFullStopKeyword_6() { return cFullStopKeyword_6; }
 
 		//subChapterNumber=INT
-		public Assignment getSubChapterNumberAssignment_6() { return cSubChapterNumberAssignment_6; }
+		public Assignment getSubChapterNumberAssignment_7() { return cSubChapterNumberAssignment_7; }
 
 		//INT
-		public RuleCall getSubChapterNumberINTTerminalRuleCall_6_0() { return cSubChapterNumberINTTerminalRuleCall_6_0; }
+		public RuleCall getSubChapterNumberINTTerminalRuleCall_7_0() { return cSubChapterNumberINTTerminalRuleCall_7_0; }
 
 		//"chapterName"
-		public Keyword getChapterNameKeyword_7() { return cChapterNameKeyword_7; }
+		public Keyword getChapterNameKeyword_8() { return cChapterNameKeyword_8; }
 
 		//chapterName=STRING
-		public Assignment getChapterNameAssignment_8() { return cChapterNameAssignment_8; }
+		public Assignment getChapterNameAssignment_9() { return cChapterNameAssignment_9; }
 
 		//STRING
-		public RuleCall getChapterNameSTRINGTerminalRuleCall_8_0() { return cChapterNameSTRINGTerminalRuleCall_8_0; }
+		public RuleCall getChapterNameSTRINGTerminalRuleCall_9_0() { return cChapterNameSTRINGTerminalRuleCall_9_0; }
 
 		//scriptBody=ScriptBody?
-		public Assignment getScriptBodyAssignment_9() { return cScriptBodyAssignment_9; }
+		public Assignment getScriptBodyAssignment_10() { return cScriptBodyAssignment_10; }
 
 		//ScriptBody
-		public RuleCall getScriptBodyScriptBodyParserRuleCall_9_0() { return cScriptBodyScriptBodyParserRuleCall_9_0; }
+		public RuleCall getScriptBodyScriptBodyParserRuleCall_10_0() { return cScriptBodyScriptBodyParserRuleCall_10_0; }
 	}
 
 	public class NotesElementElements extends AbstractParserRuleElementFinder {
@@ -184,20 +192,22 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cEquationParserRuleCall_0_13 = (RuleCall)cAlternatives_0.eContents().get(13);
 		private final RuleCall cRefToContextParserRuleCall_0_14 = (RuleCall)cAlternatives_0.eContents().get(14);
 		private final RuleCall cMultiChoiceParserRuleCall_0_15 = (RuleCall)cAlternatives_0.eContents().get(15);
+		private final RuleCall cExerciseParserRuleCall_0_16 = (RuleCall)cAlternatives_0.eContents().get(16);
 		private final Assignment cScriptAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cScriptScriptParserRuleCall_1_0 = (RuleCall)cScriptAssignment_1.eContents().get(0);
 		
 		//NotesElement:
 		//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?;
+		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+		//	script=Script?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise) script=Script?
 		public Group getGroup() { return cGroup; }
 
 		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//WordMeaning
@@ -247,6 +257,9 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//MultiChoice
 		public RuleCall getMultiChoiceParserRuleCall_0_15() { return cMultiChoiceParserRuleCall_0_15; }
+
+		//Exercise
+		public RuleCall getExerciseParserRuleCall_0_16() { return cExerciseParserRuleCall_0_16; }
 
 		//script=Script?
 		public Assignment getScriptAssignment_1() { return cScriptAssignment_1; }
@@ -1435,6 +1448,100 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
+	public class ExerciseElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exercise");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cExerciseKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cMarksKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cMarksAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cMarksINTTerminalRuleCall_2_2_0 = (RuleCall)cMarksAssignment_2_2.eContents().get(0);
+		private final Assignment cQuestionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cQuestionSTRINGTerminalRuleCall_3_0 = (RuleCall)cQuestionAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cHintsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cHintsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cHintsSTRINGTerminalRuleCall_4_2_0 = (RuleCall)cHintsAssignment_4_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cAnswerKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cAnswerAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cAnswerSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cAnswerAssignment_5_1.eContents().get(0);
+		
+		//Exercise:
+		//	"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
+		//	answer=STRING);
+		@Override public ParserRule getRule() { return rule; }
+
+		//"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
+		//answer=STRING)
+		public Group getGroup() { return cGroup; }
+
+		//"@exercise"
+		public Keyword getExerciseKeyword_0() { return cExerciseKeyword_0; }
+
+		//hideFromView="hide"?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//"hide"
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
+		//"marks" "=" marks=INT
+		public Group getGroup_2() { return cGroup_2; }
+
+		//"marks"
+		public Keyword getMarksKeyword_2_0() { return cMarksKeyword_2_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_2_1() { return cEqualsSignKeyword_2_1; }
+
+		//marks=INT
+		public Assignment getMarksAssignment_2_2() { return cMarksAssignment_2_2; }
+
+		//INT
+		public RuleCall getMarksINTTerminalRuleCall_2_2_0() { return cMarksINTTerminalRuleCall_2_2_0; }
+
+		//question=STRING
+		public Assignment getQuestionAssignment_3() { return cQuestionAssignment_3; }
+
+		//STRING
+		public RuleCall getQuestionSTRINGTerminalRuleCall_3_0() { return cQuestionSTRINGTerminalRuleCall_3_0; }
+
+		//("hints" "{" hints+=STRING+ "}")?
+		public Group getGroup_4() { return cGroup_4; }
+
+		//"hints"
+		public Keyword getHintsKeyword_4_0() { return cHintsKeyword_4_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
+
+		//hints+=STRING+
+		public Assignment getHintsAssignment_4_2() { return cHintsAssignment_4_2; }
+
+		//STRING
+		public RuleCall getHintsSTRINGTerminalRuleCall_4_2_0() { return cHintsSTRINGTerminalRuleCall_4_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4_3() { return cRightCurlyBracketKeyword_4_3; }
+
+		//"answer" answer=STRING
+		public Group getGroup_5() { return cGroup_5; }
+
+		//"answer"
+		public Keyword getAnswerKeyword_5_0() { return cAnswerKeyword_5_0; }
+
+		//answer=STRING
+		public Assignment getAnswerAssignment_5_1() { return cAnswerAssignment_5_1; }
+
+		//STRING
+		public RuleCall getAnswerSTRINGTerminalRuleCall_5_1_0() { return cAnswerSTRINGTerminalRuleCall_5_1_0; }
+	}
+
 	public class OptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Option");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1641,6 +1748,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final RefToContextElements pRefToContext;
 	private final RTCElementElements pRTCElement;
 	private final MultiChoiceElements pMultiChoice;
+	private final ExerciseElements pExercise;
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
 	private final ScriptElements pScript;
@@ -1682,6 +1790,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRefToContext = new RefToContextElements();
 		this.pRTCElement = new RTCElementElements();
 		this.pMultiChoice = new MultiChoiceElements();
+		this.pExercise = new ExerciseElements();
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
 		this.pScript = new ScriptElements();
@@ -1738,8 +1847,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChapterDetails:
-	//	testPaper="@test_paper"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
-	//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
+	//	testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
+	//	"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?;
 	public ChapterDetailsElements getChapterDetailsAccess() {
 		return pChapterDetails;
 	}
@@ -1750,7 +1859,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//NotesElement:
 	//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice) script=Script?;
+	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+	//	script=Script?;
 	public NotesElementElements getNotesElementAccess() {
 		return pNotesElement;
 	}
@@ -1975,6 +2085,17 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getMultiChoiceRule() {
 		return getMultiChoiceAccess().getRule();
+	}
+
+	//Exercise:
+	//	"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
+	//	answer=STRING);
+	public ExerciseElements getExerciseAccess() {
+		return pExercise;
+	}
+	
+	public ParserRule getExerciseRule() {
+		return getExerciseAccess().getRule();
 	}
 
 	//Option:

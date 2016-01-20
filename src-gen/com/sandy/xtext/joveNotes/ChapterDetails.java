@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getTestPaper <em>Test Paper</em>}</li>
+ *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubjectName <em>Subject Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterNumber <em>Chapter Number</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubChapterNumber <em>Sub Chapter Number</em>}</li>
@@ -52,6 +53,32 @@ public interface ChapterDetails extends EObject
    * @generated
    */
   void setTestPaper(String value);
+
+  /**
+   * Returns the value of the '<em><b>Exercise Bank</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Exercise Bank</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Exercise Bank</em>' attribute.
+   * @see #setExerciseBank(String)
+   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails_ExerciseBank()
+   * @model
+   * @generated
+   */
+  String getExerciseBank();
+
+  /**
+   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Exercise Bank</em>' attribute.
+   * @see #getExerciseBank()
+   * @generated
+   */
+  void setExerciseBank(String value);
 
   /**
    * Returns the value of the '<em><b>Subject Name</b></em>' attribute.

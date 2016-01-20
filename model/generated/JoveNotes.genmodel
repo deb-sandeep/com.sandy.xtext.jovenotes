@@ -18,6 +18,7 @@
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//ChapterDetails">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/testPaper"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/exerciseBank"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subjectName"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterNumber"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subChapterNumber"/>
@@ -154,6 +155,14 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsToShow"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsPerRow"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/explanation"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Exercise">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Exercise/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/marks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/hints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/answer"/>
     </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Option">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/optionValue"/>
