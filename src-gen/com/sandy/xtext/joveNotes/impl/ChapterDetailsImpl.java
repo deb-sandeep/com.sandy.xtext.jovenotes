@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getTestPaper <em>Test Paper</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubjectName <em>Subject Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterNumber <em>Chapter Number</em>}</li>
@@ -36,26 +35,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements ChapterDetails
 {
-  /**
-   * The default value of the '{@link #getTestPaper() <em>Test Paper</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTestPaper()
-   * @generated
-   * @ordered
-   */
-  protected static final String TEST_PAPER_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getTestPaper() <em>Test Paper</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getTestPaper()
-   * @generated
-   * @ordered
-   */
-  protected String testPaper = TEST_PAPER_EDEFAULT;
-
   /**
    * The default value of the '{@link #getExerciseBank() <em>Exercise Bank</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -185,29 +164,6 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   protected EClass eStaticClass()
   {
     return JoveNotesPackage.Literals.CHAPTER_DETAILS;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getTestPaper()
-  {
-    return testPaper;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setTestPaper(String newTestPaper)
-  {
-    String oldTestPaper = testPaper;
-    testPaper = newTestPaper;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER, oldTestPaper, testPaper));
   }
 
   /**
@@ -399,8 +355,6 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
-        return getTestPaper();
       case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
         return getExerciseBank();
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
@@ -427,9 +381,6 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
-        setTestPaper((String)newValue);
-        return;
       case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
         setExerciseBank((String)newValue);
         return;
@@ -462,9 +413,6 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
-        setTestPaper(TEST_PAPER_EDEFAULT);
-        return;
       case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
         setExerciseBank(EXERCISE_BANK_EDEFAULT);
         return;
@@ -497,8 +445,6 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case JoveNotesPackage.CHAPTER_DETAILS__TEST_PAPER:
-        return TEST_PAPER_EDEFAULT == null ? testPaper != null : !TEST_PAPER_EDEFAULT.equals(testPaper);
       case JoveNotesPackage.CHAPTER_DETAILS__EXERCISE_BANK:
         return EXERCISE_BANK_EDEFAULT == null ? exerciseBank != null : !EXERCISE_BANK_EDEFAULT.equals(exerciseBank);
       case JoveNotesPackage.CHAPTER_DETAILS__SUBJECT_NAME:
@@ -526,9 +472,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (testPaper: ");
-    result.append(testPaper);
-    result.append(", exerciseBank: ");
+    result.append(" (exerciseBank: ");
     result.append(exerciseBank);
     result.append(", subjectName: ");
     result.append(subjectName);

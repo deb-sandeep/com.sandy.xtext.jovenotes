@@ -150,22 +150,13 @@ public interface JoveNotesPackage extends EPackage
   int CHAPTER_DETAILS = 2;
 
   /**
-   * The feature id for the '<em><b>Test Paper</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int CHAPTER_DETAILS__TEST_PAPER = 0;
-
-  /**
    * The feature id for the '<em><b>Exercise Bank</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__EXERCISE_BANK = 1;
+  int CHAPTER_DETAILS__EXERCISE_BANK = 0;
 
   /**
    * The feature id for the '<em><b>Subject Name</b></em>' attribute.
@@ -174,7 +165,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SUBJECT_NAME = 2;
+  int CHAPTER_DETAILS__SUBJECT_NAME = 1;
 
   /**
    * The feature id for the '<em><b>Chapter Number</b></em>' attribute.
@@ -183,7 +174,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__CHAPTER_NUMBER = 3;
+  int CHAPTER_DETAILS__CHAPTER_NUMBER = 2;
 
   /**
    * The feature id for the '<em><b>Sub Chapter Number</b></em>' attribute.
@@ -192,7 +183,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SUB_CHAPTER_NUMBER = 4;
+  int CHAPTER_DETAILS__SUB_CHAPTER_NUMBER = 3;
 
   /**
    * The feature id for the '<em><b>Chapter Name</b></em>' attribute.
@@ -201,7 +192,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__CHAPTER_NAME = 5;
+  int CHAPTER_DETAILS__CHAPTER_NAME = 4;
 
   /**
    * The feature id for the '<em><b>Script Body</b></em>' containment reference.
@@ -210,7 +201,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS__SCRIPT_BODY = 6;
+  int CHAPTER_DETAILS__SCRIPT_BODY = 5;
 
   /**
    * The number of structural features of the '<em>Chapter Details</em>' class.
@@ -219,7 +210,7 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CHAPTER_DETAILS_FEATURE_COUNT = 7;
+  int CHAPTER_DETAILS_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.NotesElementImpl <em>Notes Element</em>}' class.
@@ -1765,17 +1756,6 @@ public interface JoveNotesPackage extends EPackage
    * @generated
    */
   EClass getChapterDetails();
-
-  /**
-   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChapterDetails#getTestPaper <em>Test Paper</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Test Paper</em>'.
-   * @see com.sandy.xtext.joveNotes.ChapterDetails#getTestPaper()
-   * @see #getChapterDetails()
-   * @generated
-   */
-  EAttribute getChapterDetails_TestPaper();
 
   /**
    * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}'.
@@ -3348,14 +3328,6 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EClass CHAPTER_DETAILS = eINSTANCE.getChapterDetails();
-
-    /**
-     * The meta object literal for the '<em><b>Test Paper</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute CHAPTER_DETAILS__TEST_PAPER = eINSTANCE.getChapterDetails_TestPaper();
 
     /**
      * The meta object literal for the '<em><b>Exercise Bank</b></em>' attribute feature.

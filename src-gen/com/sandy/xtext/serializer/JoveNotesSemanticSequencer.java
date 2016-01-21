@@ -299,7 +299,6 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	/**
 	 * Constraint:
 	 *     (
-	 *         testPaper='@test_paper'? 
 	 *         exerciseBank='@exercise_bank'? 
 	 *         subjectName=STRING 
 	 *         chapterNumber=INT 

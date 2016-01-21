@@ -89,87 +89,79 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	public class ChapterDetailsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChapterDetails");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTestPaperAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final Keyword cTestPaperTest_paperKeyword_0_0 = (Keyword)cTestPaperAssignment_0.eContents().get(0);
-		private final Assignment cExerciseBankAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final Keyword cExerciseBankExercise_bankKeyword_1_0 = (Keyword)cExerciseBankAssignment_1.eContents().get(0);
-		private final Keyword cSubjectKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSubjectNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSubjectNameSTRINGTerminalRuleCall_3_0 = (RuleCall)cSubjectNameAssignment_3.eContents().get(0);
-		private final Keyword cChapterNumberKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cChapterNumberAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cChapterNumberINTTerminalRuleCall_5_0 = (RuleCall)cChapterNumberAssignment_5.eContents().get(0);
-		private final Keyword cFullStopKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cSubChapterNumberAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSubChapterNumberINTTerminalRuleCall_7_0 = (RuleCall)cSubChapterNumberAssignment_7.eContents().get(0);
-		private final Keyword cChapterNameKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cChapterNameAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cChapterNameSTRINGTerminalRuleCall_9_0 = (RuleCall)cChapterNameAssignment_9.eContents().get(0);
-		private final Assignment cScriptBodyAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cScriptBodyScriptBodyParserRuleCall_10_0 = (RuleCall)cScriptBodyAssignment_10.eContents().get(0);
+		private final Assignment cExerciseBankAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cExerciseBankExercise_bankKeyword_0_0 = (Keyword)cExerciseBankAssignment_0.eContents().get(0);
+		private final Keyword cSubjectKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSubjectNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSubjectNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cSubjectNameAssignment_2.eContents().get(0);
+		private final Keyword cChapterNumberKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cChapterNumberAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cChapterNumberINTTerminalRuleCall_4_0 = (RuleCall)cChapterNumberAssignment_4.eContents().get(0);
+		private final Keyword cFullStopKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSubChapterNumberAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cSubChapterNumberINTTerminalRuleCall_6_0 = (RuleCall)cSubChapterNumberAssignment_6.eContents().get(0);
+		private final Keyword cChapterNameKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cChapterNameAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cChapterNameSTRINGTerminalRuleCall_8_0 = (RuleCall)cChapterNameAssignment_8.eContents().get(0);
+		private final Assignment cScriptBodyAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cScriptBodyScriptBodyParserRuleCall_9_0 = (RuleCall)cScriptBodyAssignment_9.eContents().get(0);
 		
 		//ChapterDetails:
-		//	testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
-		//	"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?;
+		//	exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+		//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
-		//"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?
+		//exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+		//"chapterName" chapterName=STRING scriptBody=ScriptBody?
 		public Group getGroup() { return cGroup; }
 
-		//testPaper="@test_paper"?
-		public Assignment getTestPaperAssignment_0() { return cTestPaperAssignment_0; }
-
-		//"@test_paper"
-		public Keyword getTestPaperTest_paperKeyword_0_0() { return cTestPaperTest_paperKeyword_0_0; }
-
 		//exerciseBank="@exercise_bank"?
-		public Assignment getExerciseBankAssignment_1() { return cExerciseBankAssignment_1; }
+		public Assignment getExerciseBankAssignment_0() { return cExerciseBankAssignment_0; }
 
 		//"@exercise_bank"
-		public Keyword getExerciseBankExercise_bankKeyword_1_0() { return cExerciseBankExercise_bankKeyword_1_0; }
+		public Keyword getExerciseBankExercise_bankKeyword_0_0() { return cExerciseBankExercise_bankKeyword_0_0; }
 
 		//"subject"
-		public Keyword getSubjectKeyword_2() { return cSubjectKeyword_2; }
+		public Keyword getSubjectKeyword_1() { return cSubjectKeyword_1; }
 
 		//subjectName=STRING
-		public Assignment getSubjectNameAssignment_3() { return cSubjectNameAssignment_3; }
+		public Assignment getSubjectNameAssignment_2() { return cSubjectNameAssignment_2; }
 
 		//STRING
-		public RuleCall getSubjectNameSTRINGTerminalRuleCall_3_0() { return cSubjectNameSTRINGTerminalRuleCall_3_0; }
+		public RuleCall getSubjectNameSTRINGTerminalRuleCall_2_0() { return cSubjectNameSTRINGTerminalRuleCall_2_0; }
 
 		//"chapterNumber"
-		public Keyword getChapterNumberKeyword_4() { return cChapterNumberKeyword_4; }
+		public Keyword getChapterNumberKeyword_3() { return cChapterNumberKeyword_3; }
 
 		//chapterNumber=INT
-		public Assignment getChapterNumberAssignment_5() { return cChapterNumberAssignment_5; }
+		public Assignment getChapterNumberAssignment_4() { return cChapterNumberAssignment_4; }
 
 		//INT
-		public RuleCall getChapterNumberINTTerminalRuleCall_5_0() { return cChapterNumberINTTerminalRuleCall_5_0; }
+		public RuleCall getChapterNumberINTTerminalRuleCall_4_0() { return cChapterNumberINTTerminalRuleCall_4_0; }
 
 		//"."
-		public Keyword getFullStopKeyword_6() { return cFullStopKeyword_6; }
+		public Keyword getFullStopKeyword_5() { return cFullStopKeyword_5; }
 
 		//subChapterNumber=INT
-		public Assignment getSubChapterNumberAssignment_7() { return cSubChapterNumberAssignment_7; }
+		public Assignment getSubChapterNumberAssignment_6() { return cSubChapterNumberAssignment_6; }
 
 		//INT
-		public RuleCall getSubChapterNumberINTTerminalRuleCall_7_0() { return cSubChapterNumberINTTerminalRuleCall_7_0; }
+		public RuleCall getSubChapterNumberINTTerminalRuleCall_6_0() { return cSubChapterNumberINTTerminalRuleCall_6_0; }
 
 		//"chapterName"
-		public Keyword getChapterNameKeyword_8() { return cChapterNameKeyword_8; }
+		public Keyword getChapterNameKeyword_7() { return cChapterNameKeyword_7; }
 
 		//chapterName=STRING
-		public Assignment getChapterNameAssignment_9() { return cChapterNameAssignment_9; }
+		public Assignment getChapterNameAssignment_8() { return cChapterNameAssignment_8; }
 
 		//STRING
-		public RuleCall getChapterNameSTRINGTerminalRuleCall_9_0() { return cChapterNameSTRINGTerminalRuleCall_9_0; }
+		public RuleCall getChapterNameSTRINGTerminalRuleCall_8_0() { return cChapterNameSTRINGTerminalRuleCall_8_0; }
 
 		//scriptBody=ScriptBody?
-		public Assignment getScriptBodyAssignment_10() { return cScriptBodyAssignment_10; }
+		public Assignment getScriptBodyAssignment_9() { return cScriptBodyAssignment_9; }
 
 		//ScriptBody
-		public RuleCall getScriptBodyScriptBodyParserRuleCall_10_0() { return cScriptBodyScriptBodyParserRuleCall_10_0; }
+		public RuleCall getScriptBodyScriptBodyParserRuleCall_9_0() { return cScriptBodyScriptBodyParserRuleCall_9_0; }
 	}
 
 	public class NotesElementElements extends AbstractParserRuleElementFinder {
@@ -1847,8 +1839,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChapterDetails:
-	//	testPaper="@test_paper"? exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT
-	//	"." subChapterNumber=INT "chapterName" chapterName=STRING scriptBody=ScriptBody?;
+	//	exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+	//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 	public ChapterDetailsElements getChapterDetailsAccess() {
 		return pChapterDetails;
 	}

@@ -414,7 +414,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_TestPaper()
+  public EAttribute getChapterDetails_ExerciseBank()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(0);
   }
@@ -424,7 +424,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_ExerciseBank()
+  public EAttribute getChapterDetails_SubjectName()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(1);
   }
@@ -434,7 +434,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_SubjectName()
+  public EAttribute getChapterDetails_ChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(2);
   }
@@ -444,7 +444,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_ChapterNumber()
+  public EAttribute getChapterDetails_SubChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(3);
   }
@@ -454,7 +454,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_SubChapterNumber()
+  public EAttribute getChapterDetails_ChapterName()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(4);
   }
@@ -464,19 +464,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getChapterDetails_ChapterName()
-  {
-    return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EReference getChapterDetails_ScriptBody()
   {
-    return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(6);
+    return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1829,7 +1819,6 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(processingHintsEClass, PROCESSING_HINTS__SKIP_GENERATION_IN_PRODUCTION);
 
     chapterDetailsEClass = createEClass(CHAPTER_DETAILS);
-    createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__TEST_PAPER);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__EXERCISE_BANK);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__SUBJECT_NAME);
     createEAttribute(chapterDetailsEClass, CHAPTER_DETAILS__CHAPTER_NUMBER);
@@ -2069,7 +2058,6 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getProcessingHints_SkipGenerationInProduction(), ecorePackage.getEString(), "skipGenerationInProduction", null, 0, 1, ProcessingHints.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(chapterDetailsEClass, ChapterDetails.class, "ChapterDetails", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getChapterDetails_TestPaper(), ecorePackage.getEString(), "testPaper", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_ExerciseBank(), ecorePackage.getEString(), "exerciseBank", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_SubjectName(), ecorePackage.getEString(), "subjectName", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getChapterDetails_ChapterNumber(), ecorePackage.getEInt(), "chapterNumber", null, 0, 1, ChapterDetails.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

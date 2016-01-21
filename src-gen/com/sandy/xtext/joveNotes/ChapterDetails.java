@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getTestPaper <em>Test Paper</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubjectName <em>Subject Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterNumber <em>Chapter Number</em>}</li>
@@ -28,32 +27,6 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ChapterDetails extends EObject
 {
-  /**
-   * Returns the value of the '<em><b>Test Paper</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Test Paper</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Test Paper</em>' attribute.
-   * @see #setTestPaper(String)
-   * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails_TestPaper()
-   * @model
-   * @generated
-   */
-  String getTestPaper();
-
-  /**
-   * Sets the value of the '{@link com.sandy.xtext.joveNotes.ChapterDetails#getTestPaper <em>Test Paper</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Test Paper</em>' attribute.
-   * @see #getTestPaper()
-   * @generated
-   */
-  void setTestPaper(String value);
-
   /**
    * Returns the value of the '<em><b>Exercise Bank</b></em>' attribute.
    * <!-- begin-user-doc -->
