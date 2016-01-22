@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.FIB#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.FIB#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.FIB#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.FIB#getAnswers <em>Answers</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getFIB()
  * @model

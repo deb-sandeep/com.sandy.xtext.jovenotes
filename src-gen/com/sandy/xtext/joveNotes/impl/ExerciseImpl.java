@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getHints <em>Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getAnswer <em>Answer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

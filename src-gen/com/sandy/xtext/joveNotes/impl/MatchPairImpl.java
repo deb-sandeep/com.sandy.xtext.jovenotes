@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl#getMatchQuestion <em>Match Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl#getMatchAnswer <em>Match Answer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

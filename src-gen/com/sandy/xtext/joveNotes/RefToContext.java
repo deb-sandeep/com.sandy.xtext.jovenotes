@@ -11,13 +11,13 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getContext <em>Context</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.RefToContext#getRtcElement <em>Rtc Element</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getRefToContext()
  * @model
