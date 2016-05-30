@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGeneration <em>Skip Generation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getProcessingHints()
  * @model

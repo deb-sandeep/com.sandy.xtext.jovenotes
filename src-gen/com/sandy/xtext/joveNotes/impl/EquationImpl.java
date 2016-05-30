@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -36,6 +35,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EquationImpl#getSymbols <em>Symbols</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

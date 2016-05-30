@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGeneration <em>Skip Generation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

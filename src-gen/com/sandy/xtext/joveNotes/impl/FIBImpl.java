@@ -26,13 +26,13 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getAnswers <em>Answers</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

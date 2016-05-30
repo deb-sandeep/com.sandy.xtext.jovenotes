@@ -10,13 +10,13 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getEvent <em>Event</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Event#getTime <em>Time</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEvent()
  * @model

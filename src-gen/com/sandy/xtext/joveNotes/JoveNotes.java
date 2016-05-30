@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getProcessingHints <em>Processing Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getChapterDetails <em>Chapter Details</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getJoveNotes()
  * @model

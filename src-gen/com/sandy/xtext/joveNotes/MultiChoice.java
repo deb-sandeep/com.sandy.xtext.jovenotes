@@ -11,7 +11,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getHideFromView <em>Hide From View</em>}</li>
@@ -21,6 +20,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MultiChoice#getExplanation <em>Explanation</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMultiChoice()
  * @model
