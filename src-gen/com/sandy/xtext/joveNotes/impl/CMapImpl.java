@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CMapImpl#getContent <em>Content</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

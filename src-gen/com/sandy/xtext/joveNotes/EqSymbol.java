@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.EqSymbol#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.EqSymbol#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEqSymbol()
  * @model

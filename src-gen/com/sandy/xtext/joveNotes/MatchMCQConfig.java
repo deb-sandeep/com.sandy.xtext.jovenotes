@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getForwardCaption <em>Forward Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getReverseCaption <em>Reverse Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsToShow <em>Num Options To Show</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatchMCQConfig()
  * @model

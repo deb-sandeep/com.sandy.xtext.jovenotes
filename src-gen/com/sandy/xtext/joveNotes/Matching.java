@@ -11,7 +11,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getHideFromView <em>Hide From View</em>}</li>
@@ -20,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getPairs <em>Pairs</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getMcqConfig <em>Mcq Config</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatching()
  * @model

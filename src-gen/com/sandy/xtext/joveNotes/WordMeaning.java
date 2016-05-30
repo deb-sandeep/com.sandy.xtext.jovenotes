@@ -10,13 +10,13 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getWord <em>Word</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.WordMeaning#getMeaning <em>Meaning</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getWordMeaning()
  * @model
