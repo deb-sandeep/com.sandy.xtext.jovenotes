@@ -30,12 +30,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getProcessingHints <em>Processing Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getChapterDetails <em>Chapter Details</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getX <em>X</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getY <em>Y</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getLabel <em>Label</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

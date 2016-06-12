@@ -28,13 +28,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getContext <em>Context</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getRtcElement <em>Rtc Element</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

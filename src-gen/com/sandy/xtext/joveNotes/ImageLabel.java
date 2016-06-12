@@ -11,7 +11,6 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHideFromView <em>Hide From View</em>}</li>
@@ -19,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getImageName <em>Image Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHotspots <em>Hotspots</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getImageLabel()
  * @model

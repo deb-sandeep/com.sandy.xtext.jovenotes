@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.OptionImpl#getOptionValue <em>Option Value</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.OptionImpl#getCorrectOption <em>Correct Option</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

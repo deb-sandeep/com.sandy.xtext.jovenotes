@@ -10,7 +10,6 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getHideFromView <em>Hide From View</em>}</li>
@@ -18,6 +17,7 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getNote <em>Note</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TeacherNote#getCmap <em>Cmap</em>}</li>
  * </ul>
+ * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getTeacherNote()
  * @model

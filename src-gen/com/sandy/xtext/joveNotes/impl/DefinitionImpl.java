@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.DefinitionImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.DefinitionImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -29,6 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.DefinitionImpl#getDefinition <em>Definition</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.DefinitionImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

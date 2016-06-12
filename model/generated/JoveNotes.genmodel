@@ -4,7 +4,7 @@
     editorDirectory="/com.sandy.xtext.jovenotes.editor/src" modelPluginID="com.sandy.xtext.jovenotes"
     forceOverwrite="true" modelName="JoveNotes" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     complianceLevel="6.0" copyrightFields="false" editPluginID="com.sandy.xtext.jovenotes.edit"
-    editorPluginID="com.sandy.xtext.jovenotes.editor" runtimeVersion="2.11">
+    editorPluginID="com.sandy.xtext.jovenotes.editor" runtimeVersion="2.10">
   <genPackages prefix="JoveNotes" basePackage="com.sandy.xtext" disposableProviderFactory="true"
       fileExtensions="jn" ecorePackage="JoveNotes.ecore#/">
     <genClasses ecoreClass="JoveNotes.ecore#//JoveNotes">

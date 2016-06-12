@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EqSymbolImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EqSymbolImpl#getDescription <em>Description</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */

@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
- * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getForwardCaption <em>Forward Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getReverseCaption <em>Reverse Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getNumOptionsToShow <em>Num Options To Show</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  * </ul>
+ * </p>
  *
  * @generated
  */
