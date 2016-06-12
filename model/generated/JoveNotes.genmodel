@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.sandy.xtext.jovenotes/src-gen" editDirectory="/com.sandy.xtext.jovenotes.edit/src"
+    editorDirectory="/com.sandy.xtext.jovenotes.editor/src" modelPluginID="com.sandy.xtext.jovenotes"
+    forceOverwrite="true" modelName="JoveNotes" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="com.sandy.xtext.jovenotes.edit"
+    editorPluginID="com.sandy.xtext.jovenotes.editor" runtimeVersion="2.11">
+  <genPackages prefix="JoveNotes" basePackage="com.sandy.xtext" disposableProviderFactory="true"
+      fileExtensions="jn" ecorePackage="JoveNotes.ecore#/">
+    <genClasses ecoreClass="JoveNotes.ecore#//JoveNotes">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//JoveNotes/processingHints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//JoveNotes/chapterDetails"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//JoveNotes/notesElements"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ProcessingHints">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ProcessingHints/skipGeneration"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ProcessingHints/skipGenerationInProduction"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ChapterDetails">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/exerciseBank"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subjectName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/subChapterNumber"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterDetails/chapterName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChapterDetails/scriptBody"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//NotesElement"/>
+    <genClasses ecoreClass="JoveNotes.ecore#//WordMeaning">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//WordMeaning/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//WordMeaning/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//WordMeaning/word"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//WordMeaning/meaning"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//QuestionAnswer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//QuestionAnswer/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//QuestionAnswer/answerParts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//QuestionAnswer/cmap"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//FIB">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//FIB/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//FIB/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//FIB/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//FIB/answers"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Definition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Definition/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Definition/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Definition/term"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Definition/definition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Definition/cmap"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Character">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Character/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Character/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Character/character"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Character/estimate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Character/cmap"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//TeacherNote">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//TeacherNote/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TeacherNote/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TeacherNote/caption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TeacherNote/note"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//TeacherNote/cmap"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Matching">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Matching/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Matching/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Matching/skipReverseQuestion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Matching/question"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Matching/pairs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Matching/mcqConfig"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//MatchPair">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchPair/matchQuestion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchPair/matchAnswer"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//MatchMCQConfig">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/forwardCaption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/reverseCaption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/numOptionsToShow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MatchMCQConfig/numOptionsPerRow"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Event">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Event/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Event/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Event/event"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Event/time"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//TrueFalse">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//TrueFalse/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TrueFalse/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TrueFalse/statement"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TrueFalse/truthValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//TrueFalse/justification"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ChemEquation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChemEquation/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/description"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/reactants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/produces"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemEquation/products"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ChemCompound">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChemCompound/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemCompound/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemCompound/symbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemCompound/chemicalName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChemCompound/commonName"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Spellbee">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Spellbee/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Spellbee/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Spellbee/word"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ImageLabel">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ImageLabel/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ImageLabel/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ImageLabel/caption"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ImageLabel/imageName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ImageLabel/hotspots"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//HotSpot">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//HotSpot/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//HotSpot/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//HotSpot/label"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Equation">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Equation/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Equation/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Equation/equation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Equation/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Equation/symbols"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//EqSymbol">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EqSymbol/symbol"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EqSymbol/description"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//RefToContext">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//RefToContext/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//RefToContext/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//RefToContext/context"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//RefToContext/rtcElement"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//RTCElement"/>
+    <genClasses ecoreClass="JoveNotes.ecore#//MultiChoice">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//MultiChoice/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/question"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//MultiChoice/options"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsToShow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/numOptionsPerRow"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//MultiChoice/explanation"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Exercise">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Exercise/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/marks"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/question"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/hints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/answer"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Option">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/optionValue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/correctOption"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//CMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//CMap/content"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//Script">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Script/evalVars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//Script/scriptBody"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//EvalVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EvalVar/varName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//EvalVar/varExpression"/>
+    </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ScriptBody">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ScriptBody/script"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
