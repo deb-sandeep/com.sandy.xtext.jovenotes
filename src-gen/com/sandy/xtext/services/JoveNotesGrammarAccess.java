@@ -19,7 +19,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	
 	public class JoveNotesElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.JoveNotes");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "JoveNotes");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cProcessingHintsAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cProcessingHintsProcessingHintsParserRuleCall_0_0 = (RuleCall)cProcessingHintsAssignment_0.eContents().get(0);
@@ -55,7 +55,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ProcessingHintsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ProcessingHints");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ProcessingHints");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cProcessingHintsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cSkipGenerationAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -64,31 +64,30 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0 = (Keyword)cSkipGenerationInProductionAssignment_2.eContents().get(0);
 		
 		//ProcessingHints:
-		//	{ProcessingHints} skipGeneration='@skip_generation'?
-		//	skipGenerationInProduction='@skip_generation_in_production'?;
+		//	{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//{ProcessingHints} skipGeneration='@skip_generation'? skipGenerationInProduction='@skip_generation_in_production'?
+		//{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?
 		public Group getGroup() { return cGroup; }
 
 		//{ProcessingHints}
 		public Action getProcessingHintsAction_0() { return cProcessingHintsAction_0; }
 
-		//skipGeneration='@skip_generation'?
+		//skipGeneration="@skip_generation"?
 		public Assignment getSkipGenerationAssignment_1() { return cSkipGenerationAssignment_1; }
 
-		//'@skip_generation'
+		//"@skip_generation"
 		public Keyword getSkipGenerationSkip_generationKeyword_1_0() { return cSkipGenerationSkip_generationKeyword_1_0; }
 
-		//skipGenerationInProduction='@skip_generation_in_production'?
+		//skipGenerationInProduction="@skip_generation_in_production"?
 		public Assignment getSkipGenerationInProductionAssignment_2() { return cSkipGenerationInProductionAssignment_2; }
 
-		//'@skip_generation_in_production'
+		//"@skip_generation_in_production"
 		public Keyword getSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0() { return cSkipGenerationInProductionSkip_generation_in_productionKeyword_2_0; }
 	}
 
 	public class ChapterDetailsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ChapterDetails");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChapterDetails");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cExerciseBankAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cExerciseBankExercise_bankKeyword_0_0 = (Keyword)cExerciseBankAssignment_0.eContents().get(0);
@@ -108,24 +107,21 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cScriptBodyScriptBodyParserRuleCall_9_0 = (RuleCall)cScriptBodyAssignment_9.eContents().get(0);
 		
 		//ChapterDetails:
-		//	exerciseBank='@exercise_bank'?
-		//	'subject' subjectName=STRING
-		//	'chapterNumber' chapterNumber=INT '.' subChapterNumber=INT
-		//	'chapterName' chapterName=STRING
-		//	scriptBody=ScriptBody?;
+		//	exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+		//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//exerciseBank='@exercise_bank'? 'subject' subjectName=STRING 'chapterNumber' chapterNumber=INT '.' subChapterNumber=INT
-		//'chapterName' chapterName=STRING scriptBody=ScriptBody?
+		//exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+		//"chapterName" chapterName=STRING scriptBody=ScriptBody?
 		public Group getGroup() { return cGroup; }
 
-		//exerciseBank='@exercise_bank'?
+		//exerciseBank="@exercise_bank"?
 		public Assignment getExerciseBankAssignment_0() { return cExerciseBankAssignment_0; }
 
-		//'@exercise_bank'
+		//"@exercise_bank"
 		public Keyword getExerciseBankExercise_bankKeyword_0_0() { return cExerciseBankExercise_bankKeyword_0_0; }
 
-		//'subject'
+		//"subject"
 		public Keyword getSubjectKeyword_1() { return cSubjectKeyword_1; }
 
 		//subjectName=STRING
@@ -134,7 +130,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getSubjectNameSTRINGTerminalRuleCall_2_0() { return cSubjectNameSTRINGTerminalRuleCall_2_0; }
 
-		//'chapterNumber'
+		//"chapterNumber"
 		public Keyword getChapterNumberKeyword_3() { return cChapterNumberKeyword_3; }
 
 		//chapterNumber=INT
@@ -143,7 +139,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getChapterNumberINTTerminalRuleCall_4_0() { return cChapterNumberINTTerminalRuleCall_4_0; }
 
-		//'.'
+		//"."
 		public Keyword getFullStopKeyword_5() { return cFullStopKeyword_5; }
 
 		//subChapterNumber=INT
@@ -152,7 +148,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getSubChapterNumberINTTerminalRuleCall_6_0() { return cSubChapterNumberINTTerminalRuleCall_6_0; }
 
-		//'chapterName'
+		//"chapterName"
 		public Keyword getChapterNameKeyword_7() { return cChapterNameKeyword_7; }
 
 		//chapterName=STRING
@@ -169,7 +165,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class NotesElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.NotesElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "NotesElement");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
 		private final RuleCall cWordMeaningParserRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
@@ -202,8 +198,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise) script=Script?
 		public Group getGroup() { return cGroup; }
 
-		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+		//WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//WordMeaning
@@ -265,7 +261,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class WordMeaningElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.WordMeaning");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "WordMeaning");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cWmKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -276,21 +272,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMeaningSTRINGTerminalRuleCall_3_0 = (RuleCall)cMeaningAssignment_3.eContents().get(0);
 		
 		//WordMeaning:
-		//	'@wm' hideFromView='hide'?
-		//	word=STRING
-		//	meaning=STRING;
+		//	"@wm" hideFromView="hide"? word=STRING meaning=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@wm' hideFromView='hide'? word=STRING meaning=STRING
+		//"@wm" hideFromView="hide"? word=STRING meaning=STRING
 		public Group getGroup() { return cGroup; }
 
-		//'@wm'
+		//"@wm"
 		public Keyword getWmKeyword_0() { return cWmKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//word=STRING
@@ -307,7 +301,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class QuestionAnswerElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.QuestionAnswer");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "QuestionAnswer");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cQaKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -320,22 +314,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//QuestionAnswer:
-		//	'@qa' hideFromView='hide'?
-		//	question=STRING
-		//	answerParts+=STRING+
-		//	cmap=CMap?;
+		//	"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@qa' hideFromView='hide'? question=STRING answerParts+=STRING+ cmap=CMap?
+		//"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
-		//'@qa'
+		//"@qa"
 		public Keyword getQaKeyword_0() { return cQaKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//question=STRING
@@ -358,7 +349,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class FIBElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.FIB");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FIB");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFibKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -369,21 +360,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAnswersSTRINGTerminalRuleCall_3_0 = (RuleCall)cAnswersAssignment_3.eContents().get(0);
 		
 		//FIB:
-		//	'@fib' hideFromView='hide'?
-		//	question=STRING
-		//	answers+=STRING+;
+		//	"@fib" hideFromView="hide"? question=STRING answers+=STRING+;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@fib' hideFromView='hide'? question=STRING answers+=STRING+
+		//"@fib" hideFromView="hide"? question=STRING answers+=STRING+
 		public Group getGroup() { return cGroup; }
 
-		//'@fib'
+		//"@fib"
 		public Keyword getFibKeyword_0() { return cFibKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//question=STRING
@@ -400,7 +389,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class DefinitionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Definition");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Definition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cDefinitionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -413,22 +402,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//Definition:
-		//	'@definition' hideFromView='hide'?
-		//	term=STRING
-		//	definition=STRING
-		//	cmap=CMap?;
+		//	"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@definition' hideFromView='hide'? term=STRING definition=STRING cmap=CMap?
+		//"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
-		//'@definition'
+		//"@definition"
 		public Keyword getDefinitionKeyword_0() { return cDefinitionKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//term=STRING
@@ -451,7 +437,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class CharacterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Character");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Character");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCharacterKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -464,22 +450,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//Character:
-		//	'@character' hideFromView='hide'?
-		//	character=STRING
-		//	estimate=STRING
-		//	cmap=CMap?;
+		//	"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@character' hideFromView='hide'? character=STRING estimate=STRING cmap=CMap?
+		//"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
-		//'@character'
+		//"@character"
 		public Keyword getCharacterKeyword_0() { return cCharacterKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//character=STRING
@@ -502,7 +485,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class TeacherNoteElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.TeacherNote");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TeacherNote");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTnKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -515,22 +498,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCmapCMapParserRuleCall_4_0 = (RuleCall)cCmapAssignment_4.eContents().get(0);
 		
 		//TeacherNote:
-		//	'@tn' hideFromView='hide'?
-		//	caption=STRING?
-		//	note=STRING
-		//	cmap=CMap?;
+		//	"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@tn' hideFromView='hide'? caption=STRING? note=STRING cmap=CMap?
+		//"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?
 		public Group getGroup() { return cGroup; }
 
-		//'@tn'
+		//"@tn"
 		public Keyword getTnKeyword_0() { return cTnKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//caption=STRING?
@@ -553,7 +533,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MatchingElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Matching");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Matching");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMatchKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -570,31 +550,27 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//Matching:
-		//	'@match' hideFromView='hide'?
-		//	skipReverseQuestion='skip_reverse_question'?
-		//	question=STRING? '{'
-		//	pairs+=MatchPair+
-		//	mcqConfig=MatchMCQConfig?
-		//	'}';
+		//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+		//	mcqConfig=MatchMCQConfig? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@match' hideFromView='hide'? skipReverseQuestion='skip_reverse_question'? question=STRING? '{' pairs+=MatchPair+
-		//mcqConfig=MatchMCQConfig? '}'
+		//"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+		//mcqConfig=MatchMCQConfig? "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@match'
+		//"@match"
 		public Keyword getMatchKeyword_0() { return cMatchKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
-		//skipReverseQuestion='skip_reverse_question'?
+		//skipReverseQuestion="skip_reverse_question"?
 		public Assignment getSkipReverseQuestionAssignment_2() { return cSkipReverseQuestionAssignment_2; }
 
-		//'skip_reverse_question'
+		//"skip_reverse_question"
 		public Keyword getSkipReverseQuestionSkip_reverse_questionKeyword_2_0() { return cSkipReverseQuestionSkip_reverse_questionKeyword_2_0; }
 
 		//question=STRING?
@@ -603,7 +579,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_3_0() { return cQuestionSTRINGTerminalRuleCall_3_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 
 		//pairs+=MatchPair+
@@ -618,12 +594,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//MatchMCQConfig
 		public RuleCall getMcqConfigMatchMCQConfigParserRuleCall_6_0() { return cMcqConfigMatchMCQConfigParserRuleCall_6_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class MatchPairElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.MatchPair");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MatchPair");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cMatchQuestionAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cMatchQuestionSTRINGTerminalRuleCall_0_0 = (RuleCall)cMatchQuestionAssignment_0.eContents().get(0);
@@ -632,10 +608,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cMatchAnswerSTRINGTerminalRuleCall_2_0 = (RuleCall)cMatchAnswerAssignment_2.eContents().get(0);
 		
 		//MatchPair:
-		//	matchQuestion=STRING '=' matchAnswer=STRING;
+		//	matchQuestion=STRING "=" matchAnswer=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//matchQuestion=STRING '=' matchAnswer=STRING
+		//matchQuestion=STRING "=" matchAnswer=STRING
 		public Group getGroup() { return cGroup; }
 
 		//matchQuestion=STRING
@@ -644,7 +620,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getMatchQuestionSTRINGTerminalRuleCall_0_0() { return cMatchQuestionSTRINGTerminalRuleCall_0_0; }
 
-		//'='
+		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
 		//matchAnswer=STRING
@@ -655,7 +631,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MatchMCQConfigElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.MatchMCQConfig");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MatchMCQConfig");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMcq_configKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -677,23 +653,21 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//MatchMCQConfig:
-		//	'@mcq_config' '{'
-		//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)? ('@numOptionsToShow'
-		//	numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)?
-		//	'}';
+		//	"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+		//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@mcq_config' '{' '@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)?
-		//('@numOptionsToShow' numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)? '}'
+		//"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+		//("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@mcq_config'
+		//"@mcq_config"
 		public Keyword getMcq_configKeyword_0() { return cMcq_configKeyword_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
-		//'@forwardCaption'
+		//"@forwardCaption"
 		public Keyword getForwardCaptionKeyword_2() { return cForwardCaptionKeyword_2; }
 
 		//forwardCaption=STRING
@@ -702,10 +676,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getForwardCaptionSTRINGTerminalRuleCall_3_0() { return cForwardCaptionSTRINGTerminalRuleCall_3_0; }
 
-		//('@reverseCaption' reverseCaption=STRING)?
+		//("@reverseCaption" reverseCaption=STRING)?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//'@reverseCaption'
+		//"@reverseCaption"
 		public Keyword getReverseCaptionKeyword_4_0() { return cReverseCaptionKeyword_4_0; }
 
 		//reverseCaption=STRING
@@ -714,10 +688,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getReverseCaptionSTRINGTerminalRuleCall_4_1_0() { return cReverseCaptionSTRINGTerminalRuleCall_4_1_0; }
 
-		//('@numOptionsToShow' numOptionsToShow=INT)?
+		//("@numOptionsToShow" numOptionsToShow=INT)?
 		public Group getGroup_5() { return cGroup_5; }
 
-		//'@numOptionsToShow'
+		//"@numOptionsToShow"
 		public Keyword getNumOptionsToShowKeyword_5_0() { return cNumOptionsToShowKeyword_5_0; }
 
 		//numOptionsToShow=INT
@@ -726,10 +700,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getNumOptionsToShowINTTerminalRuleCall_5_1_0() { return cNumOptionsToShowINTTerminalRuleCall_5_1_0; }
 
-		//('@numOptionsPerRow' numOptionsPerRow=INT)?
+		//("@numOptionsPerRow" numOptionsPerRow=INT)?
 		public Group getGroup_6() { return cGroup_6; }
 
-		//'@numOptionsPerRow'
+		//"@numOptionsPerRow"
 		public Keyword getNumOptionsPerRowKeyword_6_0() { return cNumOptionsPerRowKeyword_6_0; }
 
 		//numOptionsPerRow=INT
@@ -738,12 +712,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getNumOptionsPerRowINTTerminalRuleCall_6_1_0() { return cNumOptionsPerRowINTTerminalRuleCall_6_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
 	}
 
 	public class EventElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Event");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Event");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEventKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -754,20 +728,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cTimeSTRINGTerminalRuleCall_3_0 = (RuleCall)cTimeAssignment_3.eContents().get(0);
 		
 		//Event:
-		//	'@event' hideFromView='hide'?
-		//	event=STRING time=STRING;
+		//	"@event" hideFromView="hide"? event=STRING time=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@event' hideFromView='hide'? event=STRING time=STRING
+		//"@event" hideFromView="hide"? event=STRING time=STRING
 		public Group getGroup() { return cGroup; }
 
-		//'@event'
+		//"@event"
 		public Keyword getEventKeyword_0() { return cEventKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//event=STRING
@@ -784,7 +757,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class TrueFalseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.TrueFalse");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "TrueFalse");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cTrue_falseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -797,22 +770,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cJustificationSTRINGTerminalRuleCall_4_0 = (RuleCall)cJustificationAssignment_4.eContents().get(0);
 		
 		//TrueFalse:
-		//	'@true_false' hideFromView='hide'?
-		//	statement=STRING
-		//	truthValue=BOOL
-		//	justification=STRING?;
+		//	"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@true_false' hideFromView='hide'? statement=STRING truthValue=BOOL justification=STRING?
+		//"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?
 		public Group getGroup() { return cGroup; }
 
-		//'@true_false'
+		//"@true_false"
 		public Keyword getTrue_falseKeyword_0() { return cTrue_falseKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//statement=STRING
@@ -835,7 +805,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ChemEquationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ChemEquation");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChemEquation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChem_equationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -854,23 +824,21 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//ChemEquation:
-		//	'@chem_equation' hideFromView='hide'?
-		//	description=STRING? '{'
-		//	reactants=STRING '>' produces=STRING? '>' products=STRING
-		//	'}';
+		//	"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">"
+		//	products=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@chem_equation' hideFromView='hide'? description=STRING? '{' reactants=STRING '>' produces=STRING? '>' products=STRING
-		//'}'
+		//"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">" products=STRING
+		//"}"
 		public Group getGroup() { return cGroup; }
 
-		//'@chem_equation'
+		//"@chem_equation"
 		public Keyword getChem_equationKeyword_0() { return cChem_equationKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//description=STRING?
@@ -879,7 +847,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_2_0() { return cDescriptionSTRINGTerminalRuleCall_2_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//reactants=STRING
@@ -888,7 +856,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getReactantsSTRINGTerminalRuleCall_4_0() { return cReactantsSTRINGTerminalRuleCall_4_0; }
 
-		//'>'
+		//">"
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 
 		//produces=STRING?
@@ -897,7 +865,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getProducesSTRINGTerminalRuleCall_6_0() { return cProducesSTRINGTerminalRuleCall_6_0; }
 
-		//'>'
+		//">"
 		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
 
 		//products=STRING
@@ -906,12 +874,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getProductsSTRINGTerminalRuleCall_8_0() { return cProductsSTRINGTerminalRuleCall_8_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 
 	public class ChemCompoundElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ChemCompound");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ChemCompound");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cChem_compoundKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -924,22 +892,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCommonNameSTRINGTerminalRuleCall_4_0 = (RuleCall)cCommonNameAssignment_4.eContents().get(0);
 		
 		//ChemCompound:
-		//	'@chem_compound' hideFromView='hide'?
-		//	symbol=STRING
-		//	chemicalName=STRING
-		//	commonName=STRING?;
+		//	"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@chem_compound' hideFromView='hide'? symbol=STRING chemicalName=STRING commonName=STRING?
+		//"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?
 		public Group getGroup() { return cGroup; }
 
-		//'@chem_compound'
+		//"@chem_compound"
 		public Keyword getChem_compoundKeyword_0() { return cChem_compoundKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//symbol=STRING
@@ -962,7 +927,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class SpellbeeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Spellbee");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Spellbee");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpellbeeKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -971,20 +936,19 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cWordSTRINGTerminalRuleCall_2_0 = (RuleCall)cWordAssignment_2.eContents().get(0);
 		
 		//Spellbee:
-		//	'@spellbee' hideFromView='hide'?
-		//	word=STRING;
+		//	"@spellbee" hideFromView="hide"? word=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@spellbee' hideFromView='hide'? word=STRING
+		//"@spellbee" hideFromView="hide"? word=STRING
 		public Group getGroup() { return cGroup; }
 
-		//'@spellbee'
+		//"@spellbee"
 		public Keyword getSpellbeeKeyword_0() { return cSpellbeeKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//word=STRING
@@ -995,7 +959,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ImageLabelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ImageLabel");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ImageLabel");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cImage_labelKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1015,24 +979,21 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//ImageLabel:
-		//	'@image_label' hideFromView='hide'?
-		//	caption=STRING? '{'
-		//	'imageName' imageName=STRING
-		//	hotspots+=HotSpot (',' hotspots+=HotSpot)*
-		//	'}';
+		//	"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+		//	hotspots+=HotSpot)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@image_label' hideFromView='hide'? caption=STRING? '{' 'imageName' imageName=STRING hotspots+=HotSpot (','
-		//hotspots+=HotSpot)* '}'
+		//"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+		//hotspots+=HotSpot)* "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@image_label'
+		//"@image_label"
 		public Keyword getImage_labelKeyword_0() { return cImage_labelKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//caption=STRING?
@@ -1041,10 +1002,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getCaptionSTRINGTerminalRuleCall_2_0() { return cCaptionSTRINGTerminalRuleCall_2_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//'imageName'
+		//"imageName"
 		public Keyword getImageNameKeyword_4() { return cImageNameKeyword_4; }
 
 		//imageName=STRING
@@ -1059,10 +1020,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//HotSpot
 		public RuleCall getHotspotsHotSpotParserRuleCall_6_0() { return cHotspotsHotSpotParserRuleCall_6_0; }
 
-		//(',' hotspots+=HotSpot)*
+		//("," hotspots+=HotSpot)*
 		public Group getGroup_7() { return cGroup_7; }
 
-		//','
+		//","
 		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//hotspots+=HotSpot
@@ -1071,12 +1032,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//HotSpot
 		public RuleCall getHotspotsHotSpotParserRuleCall_7_1_0() { return cHotspotsHotSpotParserRuleCall_7_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class HotSpotElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.HotSpot");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "HotSpot");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cXAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cXINTTerminalRuleCall_0_0 = (RuleCall)cXAssignment_0.eContents().get(0);
@@ -1088,10 +1049,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_4_0 = (RuleCall)cLabelAssignment_4.eContents().get(0);
 		
 		//HotSpot:
-		//	x=INT ',' y=INT '=' label=STRING;
+		//	x=INT "," y=INT "=" label=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//x=INT ',' y=INT '=' label=STRING
+		//x=INT "," y=INT "=" label=STRING
 		public Group getGroup() { return cGroup; }
 
 		//x=INT
@@ -1100,7 +1061,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getXINTTerminalRuleCall_0_0() { return cXINTTerminalRuleCall_0_0; }
 
-		//','
+		//","
 		public Keyword getCommaKeyword_1() { return cCommaKeyword_1; }
 
 		//y=INT
@@ -1109,7 +1070,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getYINTTerminalRuleCall_2_0() { return cYINTTerminalRuleCall_2_0; }
 
-		//'='
+		//"="
 		public Keyword getEqualsSignKeyword_3() { return cEqualsSignKeyword_3; }
 
 		//label=STRING
@@ -1120,7 +1081,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EquationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Equation");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Equation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEquationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1140,25 +1101,21 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Equation:
-		//	'@equation' hideFromView='hide'?
-		//	equation=STRING '{'
-		//	description=STRING?
-		//	'where'
-		//	symbols+=EqSymbol (',' symbols+=EqSymbol)*
-		//	'}';
+		//	"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+		//	symbols+=EqSymbol)* "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@equation' hideFromView='hide'? equation=STRING '{' description=STRING? 'where' symbols+=EqSymbol (','
-		//symbols+=EqSymbol)* '}'
+		//"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+		//symbols+=EqSymbol)* "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@equation'
+		//"@equation"
 		public Keyword getEquationKeyword_0() { return cEquationKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//equation=STRING
@@ -1167,7 +1124,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getEquationSTRINGTerminalRuleCall_2_0() { return cEquationSTRINGTerminalRuleCall_2_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
 		//description=STRING?
@@ -1176,7 +1133,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
 
-		//'where'
+		//"where"
 		public Keyword getWhereKeyword_5() { return cWhereKeyword_5; }
 
 		//symbols+=EqSymbol
@@ -1185,10 +1142,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//EqSymbol
 		public RuleCall getSymbolsEqSymbolParserRuleCall_6_0() { return cSymbolsEqSymbolParserRuleCall_6_0; }
 
-		//(',' symbols+=EqSymbol)*
+		//("," symbols+=EqSymbol)*
 		public Group getGroup_7() { return cGroup_7; }
 
-		//','
+		//","
 		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//symbols+=EqSymbol
@@ -1197,12 +1154,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//EqSymbol
 		public RuleCall getSymbolsEqSymbolParserRuleCall_7_1_0() { return cSymbolsEqSymbolParserRuleCall_7_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 	}
 
 	public class EqSymbolElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.EqSymbol");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EqSymbol");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cSymbolAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cSymbolSTRINGTerminalRuleCall_0_0 = (RuleCall)cSymbolAssignment_0.eContents().get(0);
@@ -1211,10 +1168,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_2_0 = (RuleCall)cDescriptionAssignment_2.eContents().get(0);
 		
 		//EqSymbol:
-		//	symbol=STRING '=' description=STRING;
+		//	symbol=STRING "=" description=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//symbol=STRING '=' description=STRING
+		//symbol=STRING "=" description=STRING
 		public Group getGroup() { return cGroup; }
 
 		//symbol=STRING
@@ -1223,7 +1180,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getSymbolSTRINGTerminalRuleCall_0_0() { return cSymbolSTRINGTerminalRuleCall_0_0; }
 
-		//'='
+		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
 		//description=STRING
@@ -1234,7 +1191,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class RefToContextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.RefToContext");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RefToContext");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRtcKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1248,28 +1205,25 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//RefToContext:
-		//	'@rtc' hideFromView='hide'? '{'
-		//	'context' context=STRING
-		//	rtcElement+=RTCElement+
-		//	'}';
+		//	"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@rtc' hideFromView='hide'? '{' 'context' context=STRING rtcElement+=RTCElement+ '}'
+		//"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@rtc'
+		//"@rtc"
 		public Keyword getRtcKeyword_0() { return cRtcKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//'context'
+		//"context"
 		public Keyword getContextKeyword_3() { return cContextKeyword_3; }
 
 		//context=STRING
@@ -1284,12 +1238,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//RTCElement
 		public RuleCall getRtcElementRTCElementParserRuleCall_5_0() { return cRtcElementRTCElementParserRuleCall_5_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 
 	public class RTCElementElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.RTCElement");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "RTCElement");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cWordMeaningParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cQuestionAnswerParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
@@ -1359,7 +1313,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class MultiChoiceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.MultiChoice");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultiChoice");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cMulti_choiceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1391,26 +1345,23 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//MultiChoice:
-		//	'@multi_choice' hideFromView='hide'? question=STRING '{'
-		//	'@options' '{'
-		//	options+=Option (',' options+=Option)*
-		//	'}' ('@numOptionsToShow' numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)? ('@explanation'
-		//	explanation=STRING)?
-		//	'}';
+		//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+		//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+		//	explanation=STRING)? "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@multi_choice' hideFromView='hide'? question=STRING '{' '@options' '{' options+=Option (',' options+=Option)* '}'
-		//('@numOptionsToShow' numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)? ('@explanation'
-		//explanation=STRING)? '}'
+		//"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+		//("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+		//explanation=STRING)? "}"
 		public Group getGroup() { return cGroup; }
 
-		//'@multi_choice'
+		//"@multi_choice"
 		public Keyword getMulti_choiceKeyword_0() { return cMulti_choiceKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
 		//question=STRING
@@ -1419,13 +1370,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_2_0() { return cQuestionSTRINGTerminalRuleCall_2_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 
-		//'@options'
+		//"@options"
 		public Keyword getOptionsKeyword_4() { return cOptionsKeyword_4; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_5() { return cLeftCurlyBracketKeyword_5; }
 
 		//options+=Option
@@ -1434,10 +1385,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//Option
 		public RuleCall getOptionsOptionParserRuleCall_6_0() { return cOptionsOptionParserRuleCall_6_0; }
 
-		//(',' options+=Option)*
+		//("," options+=Option)*
 		public Group getGroup_7() { return cGroup_7; }
 
-		//','
+		//","
 		public Keyword getCommaKeyword_7_0() { return cCommaKeyword_7_0; }
 
 		//options+=Option
@@ -1446,13 +1397,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//Option
 		public RuleCall getOptionsOptionParserRuleCall_7_1_0() { return cOptionsOptionParserRuleCall_7_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
 
-		//('@numOptionsToShow' numOptionsToShow=INT)?
+		//("@numOptionsToShow" numOptionsToShow=INT)?
 		public Group getGroup_9() { return cGroup_9; }
 
-		//'@numOptionsToShow'
+		//"@numOptionsToShow"
 		public Keyword getNumOptionsToShowKeyword_9_0() { return cNumOptionsToShowKeyword_9_0; }
 
 		//numOptionsToShow=INT
@@ -1461,10 +1412,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getNumOptionsToShowINTTerminalRuleCall_9_1_0() { return cNumOptionsToShowINTTerminalRuleCall_9_1_0; }
 
-		//('@numOptionsPerRow' numOptionsPerRow=INT)?
+		//("@numOptionsPerRow" numOptionsPerRow=INT)?
 		public Group getGroup_10() { return cGroup_10; }
 
-		//'@numOptionsPerRow'
+		//"@numOptionsPerRow"
 		public Keyword getNumOptionsPerRowKeyword_10_0() { return cNumOptionsPerRowKeyword_10_0; }
 
 		//numOptionsPerRow=INT
@@ -1473,10 +1424,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//INT
 		public RuleCall getNumOptionsPerRowINTTerminalRuleCall_10_1_0() { return cNumOptionsPerRowINTTerminalRuleCall_10_1_0; }
 
-		//('@explanation' explanation=STRING)?
+		//("@explanation" explanation=STRING)?
 		public Group getGroup_11() { return cGroup_11; }
 
-		//'@explanation'
+		//"@explanation"
 		public Keyword getExplanationKeyword_11_0() { return cExplanationKeyword_11_0; }
 
 		//explanation=STRING
@@ -1485,12 +1436,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getExplanationSTRINGTerminalRuleCall_11_1_0() { return cExplanationSTRINGTerminalRuleCall_11_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
 	}
 
 	public class ExerciseElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Exercise");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Exercise");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cExerciseKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
@@ -1514,30 +1465,30 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cAnswerSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cAnswerAssignment_5_1.eContents().get(0);
 		
 		//Exercise:
-		//	'@exercise' hideFromView='hide'? ('marks' '=' marks=INT) question=STRING ('hints' '{' hints+=STRING+ '}')? ('answer'
+		//	"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
 		//	answer=STRING);
 		@Override public ParserRule getRule() { return rule; }
 
-		//'@exercise' hideFromView='hide'? ('marks' '=' marks=INT) question=STRING ('hints' '{' hints+=STRING+ '}')? ('answer'
+		//"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
 		//answer=STRING)
 		public Group getGroup() { return cGroup; }
 
-		//'@exercise'
+		//"@exercise"
 		public Keyword getExerciseKeyword_0() { return cExerciseKeyword_0; }
 
-		//hideFromView='hide'?
+		//hideFromView="hide"?
 		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
 
-		//'hide'
+		//"hide"
 		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
 
-		//('marks' '=' marks=INT)
+		//"marks" "=" marks=INT
 		public Group getGroup_2() { return cGroup_2; }
 
-		//'marks'
+		//"marks"
 		public Keyword getMarksKeyword_2_0() { return cMarksKeyword_2_0; }
 
-		//'='
+		//"="
 		public Keyword getEqualsSignKeyword_2_1() { return cEqualsSignKeyword_2_1; }
 
 		//marks=INT
@@ -1552,13 +1503,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getQuestionSTRINGTerminalRuleCall_3_0() { return cQuestionSTRINGTerminalRuleCall_3_0; }
 
-		//('hints' '{' hints+=STRING+ '}')?
+		//("hints" "{" hints+=STRING+ "}")?
 		public Group getGroup_4() { return cGroup_4; }
 
-		//'hints'
+		//"hints"
 		public Keyword getHintsKeyword_4_0() { return cHintsKeyword_4_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 
 		//hints+=STRING+
@@ -1567,13 +1518,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getHintsSTRINGTerminalRuleCall_4_2_0() { return cHintsSTRINGTerminalRuleCall_4_2_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_4_3() { return cRightCurlyBracketKeyword_4_3; }
 
-		//('answer' answer=STRING)
+		//"answer" answer=STRING
 		public Group getGroup_5() { return cGroup_5; }
 
-		//'answer'
+		//"answer"
 		public Keyword getAnswerKeyword_5_0() { return cAnswerKeyword_5_0; }
 
 		//answer=STRING
@@ -1584,7 +1535,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class OptionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Option");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Option");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cOptionValueAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cOptionValueSTRINGTerminalRuleCall_0_0 = (RuleCall)cOptionValueAssignment_0.eContents().get(0);
@@ -1592,11 +1543,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCorrectOptionCorrectKeyword_1_0 = (Keyword)cCorrectOptionAssignment_1.eContents().get(0);
 		
 		//Option:
-		//	optionValue=STRING
-		//	correctOption='correct'?;
+		//	optionValue=STRING correctOption="correct"?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//optionValue=STRING correctOption='correct'?
+		//optionValue=STRING correctOption="correct"?
 		public Group getGroup() { return cGroup; }
 
 		//optionValue=STRING
@@ -1605,15 +1555,15 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getOptionValueSTRINGTerminalRuleCall_0_0() { return cOptionValueSTRINGTerminalRuleCall_0_0; }
 
-		//correctOption='correct'?
+		//correctOption="correct"?
 		public Assignment getCorrectOptionAssignment_1() { return cCorrectOptionAssignment_1; }
 
-		//'correct'
+		//"correct"
 		public Keyword getCorrectOptionCorrectKeyword_1_0() { return cCorrectOptionCorrectKeyword_1_0; }
 	}
 
 	public class CMapElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.CMap");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "CMap");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCmapKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1622,16 +1572,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//CMap:
-		//	'cmap' '{' content=STRING '}';
+		//	"cmap" "{" content=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'cmap' '{' content=STRING '}'
+		//"cmap" "{" content=STRING "}"
 		public Group getGroup() { return cGroup; }
 
-		//'cmap'
+		//"cmap"
 		public Keyword getCmapKeyword_0() { return cCmapKeyword_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//content=STRING
@@ -1640,12 +1590,12 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getContentSTRINGTerminalRuleCall_2_0() { return cContentSTRINGTerminalRuleCall_2_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 
 	public class ScriptElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Script");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Script");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScript_expressionsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1660,19 +1610,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cScriptBodyScriptBodyParserRuleCall_5_0 = (RuleCall)cScriptBodyAssignment_5.eContents().get(0);
 		
 		//Script:
-		//	'script_expressions' '{'
-		//	evalVars+=EvalVar (',' evalVars+=EvalVar)*
-		//	'}'
-		//	scriptBody=ScriptBody?;
+		//	"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//'script_expressions' '{' evalVars+=EvalVar (',' evalVars+=EvalVar)* '}' scriptBody=ScriptBody?
+		//"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?
 		public Group getGroup() { return cGroup; }
 
-		//'script_expressions'
+		//"script_expressions"
 		public Keyword getScript_expressionsKeyword_0() { return cScript_expressionsKeyword_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//evalVars+=EvalVar
@@ -1681,10 +1628,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//EvalVar
 		public RuleCall getEvalVarsEvalVarParserRuleCall_2_0() { return cEvalVarsEvalVarParserRuleCall_2_0; }
 
-		//(',' evalVars+=EvalVar)*
+		//("," evalVars+=EvalVar)*
 		public Group getGroup_3() { return cGroup_3; }
 
-		//','
+		//","
 		public Keyword getCommaKeyword_3_0() { return cCommaKeyword_3_0; }
 
 		//evalVars+=EvalVar
@@ -1693,7 +1640,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//EvalVar
 		public RuleCall getEvalVarsEvalVarParserRuleCall_3_1_0() { return cEvalVarsEvalVarParserRuleCall_3_1_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
 
 		//scriptBody=ScriptBody?
@@ -1704,7 +1651,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class EvalVarElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.EvalVar");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "EvalVar");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cVarNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cVarNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cVarNameAssignment_0.eContents().get(0);
@@ -1713,10 +1660,10 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cVarExpressionSTRINGTerminalRuleCall_2_0 = (RuleCall)cVarExpressionAssignment_2.eContents().get(0);
 		
 		//EvalVar:
-		//	varName=STRING '=' varExpression=STRING;
+		//	varName=STRING "=" varExpression=STRING;
 		@Override public ParserRule getRule() { return rule; }
 
-		//varName=STRING '=' varExpression=STRING
+		//varName=STRING "=" varExpression=STRING
 		public Group getGroup() { return cGroup; }
 
 		//varName=STRING
@@ -1725,7 +1672,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getVarNameSTRINGTerminalRuleCall_0_0() { return cVarNameSTRINGTerminalRuleCall_0_0; }
 
-		//'='
+		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
 		//varExpression=STRING
@@ -1736,7 +1683,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	public class ScriptBodyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ScriptBody");
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "ScriptBody");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScriptKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -1745,18 +1692,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//ScriptBody:
-		//	'script' '{'
-		//	script=STRING
-		//	'}';
+		//	"script" "{" script=STRING "}";
 		@Override public ParserRule getRule() { return rule; }
 
-		//'script' '{' script=STRING '}'
+		//"script" "{" script=STRING "}"
 		public Group getGroup() { return cGroup; }
 
-		//'script'
+		//"script"
 		public Keyword getScriptKeyword_0() { return cScriptKeyword_0; }
 
-		//'{'
+		//"{"
 		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 
 		//script=STRING
@@ -1765,7 +1710,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getScriptSTRINGTerminalRuleCall_2_0() { return cScriptSTRINGTerminalRuleCall_2_0; }
 
-		//'}'
+		//"}"
 		public Keyword getRightCurlyBracketKeyword_3() { return cRightCurlyBracketKeyword_3; }
 	}
 	
@@ -1843,7 +1788,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pScript = new ScriptElements();
 		this.pEvalVar = new EvalVarElements();
 		this.pScriptBody = new ScriptBodyElements();
-		this.tBOOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.BOOL");
+		this.tBOOL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "BOOL");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -1884,8 +1829,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ProcessingHints:
-	//	{ProcessingHints} skipGeneration='@skip_generation'?
-	//	skipGenerationInProduction='@skip_generation_in_production'?;
+	//	{ProcessingHints} skipGeneration="@skip_generation"? skipGenerationInProduction="@skip_generation_in_production"?;
 	public ProcessingHintsElements getProcessingHintsAccess() {
 		return pProcessingHints;
 	}
@@ -1895,11 +1839,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChapterDetails:
-	//	exerciseBank='@exercise_bank'?
-	//	'subject' subjectName=STRING
-	//	'chapterNumber' chapterNumber=INT '.' subChapterNumber=INT
-	//	'chapterName' chapterName=STRING
-	//	scriptBody=ScriptBody?;
+	//	exerciseBank="@exercise_bank"? "subject" subjectName=STRING "chapterNumber" chapterNumber=INT "." subChapterNumber=INT
+	//	"chapterName" chapterName=STRING scriptBody=ScriptBody?;
 	public ChapterDetailsElements getChapterDetailsAccess() {
 		return pChapterDetails;
 	}
@@ -1921,9 +1862,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//WordMeaning:
-	//	'@wm' hideFromView='hide'?
-	//	word=STRING
-	//	meaning=STRING;
+	//	"@wm" hideFromView="hide"? word=STRING meaning=STRING;
 	public WordMeaningElements getWordMeaningAccess() {
 		return pWordMeaning;
 	}
@@ -1933,10 +1872,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//QuestionAnswer:
-	//	'@qa' hideFromView='hide'?
-	//	question=STRING
-	//	answerParts+=STRING+
-	//	cmap=CMap?;
+	//	"@qa" hideFromView="hide"? question=STRING answerParts+=STRING+ cmap=CMap?;
 	public QuestionAnswerElements getQuestionAnswerAccess() {
 		return pQuestionAnswer;
 	}
@@ -1946,9 +1882,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//FIB:
-	//	'@fib' hideFromView='hide'?
-	//	question=STRING
-	//	answers+=STRING+;
+	//	"@fib" hideFromView="hide"? question=STRING answers+=STRING+;
 	public FIBElements getFIBAccess() {
 		return pFIB;
 	}
@@ -1958,10 +1892,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Definition:
-	//	'@definition' hideFromView='hide'?
-	//	term=STRING
-	//	definition=STRING
-	//	cmap=CMap?;
+	//	"@definition" hideFromView="hide"? term=STRING definition=STRING cmap=CMap?;
 	public DefinitionElements getDefinitionAccess() {
 		return pDefinition;
 	}
@@ -1971,10 +1902,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Character:
-	//	'@character' hideFromView='hide'?
-	//	character=STRING
-	//	estimate=STRING
-	//	cmap=CMap?;
+	//	"@character" hideFromView="hide"? character=STRING estimate=STRING cmap=CMap?;
 	public CharacterElements getCharacterAccess() {
 		return pCharacter;
 	}
@@ -1984,10 +1912,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TeacherNote:
-	//	'@tn' hideFromView='hide'?
-	//	caption=STRING?
-	//	note=STRING
-	//	cmap=CMap?;
+	//	"@tn" hideFromView="hide"? caption=STRING? note=STRING cmap=CMap?;
 	public TeacherNoteElements getTeacherNoteAccess() {
 		return pTeacherNote;
 	}
@@ -1997,12 +1922,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Matching:
-	//	'@match' hideFromView='hide'?
-	//	skipReverseQuestion='skip_reverse_question'?
-	//	question=STRING? '{'
-	//	pairs+=MatchPair+
-	//	mcqConfig=MatchMCQConfig?
-	//	'}';
+	//	"@match" hideFromView="hide"? skipReverseQuestion="skip_reverse_question"? question=STRING? "{" pairs+=MatchPair+
+	//	mcqConfig=MatchMCQConfig? "}";
 	public MatchingElements getMatchingAccess() {
 		return pMatching;
 	}
@@ -2012,7 +1933,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MatchPair:
-	//	matchQuestion=STRING '=' matchAnswer=STRING;
+	//	matchQuestion=STRING "=" matchAnswer=STRING;
 	public MatchPairElements getMatchPairAccess() {
 		return pMatchPair;
 	}
@@ -2022,10 +1943,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MatchMCQConfig:
-	//	'@mcq_config' '{'
-	//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)? ('@numOptionsToShow'
-	//	numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)?
-	//	'}';
+	//	"@mcq_config" "{" "@forwardCaption" forwardCaption=STRING ("@reverseCaption" reverseCaption=STRING)?
+	//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? "}";
 	public MatchMCQConfigElements getMatchMCQConfigAccess() {
 		return pMatchMCQConfig;
 	}
@@ -2035,8 +1954,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Event:
-	//	'@event' hideFromView='hide'?
-	//	event=STRING time=STRING;
+	//	"@event" hideFromView="hide"? event=STRING time=STRING;
 	public EventElements getEventAccess() {
 		return pEvent;
 	}
@@ -2046,10 +1964,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//TrueFalse:
-	//	'@true_false' hideFromView='hide'?
-	//	statement=STRING
-	//	truthValue=BOOL
-	//	justification=STRING?;
+	//	"@true_false" hideFromView="hide"? statement=STRING truthValue=BOOL justification=STRING?;
 	public TrueFalseElements getTrueFalseAccess() {
 		return pTrueFalse;
 	}
@@ -2059,10 +1974,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemEquation:
-	//	'@chem_equation' hideFromView='hide'?
-	//	description=STRING? '{'
-	//	reactants=STRING '>' produces=STRING? '>' products=STRING
-	//	'}';
+	//	"@chem_equation" hideFromView="hide"? description=STRING? "{" reactants=STRING ">" produces=STRING? ">"
+	//	products=STRING "}";
 	public ChemEquationElements getChemEquationAccess() {
 		return pChemEquation;
 	}
@@ -2072,10 +1985,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ChemCompound:
-	//	'@chem_compound' hideFromView='hide'?
-	//	symbol=STRING
-	//	chemicalName=STRING
-	//	commonName=STRING?;
+	//	"@chem_compound" hideFromView="hide"? symbol=STRING chemicalName=STRING commonName=STRING?;
 	public ChemCompoundElements getChemCompoundAccess() {
 		return pChemCompound;
 	}
@@ -2085,8 +1995,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Spellbee:
-	//	'@spellbee' hideFromView='hide'?
-	//	word=STRING;
+	//	"@spellbee" hideFromView="hide"? word=STRING;
 	public SpellbeeElements getSpellbeeAccess() {
 		return pSpellbee;
 	}
@@ -2096,11 +2005,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ImageLabel:
-	//	'@image_label' hideFromView='hide'?
-	//	caption=STRING? '{'
-	//	'imageName' imageName=STRING
-	//	hotspots+=HotSpot (',' hotspots+=HotSpot)*
-	//	'}';
+	//	"@image_label" hideFromView="hide"? caption=STRING? "{" "imageName" imageName=STRING hotspots+=HotSpot (","
+	//	hotspots+=HotSpot)* "}";
 	public ImageLabelElements getImageLabelAccess() {
 		return pImageLabel;
 	}
@@ -2110,7 +2016,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//HotSpot:
-	//	x=INT ',' y=INT '=' label=STRING;
+	//	x=INT "," y=INT "=" label=STRING;
 	public HotSpotElements getHotSpotAccess() {
 		return pHotSpot;
 	}
@@ -2120,12 +2026,8 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Equation:
-	//	'@equation' hideFromView='hide'?
-	//	equation=STRING '{'
-	//	description=STRING?
-	//	'where'
-	//	symbols+=EqSymbol (',' symbols+=EqSymbol)*
-	//	'}';
+	//	"@equation" hideFromView="hide"? equation=STRING "{" description=STRING? "where" symbols+=EqSymbol (","
+	//	symbols+=EqSymbol)* "}";
 	public EquationElements getEquationAccess() {
 		return pEquation;
 	}
@@ -2135,7 +2037,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EqSymbol:
-	//	symbol=STRING '=' description=STRING;
+	//	symbol=STRING "=" description=STRING;
 	public EqSymbolElements getEqSymbolAccess() {
 		return pEqSymbol;
 	}
@@ -2145,10 +2047,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//RefToContext:
-	//	'@rtc' hideFromView='hide'? '{'
-	//	'context' context=STRING
-	//	rtcElement+=RTCElement+
-	//	'}';
+	//	"@rtc" hideFromView="hide"? "{" "context" context=STRING rtcElement+=RTCElement+ "}";
 	public RefToContextElements getRefToContextAccess() {
 		return pRefToContext;
 	}
@@ -2169,12 +2068,9 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//MultiChoice:
-	//	'@multi_choice' hideFromView='hide'? question=STRING '{'
-	//	'@options' '{'
-	//	options+=Option (',' options+=Option)*
-	//	'}' ('@numOptionsToShow' numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)? ('@explanation'
-	//	explanation=STRING)?
-	//	'}';
+	//	"@multi_choice" hideFromView="hide"? question=STRING "{" "@options" "{" options+=Option ("," options+=Option)* "}"
+	//	("@numOptionsToShow" numOptionsToShow=INT)? ("@numOptionsPerRow" numOptionsPerRow=INT)? ("@explanation"
+	//	explanation=STRING)? "}";
 	public MultiChoiceElements getMultiChoiceAccess() {
 		return pMultiChoice;
 	}
@@ -2184,7 +2080,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Exercise:
-	//	'@exercise' hideFromView='hide'? ('marks' '=' marks=INT) question=STRING ('hints' '{' hints+=STRING+ '}')? ('answer'
+	//	"@exercise" hideFromView="hide"? ("marks" "=" marks=INT) question=STRING ("hints" "{" hints+=STRING+ "}")? ("answer"
 	//	answer=STRING);
 	public ExerciseElements getExerciseAccess() {
 		return pExercise;
@@ -2195,8 +2091,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Option:
-	//	optionValue=STRING
-	//	correctOption='correct'?;
+	//	optionValue=STRING correctOption="correct"?;
 	public OptionElements getOptionAccess() {
 		return pOption;
 	}
@@ -2206,7 +2101,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//CMap:
-	//	'cmap' '{' content=STRING '}';
+	//	"cmap" "{" content=STRING "}";
 	public CMapElements getCMapAccess() {
 		return pCMap;
 	}
@@ -2216,10 +2111,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Script:
-	//	'script_expressions' '{'
-	//	evalVars+=EvalVar (',' evalVars+=EvalVar)*
-	//	'}'
-	//	scriptBody=ScriptBody?;
+	//	"script_expressions" "{" evalVars+=EvalVar ("," evalVars+=EvalVar)* "}" scriptBody=ScriptBody?;
 	public ScriptElements getScriptAccess() {
 		return pScript;
 	}
@@ -2229,7 +2121,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//EvalVar:
-	//	varName=STRING '=' varExpression=STRING;
+	//	varName=STRING "=" varExpression=STRING;
 	public EvalVarElements getEvalVarAccess() {
 		return pEvalVar;
 	}
@@ -2239,9 +2131,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ScriptBody:
-	//	'script' '{'
-	//	script=STRING
-	//	'}';
+	//	"script" "{" script=STRING "}";
 	public ScriptBodyElements getScriptBodyAccess() {
 		return pScriptBody;
 	}
@@ -2251,44 +2141,44 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//terminal BOOL:
-	//	'true' | 'false';
+	//	"true" | "false";
 	public TerminalRule getBOOLRule() {
 		return tBOOL;
 	} 
 
 	//terminal ID:
-	//	'^'? ('a'..'z' | 'A'..'Z' | '_') ('a'..'z' | 'A'..'Z' | '_' | '0'..'9')*;
+	//	"^"? ("a".."z" | "A".."Z" | "_") ("a".."z" | "A".."Z" | "_" | "0".."9")*;
 	public TerminalRule getIDRule() {
 		return gaTerminals.getIDRule();
 	} 
 
 	//terminal INT returns ecore::EInt:
-	//	'0'..'9'+;
+	//	"0".."9"+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
 	} 
 
 	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' |
-	//	"'" ('\\' . | !('\\' | "'"))* "'";
+	//	"\"" ("\\" . / * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\""))* "\"" | "\'" ("\\" .
+	//	/ * 'b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\' * / | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return gaTerminals.getSTRINGRule();
 	} 
 
 	//terminal ML_COMMENT:
-	//	'/ *'->'* /';
+	//	"/ *"->"* /";
 	public TerminalRule getML_COMMENTRule() {
 		return gaTerminals.getML_COMMENTRule();
 	} 
 
 	//terminal SL_COMMENT:
-	//	'//' !('\n' | '\r')* ('\r'? '\n')?;
+	//	"//" !("\n" | "\r")* ("\r"? "\n")?;
 	public TerminalRule getSL_COMMENTRule() {
 		return gaTerminals.getSL_COMMENTRule();
 	} 
 
 	//terminal WS:
-	//	' ' | '\t' | '\r' | '\n'+;
+	//	(" " | "\t" | "\r" | "\n")+;
 	public TerminalRule getWSRule() {
 		return gaTerminals.getWSRule();
 	} 

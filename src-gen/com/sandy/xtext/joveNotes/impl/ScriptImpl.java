@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptImpl#getEvalVars <em>Eval Vars</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptImpl#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

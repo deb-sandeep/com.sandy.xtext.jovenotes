@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getHideFromView <em>Hide From View</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getDescription <em>Description</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Equation#getSymbols <em>Symbols</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEquation()
  * @model

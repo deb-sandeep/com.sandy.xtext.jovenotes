@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl#getWord <em>Word</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.WordMeaningImpl#getMeaning <em>Meaning</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

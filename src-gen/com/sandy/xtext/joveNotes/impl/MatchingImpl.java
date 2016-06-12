@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -37,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getPairs <em>Pairs</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getMcqConfig <em>Mcq Config</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

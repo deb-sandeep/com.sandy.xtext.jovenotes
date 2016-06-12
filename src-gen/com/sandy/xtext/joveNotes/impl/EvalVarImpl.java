@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl#getVarName <em>Var Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl#getVarExpression <em>Var Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

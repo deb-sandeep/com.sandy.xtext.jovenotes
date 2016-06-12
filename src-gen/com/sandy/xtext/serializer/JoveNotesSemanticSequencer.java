@@ -4,6 +4,7 @@
 package com.sandy.xtext.serializer;
 
 import com.google.inject.Inject;
+import com.google.inject.Provider;
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
@@ -34,15 +35,16 @@ import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
 import com.sandy.xtext.joveNotes.WordMeaning;
 import com.sandy.xtext.services.JoveNotesGrammarAccess;
-import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.xtext.Action;
-import org.eclipse.xtext.Parameter;
-import org.eclipse.xtext.ParserRule;
-import org.eclipse.xtext.serializer.ISerializationContext;
+import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
+import org.eclipse.xtext.serializer.diagnostic.ISemanticSequencerDiagnosticProvider;
+import org.eclipse.xtext.serializer.diagnostic.ISerializationDiagnostic.Acceptor;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.GenericSequencer;
+import org.eclipse.xtext.serializer.sequencer.ISemanticNodeProvider.INodesForEObjectProvider;
+import org.eclipse.xtext.serializer.sequencer.ISemanticSequencer;
+import org.eclipse.xtext.serializer.sequencer.ITransientValueService;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 
 @SuppressWarnings("all")
@@ -52,13 +54,8 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	private JoveNotesGrammarAccess grammarAccess;
 	
 	@Override
-	public void sequence(ISerializationContext context, EObject semanticObject) {
-		EPackage epackage = semanticObject.eClass().getEPackage();
-		ParserRule rule = context.getParserRule();
-		Action action = context.getAssignedAction();
-		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == JoveNotesPackage.eINSTANCE)
-			switch (semanticObject.eClass().getClassifierID()) {
+	public void createSequence(EObject context, EObject semanticObject) {
+		if(semanticObject.eClass().getEPackage() == JoveNotesPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
 			case JoveNotesPackage.CMAP:
 				sequence_CMap(context, (CMap) semanticObject); 
 				return; 
@@ -66,45 +63,45 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_ChapterDetails(context, (ChapterDetails) semanticObject); 
 				return; 
 			case JoveNotesPackage.CHARACTER:
-				if (rule == grammarAccess.getCharacterRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getCharacterRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Character(context, (com.sandy.xtext.joveNotes.Character) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Character_NotesElement(context, (com.sandy.xtext.joveNotes.Character) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.CHEM_COMPOUND:
-				if (rule == grammarAccess.getChemCompoundRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getChemCompoundRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ChemCompound(context, (ChemCompound) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_ChemCompound_NotesElement(context, (ChemCompound) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.CHEM_EQUATION:
-				if (rule == grammarAccess.getChemEquationRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getChemEquationRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ChemEquation(context, (ChemEquation) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_ChemEquation_NotesElement(context, (ChemEquation) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.DEFINITION:
-				if (rule == grammarAccess.getDefinitionRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getDefinitionRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Definition(context, (Definition) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Definition_NotesElement(context, (Definition) semanticObject); 
 					return; 
 				}
@@ -113,12 +110,12 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_EqSymbol(context, (EqSymbol) semanticObject); 
 				return; 
 			case JoveNotesPackage.EQUATION:
-				if (rule == grammarAccess.getEquationRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getEquationRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Equation(context, (Equation) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Equation_NotesElement(context, (Equation) semanticObject); 
 					return; 
 				}
@@ -127,33 +124,33 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_EvalVar(context, (EvalVar) semanticObject); 
 				return; 
 			case JoveNotesPackage.EVENT:
-				if (rule == grammarAccess.getEventRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getEventRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Event(context, (Event) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Event_NotesElement(context, (Event) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.EXERCISE:
-				if (rule == grammarAccess.getExerciseRule()) {
+				if(context == grammarAccess.getExerciseRule()) {
 					sequence_Exercise(context, (Exercise) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Exercise_NotesElement(context, (Exercise) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.FIB:
-				if (rule == grammarAccess.getFIBRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getFIBRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_FIB(context, (FIB) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_FIB_NotesElement(context, (FIB) semanticObject); 
 					return; 
 				}
@@ -162,12 +159,12 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_HotSpot(context, (HotSpot) semanticObject); 
 				return; 
 			case JoveNotesPackage.IMAGE_LABEL:
-				if (rule == grammarAccess.getImageLabelRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getImageLabelRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_ImageLabel(context, (ImageLabel) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_ImageLabel_NotesElement(context, (ImageLabel) semanticObject); 
 					return; 
 				}
@@ -182,23 +179,23 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_MatchPair(context, (MatchPair) semanticObject); 
 				return; 
 			case JoveNotesPackage.MATCHING:
-				if (rule == grammarAccess.getMatchingRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				if(context == grammarAccess.getMatchingRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_Matching(context, (Matching) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_Matching_NotesElement(context, (Matching) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.MULTI_CHOICE:
-				if (rule == grammarAccess.getRTCElementRule()
-						|| rule == grammarAccess.getMultiChoiceRule()) {
+				if(context == grammarAccess.getMultiChoiceRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_MultiChoice(context, (MultiChoice) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getNotesElementRule()) {
+				else if(context == grammarAccess.getNotesElementRule()) {
 					sequence_MultiChoice_NotesElement(context, (MultiChoice) semanticObject); 
 					return; 
 				}
@@ -210,22 +207,22 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_ProcessingHints(context, (ProcessingHints) semanticObject); 
 				return; 
 			case JoveNotesPackage.QUESTION_ANSWER:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_QuestionAnswer(context, (QuestionAnswer) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getQuestionAnswerRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				else if(context == grammarAccess.getQuestionAnswerRule() ||
+				   context == grammarAccess.getRTCElementRule()) {
 					sequence_QuestionAnswer(context, (QuestionAnswer) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.REF_TO_CONTEXT:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_RefToContext(context, (RefToContext) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getRefToContextRule()) {
+				else if(context == grammarAccess.getRefToContextRule()) {
 					sequence_RefToContext(context, (RefToContext) semanticObject); 
 					return; 
 				}
@@ -237,75 +234,69 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				sequence_ScriptBody(context, (ScriptBody) semanticObject); 
 				return; 
 			case JoveNotesPackage.SPELLBEE:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getSpellbeeRule()) {
+				else if(context == grammarAccess.getSpellbeeRule()) {
 					sequence_Spellbee(context, (Spellbee) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.TEACHER_NOTE:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_TeacherNote(context, (TeacherNote) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTeacherNoteRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getTeacherNoteRule()) {
 					sequence_TeacherNote(context, (TeacherNote) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.TRUE_FALSE:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_TrueFalse(context, (TrueFalse) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getTrueFalseRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getTrueFalseRule()) {
 					sequence_TrueFalse(context, (TrueFalse) semanticObject); 
 					return; 
 				}
 				else break;
 			case JoveNotesPackage.WORD_MEANING:
-				if (rule == grammarAccess.getNotesElementRule()) {
+				if(context == grammarAccess.getNotesElementRule()) {
 					sequence_NotesElement_WordMeaning(context, (WordMeaning) semanticObject); 
 					return; 
 				}
-				else if (rule == grammarAccess.getWordMeaningRule()
-						|| rule == grammarAccess.getRTCElementRule()) {
+				else if(context == grammarAccess.getRTCElementRule() ||
+				   context == grammarAccess.getWordMeaningRule()) {
 					sequence_WordMeaning(context, (WordMeaning) semanticObject); 
 					return; 
 				}
 				else break;
 			}
-		if (errorAcceptor != null)
-			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
+		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
 	
 	/**
-	 * Contexts:
-	 *     CMap returns CMap
-	 *
 	 * Constraint:
 	 *     content=STRING
 	 */
-	protected void sequence_CMap(ISerializationContext context, CMap semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CMAP__CONTENT) == ValueTransient.YES)
+	protected void sequence_CMap(EObject context, CMap semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CMAP__CONTENT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CMAP__CONTENT));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getCMapAccess().getContentSTRINGTerminalRuleCall_2_0(), semanticObject.getContent());
 		feeder.finish();
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ChapterDetails returns ChapterDetails
-	 *
 	 * Constraint:
 	 *     (
 	 *         exerciseBank='@exercise_bank'? 
@@ -316,78 +307,57 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         scriptBody=ScriptBody?
 	 *     )
 	 */
-	protected void sequence_ChapterDetails(ISerializationContext context, ChapterDetails semanticObject) {
+	protected void sequence_ChapterDetails(EObject context, ChapterDetails semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Character returns Character
-	 *     RTCElement returns Character
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? character=STRING estimate=STRING cmap=CMap?)
 	 */
-	protected void sequence_Character(ISerializationContext context, com.sandy.xtext.joveNotes.Character semanticObject) {
+	protected void sequence_Character(EObject context, com.sandy.xtext.joveNotes.Character semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Character
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? character=STRING estimate=STRING cmap=CMap? script=Script?)
 	 */
-	protected void sequence_Character_NotesElement(ISerializationContext context, com.sandy.xtext.joveNotes.Character semanticObject) {
+	protected void sequence_Character_NotesElement(EObject context, com.sandy.xtext.joveNotes.Character semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ChemCompound returns ChemCompound
-	 *     RTCElement returns ChemCompound
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? symbol=STRING chemicalName=STRING commonName=STRING?)
 	 */
-	protected void sequence_ChemCompound(ISerializationContext context, ChemCompound semanticObject) {
+	protected void sequence_ChemCompound(EObject context, ChemCompound semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns ChemCompound
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? symbol=STRING chemicalName=STRING commonName=STRING? script=Script?)
 	 */
-	protected void sequence_ChemCompound_NotesElement(ISerializationContext context, ChemCompound semanticObject) {
+	protected void sequence_ChemCompound_NotesElement(EObject context, ChemCompound semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ChemEquation returns ChemEquation
-	 *     RTCElement returns ChemEquation
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? description=STRING? reactants=STRING produces=STRING? products=STRING)
 	 */
-	protected void sequence_ChemEquation(ISerializationContext context, ChemEquation semanticObject) {
+	protected void sequence_ChemEquation(EObject context, ChemEquation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns ChemEquation
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -398,51 +368,42 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_ChemEquation_NotesElement(ISerializationContext context, ChemEquation semanticObject) {
+	protected void sequence_ChemEquation_NotesElement(EObject context, ChemEquation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Definition returns Definition
-	 *     RTCElement returns Definition
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? term=STRING definition=STRING cmap=CMap?)
 	 */
-	protected void sequence_Definition(ISerializationContext context, Definition semanticObject) {
+	protected void sequence_Definition(EObject context, Definition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Definition
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? term=STRING definition=STRING cmap=CMap? script=Script?)
 	 */
-	protected void sequence_Definition_NotesElement(ISerializationContext context, Definition semanticObject) {
+	protected void sequence_Definition_NotesElement(EObject context, Definition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     EqSymbol returns EqSymbol
-	 *
 	 * Constraint:
 	 *     (symbol=STRING description=STRING)
 	 */
-	protected void sequence_EqSymbol(ISerializationContext context, EqSymbol semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__SYMBOL) == ValueTransient.YES)
+	protected void sequence_EqSymbol(EObject context, EqSymbol semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__SYMBOL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__SYMBOL));
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__DESCRIPTION) == ValueTransient.YES)
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__DESCRIPTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EQ_SYMBOL__DESCRIPTION));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getEqSymbolAccess().getSymbolSTRINGTerminalRuleCall_0_0(), semanticObject.getSymbol());
 		feeder.accept(grammarAccess.getEqSymbolAccess().getDescriptionSTRINGTerminalRuleCall_2_0(), semanticObject.getDescription());
 		feeder.finish();
@@ -450,22 +411,15 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	
 	/**
-	 * Contexts:
-	 *     Equation returns Equation
-	 *     RTCElement returns Equation
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? equation=STRING description=STRING? symbols+=EqSymbol symbols+=EqSymbol*)
 	 */
-	protected void sequence_Equation(ISerializationContext context, Equation semanticObject) {
+	protected void sequence_Equation(EObject context, Equation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Equation
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -476,26 +430,24 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_Equation_NotesElement(ISerializationContext context, Equation semanticObject) {
+	protected void sequence_Equation_NotesElement(EObject context, Equation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     EvalVar returns EvalVar
-	 *
 	 * Constraint:
 	 *     (varName=STRING varExpression=STRING)
 	 */
-	protected void sequence_EvalVar(ISerializationContext context, EvalVar semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_NAME) == ValueTransient.YES)
+	protected void sequence_EvalVar(EObject context, EvalVar semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_NAME));
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_EXPRESSION) == ValueTransient.YES)
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_EXPRESSION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.EVAL_VAR__VAR_EXPRESSION));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getEvalVarAccess().getVarNameSTRINGTerminalRuleCall_0_0(), semanticObject.getVarName());
 		feeder.accept(grammarAccess.getEvalVarAccess().getVarExpressionSTRINGTerminalRuleCall_2_0(), semanticObject.getVarExpression());
 		feeder.finish();
@@ -503,46 +455,33 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	
 	/**
-	 * Contexts:
-	 *     Event returns Event
-	 *     RTCElement returns Event
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? event=STRING time=STRING)
 	 */
-	protected void sequence_Event(ISerializationContext context, Event semanticObject) {
+	protected void sequence_Event(EObject context, Event semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Event
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? event=STRING time=STRING script=Script?)
 	 */
-	protected void sequence_Event_NotesElement(ISerializationContext context, Event semanticObject) {
+	protected void sequence_Event_NotesElement(EObject context, Event semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Exercise returns Exercise
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? marks=INT question=STRING hints+=STRING* answer=STRING)
 	 */
-	protected void sequence_Exercise(ISerializationContext context, Exercise semanticObject) {
+	protected void sequence_Exercise(EObject context, Exercise semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Exercise
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -553,53 +492,44 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_Exercise_NotesElement(ISerializationContext context, Exercise semanticObject) {
+	protected void sequence_Exercise_NotesElement(EObject context, Exercise semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     FIB returns FIB
-	 *     RTCElement returns FIB
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? question=STRING answers+=STRING+)
 	 */
-	protected void sequence_FIB(ISerializationContext context, FIB semanticObject) {
+	protected void sequence_FIB(EObject context, FIB semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns FIB
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? question=STRING answers+=STRING+ script=Script?)
 	 */
-	protected void sequence_FIB_NotesElement(ISerializationContext context, FIB semanticObject) {
+	protected void sequence_FIB_NotesElement(EObject context, FIB semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     HotSpot returns HotSpot
-	 *
 	 * Constraint:
 	 *     (x=INT y=INT label=STRING)
 	 */
-	protected void sequence_HotSpot(ISerializationContext context, HotSpot semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__X) == ValueTransient.YES)
+	protected void sequence_HotSpot(EObject context, HotSpot semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__X) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__X));
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__Y) == ValueTransient.YES)
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__Y) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__Y));
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__LABEL) == ValueTransient.YES)
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__LABEL) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.HOT_SPOT__LABEL));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getHotSpotAccess().getXINTTerminalRuleCall_0_0(), semanticObject.getX());
 		feeder.accept(grammarAccess.getHotSpotAccess().getYINTTerminalRuleCall_2_0(), semanticObject.getY());
 		feeder.accept(grammarAccess.getHotSpotAccess().getLabelSTRINGTerminalRuleCall_4_0(), semanticObject.getLabel());
@@ -608,22 +538,15 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	
 	/**
-	 * Contexts:
-	 *     ImageLabel returns ImageLabel
-	 *     RTCElement returns ImageLabel
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? caption=STRING? imageName=STRING hotspots+=HotSpot hotspots+=HotSpot*)
 	 */
-	protected void sequence_ImageLabel(ISerializationContext context, ImageLabel semanticObject) {
+	protected void sequence_ImageLabel(EObject context, ImageLabel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns ImageLabel
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -634,50 +557,42 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_ImageLabel_NotesElement(ISerializationContext context, ImageLabel semanticObject) {
+	protected void sequence_ImageLabel_NotesElement(EObject context, ImageLabel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     JoveNotes returns JoveNotes
-	 *
 	 * Constraint:
 	 *     (processingHints=ProcessingHints chapterDetails=ChapterDetails notesElements+=NotesElement*)
 	 */
-	protected void sequence_JoveNotes(ISerializationContext context, JoveNotes semanticObject) {
+	protected void sequence_JoveNotes(EObject context, JoveNotes semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     MatchMCQConfig returns MatchMCQConfig
-	 *
 	 * Constraint:
 	 *     (forwardCaption=STRING reverseCaption=STRING? numOptionsToShow=INT? numOptionsPerRow=INT?)
 	 */
-	protected void sequence_MatchMCQConfig(ISerializationContext context, MatchMCQConfig semanticObject) {
+	protected void sequence_MatchMCQConfig(EObject context, MatchMCQConfig semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     MatchPair returns MatchPair
-	 *
 	 * Constraint:
 	 *     (matchQuestion=STRING matchAnswer=STRING)
 	 */
-	protected void sequence_MatchPair(ISerializationContext context, MatchPair semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_QUESTION) == ValueTransient.YES)
+	protected void sequence_MatchPair(EObject context, MatchPair semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_QUESTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_QUESTION));
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_ANSWER) == ValueTransient.YES)
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_ANSWER) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.MATCH_PAIR__MATCH_ANSWER));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getMatchPairAccess().getMatchQuestionSTRINGTerminalRuleCall_0_0(), semanticObject.getMatchQuestion());
 		feeder.accept(grammarAccess.getMatchPairAccess().getMatchAnswerSTRINGTerminalRuleCall_2_0(), semanticObject.getMatchAnswer());
 		feeder.finish();
@@ -685,22 +600,15 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	
 	/**
-	 * Contexts:
-	 *     Matching returns Matching
-	 *     RTCElement returns Matching
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? skipReverseQuestion='skip_reverse_question'? question=STRING? pairs+=MatchPair+ mcqConfig=MatchMCQConfig?)
 	 */
-	protected void sequence_Matching(ISerializationContext context, Matching semanticObject) {
+	protected void sequence_Matching(EObject context, Matching semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Matching
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -711,16 +619,12 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_Matching_NotesElement(ISerializationContext context, Matching semanticObject) {
+	protected void sequence_Matching_NotesElement(EObject context, Matching semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     RTCElement returns MultiChoice
-	 *     MultiChoice returns MultiChoice
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -732,15 +636,12 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         explanation=STRING?
 	 *     )
 	 */
-	protected void sequence_MultiChoice(ISerializationContext context, MultiChoice semanticObject) {
+	protected void sequence_MultiChoice(EObject context, MultiChoice semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns MultiChoice
-	 *
 	 * Constraint:
 	 *     (
 	 *         hideFromView='hide'? 
@@ -753,211 +654,158 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         script=Script?
 	 *     )
 	 */
-	protected void sequence_MultiChoice_NotesElement(ISerializationContext context, MultiChoice semanticObject) {
+	protected void sequence_MultiChoice_NotesElement(EObject context, MultiChoice semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns QuestionAnswer
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? question=STRING answerParts+=STRING+ cmap=CMap? script=Script?)
 	 */
-	protected void sequence_NotesElement_QuestionAnswer(ISerializationContext context, QuestionAnswer semanticObject) {
+	protected void sequence_NotesElement_QuestionAnswer(EObject context, QuestionAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns RefToContext
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? context=STRING rtcElement+=RTCElement+ script=Script?)
 	 */
-	protected void sequence_NotesElement_RefToContext(ISerializationContext context, RefToContext semanticObject) {
+	protected void sequence_NotesElement_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns Spellbee
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? word=STRING script=Script?)
 	 */
-	protected void sequence_NotesElement_Spellbee(ISerializationContext context, Spellbee semanticObject) {
+	protected void sequence_NotesElement_Spellbee(EObject context, Spellbee semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns TeacherNote
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? caption=STRING? note=STRING cmap=CMap? script=Script?)
 	 */
-	protected void sequence_NotesElement_TeacherNote(ISerializationContext context, TeacherNote semanticObject) {
+	protected void sequence_NotesElement_TeacherNote(EObject context, TeacherNote semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns TrueFalse
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? statement=STRING truthValue=BOOL justification=STRING? script=Script?)
 	 */
-	protected void sequence_NotesElement_TrueFalse(ISerializationContext context, TrueFalse semanticObject) {
+	protected void sequence_NotesElement_TrueFalse(EObject context, TrueFalse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     NotesElement returns WordMeaning
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? word=STRING meaning=STRING script=Script?)
 	 */
-	protected void sequence_NotesElement_WordMeaning(ISerializationContext context, WordMeaning semanticObject) {
+	protected void sequence_NotesElement_WordMeaning(EObject context, WordMeaning semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Option returns Option
-	 *
 	 * Constraint:
 	 *     (optionValue=STRING correctOption='correct'?)
 	 */
-	protected void sequence_Option(ISerializationContext context, Option semanticObject) {
+	protected void sequence_Option(EObject context, Option semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ProcessingHints returns ProcessingHints
-	 *
 	 * Constraint:
 	 *     (skipGeneration='@skip_generation'? skipGenerationInProduction='@skip_generation_in_production'?)
 	 */
-	protected void sequence_ProcessingHints(ISerializationContext context, ProcessingHints semanticObject) {
+	protected void sequence_ProcessingHints(EObject context, ProcessingHints semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     QuestionAnswer returns QuestionAnswer
-	 *     RTCElement returns QuestionAnswer
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? question=STRING answerParts+=STRING+ cmap=CMap?)
 	 */
-	protected void sequence_QuestionAnswer(ISerializationContext context, QuestionAnswer semanticObject) {
+	protected void sequence_QuestionAnswer(EObject context, QuestionAnswer semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     RefToContext returns RefToContext
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? context=STRING rtcElement+=RTCElement+)
 	 */
-	protected void sequence_RefToContext(ISerializationContext context, RefToContext semanticObject) {
+	protected void sequence_RefToContext(EObject context, RefToContext semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     ScriptBody returns ScriptBody
-	 *
 	 * Constraint:
 	 *     script=STRING
 	 */
-	protected void sequence_ScriptBody(ISerializationContext context, ScriptBody semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT) == ValueTransient.YES)
+	protected void sequence_ScriptBody(EObject context, ScriptBody semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.SCRIPT_BODY__SCRIPT));
 		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getScriptBodyAccess().getScriptSTRINGTerminalRuleCall_2_0(), semanticObject.getScript());
 		feeder.finish();
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Script returns Script
-	 *
 	 * Constraint:
 	 *     (evalVars+=EvalVar evalVars+=EvalVar* scriptBody=ScriptBody?)
 	 */
-	protected void sequence_Script(ISerializationContext context, Script semanticObject) {
+	protected void sequence_Script(EObject context, Script semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     Spellbee returns Spellbee
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? word=STRING)
 	 */
-	protected void sequence_Spellbee(ISerializationContext context, Spellbee semanticObject) {
+	protected void sequence_Spellbee(EObject context, Spellbee semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     TeacherNote returns TeacherNote
-	 *     RTCElement returns TeacherNote
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? caption=STRING? note=STRING cmap=CMap?)
 	 */
-	protected void sequence_TeacherNote(ISerializationContext context, TeacherNote semanticObject) {
+	protected void sequence_TeacherNote(EObject context, TeacherNote semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     TrueFalse returns TrueFalse
-	 *     RTCElement returns TrueFalse
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? statement=STRING truthValue=BOOL justification=STRING?)
 	 */
-	protected void sequence_TrueFalse(ISerializationContext context, TrueFalse semanticObject) {
+	protected void sequence_TrueFalse(EObject context, TrueFalse semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
-	 * Contexts:
-	 *     WordMeaning returns WordMeaning
-	 *     RTCElement returns WordMeaning
-	 *
 	 * Constraint:
 	 *     (hideFromView='hide'? word=STRING meaning=STRING)
 	 */
-	protected void sequence_WordMeaning(ISerializationContext context, WordMeaning semanticObject) {
+	protected void sequence_WordMeaning(EObject context, WordMeaning semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
-	
-	
 }

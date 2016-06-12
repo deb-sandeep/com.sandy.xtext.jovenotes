@@ -10,6 +10,7 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.TrueFalse#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TrueFalse#getHideFromView <em>Hide From View</em>}</li>
@@ -17,7 +18,6 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.TrueFalse#getTruthValue <em>Truth Value</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.TrueFalse#getJustification <em>Justification</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getTrueFalse()
  * @model

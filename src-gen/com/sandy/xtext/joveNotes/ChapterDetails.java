@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubjectName <em>Subject Name</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterName <em>Chapter Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails()
  * @model

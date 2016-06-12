@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.EvalVar#getVarName <em>Var Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.EvalVar#getVarExpression <em>Var Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEvalVar()
  * @model

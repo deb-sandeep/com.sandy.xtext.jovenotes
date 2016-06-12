@@ -10,12 +10,12 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Spellbee#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Spellbee#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Spellbee#getWord <em>Word</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getSpellbee()
  * @model

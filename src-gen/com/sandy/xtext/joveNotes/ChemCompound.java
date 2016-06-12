@@ -10,6 +10,7 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemCompound#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemCompound#getHideFromView <em>Hide From View</em>}</li>
@@ -17,7 +18,6 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.ChemCompound#getChemicalName <em>Chemical Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemCompound#getCommonName <em>Common Name</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemCompound()
  * @model

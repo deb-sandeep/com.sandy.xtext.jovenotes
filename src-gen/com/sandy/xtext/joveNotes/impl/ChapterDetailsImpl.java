@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubjectName <em>Subject Name</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterName <em>Chapter Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */

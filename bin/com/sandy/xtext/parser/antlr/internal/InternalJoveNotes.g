@@ -90,7 +90,7 @@ ruleJoveNotes returns [EObject current=null]
        			$current, 
        			"processingHints",
         		lv_processingHints_0_0, 
-        		"com.sandy.xtext.JoveNotes.ProcessingHints");
+        		"ProcessingHints");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -108,7 +108,7 @@ ruleJoveNotes returns [EObject current=null]
        			$current, 
        			"chapterDetails",
         		lv_chapterDetails_1_0, 
-        		"com.sandy.xtext.JoveNotes.ChapterDetails");
+        		"ChapterDetails");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -126,7 +126,7 @@ ruleJoveNotes returns [EObject current=null]
        			$current, 
        			"notesElements",
         		lv_notesElements_2_0, 
-        		"com.sandy.xtext.JoveNotes.NotesElement");
+        		"NotesElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -242,7 +242,7 @@ ruleChapterDetails returns [EObject current=null]
        			$current, 
        			"subjectName",
         		lv_subjectName_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -264,7 +264,7 @@ ruleChapterDetails returns [EObject current=null]
        			$current, 
        			"chapterNumber",
         		lv_chapterNumber_4_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -286,7 +286,7 @@ ruleChapterDetails returns [EObject current=null]
        			$current, 
        			"subChapterNumber",
         		lv_subChapterNumber_6_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -308,7 +308,7 @@ ruleChapterDetails returns [EObject current=null]
        			$current, 
        			"chapterName",
         		lv_chapterName_8_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -325,7 +325,7 @@ ruleChapterDetails returns [EObject current=null]
        			$current, 
        			"scriptBody",
         		lv_scriptBody_9_0, 
-        		"com.sandy.xtext.JoveNotes.ScriptBody");
+        		"ScriptBody");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -533,7 +533,7 @@ ruleNotesElement returns [EObject current=null]
        			$current, 
        			"script",
         		lv_script_17_0, 
-        		"com.sandy.xtext.JoveNotes.Script");
+        		"Script");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -592,7 +592,7 @@ ruleWordMeaning returns [EObject current=null]
        			$current, 
        			"word",
         		lv_word_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -610,7 +610,7 @@ ruleWordMeaning returns [EObject current=null]
        			$current, 
        			"meaning",
         		lv_meaning_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -668,7 +668,7 @@ ruleQuestionAnswer returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -686,7 +686,7 @@ ruleQuestionAnswer returns [EObject current=null]
        			$current, 
        			"answerParts",
         		lv_answerParts_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -703,7 +703,7 @@ ruleQuestionAnswer returns [EObject current=null]
        			$current, 
        			"cmap",
         		lv_cmap_4_0, 
-        		"com.sandy.xtext.JoveNotes.CMap");
+        		"CMap");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -762,7 +762,7 @@ ruleFIB returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -780,7 +780,7 @@ ruleFIB returns [EObject current=null]
        			$current, 
        			"answers",
         		lv_answers_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -838,7 +838,7 @@ ruleDefinition returns [EObject current=null]
        			$current, 
        			"term",
         		lv_term_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -856,7 +856,7 @@ ruleDefinition returns [EObject current=null]
        			$current, 
        			"definition",
         		lv_definition_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -873,7 +873,7 @@ ruleDefinition returns [EObject current=null]
        			$current, 
        			"cmap",
         		lv_cmap_4_0, 
-        		"com.sandy.xtext.JoveNotes.CMap");
+        		"CMap");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -932,7 +932,7 @@ ruleCharacter returns [EObject current=null]
        			$current, 
        			"character",
         		lv_character_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -950,7 +950,7 @@ ruleCharacter returns [EObject current=null]
        			$current, 
        			"estimate",
         		lv_estimate_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -967,7 +967,7 @@ ruleCharacter returns [EObject current=null]
        			$current, 
        			"cmap",
         		lv_cmap_4_0, 
-        		"com.sandy.xtext.JoveNotes.CMap");
+        		"CMap");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1026,7 +1026,7 @@ ruleTeacherNote returns [EObject current=null]
        			$current, 
        			"caption",
         		lv_caption_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1044,7 +1044,7 @@ ruleTeacherNote returns [EObject current=null]
        			$current, 
        			"note",
         		lv_note_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1061,7 +1061,7 @@ ruleTeacherNote returns [EObject current=null]
        			$current, 
        			"cmap",
         		lv_cmap_4_0, 
-        		"com.sandy.xtext.JoveNotes.CMap");
+        		"CMap");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1135,7 +1135,7 @@ ruleMatching returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1156,7 +1156,7 @@ ruleMatching returns [EObject current=null]
        			$current, 
        			"pairs",
         		lv_pairs_5_0, 
-        		"com.sandy.xtext.JoveNotes.MatchPair");
+        		"MatchPair");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1174,7 +1174,7 @@ ruleMatching returns [EObject current=null]
        			$current, 
        			"mcqConfig",
         		lv_mcqConfig_6_0, 
-        		"com.sandy.xtext.JoveNotes.MatchMCQConfig");
+        		"MatchMCQConfig");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1218,7 +1218,7 @@ ruleMatchPair returns [EObject current=null]
        			$current, 
        			"matchQuestion",
         		lv_matchQuestion_0_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1240,7 +1240,7 @@ ruleMatchPair returns [EObject current=null]
        			$current, 
        			"matchAnswer",
         		lv_matchAnswer_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1291,7 +1291,7 @@ ruleMatchMCQConfig returns [EObject current=null]
        			$current, 
        			"forwardCaption",
         		lv_forwardCaption_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1313,7 +1313,7 @@ ruleMatchMCQConfig returns [EObject current=null]
        			$current, 
        			"reverseCaption",
         		lv_reverseCaption_5_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1335,7 +1335,7 @@ ruleMatchMCQConfig returns [EObject current=null]
        			$current, 
        			"numOptionsToShow",
         		lv_numOptionsToShow_7_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -1357,7 +1357,7 @@ ruleMatchMCQConfig returns [EObject current=null]
        			$current, 
        			"numOptionsPerRow",
         		lv_numOptionsPerRow_9_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -1419,7 +1419,7 @@ ruleEvent returns [EObject current=null]
        			$current, 
        			"event",
         		lv_event_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1437,7 +1437,7 @@ ruleEvent returns [EObject current=null]
        			$current, 
        			"time",
         		lv_time_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1495,7 +1495,7 @@ ruleTrueFalse returns [EObject current=null]
        			$current, 
        			"statement",
         		lv_statement_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1513,7 +1513,7 @@ ruleTrueFalse returns [EObject current=null]
        			$current, 
        			"truthValue",
         		lv_truthValue_3_0, 
-        		"com.sandy.xtext.JoveNotes.BOOL");
+        		"BOOL");
 	    }
 
 )
@@ -1531,7 +1531,7 @@ ruleTrueFalse returns [EObject current=null]
        			$current, 
        			"justification",
         		lv_justification_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1589,7 +1589,7 @@ ruleChemEquation returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1611,7 +1611,7 @@ ruleChemEquation returns [EObject current=null]
        			$current, 
        			"reactants",
         		lv_reactants_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1633,7 +1633,7 @@ ruleChemEquation returns [EObject current=null]
        			$current, 
        			"produces",
         		lv_produces_6_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1655,7 +1655,7 @@ ruleChemEquation returns [EObject current=null]
        			$current, 
        			"products",
         		lv_products_8_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1717,7 +1717,7 @@ ruleChemCompound returns [EObject current=null]
        			$current, 
        			"symbol",
         		lv_symbol_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1735,7 +1735,7 @@ ruleChemCompound returns [EObject current=null]
        			$current, 
        			"chemicalName",
         		lv_chemicalName_3_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1753,7 +1753,7 @@ ruleChemCompound returns [EObject current=null]
        			$current, 
        			"commonName",
         		lv_commonName_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1811,7 +1811,7 @@ ruleSpellbee returns [EObject current=null]
        			$current, 
        			"word",
         		lv_word_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1869,7 +1869,7 @@ ruleImageLabel returns [EObject current=null]
        			$current, 
        			"caption",
         		lv_caption_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1895,7 +1895,7 @@ ruleImageLabel returns [EObject current=null]
        			$current, 
        			"imageName",
         		lv_imageName_5_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -1912,7 +1912,7 @@ ruleImageLabel returns [EObject current=null]
        			$current, 
        			"hotspots",
         		lv_hotspots_6_0, 
-        		"com.sandy.xtext.JoveNotes.HotSpot");
+        		"HotSpot");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1934,7 +1934,7 @@ ruleImageLabel returns [EObject current=null]
        			$current, 
        			"hotspots",
         		lv_hotspots_8_0, 
-        		"com.sandy.xtext.JoveNotes.HotSpot");
+        		"HotSpot");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -1978,7 +1978,7 @@ ruleHotSpot returns [EObject current=null]
        			$current, 
        			"x",
         		lv_x_0_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -2000,7 +2000,7 @@ ruleHotSpot returns [EObject current=null]
        			$current, 
        			"y",
         		lv_y_2_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -2022,7 +2022,7 @@ ruleHotSpot returns [EObject current=null]
        			$current, 
        			"label",
         		lv_label_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2080,7 +2080,7 @@ ruleEquation returns [EObject current=null]
        			$current, 
        			"equation",
         		lv_equation_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2102,7 +2102,7 @@ ruleEquation returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2123,7 +2123,7 @@ ruleEquation returns [EObject current=null]
        			$current, 
        			"symbols",
         		lv_symbols_6_0, 
-        		"com.sandy.xtext.JoveNotes.EqSymbol");
+        		"EqSymbol");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2145,7 +2145,7 @@ ruleEquation returns [EObject current=null]
        			$current, 
        			"symbols",
         		lv_symbols_8_0, 
-        		"com.sandy.xtext.JoveNotes.EqSymbol");
+        		"EqSymbol");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2189,7 +2189,7 @@ ruleEqSymbol returns [EObject current=null]
        			$current, 
        			"symbol",
         		lv_symbol_0_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2211,7 +2211,7 @@ ruleEqSymbol returns [EObject current=null]
        			$current, 
        			"description",
         		lv_description_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2277,7 +2277,7 @@ ruleRefToContext returns [EObject current=null]
        			$current, 
        			"context",
         		lv_context_4_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2294,7 +2294,7 @@ ruleRefToContext returns [EObject current=null]
        			$current, 
        			"rtcElement",
         		lv_rtcElement_5_0, 
-        		"com.sandy.xtext.JoveNotes.RTCElement");
+        		"RTCElement");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2517,7 +2517,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2546,7 +2546,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"options",
         		lv_options_6_0, 
-        		"com.sandy.xtext.JoveNotes.Option");
+        		"Option");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2568,7 +2568,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"options",
         		lv_options_8_0, 
-        		"com.sandy.xtext.JoveNotes.Option");
+        		"Option");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2595,7 +2595,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"numOptionsToShow",
         		lv_numOptionsToShow_11_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -2617,7 +2617,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"numOptionsPerRow",
         		lv_numOptionsPerRow_13_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -2639,7 +2639,7 @@ ruleMultiChoice returns [EObject current=null]
        			$current, 
        			"explanation",
         		lv_explanation_15_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2709,7 +2709,7 @@ ruleExercise returns [EObject current=null]
        			$current, 
        			"marks",
         		lv_marks_4_0, 
-        		"org.eclipse.xtext.common.Terminals.INT");
+        		"INT");
 	    }
 
 )
@@ -2727,7 +2727,7 @@ ruleExercise returns [EObject current=null]
        			$current, 
        			"question",
         		lv_question_5_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2753,7 +2753,7 @@ ruleExercise returns [EObject current=null]
        			$current, 
        			"hints",
         		lv_hints_8_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2779,7 +2779,7 @@ ruleExercise returns [EObject current=null]
        			$current, 
        			"answer",
         		lv_answer_11_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2818,7 +2818,7 @@ ruleOption returns [EObject current=null]
        			$current, 
        			"optionValue",
         		lv_optionValue_0_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2880,7 +2880,7 @@ ruleCMap returns [EObject current=null]
        			$current, 
        			"content",
         		lv_content_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -2930,7 +2930,7 @@ ruleScript returns [EObject current=null]
        			$current, 
        			"evalVars",
         		lv_evalVars_2_0, 
-        		"com.sandy.xtext.JoveNotes.EvalVar");
+        		"EvalVar");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2952,7 +2952,7 @@ ruleScript returns [EObject current=null]
        			$current, 
        			"evalVars",
         		lv_evalVars_4_0, 
-        		"com.sandy.xtext.JoveNotes.EvalVar");
+        		"EvalVar");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -2974,7 +2974,7 @@ ruleScript returns [EObject current=null]
        			$current, 
        			"scriptBody",
         		lv_scriptBody_6_0, 
-        		"com.sandy.xtext.JoveNotes.ScriptBody");
+        		"ScriptBody");
 	        afterParserOrEnumRuleCall();
 	    }
 
@@ -3014,7 +3014,7 @@ ruleEvalVar returns [EObject current=null]
        			$current, 
        			"varName",
         		lv_varName_0_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -3036,7 +3036,7 @@ ruleEvalVar returns [EObject current=null]
        			$current, 
        			"varExpression",
         		lv_varExpression_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )
@@ -3083,7 +3083,7 @@ ruleScriptBody returns [EObject current=null]
        			$current, 
        			"script",
         		lv_script_2_0, 
-        		"org.eclipse.xtext.common.Terminals.STRING");
+        		"STRING");
 	    }
 
 )

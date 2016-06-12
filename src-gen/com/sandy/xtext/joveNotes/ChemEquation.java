@@ -10,6 +10,7 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getHideFromView <em>Hide From View</em>}</li>
@@ -18,7 +19,6 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProducts <em>Products</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation()
  * @model
