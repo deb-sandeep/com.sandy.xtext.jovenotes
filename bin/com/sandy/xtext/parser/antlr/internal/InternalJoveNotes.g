@@ -520,19 +520,29 @@ ruleNotesElement returns [EObject current=null]
         $current = $this_Exercise_16.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getVoiceToTextParserRuleCall_0_17()); 
+    }
+    this_VoiceToText_17=ruleVoiceToText
+    { 
+        $current = $this_VoiceToText_17.current; 
+        afterParserOrEnumRuleCall();
+    }
 )(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
 	    }
-		lv_script_17_0=ruleScript		{
+		lv_script_18_0=ruleScript		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getNotesElementRule());
 	        }
        		set(
        			$current, 
        			"script",
-        		lv_script_17_0, 
+        		lv_script_18_0, 
         		"com.sandy.xtext.JoveNotes.Script");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2784,6 +2794,82 @@ ruleExercise returns [EObject current=null]
 
 )
 )))
+;
+
+
+
+
+
+// Entry rule entryRuleVoiceToText
+entryRuleVoiceToText returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getVoiceToTextRule()); }
+	 iv_ruleVoiceToText=ruleVoiceToText 
+	 { $current=$iv_ruleVoiceToText.current; } 
+	 EOF 
+;
+
+// Rule VoiceToText
+ruleVoiceToText returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='@voice2text' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getVoiceToTextAccess().getVoice2textKeyword_0());
+    }
+(
+(
+		lv_hideFromView_1_0=	'hide' 
+    {
+        newLeafNode(lv_hideFromView_1_0, grammarAccess.getVoiceToTextAccess().getHideFromViewHideKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVoiceToTextRule());
+	        }
+       		setWithLastConsumed($current, "hideFromView", lv_hideFromView_1_0, "hide");
+	    }
+
+)
+)?(
+(
+		lv_clipName_2_0=RULE_STRING
+		{
+			newLeafNode(lv_clipName_2_0, grammarAccess.getVoiceToTextAccess().getClipNameSTRINGTerminalRuleCall_2_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVoiceToTextRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"clipName",
+        		lv_clipName_2_0, 
+        		"org.eclipse.xtext.common.Terminals.STRING");
+	    }
+
+)
+)(
+(
+		lv_text_3_0=RULE_STRING
+		{
+			newLeafNode(lv_text_3_0, grammarAccess.getVoiceToTextAccess().getTextSTRINGTerminalRuleCall_3_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getVoiceToTextRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"text",
+        		lv_text_3_0, 
+        		"org.eclipse.xtext.common.Terminals.STRING");
+	    }
+
+)
+))
 ;
 
 

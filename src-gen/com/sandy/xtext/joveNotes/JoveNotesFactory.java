@@ -257,6 +257,15 @@ public interface JoveNotesFactory extends EFactory
   Exercise createExercise();
 
   /**
+   * Returns a new object of class '<em>Voice To Text</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Voice To Text</em>'.
+   * @generated
+   */
+  VoiceToText createVoiceToText();
+
+  /**
    * Returns a new object of class '<em>Option</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -32,6 +32,7 @@ import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
+import com.sandy.xtext.joveNotes.VoiceToText;
 import com.sandy.xtext.joveNotes.WordMeaning;
 
 import org.eclipse.emf.ecore.EObject;
@@ -312,6 +313,14 @@ public class JoveNotesSwitch<T> extends Switch<T>
         Exercise exercise = (Exercise)theEObject;
         T result = caseExercise(exercise);
         if (result == null) result = caseNotesElement(exercise);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.VOICE_TO_TEXT:
+      {
+        VoiceToText voiceToText = (VoiceToText)theEObject;
+        T result = caseVoiceToText(voiceToText);
+        if (result == null) result = caseNotesElement(voiceToText);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -766,6 +775,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseExercise(Exercise object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Voice To Text</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Voice To Text</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVoiceToText(VoiceToText object)
   {
     return null;
   }

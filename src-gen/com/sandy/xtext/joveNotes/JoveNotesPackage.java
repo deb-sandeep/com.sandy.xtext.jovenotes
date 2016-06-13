@@ -1505,6 +1505,61 @@ public interface JoveNotesPackage extends EPackage
   int EXERCISE_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 6;
 
   /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.VoiceToTextImpl <em>Voice To Text</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.VoiceToTextImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getVoiceToText()
+   * @generated
+   */
+  int VOICE_TO_TEXT = 26;
+
+  /**
+   * The feature id for the '<em><b>Script</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOICE_TO_TEXT__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Hide From View</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOICE_TO_TEXT__HIDE_FROM_VIEW = NOTES_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Clip Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOICE_TO_TEXT__CLIP_NAME = NOTES_ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Text</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOICE_TO_TEXT__TEXT = NOTES_ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Voice To Text</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VOICE_TO_TEXT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
+
+  /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1512,7 +1567,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getOption()
    * @generated
    */
-  int OPTION = 26;
+  int OPTION = 27;
 
   /**
    * The feature id for the '<em><b>Option Value</b></em>' attribute.
@@ -1549,7 +1604,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCMap()
    * @generated
    */
-  int CMAP = 27;
+  int CMAP = 28;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1577,7 +1632,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScript()
    * @generated
    */
-  int SCRIPT = 28;
+  int SCRIPT = 29;
 
   /**
    * The feature id for the '<em><b>Eval Vars</b></em>' containment reference list.
@@ -1614,7 +1669,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
    * @generated
    */
-  int EVAL_VAR = 29;
+  int EVAL_VAR = 30;
 
   /**
    * The feature id for the '<em><b>Var Name</b></em>' attribute.
@@ -1651,7 +1706,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
    * @generated
    */
-  int SCRIPT_BODY = 30;
+  int SCRIPT_BODY = 31;
 
   /**
    * The feature id for the '<em><b>Script</b></em>' attribute.
@@ -3099,6 +3154,60 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getExercise_Answer();
 
   /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.VoiceToText <em>Voice To Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Voice To Text</em>'.
+   * @see com.sandy.xtext.joveNotes.VoiceToText
+   * @generated
+   */
+  EClass getVoiceToText();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.VoiceToText#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.VoiceToText#getScript()
+   * @see #getVoiceToText()
+   * @generated
+   */
+  EReference getVoiceToText_Script();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.VoiceToText#getHideFromView <em>Hide From View</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hide From View</em>'.
+   * @see com.sandy.xtext.joveNotes.VoiceToText#getHideFromView()
+   * @see #getVoiceToText()
+   * @generated
+   */
+  EAttribute getVoiceToText_HideFromView();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.VoiceToText#getClipName <em>Clip Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Clip Name</em>'.
+   * @see com.sandy.xtext.joveNotes.VoiceToText#getClipName()
+   * @see #getVoiceToText()
+   * @generated
+   */
+  EAttribute getVoiceToText_ClipName();
+
+  /**
+   * Returns the meta object for the attribute '{@link com.sandy.xtext.joveNotes.VoiceToText#getText <em>Text</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Text</em>'.
+   * @see com.sandy.xtext.joveNotes.VoiceToText#getText()
+   * @see #getVoiceToText()
+   * @generated
+   */
+  EAttribute getVoiceToText_Text();
+
+  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.Option <em>Option</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4366,6 +4475,48 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute EXERCISE__ANSWER = eINSTANCE.getExercise_Answer();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.VoiceToTextImpl <em>Voice To Text</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.VoiceToTextImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getVoiceToText()
+     * @generated
+     */
+    EClass VOICE_TO_TEXT = eINSTANCE.getVoiceToText();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VOICE_TO_TEXT__SCRIPT = eINSTANCE.getVoiceToText_Script();
+
+    /**
+     * The meta object literal for the '<em><b>Hide From View</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VOICE_TO_TEXT__HIDE_FROM_VIEW = eINSTANCE.getVoiceToText_HideFromView();
+
+    /**
+     * The meta object literal for the '<em><b>Clip Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VOICE_TO_TEXT__CLIP_NAME = eINSTANCE.getVoiceToText_ClipName();
+
+    /**
+     * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VOICE_TO_TEXT__TEXT = eINSTANCE.getVoiceToText_Text();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.

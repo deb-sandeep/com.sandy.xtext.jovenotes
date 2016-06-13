@@ -189,21 +189,22 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRefToContextParserRuleCall_0_14 = (RuleCall)cAlternatives_0.eContents().get(14);
 		private final RuleCall cMultiChoiceParserRuleCall_0_15 = (RuleCall)cAlternatives_0.eContents().get(15);
 		private final RuleCall cExerciseParserRuleCall_0_16 = (RuleCall)cAlternatives_0.eContents().get(16);
+		private final RuleCall cVoiceToTextParserRuleCall_0_17 = (RuleCall)cAlternatives_0.eContents().get(17);
 		private final Assignment cScriptAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cScriptScriptParserRuleCall_1_0 = (RuleCall)cScriptAssignment_1.eContents().get(0);
 		
 		//NotesElement:
 		//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText)
 		//	script=Script?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise) script=Script?
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText) script=Script?
 		public Group getGroup() { return cGroup; }
 
 		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//WordMeaning
@@ -256,6 +257,9 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//Exercise
 		public RuleCall getExerciseParserRuleCall_0_16() { return cExerciseParserRuleCall_0_16; }
+
+		//VoiceToText
+		public RuleCall getVoiceToTextParserRuleCall_0_17() { return cVoiceToTextParserRuleCall_0_17; }
 
 		//script=Script?
 		public Assignment getScriptAssignment_1() { return cScriptAssignment_1; }
@@ -1583,6 +1587,47 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getAnswerSTRINGTerminalRuleCall_5_1_0() { return cAnswerSTRINGTerminalRuleCall_5_1_0; }
 	}
 
+	public class VoiceToTextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.VoiceToText");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cVoice2textKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cHideFromViewAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cHideFromViewHideKeyword_1_0 = (Keyword)cHideFromViewAssignment_1.eContents().get(0);
+		private final Assignment cClipNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cClipNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cClipNameAssignment_2.eContents().get(0);
+		private final Assignment cTextAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTextSTRINGTerminalRuleCall_3_0 = (RuleCall)cTextAssignment_3.eContents().get(0);
+		
+		//VoiceToText:
+		//	'@voice2text' hideFromView='hide'?
+		//	clipName=STRING text=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//'@voice2text' hideFromView='hide'? clipName=STRING text=STRING
+		public Group getGroup() { return cGroup; }
+
+		//'@voice2text'
+		public Keyword getVoice2textKeyword_0() { return cVoice2textKeyword_0; }
+
+		//hideFromView='hide'?
+		public Assignment getHideFromViewAssignment_1() { return cHideFromViewAssignment_1; }
+
+		//'hide'
+		public Keyword getHideFromViewHideKeyword_1_0() { return cHideFromViewHideKeyword_1_0; }
+
+		//clipName=STRING
+		public Assignment getClipNameAssignment_2() { return cClipNameAssignment_2; }
+
+		//STRING
+		public RuleCall getClipNameSTRINGTerminalRuleCall_2_0() { return cClipNameSTRINGTerminalRuleCall_2_0; }
+
+		//text=STRING
+		public Assignment getTextAssignment_3() { return cTextAssignment_3; }
+
+		//STRING
+		public RuleCall getTextSTRINGTerminalRuleCall_3_0() { return cTextSTRINGTerminalRuleCall_3_0; }
+	}
+
 	public class OptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Option");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1796,6 +1841,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final RTCElementElements pRTCElement;
 	private final MultiChoiceElements pMultiChoice;
 	private final ExerciseElements pExercise;
+	private final VoiceToTextElements pVoiceToText;
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
 	private final ScriptElements pScript;
@@ -1838,6 +1884,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pRTCElement = new RTCElementElements();
 		this.pMultiChoice = new MultiChoiceElements();
 		this.pExercise = new ExerciseElements();
+		this.pVoiceToText = new VoiceToTextElements();
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
 		this.pScript = new ScriptElements();
@@ -1910,7 +1957,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//NotesElement:
 	//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
-	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise)
+	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText)
 	//	script=Script?;
 	public NotesElementElements getNotesElementAccess() {
 		return pNotesElement;
@@ -2192,6 +2239,17 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getExerciseRule() {
 		return getExerciseAccess().getRule();
+	}
+
+	//VoiceToText:
+	//	'@voice2text' hideFromView='hide'?
+	//	clipName=STRING text=STRING;
+	public VoiceToTextElements getVoiceToTextAccess() {
+		return pVoiceToText;
+	}
+	
+	public ParserRule getVoiceToTextRule() {
+		return getVoiceToTextAccess().getRule();
 	}
 
 	//Option:

@@ -33,6 +33,7 @@ import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
+import com.sandy.xtext.joveNotes.VoiceToText;
 import com.sandy.xtext.joveNotes.WordMeaning;
 
 import org.eclipse.emf.ecore.EClass;
@@ -121,6 +122,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.RTC_ELEMENT: return createRTCElement();
       case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
       case JoveNotesPackage.EXERCISE: return createExercise();
+      case JoveNotesPackage.VOICE_TO_TEXT: return createVoiceToText();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       case JoveNotesPackage.SCRIPT: return createScript();
@@ -415,6 +417,17 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     ExerciseImpl exercise = new ExerciseImpl();
     return exercise;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VoiceToText createVoiceToText()
+  {
+    VoiceToTextImpl voiceToText = new VoiceToTextImpl();
+    return voiceToText;
   }
 
   /**

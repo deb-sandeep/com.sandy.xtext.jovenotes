@@ -32,6 +32,7 @@ import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
+import com.sandy.xtext.joveNotes.VoiceToText;
 import com.sandy.xtext.joveNotes.WordMeaning;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -233,6 +234,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseExercise(Exercise object)
       {
         return createExerciseAdapter();
+      }
+      @Override
+      public Adapter caseVoiceToText(VoiceToText object)
+      {
+        return createVoiceToTextAdapter();
       }
       @Override
       public Adapter caseOption(Option object)
@@ -667,6 +673,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createExerciseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.VoiceToText <em>Voice To Text</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.VoiceToText
+   * @generated
+   */
+  public Adapter createVoiceToTextAdapter()
   {
     return null;
   }

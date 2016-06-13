@@ -163,6 +163,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/hints"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Exercise/answer"/>
     </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//VoiceToText">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//VoiceToText/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//VoiceToText/hideFromView"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//VoiceToText/clipName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//VoiceToText/text"/>
+    </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Option">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/optionValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/correctOption"/>

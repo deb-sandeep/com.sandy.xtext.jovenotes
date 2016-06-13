@@ -39,7 +39,8 @@ NotesElement: (
     Equation       |
     RefToContext   |
     MultiChoice    |
-    Exercise )
+    Exercise       |
+    VoiceToText )
     ( script = Script )?
 ;
 
@@ -199,6 +200,12 @@ Exercise:
                 ( question = STRING )
                 ( 'hints' '{' ( hints += STRING )+ '}' )?
                 ( 'answer' answer = STRING )
+;
+
+VoiceToText:
+    '@voice2text' ( hideFromView = 'hide' )?
+                  ( clipName = STRING )
+                  ( text = STRING )
 ;
 
 Option:

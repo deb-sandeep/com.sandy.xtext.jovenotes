@@ -32,6 +32,7 @@ import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
+import com.sandy.xtext.joveNotes.VoiceToText;
 import com.sandy.xtext.joveNotes.WordMeaning;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -230,6 +231,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * @generated
    */
   private EClass exerciseEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass voiceToTextEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1654,6 +1662,56 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getVoiceToText()
+  {
+    return voiceToTextEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getVoiceToText_Script()
+  {
+    return (EReference)voiceToTextEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVoiceToText_HideFromView()
+  {
+    return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVoiceToText_ClipName()
+  {
+    return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getVoiceToText_Text()
+  {
+    return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getOption()
   {
     return optionEClass;
@@ -1967,6 +2025,12 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(exerciseEClass, EXERCISE__HINTS);
     createEAttribute(exerciseEClass, EXERCISE__ANSWER);
 
+    voiceToTextEClass = createEClass(VOICE_TO_TEXT);
+    createEReference(voiceToTextEClass, VOICE_TO_TEXT__SCRIPT);
+    createEAttribute(voiceToTextEClass, VOICE_TO_TEXT__HIDE_FROM_VIEW);
+    createEAttribute(voiceToTextEClass, VOICE_TO_TEXT__CLIP_NAME);
+    createEAttribute(voiceToTextEClass, VOICE_TO_TEXT__TEXT);
+
     optionEClass = createEClass(OPTION);
     createEAttribute(optionEClass, OPTION__OPTION_VALUE);
     createEAttribute(optionEClass, OPTION__CORRECT_OPTION);
@@ -2046,6 +2110,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     multiChoiceEClass.getESuperTypes().add(this.getNotesElement());
     multiChoiceEClass.getESuperTypes().add(this.getRTCElement());
     exerciseEClass.getESuperTypes().add(this.getNotesElement());
+    voiceToTextEClass.getESuperTypes().add(this.getNotesElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(joveNotesEClass, JoveNotes.class, "JoveNotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2205,6 +2270,12 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getExercise_Question(), ecorePackage.getEString(), "question", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExercise_Hints(), ecorePackage.getEString(), "hints", null, 0, -1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getExercise_Answer(), ecorePackage.getEString(), "answer", null, 0, 1, Exercise.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(voiceToTextEClass, VoiceToText.class, "VoiceToText", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getVoiceToText_Script(), this.getScript(), null, "script", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVoiceToText_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVoiceToText_ClipName(), ecorePackage.getEString(), "clipName", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getVoiceToText_Text(), ecorePackage.getEString(), "text", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOption_OptionValue(), ecorePackage.getEString(), "optionValue", null, 0, 1, Option.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

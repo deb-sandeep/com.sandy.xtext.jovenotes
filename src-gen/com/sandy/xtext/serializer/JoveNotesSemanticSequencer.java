@@ -32,6 +32,7 @@ import com.sandy.xtext.joveNotes.ScriptBody;
 import com.sandy.xtext.joveNotes.Spellbee;
 import com.sandy.xtext.joveNotes.TeacherNote;
 import com.sandy.xtext.joveNotes.TrueFalse;
+import com.sandy.xtext.joveNotes.VoiceToText;
 import com.sandy.xtext.joveNotes.WordMeaning;
 import com.sandy.xtext.services.JoveNotesGrammarAccess;
 import java.util.Set;
@@ -265,6 +266,16 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				else if (rule == grammarAccess.getTrueFalseRule()
 						|| rule == grammarAccess.getRTCElementRule()) {
 					sequence_TrueFalse(context, (TrueFalse) semanticObject); 
+					return; 
+				}
+				else break;
+			case JoveNotesPackage.VOICE_TO_TEXT:
+				if (rule == grammarAccess.getNotesElementRule()) {
+					sequence_NotesElement_VoiceToText(context, (VoiceToText) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getVoiceToTextRule()) {
+					sequence_VoiceToText(context, (VoiceToText) semanticObject); 
 					return; 
 				}
 				else break;
@@ -820,6 +831,18 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     NotesElement returns VoiceToText
+	 *
+	 * Constraint:
+	 *     (hideFromView='hide'? clipName=STRING text=STRING script=Script?)
+	 */
+	protected void sequence_NotesElement_VoiceToText(ISerializationContext context, VoiceToText semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     NotesElement returns WordMeaning
 	 *
 	 * Constraint:
@@ -943,6 +966,18 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     (hideFromView='hide'? statement=STRING truthValue=BOOL justification=STRING?)
 	 */
 	protected void sequence_TrueFalse(ISerializationContext context, TrueFalse semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VoiceToText returns VoiceToText
+	 *
+	 * Constraint:
+	 *     (hideFromView='hide'? clipName=STRING text=STRING)
+	 */
+	protected void sequence_VoiceToText(ISerializationContext context, VoiceToText semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
