@@ -6,6 +6,7 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
+import com.sandy.xtext.joveNotes.CompilerBreak;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
@@ -123,6 +124,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.MULTI_CHOICE: return createMultiChoice();
       case JoveNotesPackage.EXERCISE: return createExercise();
       case JoveNotesPackage.VOICE_TO_TEXT: return createVoiceToText();
+      case JoveNotesPackage.COMPILER_BREAK: return createCompilerBreak();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       case JoveNotesPackage.SCRIPT: return createScript();
@@ -138,6 +140,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public JoveNotes createJoveNotes()
   {
     JoveNotesImpl joveNotes = new JoveNotesImpl();
@@ -149,6 +152,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ProcessingHints createProcessingHints()
   {
     ProcessingHintsImpl processingHints = new ProcessingHintsImpl();
@@ -160,6 +164,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ChapterDetails createChapterDetails()
   {
     ChapterDetailsImpl chapterDetails = new ChapterDetailsImpl();
@@ -171,6 +176,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public NotesElement createNotesElement()
   {
     NotesElementImpl notesElement = new NotesElementImpl();
@@ -182,6 +188,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public WordMeaning createWordMeaning()
   {
     WordMeaningImpl wordMeaning = new WordMeaningImpl();
@@ -193,6 +200,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public QuestionAnswer createQuestionAnswer()
   {
     QuestionAnswerImpl questionAnswer = new QuestionAnswerImpl();
@@ -204,6 +212,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public FIB createFIB()
   {
     FIBImpl fib = new FIBImpl();
@@ -215,6 +224,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Definition createDefinition()
   {
     DefinitionImpl definition = new DefinitionImpl();
@@ -226,6 +236,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public com.sandy.xtext.joveNotes.Character createCharacter()
   {
     CharacterImpl character = new CharacterImpl();
@@ -237,6 +248,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public TeacherNote createTeacherNote()
   {
     TeacherNoteImpl teacherNote = new TeacherNoteImpl();
@@ -248,6 +260,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Matching createMatching()
   {
     MatchingImpl matching = new MatchingImpl();
@@ -259,6 +272,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public MatchPair createMatchPair()
   {
     MatchPairImpl matchPair = new MatchPairImpl();
@@ -270,6 +284,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public MatchMCQConfig createMatchMCQConfig()
   {
     MatchMCQConfigImpl matchMCQConfig = new MatchMCQConfigImpl();
@@ -281,6 +296,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Event createEvent()
   {
     EventImpl event = new EventImpl();
@@ -292,6 +308,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public TrueFalse createTrueFalse()
   {
     TrueFalseImpl trueFalse = new TrueFalseImpl();
@@ -303,6 +320,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ChemEquation createChemEquation()
   {
     ChemEquationImpl chemEquation = new ChemEquationImpl();
@@ -314,6 +332,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ChemCompound createChemCompound()
   {
     ChemCompoundImpl chemCompound = new ChemCompoundImpl();
@@ -325,6 +344,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Spellbee createSpellbee()
   {
     SpellbeeImpl spellbee = new SpellbeeImpl();
@@ -336,6 +356,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ImageLabel createImageLabel()
   {
     ImageLabelImpl imageLabel = new ImageLabelImpl();
@@ -347,6 +368,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public HotSpot createHotSpot()
   {
     HotSpotImpl hotSpot = new HotSpotImpl();
@@ -358,6 +380,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Equation createEquation()
   {
     EquationImpl equation = new EquationImpl();
@@ -369,6 +392,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EqSymbol createEqSymbol()
   {
     EqSymbolImpl eqSymbol = new EqSymbolImpl();
@@ -380,6 +404,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RefToContext createRefToContext()
   {
     RefToContextImpl refToContext = new RefToContextImpl();
@@ -391,6 +416,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public RTCElement createRTCElement()
   {
     RTCElementImpl rtcElement = new RTCElementImpl();
@@ -402,6 +428,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public MultiChoice createMultiChoice()
   {
     MultiChoiceImpl multiChoice = new MultiChoiceImpl();
@@ -413,6 +440,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Exercise createExercise()
   {
     ExerciseImpl exercise = new ExerciseImpl();
@@ -424,6 +452,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public VoiceToText createVoiceToText()
   {
     VoiceToTextImpl voiceToText = new VoiceToTextImpl();
@@ -435,6 +464,19 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
+  public CompilerBreak createCompilerBreak()
+  {
+    CompilerBreakImpl compilerBreak = new CompilerBreakImpl();
+    return compilerBreak;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Option createOption()
   {
     OptionImpl option = new OptionImpl();
@@ -446,6 +488,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public CMap createCMap()
   {
     CMapImpl cMap = new CMapImpl();
@@ -457,6 +500,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script createScript()
   {
     ScriptImpl script = new ScriptImpl();
@@ -468,6 +512,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EvalVar createEvalVar()
   {
     EvalVarImpl evalVar = new EvalVarImpl();
@@ -479,6 +524,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ScriptBody createScriptBody()
   {
     ScriptBodyImpl scriptBody = new ScriptBodyImpl();
@@ -490,6 +536,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public JoveNotesPackage getJoveNotesPackage()
   {
     return (JoveNotesPackage)getEPackage();

@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGeneration <em>Skip Generation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ProcessingHintsImpl#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSkipGeneration()
   {
     return skipGeneration;
@@ -104,6 +105,7 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSkipGeneration(String newSkipGeneration)
   {
     String oldSkipGeneration = skipGeneration;
@@ -117,6 +119,7 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSkipGenerationInProduction()
   {
     return skipGenerationInProduction;
@@ -127,6 +130,7 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSkipGenerationInProduction(String newSkipGenerationInProduction)
   {
     String oldSkipGenerationInProduction = skipGenerationInProduction;
@@ -221,7 +225,7 @@ public class ProcessingHintsImpl extends MinimalEObjectImpl.Container implements
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (skipGeneration: ");
     result.append(skipGeneration);
     result.append(", skipGenerationInProduction: ");

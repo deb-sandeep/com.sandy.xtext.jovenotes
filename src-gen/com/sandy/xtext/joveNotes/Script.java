@@ -13,11 +13,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Script#getEvalVars <em>Eval Vars</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Script#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScript()
  * @model
@@ -29,10 +29,6 @@ public interface Script extends EObject
    * Returns the value of the '<em><b>Eval Vars</b></em>' containment reference list.
    * The list contents are of type {@link com.sandy.xtext.joveNotes.EvalVar}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Eval Vars</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Eval Vars</em>' containment reference list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getScript_EvalVars()
@@ -44,10 +40,6 @@ public interface Script extends EObject
   /**
    * Returns the value of the '<em><b>Script Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script Body</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script Body</em>' containment reference.
    * @see #setScriptBody(ScriptBody)

@@ -10,6 +10,7 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Definition#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Definition#getHideFromView <em>Hide From View</em>}</li>
@@ -17,7 +18,6 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.Definition#getDefinition <em>Definition</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Definition#getCmap <em>Cmap</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getDefinition()
  * @model
@@ -28,10 +28,6 @@ public interface Definition extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -54,10 +50,6 @@ public interface Definition extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -80,10 +72,6 @@ public interface Definition extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Term</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Term</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Term</em>' attribute.
    * @see #setTerm(String)
@@ -106,10 +94,6 @@ public interface Definition extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Definition</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Definition</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Definition</em>' attribute.
    * @see #setDefinition(String)
@@ -132,10 +116,6 @@ public interface Definition extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Cmap</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Cmap</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Cmap</em>' containment reference.
    * @see #setCmap(CMap)

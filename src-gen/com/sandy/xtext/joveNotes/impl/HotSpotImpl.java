@@ -18,12 +18,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getX <em>X</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getY <em>Y</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.HotSpotImpl#getLabel <em>Label</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -115,6 +115,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getX()
   {
     return x;
@@ -125,6 +126,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setX(int newX)
   {
     int oldX = x;
@@ -138,6 +140,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getY()
   {
     return y;
@@ -148,6 +151,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setY(int newY)
   {
     int oldY = y;
@@ -161,6 +165,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getLabel()
   {
     return label;
@@ -171,6 +176,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setLabel(String newLabel)
   {
     String oldLabel = label;
@@ -275,7 +281,7 @@ public class HotSpotImpl extends MinimalEObjectImpl.Container implements HotSpot
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (x: ");
     result.append(x);
     result.append(", y: ");

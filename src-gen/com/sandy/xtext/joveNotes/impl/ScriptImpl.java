@@ -29,11 +29,11 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptImpl#getEvalVars <em>Eval Vars</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ScriptImpl#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -85,6 +85,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<EvalVar> getEvalVars()
   {
     if (evalVars == null)
@@ -99,6 +100,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ScriptBody getScriptBody()
   {
     return scriptBody;
@@ -126,6 +128,7 @@ public class ScriptImpl extends MinimalEObjectImpl.Container implements Script
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScriptBody(ScriptBody newScriptBody)
   {
     if (newScriptBody != scriptBody)

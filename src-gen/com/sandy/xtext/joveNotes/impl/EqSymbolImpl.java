@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EqSymbolImpl#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EqSymbolImpl#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class EqSymbolImpl extends MinimalEObjectImpl.Container implements EqSymb
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSymbol()
   {
     return symbol;
@@ -104,6 +105,7 @@ public class EqSymbolImpl extends MinimalEObjectImpl.Container implements EqSymb
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSymbol(String newSymbol)
   {
     String oldSymbol = symbol;
@@ -117,6 +119,7 @@ public class EqSymbolImpl extends MinimalEObjectImpl.Container implements EqSymb
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getDescription()
   {
     return description;
@@ -127,6 +130,7 @@ public class EqSymbolImpl extends MinimalEObjectImpl.Container implements EqSymb
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setDescription(String newDescription)
   {
     String oldDescription = description;
@@ -221,7 +225,7 @@ public class EqSymbolImpl extends MinimalEObjectImpl.Container implements EqSymb
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (symbol: ");
     result.append(symbol);
     result.append(", description: ");

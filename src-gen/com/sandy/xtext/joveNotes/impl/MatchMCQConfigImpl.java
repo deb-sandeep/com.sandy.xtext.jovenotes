@@ -18,13 +18,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getForwardCaption <em>Forward Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getReverseCaption <em>Reverse Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getNumOptionsToShow <em>Num Options To Show</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchMCQConfigImpl#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,6 +136,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getForwardCaption()
   {
     return forwardCaption;
@@ -146,6 +147,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setForwardCaption(String newForwardCaption)
   {
     String oldForwardCaption = forwardCaption;
@@ -159,6 +161,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getReverseCaption()
   {
     return reverseCaption;
@@ -169,6 +172,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setReverseCaption(String newReverseCaption)
   {
     String oldReverseCaption = reverseCaption;
@@ -182,6 +186,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getNumOptionsToShow()
   {
     return numOptionsToShow;
@@ -192,6 +197,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setNumOptionsToShow(int newNumOptionsToShow)
   {
     int oldNumOptionsToShow = numOptionsToShow;
@@ -205,6 +211,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getNumOptionsPerRow()
   {
     return numOptionsPerRow;
@@ -215,6 +222,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setNumOptionsPerRow(int newNumOptionsPerRow)
   {
     int oldNumOptionsPerRow = numOptionsPerRow;
@@ -329,7 +337,7 @@ public class MatchMCQConfigImpl extends MinimalEObjectImpl.Container implements 
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (forwardCaption: ");
     result.append(forwardCaption);
     result.append(", reverseCaption: ");

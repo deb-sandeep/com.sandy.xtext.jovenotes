@@ -10,6 +10,7 @@ package com.sandy.xtext.joveNotes;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getHideFromView <em>Hide From View</em>}</li>
@@ -18,7 +19,6 @@ package com.sandy.xtext.joveNotes;
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProduces <em>Produces</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChemEquation#getProducts <em>Products</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChemEquation()
  * @model
@@ -29,10 +29,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -55,10 +51,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -81,10 +73,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Description</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)
@@ -107,10 +95,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Reactants</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Reactants</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Reactants</em>' attribute.
    * @see #setReactants(String)
@@ -133,10 +117,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Produces</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Produces</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Produces</em>' attribute.
    * @see #setProduces(String)
@@ -159,10 +139,6 @@ public interface ChemEquation extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Products</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Products</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Products</em>' attribute.
    * @see #setProducts(String)

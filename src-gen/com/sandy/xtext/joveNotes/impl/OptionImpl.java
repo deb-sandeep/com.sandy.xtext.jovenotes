@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.OptionImpl#getOptionValue <em>Option Value</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.OptionImpl#getCorrectOption <em>Correct Option</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class OptionImpl extends MinimalEObjectImpl.Container implements Option
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getOptionValue()
   {
     return optionValue;
@@ -104,6 +105,7 @@ public class OptionImpl extends MinimalEObjectImpl.Container implements Option
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setOptionValue(String newOptionValue)
   {
     String oldOptionValue = optionValue;
@@ -117,6 +119,7 @@ public class OptionImpl extends MinimalEObjectImpl.Container implements Option
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getCorrectOption()
   {
     return correctOption;
@@ -127,6 +130,7 @@ public class OptionImpl extends MinimalEObjectImpl.Container implements Option
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCorrectOption(String newCorrectOption)
   {
     String oldCorrectOption = correctOption;
@@ -221,7 +225,7 @@ public class OptionImpl extends MinimalEObjectImpl.Container implements Option
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (optionValue: ");
     result.append(optionValue);
     result.append(", correctOption: ");

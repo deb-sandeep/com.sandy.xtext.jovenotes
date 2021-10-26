@@ -8,6 +8,7 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
+import com.sandy.xtext.joveNotes.CompilerBreak;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
@@ -96,6 +97,16 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 				}
 				else if (rule == grammarAccess.getNotesElementRule()) {
 					sequence_ChemEquation_NotesElement(context, (ChemEquation) semanticObject); 
+					return; 
+				}
+				else break;
+			case JoveNotesPackage.COMPILER_BREAK:
+				if (rule == grammarAccess.getCompilerBreakRule()) {
+					sequence_CompilerBreak(context, (CompilerBreak) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getNotesElementRule()) {
+					sequence_CompilerBreak_NotesElement(context, (CompilerBreak) semanticObject); 
 					return; 
 				}
 				else break;
@@ -410,6 +421,30 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     )
 	 */
 	protected void sequence_ChemEquation_NotesElement(ISerializationContext context, ChemEquation semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     CompilerBreak returns CompilerBreak
+	 *
+	 * Constraint:
+	 *     {CompilerBreak}
+	 */
+	protected void sequence_CompilerBreak(ISerializationContext context, CompilerBreak semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     NotesElement returns CompilerBreak
+	 *
+	 * Constraint:
+	 *     script=Script?
+	 */
+	protected void sequence_CompilerBreak_NotesElement(ISerializationContext context, CompilerBreak semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

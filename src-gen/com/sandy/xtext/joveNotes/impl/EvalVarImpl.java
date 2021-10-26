@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl#getVarName <em>Var Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EvalVarImpl#getVarExpression <em>Var Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class EvalVarImpl extends MinimalEObjectImpl.Container implements EvalVar
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getVarName()
   {
     return varName;
@@ -104,6 +105,7 @@ public class EvalVarImpl extends MinimalEObjectImpl.Container implements EvalVar
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setVarName(String newVarName)
   {
     String oldVarName = varName;
@@ -117,6 +119,7 @@ public class EvalVarImpl extends MinimalEObjectImpl.Container implements EvalVar
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getVarExpression()
   {
     return varExpression;
@@ -127,6 +130,7 @@ public class EvalVarImpl extends MinimalEObjectImpl.Container implements EvalVar
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setVarExpression(String newVarExpression)
   {
     String oldVarExpression = varExpression;
@@ -221,7 +225,7 @@ public class EvalVarImpl extends MinimalEObjectImpl.Container implements EvalVar
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (varName: ");
     result.append(varName);
     result.append(", varExpression: ");

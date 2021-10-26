@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGeneration <em>Skip Generation</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ProcessingHints#getSkipGenerationInProduction <em>Skip Generation In Production</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getProcessingHints()
  * @model
@@ -26,10 +26,6 @@ public interface ProcessingHints extends EObject
   /**
    * Returns the value of the '<em><b>Skip Generation</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Skip Generation</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Skip Generation</em>' attribute.
    * @see #setSkipGeneration(String)
@@ -52,10 +48,6 @@ public interface ProcessingHints extends EObject
   /**
    * Returns the value of the '<em><b>Skip Generation In Production</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Skip Generation In Production</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Skip Generation In Production</em>' attribute.
    * @see #setSkipGenerationInProduction(String)

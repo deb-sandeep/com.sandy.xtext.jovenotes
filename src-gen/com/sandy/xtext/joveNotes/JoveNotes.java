@@ -13,12 +13,12 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getProcessingHints <em>Processing Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getChapterDetails <em>Chapter Details</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.JoveNotes#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getJoveNotes()
  * @model
@@ -29,10 +29,6 @@ public interface JoveNotes extends EObject
   /**
    * Returns the value of the '<em><b>Processing Hints</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Processing Hints</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Processing Hints</em>' containment reference.
    * @see #setProcessingHints(ProcessingHints)
@@ -55,10 +51,6 @@ public interface JoveNotes extends EObject
   /**
    * Returns the value of the '<em><b>Chapter Details</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Chapter Details</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Chapter Details</em>' containment reference.
    * @see #setChapterDetails(ChapterDetails)
@@ -82,10 +74,6 @@ public interface JoveNotes extends EObject
    * Returns the value of the '<em><b>Notes Elements</b></em>' containment reference list.
    * The list contents are of type {@link com.sandy.xtext.joveNotes.NotesElement}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Notes Elements</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Notes Elements</em>' containment reference list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getJoveNotes_NotesElements()

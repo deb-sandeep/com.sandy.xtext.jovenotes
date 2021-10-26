@@ -6,6 +6,7 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
+import com.sandy.xtext.joveNotes.CompilerBreak;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
@@ -239,6 +240,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseVoiceToText(VoiceToText object)
       {
         return createVoiceToTextAdapter();
+      }
+      @Override
+      public Adapter caseCompilerBreak(CompilerBreak object)
+      {
+        return createCompilerBreakAdapter();
       }
       @Override
       public Adapter caseOption(Option object)
@@ -688,6 +694,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVoiceToTextAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.CompilerBreak <em>Compiler Break</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.CompilerBreak
+   * @generated
+   */
+  public Adapter createCompilerBreakAdapter()
   {
     return null;
   }

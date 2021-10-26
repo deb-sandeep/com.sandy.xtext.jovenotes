@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getHideFromView <em>Hide From View</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getAnswerParts <em>Answer Parts</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.QuestionAnswer#getCmap <em>Cmap</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getQuestionAnswer()
  * @model
@@ -29,10 +29,6 @@ public interface QuestionAnswer extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -55,10 +51,6 @@ public interface QuestionAnswer extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -81,10 +73,6 @@ public interface QuestionAnswer extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Question</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Question</em>' attribute.
    * @see #setQuestion(String)
@@ -108,10 +96,6 @@ public interface QuestionAnswer extends NotesElement, RTCElement
    * Returns the value of the '<em><b>Answer Parts</b></em>' attribute list.
    * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Answer Parts</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Answer Parts</em>' attribute list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getQuestionAnswer_AnswerParts()
@@ -123,10 +107,6 @@ public interface QuestionAnswer extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Cmap</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Cmap</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Cmap</em>' containment reference.
    * @see #setCmap(CMap)

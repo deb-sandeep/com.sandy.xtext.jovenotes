@@ -20,13 +20,13 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EventImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EventImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EventImpl#getEvent <em>Event</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.EventImpl#getTime <em>Time</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -128,6 +128,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -155,6 +156,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -176,6 +178,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -186,6 +189,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -199,6 +203,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getEvent()
   {
     return event;
@@ -209,6 +214,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setEvent(String newEvent)
   {
     String oldEvent = event;
@@ -222,6 +228,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getTime()
   {
     return time;
@@ -232,6 +239,7 @@ public class EventImpl extends NotesElementImpl implements Event
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setTime(String newTime)
   {
     String oldTime = time;
@@ -362,7 +370,7 @@ public class EventImpl extends NotesElementImpl implements Event
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", event: ");

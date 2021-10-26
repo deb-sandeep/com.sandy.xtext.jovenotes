@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getHideFromView <em>Hide From View</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getPairs <em>Pairs</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Matching#getMcqConfig <em>Mcq Config</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatching()
  * @model
@@ -30,10 +30,6 @@ public interface Matching extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -56,10 +52,6 @@ public interface Matching extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -82,10 +74,6 @@ public interface Matching extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Skip Reverse Question</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Skip Reverse Question</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Skip Reverse Question</em>' attribute.
    * @see #setSkipReverseQuestion(String)
@@ -108,10 +96,6 @@ public interface Matching extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Question</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Question</em>' attribute.
    * @see #setQuestion(String)
@@ -135,10 +119,6 @@ public interface Matching extends NotesElement, RTCElement
    * Returns the value of the '<em><b>Pairs</b></em>' containment reference list.
    * The list contents are of type {@link com.sandy.xtext.joveNotes.MatchPair}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Pairs</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Pairs</em>' containment reference list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatching_Pairs()
@@ -150,10 +130,6 @@ public interface Matching extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Mcq Config</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Mcq Config</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Mcq Config</em>' containment reference.
    * @see #setMcqConfig(MatchMCQConfig)

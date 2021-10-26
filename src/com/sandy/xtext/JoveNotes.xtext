@@ -40,7 +40,8 @@ NotesElement: (
     RefToContext   |
     MultiChoice    |
     Exercise       |
-    VoiceToText )
+    VoiceToText    |
+    CompilerBreak )
     ( script = Script )?
 ;
 
@@ -206,6 +207,11 @@ VoiceToText:
     '@voice2text' ( hideFromView = 'hide' )?
                   ( clipName = STRING )
                   ( text = STRING )
+;
+
+CompilerBreak:
+    {CompilerBreak}
+    '@compiler_break'
 ;
 
 Option:

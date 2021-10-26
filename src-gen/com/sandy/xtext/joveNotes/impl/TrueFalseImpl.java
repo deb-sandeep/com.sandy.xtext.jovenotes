@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getTruthValue <em>Truth Value</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TrueFalseImpl#getJustification <em>Justification</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -149,6 +149,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -176,6 +177,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -197,6 +199,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -207,6 +210,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -220,6 +224,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getStatement()
   {
     return statement;
@@ -230,6 +235,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setStatement(String newStatement)
   {
     String oldStatement = statement;
@@ -243,6 +249,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getTruthValue()
   {
     return truthValue;
@@ -253,6 +260,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setTruthValue(String newTruthValue)
   {
     String oldTruthValue = truthValue;
@@ -266,6 +274,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getJustification()
   {
     return justification;
@@ -276,6 +285,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setJustification(String newJustification)
   {
     String oldJustification = justification;
@@ -416,7 +426,7 @@ public class TrueFalseImpl extends NotesElementImpl implements TrueFalse
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", statement: ");

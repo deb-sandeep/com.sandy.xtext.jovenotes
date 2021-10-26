@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.EqSymbol#getSymbol <em>Symbol</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.EqSymbol#getDescription <em>Description</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEqSymbol()
  * @model
@@ -26,10 +26,6 @@ public interface EqSymbol extends EObject
   /**
    * Returns the value of the '<em><b>Symbol</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Symbol</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Symbol</em>' attribute.
    * @see #setSymbol(String)
@@ -52,10 +48,6 @@ public interface EqSymbol extends EObject
   /**
    * Returns the value of the '<em><b>Description</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Description</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Description</em>' attribute.
    * @see #setDescription(String)

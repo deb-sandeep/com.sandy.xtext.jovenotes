@@ -30,12 +30,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getProcessingHints <em>Processing Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getChapterDetails <em>Chapter Details</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.JoveNotesImpl#getNotesElements <em>Notes Elements</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -97,6 +97,7 @@ public class JoveNotesImpl extends MinimalEObjectImpl.Container implements JoveN
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ProcessingHints getProcessingHints()
   {
     return processingHints;
@@ -124,6 +125,7 @@ public class JoveNotesImpl extends MinimalEObjectImpl.Container implements JoveN
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setProcessingHints(ProcessingHints newProcessingHints)
   {
     if (newProcessingHints != processingHints)
@@ -145,6 +147,7 @@ public class JoveNotesImpl extends MinimalEObjectImpl.Container implements JoveN
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ChapterDetails getChapterDetails()
   {
     return chapterDetails;
@@ -172,6 +175,7 @@ public class JoveNotesImpl extends MinimalEObjectImpl.Container implements JoveN
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setChapterDetails(ChapterDetails newChapterDetails)
   {
     if (newChapterDetails != chapterDetails)
@@ -193,6 +197,7 @@ public class JoveNotesImpl extends MinimalEObjectImpl.Container implements JoveN
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<NotesElement> getNotesElements()
   {
     if (notesElements == null)

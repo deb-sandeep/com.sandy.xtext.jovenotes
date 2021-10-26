@@ -26,13 +26,13 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getQuestion <em>Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.FIBImpl#getAnswers <em>Answers</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -124,6 +124,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -151,6 +152,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -172,6 +174,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -182,6 +185,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -195,6 +199,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getQuestion()
   {
     return question;
@@ -205,6 +210,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQuestion(String newQuestion)
   {
     String oldQuestion = question;
@@ -218,6 +224,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<String> getAnswers()
   {
     if (answers == null)
@@ -351,7 +358,7 @@ public class FIBImpl extends NotesElementImpl implements FIB
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", question: ");

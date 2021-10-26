@@ -1560,6 +1560,34 @@ public interface JoveNotesPackage extends EPackage
   int VOICE_TO_TEXT_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 4;
 
   /**
+   * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.CompilerBreakImpl <em>Compiler Break</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see com.sandy.xtext.joveNotes.impl.CompilerBreakImpl
+   * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCompilerBreak()
+   * @generated
+   */
+  int COMPILER_BREAK = 27;
+
+  /**
+   * The feature id for the '<em><b>Script</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPILER_BREAK__SCRIPT = NOTES_ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Compiler Break</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPILER_BREAK_FEATURE_COUNT = NOTES_ELEMENT_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1567,7 +1595,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getOption()
    * @generated
    */
-  int OPTION = 27;
+  int OPTION = 28;
 
   /**
    * The feature id for the '<em><b>Option Value</b></em>' attribute.
@@ -1604,7 +1632,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCMap()
    * @generated
    */
-  int CMAP = 28;
+  int CMAP = 29;
 
   /**
    * The feature id for the '<em><b>Content</b></em>' attribute.
@@ -1632,7 +1660,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScript()
    * @generated
    */
-  int SCRIPT = 29;
+  int SCRIPT = 30;
 
   /**
    * The feature id for the '<em><b>Eval Vars</b></em>' containment reference list.
@@ -1669,7 +1697,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getEvalVar()
    * @generated
    */
-  int EVAL_VAR = 30;
+  int EVAL_VAR = 31;
 
   /**
    * The feature id for the '<em><b>Var Name</b></em>' attribute.
@@ -1706,7 +1734,7 @@ public interface JoveNotesPackage extends EPackage
    * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getScriptBody()
    * @generated
    */
-  int SCRIPT_BODY = 31;
+  int SCRIPT_BODY = 32;
 
   /**
    * The feature id for the '<em><b>Script</b></em>' attribute.
@@ -3208,6 +3236,27 @@ public interface JoveNotesPackage extends EPackage
   EAttribute getVoiceToText_Text();
 
   /**
+   * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.CompilerBreak <em>Compiler Break</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Compiler Break</em>'.
+   * @see com.sandy.xtext.joveNotes.CompilerBreak
+   * @generated
+   */
+  EClass getCompilerBreak();
+
+  /**
+   * Returns the meta object for the containment reference '{@link com.sandy.xtext.joveNotes.CompilerBreak#getScript <em>Script</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Script</em>'.
+   * @see com.sandy.xtext.joveNotes.CompilerBreak#getScript()
+   * @see #getCompilerBreak()
+   * @generated
+   */
+  EReference getCompilerBreak_Script();
+
+  /**
    * Returns the meta object for class '{@link com.sandy.xtext.joveNotes.Option <em>Option</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4517,6 +4566,24 @@ public interface JoveNotesPackage extends EPackage
      * @generated
      */
     EAttribute VOICE_TO_TEXT__TEXT = eINSTANCE.getVoiceToText_Text();
+
+    /**
+     * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.CompilerBreakImpl <em>Compiler Break</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see com.sandy.xtext.joveNotes.impl.CompilerBreakImpl
+     * @see com.sandy.xtext.joveNotes.impl.JoveNotesPackageImpl#getCompilerBreak()
+     * @generated
+     */
+    EClass COMPILER_BREAK = eINSTANCE.getCompilerBreak();
+
+    /**
+     * The meta object literal for the '<em><b>Script</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference COMPILER_BREAK__SCRIPT = eINSTANCE.getCompilerBreak_Script();
 
     /**
      * The meta object literal for the '{@link com.sandy.xtext.joveNotes.impl.OptionImpl <em>Option</em>}' class.

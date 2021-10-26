@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getSubjectName <em>Subject Name</em>}</li>
@@ -29,7 +30,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getChapterName <em>Chapter Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChapterDetailsImpl#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -171,6 +171,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getExerciseBank()
   {
     return exerciseBank;
@@ -181,6 +182,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setExerciseBank(String newExerciseBank)
   {
     String oldExerciseBank = exerciseBank;
@@ -194,6 +196,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSubjectName()
   {
     return subjectName;
@@ -204,6 +207,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSubjectName(String newSubjectName)
   {
     String oldSubjectName = subjectName;
@@ -217,6 +221,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getChapterNumber()
   {
     return chapterNumber;
@@ -227,6 +232,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setChapterNumber(int newChapterNumber)
   {
     int oldChapterNumber = chapterNumber;
@@ -240,6 +246,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getSubChapterNumber()
   {
     return subChapterNumber;
@@ -250,6 +257,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSubChapterNumber(int newSubChapterNumber)
   {
     int oldSubChapterNumber = subChapterNumber;
@@ -263,6 +271,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getChapterName()
   {
     return chapterName;
@@ -273,6 +282,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setChapterName(String newChapterName)
   {
     String oldChapterName = chapterName;
@@ -286,6 +296,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public ScriptBody getScriptBody()
   {
     return scriptBody;
@@ -313,6 +324,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScriptBody(ScriptBody newScriptBody)
   {
     if (newScriptBody != scriptBody)
@@ -471,7 +483,7 @@ public class ChapterDetailsImpl extends MinimalEObjectImpl.Container implements 
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (exerciseBank: ");
     result.append(exerciseBank);
     result.append(", subjectName: ");

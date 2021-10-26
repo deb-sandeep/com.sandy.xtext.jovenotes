@@ -6,6 +6,7 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
+import com.sandy.xtext.joveNotes.CompilerBreak;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
@@ -81,7 +82,7 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * Checks whether this is a switch for the given package.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @parameter ePackage the package in question.
+   * @param ePackage the package in question.
    * @return whether this is a switch for the given package.
    * @generated
    */
@@ -321,6 +322,14 @@ public class JoveNotesSwitch<T> extends Switch<T>
         VoiceToText voiceToText = (VoiceToText)theEObject;
         T result = caseVoiceToText(voiceToText);
         if (result == null) result = caseNotesElement(voiceToText);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.COMPILER_BREAK:
+      {
+        CompilerBreak compilerBreak = (CompilerBreak)theEObject;
+        T result = caseCompilerBreak(compilerBreak);
+        if (result == null) result = caseNotesElement(compilerBreak);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -791,6 +800,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVoiceToText(VoiceToText object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Compiler Break</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Compiler Break</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCompilerBreak(CompilerBreak object)
   {
     return null;
   }

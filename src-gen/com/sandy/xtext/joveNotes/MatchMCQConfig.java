@@ -11,13 +11,13 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getForwardCaption <em>Forward Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getReverseCaption <em>Reverse Caption</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsToShow <em>Num Options To Show</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.MatchMCQConfig#getNumOptionsPerRow <em>Num Options Per Row</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getMatchMCQConfig()
  * @model
@@ -28,10 +28,6 @@ public interface MatchMCQConfig extends EObject
   /**
    * Returns the value of the '<em><b>Forward Caption</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Forward Caption</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Forward Caption</em>' attribute.
    * @see #setForwardCaption(String)
@@ -54,10 +50,6 @@ public interface MatchMCQConfig extends EObject
   /**
    * Returns the value of the '<em><b>Reverse Caption</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Reverse Caption</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Reverse Caption</em>' attribute.
    * @see #setReverseCaption(String)
@@ -80,10 +72,6 @@ public interface MatchMCQConfig extends EObject
   /**
    * Returns the value of the '<em><b>Num Options To Show</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Num Options To Show</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Num Options To Show</em>' attribute.
    * @see #setNumOptionsToShow(int)
@@ -106,10 +94,6 @@ public interface MatchMCQConfig extends EObject
   /**
    * Returns the value of the '<em><b>Num Options Per Row</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Num Options Per Row</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Num Options Per Row</em>' attribute.
    * @see #setNumOptionsPerRow(int)

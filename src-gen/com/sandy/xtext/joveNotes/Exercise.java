@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.Exercise#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Exercise#getHideFromView <em>Hide From View</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.Exercise#getHints <em>Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.Exercise#getAnswer <em>Answer</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getExercise()
  * @model
@@ -30,10 +30,6 @@ public interface Exercise extends NotesElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -56,10 +52,6 @@ public interface Exercise extends NotesElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -82,10 +74,6 @@ public interface Exercise extends NotesElement
   /**
    * Returns the value of the '<em><b>Marks</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Marks</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Marks</em>' attribute.
    * @see #setMarks(int)
@@ -108,10 +96,6 @@ public interface Exercise extends NotesElement
   /**
    * Returns the value of the '<em><b>Question</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Question</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Question</em>' attribute.
    * @see #setQuestion(String)
@@ -135,10 +119,6 @@ public interface Exercise extends NotesElement
    * Returns the value of the '<em><b>Hints</b></em>' attribute list.
    * The list contents are of type {@link java.lang.String}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hints</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hints</em>' attribute list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getExercise_Hints()
@@ -150,10 +130,6 @@ public interface Exercise extends NotesElement
   /**
    * Returns the value of the '<em><b>Answer</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Answer</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Answer</em>' attribute.
    * @see #setAnswer(String)

@@ -28,6 +28,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -35,7 +36,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getImageName <em>Image Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ImageLabelImpl#getHotspots <em>Hotspots</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -147,6 +147,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -174,6 +175,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -195,6 +197,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -205,6 +208,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -218,6 +222,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getCaption()
   {
     return caption;
@@ -228,6 +233,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCaption(String newCaption)
   {
     String oldCaption = caption;
@@ -241,6 +247,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getImageName()
   {
     return imageName;
@@ -251,6 +258,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setImageName(String newImageName)
   {
     String oldImageName = imageName;
@@ -264,6 +272,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<HotSpot> getHotspots()
   {
     if (hotspots == null)
@@ -409,7 +418,7 @@ public class ImageLabelImpl extends NotesElementImpl implements ImageLabel
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", caption: ");

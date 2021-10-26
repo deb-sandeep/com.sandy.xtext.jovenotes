@@ -266,6 +266,15 @@ public interface JoveNotesFactory extends EFactory
   VoiceToText createVoiceToText();
 
   /**
+   * Returns a new object of class '<em>Compiler Break</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Compiler Break</em>'.
+   * @generated
+   */
+  CompilerBreak createCompilerBreak();
+
+  /**
    * Returns a new object of class '<em>Option</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

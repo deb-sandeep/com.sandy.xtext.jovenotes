@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getProduces <em>Produces</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemEquationImpl#getProducts <em>Products</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -170,6 +170,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -197,6 +198,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -218,6 +220,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -228,6 +231,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -241,6 +245,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getDescription()
   {
     return description;
@@ -251,6 +256,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setDescription(String newDescription)
   {
     String oldDescription = description;
@@ -264,6 +270,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getReactants()
   {
     return reactants;
@@ -274,6 +281,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setReactants(String newReactants)
   {
     String oldReactants = reactants;
@@ -287,6 +295,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getProduces()
   {
     return produces;
@@ -297,6 +306,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setProduces(String newProduces)
   {
     String oldProduces = produces;
@@ -310,6 +320,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getProducts()
   {
     return products;
@@ -320,6 +331,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setProducts(String newProducts)
   {
     String oldProducts = products;
@@ -470,7 +482,7 @@ public class ChemEquationImpl extends NotesElementImpl implements ChemEquation
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", description: ");

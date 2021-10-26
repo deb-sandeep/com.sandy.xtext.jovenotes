@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CharacterImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CharacterImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CharacterImpl#getEstimate <em>Estimate</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CharacterImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -139,6 +139,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -166,6 +167,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -187,6 +189,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -197,6 +200,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -210,6 +214,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getCharacter()
   {
     return character;
@@ -220,6 +225,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCharacter(String newCharacter)
   {
     String oldCharacter = character;
@@ -233,6 +239,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getEstimate()
   {
     return estimate;
@@ -243,6 +250,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setEstimate(String newEstimate)
   {
     String oldEstimate = estimate;
@@ -256,6 +264,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public CMap getCmap()
   {
     return cmap;
@@ -283,6 +292,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCmap(CMap newCmap)
   {
     if (newCmap != cmap)
@@ -433,7 +443,7 @@ public class CharacterImpl extends NotesElementImpl implements com.sandy.xtext.j
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", character: ");

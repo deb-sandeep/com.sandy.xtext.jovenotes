@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -27,7 +28,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getChemicalName <em>Chemical Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ChemCompoundImpl#getCommonName <em>Common Name</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -149,6 +149,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -176,6 +177,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -197,6 +199,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -207,6 +210,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -220,6 +224,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSymbol()
   {
     return symbol;
@@ -230,6 +235,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSymbol(String newSymbol)
   {
     String oldSymbol = symbol;
@@ -243,6 +249,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getChemicalName()
   {
     return chemicalName;
@@ -253,6 +260,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setChemicalName(String newChemicalName)
   {
     String oldChemicalName = chemicalName;
@@ -266,6 +274,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getCommonName()
   {
     return commonName;
@@ -276,6 +285,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCommonName(String newCommonName)
   {
     String oldCommonName = commonName;
@@ -416,7 +426,7 @@ public class ChemCompoundImpl extends NotesElementImpl implements ChemCompound
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", symbol: ");

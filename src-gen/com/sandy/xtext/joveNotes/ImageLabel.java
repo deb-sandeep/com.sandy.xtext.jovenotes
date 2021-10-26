@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHideFromView <em>Hide From View</em>}</li>
@@ -18,7 +19,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getImageName <em>Image Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ImageLabel#getHotspots <em>Hotspots</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getImageLabel()
  * @model
@@ -29,10 +29,6 @@ public interface ImageLabel extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Script</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script</em>' containment reference.
    * @see #setScript(Script)
@@ -55,10 +51,6 @@ public interface ImageLabel extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Hide From View</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hide From View</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hide From View</em>' attribute.
    * @see #setHideFromView(String)
@@ -81,10 +73,6 @@ public interface ImageLabel extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Caption</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Caption</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Caption</em>' attribute.
    * @see #setCaption(String)
@@ -107,10 +95,6 @@ public interface ImageLabel extends NotesElement, RTCElement
   /**
    * Returns the value of the '<em><b>Image Name</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Image Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Image Name</em>' attribute.
    * @see #setImageName(String)
@@ -134,10 +118,6 @@ public interface ImageLabel extends NotesElement, RTCElement
    * Returns the value of the '<em><b>Hotspots</b></em>' containment reference list.
    * The list contents are of type {@link com.sandy.xtext.joveNotes.HotSpot}.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Hotspots</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Hotspots</em>' containment reference list.
    * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getImageLabel_Hotspots()

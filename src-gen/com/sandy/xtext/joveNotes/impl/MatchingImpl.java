@@ -29,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -37,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getPairs <em>Pairs</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchingImpl#getMcqConfig <em>Mcq Config</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -159,6 +159,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -186,6 +187,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -207,6 +209,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -217,6 +220,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -230,6 +234,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getSkipReverseQuestion()
   {
     return skipReverseQuestion;
@@ -240,6 +245,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setSkipReverseQuestion(String newSkipReverseQuestion)
   {
     String oldSkipReverseQuestion = skipReverseQuestion;
@@ -253,6 +259,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getQuestion()
   {
     return question;
@@ -263,6 +270,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQuestion(String newQuestion)
   {
     String oldQuestion = question;
@@ -276,6 +284,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<MatchPair> getPairs()
   {
     if (pairs == null)
@@ -290,6 +299,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public MatchMCQConfig getMcqConfig()
   {
     return mcqConfig;
@@ -317,6 +327,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMcqConfig(MatchMCQConfig newMcqConfig)
   {
     if (newMcqConfig != mcqConfig)
@@ -481,7 +492,7 @@ public class MatchingImpl extends NotesElementImpl implements Matching
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", skipReverseQuestion: ");

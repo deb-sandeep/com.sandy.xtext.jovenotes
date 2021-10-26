@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getExerciseBank <em>Exercise Bank</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getSubjectName <em>Subject Name</em>}</li>
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getChapterName <em>Chapter Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.ChapterDetails#getScriptBody <em>Script Body</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getChapterDetails()
  * @model
@@ -30,10 +30,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Exercise Bank</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Exercise Bank</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Exercise Bank</em>' attribute.
    * @see #setExerciseBank(String)
@@ -56,10 +52,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Subject Name</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Subject Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Subject Name</em>' attribute.
    * @see #setSubjectName(String)
@@ -82,10 +74,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Chapter Number</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Chapter Number</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Chapter Number</em>' attribute.
    * @see #setChapterNumber(int)
@@ -108,10 +96,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Sub Chapter Number</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Sub Chapter Number</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Sub Chapter Number</em>' attribute.
    * @see #setSubChapterNumber(int)
@@ -134,10 +118,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Chapter Name</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Chapter Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Chapter Name</em>' attribute.
    * @see #setChapterName(String)
@@ -160,10 +140,6 @@ public interface ChapterDetails extends EObject
   /**
    * Returns the value of the '<em><b>Script Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Script Body</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Script Body</em>' containment reference.
    * @see #setScriptBody(ScriptBody)

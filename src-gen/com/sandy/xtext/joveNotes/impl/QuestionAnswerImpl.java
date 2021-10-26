@@ -27,6 +27,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getAnswerParts <em>Answer Parts</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.QuestionAnswerImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -136,6 +136,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -163,6 +164,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -184,6 +186,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -194,6 +197,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -207,6 +211,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getQuestion()
   {
     return question;
@@ -217,6 +222,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQuestion(String newQuestion)
   {
     String oldQuestion = question;
@@ -230,6 +236,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<String> getAnswerParts()
   {
     if (answerParts == null)
@@ -244,6 +251,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public CMap getCmap()
   {
     return cmap;
@@ -271,6 +279,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCmap(CMap newCmap)
   {
     if (newCmap != cmap)
@@ -423,7 +432,7 @@ public class QuestionAnswerImpl extends NotesElementImpl implements QuestionAnsw
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", question: ");

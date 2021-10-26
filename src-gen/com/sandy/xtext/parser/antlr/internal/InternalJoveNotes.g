@@ -530,19 +530,29 @@ ruleNotesElement returns [EObject current=null]
         $current = $this_VoiceToText_17.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getCompilerBreakParserRuleCall_0_18()); 
+    }
+    this_CompilerBreak_18=ruleCompilerBreak
+    { 
+        $current = $this_CompilerBreak_18.current; 
+        afterParserOrEnumRuleCall();
+    }
 )(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
 	    }
-		lv_script_18_0=ruleScript		{
+		lv_script_19_0=ruleScript		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getNotesElementRule());
 	        }
        		set(
        			$current, 
        			"script",
-        		lv_script_18_0, 
+        		lv_script_19_0, 
         		"com.sandy.xtext.JoveNotes.Script");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2870,6 +2880,37 @@ ruleVoiceToText returns [EObject current=null]
 
 )
 ))
+;
+
+
+
+
+
+// Entry rule entryRuleCompilerBreak
+entryRuleCompilerBreak returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getCompilerBreakRule()); }
+	 iv_ruleCompilerBreak=ruleCompilerBreak 
+	 { $current=$iv_ruleCompilerBreak.current; } 
+	 EOF 
+;
+
+// Rule CompilerBreak
+ruleCompilerBreak returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+((
+    {
+        $current = forceCreateModelElement(
+            grammarAccess.getCompilerBreakAccess().getCompilerBreakAction_0(),
+            $current);
+    }
+)	otherlv_1='@compiler_break' 
+    {
+    	newLeafNode(otherlv_1, grammarAccess.getCompilerBreakAccess().getCompiler_breakKeyword_1());
+    }
+)
 ;
 
 

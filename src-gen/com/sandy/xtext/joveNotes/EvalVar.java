@@ -11,11 +11,11 @@ import org.eclipse.emf.ecore.EObject;
  *
  * <p>
  * The following features are supported:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.EvalVar#getVarName <em>Var Name</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.EvalVar#getVarExpression <em>Var Expression</em>}</li>
  * </ul>
- * </p>
  *
  * @see com.sandy.xtext.joveNotes.JoveNotesPackage#getEvalVar()
  * @model
@@ -26,10 +26,6 @@ public interface EvalVar extends EObject
   /**
    * Returns the value of the '<em><b>Var Name</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Var Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var Name</em>' attribute.
    * @see #setVarName(String)
@@ -52,10 +48,6 @@ public interface EvalVar extends EObject
   /**
    * Returns the value of the '<em><b>Var Expression</b></em>' attribute.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Var Expression</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Var Expression</em>' attribute.
    * @see #setVarExpression(String)

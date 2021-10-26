@@ -13,7 +13,7 @@ that the changes are properly integrated with the rest of the system.
 
 1. Make changes to the grammar
 
-2. Run MWE2 workflow
+2. Right click on grammar file and generate XText artefacts
 
 3. Test the grammar changes in a new instance of eclipse
 

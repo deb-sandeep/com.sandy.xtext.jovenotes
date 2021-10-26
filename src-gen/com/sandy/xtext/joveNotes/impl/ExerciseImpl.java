@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -34,7 +35,6 @@ import org.eclipse.emf.ecore.util.EDataTypeEList;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getHints <em>Hints</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.ExerciseImpl#getAnswer <em>Answer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -166,6 +166,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -193,6 +194,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -214,6 +216,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -224,6 +227,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -237,6 +241,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public int getMarks()
   {
     return marks;
@@ -247,6 +252,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMarks(int newMarks)
   {
     int oldMarks = marks;
@@ -260,6 +266,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getQuestion()
   {
     return question;
@@ -270,6 +277,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setQuestion(String newQuestion)
   {
     String oldQuestion = question;
@@ -283,6 +291,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<String> getHints()
   {
     if (hints == null)
@@ -297,6 +306,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getAnswer()
   {
     return answer;
@@ -307,6 +317,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setAnswer(String newAnswer)
   {
     String oldAnswer = answer;
@@ -459,7 +470,7 @@ public class ExerciseImpl extends NotesElementImpl implements Exercise
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", marks: ");

@@ -18,10 +18,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.CMapImpl#getContent <em>Content</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -73,6 +73,7 @@ public class CMapImpl extends MinimalEObjectImpl.Container implements CMap
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getContent()
   {
     return content;
@@ -83,6 +84,7 @@ public class CMapImpl extends MinimalEObjectImpl.Container implements CMap
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setContent(String newContent)
   {
     String oldContent = content;
@@ -167,7 +169,7 @@ public class CMapImpl extends MinimalEObjectImpl.Container implements CMap
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (content: ");
     result.append(content);
     result.append(')');

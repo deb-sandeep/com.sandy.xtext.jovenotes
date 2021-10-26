@@ -18,11 +18,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl#getMatchQuestion <em>Match Question</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.MatchPairImpl#getMatchAnswer <em>Match Answer</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -94,6 +94,7 @@ public class MatchPairImpl extends MinimalEObjectImpl.Container implements Match
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getMatchQuestion()
   {
     return matchQuestion;
@@ -104,6 +105,7 @@ public class MatchPairImpl extends MinimalEObjectImpl.Container implements Match
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMatchQuestion(String newMatchQuestion)
   {
     String oldMatchQuestion = matchQuestion;
@@ -117,6 +119,7 @@ public class MatchPairImpl extends MinimalEObjectImpl.Container implements Match
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getMatchAnswer()
   {
     return matchAnswer;
@@ -127,6 +130,7 @@ public class MatchPairImpl extends MinimalEObjectImpl.Container implements Match
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setMatchAnswer(String newMatchAnswer)
   {
     String oldMatchAnswer = matchAnswer;
@@ -221,7 +225,7 @@ public class MatchPairImpl extends MinimalEObjectImpl.Container implements Match
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (matchQuestion: ");
     result.append(matchQuestion);
     result.append(", matchAnswer: ");

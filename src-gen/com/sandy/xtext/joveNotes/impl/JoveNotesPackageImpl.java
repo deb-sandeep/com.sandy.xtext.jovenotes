@@ -6,6 +6,7 @@ import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
+import com.sandy.xtext.joveNotes.CompilerBreak;
 import com.sandy.xtext.joveNotes.Definition;
 import com.sandy.xtext.joveNotes.EqSymbol;
 import com.sandy.xtext.joveNotes.Equation;
@@ -244,6 +245,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass compilerBreakEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass optionEClass = null;
 
   /**
@@ -303,7 +311,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
   /**
    * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
-   * 
+   *
    * <p>This method is used to initialize {@link JoveNotesPackage#eINSTANCE} when that field is accessed.
    * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
    * <!-- begin-user-doc -->
@@ -318,7 +326,8 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     if (isInited) return (JoveNotesPackage)EPackage.Registry.INSTANCE.getEPackage(JoveNotesPackage.eNS_URI);
 
     // Obtain or create and register package
-    JoveNotesPackageImpl theJoveNotesPackage = (JoveNotesPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof JoveNotesPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new JoveNotesPackageImpl());
+    Object registeredJoveNotesPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
+    JoveNotesPackageImpl theJoveNotesPackage = registeredJoveNotesPackage instanceof JoveNotesPackageImpl ? (JoveNotesPackageImpl)registeredJoveNotesPackage : new JoveNotesPackageImpl();
 
     isInited = true;
 
@@ -331,7 +340,6 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     // Mark meta-data to indicate it can't be changed
     theJoveNotesPackage.freeze();
 
-  
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(JoveNotesPackage.eNS_URI, theJoveNotesPackage);
     return theJoveNotesPackage;
@@ -342,6 +350,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getJoveNotes()
   {
     return joveNotesEClass;
@@ -352,6 +361,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getJoveNotes_ProcessingHints()
   {
     return (EReference)joveNotesEClass.getEStructuralFeatures().get(0);
@@ -362,6 +372,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getJoveNotes_ChapterDetails()
   {
     return (EReference)joveNotesEClass.getEStructuralFeatures().get(1);
@@ -372,6 +383,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getJoveNotes_NotesElements()
   {
     return (EReference)joveNotesEClass.getEStructuralFeatures().get(2);
@@ -382,6 +394,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getProcessingHints()
   {
     return processingHintsEClass;
@@ -392,6 +405,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getProcessingHints_SkipGeneration()
   {
     return (EAttribute)processingHintsEClass.getEStructuralFeatures().get(0);
@@ -402,6 +416,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getProcessingHints_SkipGenerationInProduction()
   {
     return (EAttribute)processingHintsEClass.getEStructuralFeatures().get(1);
@@ -412,6 +427,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getChapterDetails()
   {
     return chapterDetailsEClass;
@@ -422,6 +438,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChapterDetails_ExerciseBank()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(0);
@@ -432,6 +449,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChapterDetails_SubjectName()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(1);
@@ -442,6 +460,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChapterDetails_ChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(2);
@@ -452,6 +471,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChapterDetails_SubChapterNumber()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(3);
@@ -462,6 +482,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChapterDetails_ChapterName()
   {
     return (EAttribute)chapterDetailsEClass.getEStructuralFeatures().get(4);
@@ -472,6 +493,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getChapterDetails_ScriptBody()
   {
     return (EReference)chapterDetailsEClass.getEStructuralFeatures().get(5);
@@ -482,6 +504,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getNotesElement()
   {
     return notesElementEClass;
@@ -492,6 +515,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getWordMeaning()
   {
     return wordMeaningEClass;
@@ -502,6 +526,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getWordMeaning_Script()
   {
     return (EReference)wordMeaningEClass.getEStructuralFeatures().get(0);
@@ -512,6 +537,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getWordMeaning_HideFromView()
   {
     return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(1);
@@ -522,6 +548,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getWordMeaning_Word()
   {
     return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(2);
@@ -532,6 +559,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getWordMeaning_Meaning()
   {
     return (EAttribute)wordMeaningEClass.getEStructuralFeatures().get(3);
@@ -542,6 +570,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getQuestionAnswer()
   {
     return questionAnswerEClass;
@@ -552,6 +581,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getQuestionAnswer_Script()
   {
     return (EReference)questionAnswerEClass.getEStructuralFeatures().get(0);
@@ -562,6 +592,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getQuestionAnswer_HideFromView()
   {
     return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(1);
@@ -572,6 +603,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getQuestionAnswer_Question()
   {
     return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(2);
@@ -582,6 +614,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getQuestionAnswer_AnswerParts()
   {
     return (EAttribute)questionAnswerEClass.getEStructuralFeatures().get(3);
@@ -592,6 +625,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getQuestionAnswer_Cmap()
   {
     return (EReference)questionAnswerEClass.getEStructuralFeatures().get(4);
@@ -602,6 +636,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getFIB()
   {
     return fibEClass;
@@ -612,6 +647,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getFIB_Script()
   {
     return (EReference)fibEClass.getEStructuralFeatures().get(0);
@@ -622,6 +658,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getFIB_HideFromView()
   {
     return (EAttribute)fibEClass.getEStructuralFeatures().get(1);
@@ -632,6 +669,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getFIB_Question()
   {
     return (EAttribute)fibEClass.getEStructuralFeatures().get(2);
@@ -642,6 +680,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getFIB_Answers()
   {
     return (EAttribute)fibEClass.getEStructuralFeatures().get(3);
@@ -652,6 +691,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getDefinition()
   {
     return definitionEClass;
@@ -662,6 +702,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefinition_Script()
   {
     return (EReference)definitionEClass.getEStructuralFeatures().get(0);
@@ -672,6 +713,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefinition_HideFromView()
   {
     return (EAttribute)definitionEClass.getEStructuralFeatures().get(1);
@@ -682,6 +724,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefinition_Term()
   {
     return (EAttribute)definitionEClass.getEStructuralFeatures().get(2);
@@ -692,6 +735,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getDefinition_Definition()
   {
     return (EAttribute)definitionEClass.getEStructuralFeatures().get(3);
@@ -702,6 +746,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getDefinition_Cmap()
   {
     return (EReference)definitionEClass.getEStructuralFeatures().get(4);
@@ -712,6 +757,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getCharacter()
   {
     return characterEClass;
@@ -722,6 +768,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getCharacter_Script()
   {
     return (EReference)characterEClass.getEStructuralFeatures().get(0);
@@ -732,6 +779,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getCharacter_HideFromView()
   {
     return (EAttribute)characterEClass.getEStructuralFeatures().get(1);
@@ -742,6 +790,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getCharacter_Character()
   {
     return (EAttribute)characterEClass.getEStructuralFeatures().get(2);
@@ -752,6 +801,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getCharacter_Estimate()
   {
     return (EAttribute)characterEClass.getEStructuralFeatures().get(3);
@@ -762,6 +812,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getCharacter_Cmap()
   {
     return (EReference)characterEClass.getEStructuralFeatures().get(4);
@@ -772,6 +823,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getTeacherNote()
   {
     return teacherNoteEClass;
@@ -782,6 +834,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getTeacherNote_Script()
   {
     return (EReference)teacherNoteEClass.getEStructuralFeatures().get(0);
@@ -792,6 +845,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTeacherNote_HideFromView()
   {
     return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(1);
@@ -802,6 +856,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTeacherNote_Caption()
   {
     return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(2);
@@ -812,6 +867,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTeacherNote_Note()
   {
     return (EAttribute)teacherNoteEClass.getEStructuralFeatures().get(3);
@@ -822,6 +878,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getTeacherNote_Cmap()
   {
     return (EReference)teacherNoteEClass.getEStructuralFeatures().get(4);
@@ -832,6 +889,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMatching()
   {
     return matchingEClass;
@@ -842,6 +900,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMatching_Script()
   {
     return (EReference)matchingEClass.getEStructuralFeatures().get(0);
@@ -852,6 +911,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatching_HideFromView()
   {
     return (EAttribute)matchingEClass.getEStructuralFeatures().get(1);
@@ -862,6 +922,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatching_SkipReverseQuestion()
   {
     return (EAttribute)matchingEClass.getEStructuralFeatures().get(2);
@@ -872,6 +933,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatching_Question()
   {
     return (EAttribute)matchingEClass.getEStructuralFeatures().get(3);
@@ -882,6 +944,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMatching_Pairs()
   {
     return (EReference)matchingEClass.getEStructuralFeatures().get(4);
@@ -892,6 +955,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMatching_McqConfig()
   {
     return (EReference)matchingEClass.getEStructuralFeatures().get(5);
@@ -902,6 +966,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMatchPair()
   {
     return matchPairEClass;
@@ -912,6 +977,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchPair_MatchQuestion()
   {
     return (EAttribute)matchPairEClass.getEStructuralFeatures().get(0);
@@ -922,6 +988,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchPair_MatchAnswer()
   {
     return (EAttribute)matchPairEClass.getEStructuralFeatures().get(1);
@@ -932,6 +999,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMatchMCQConfig()
   {
     return matchMCQConfigEClass;
@@ -942,6 +1010,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchMCQConfig_ForwardCaption()
   {
     return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(0);
@@ -952,6 +1021,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchMCQConfig_ReverseCaption()
   {
     return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(1);
@@ -962,6 +1032,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchMCQConfig_NumOptionsToShow()
   {
     return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(2);
@@ -972,6 +1043,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMatchMCQConfig_NumOptionsPerRow()
   {
     return (EAttribute)matchMCQConfigEClass.getEStructuralFeatures().get(3);
@@ -982,6 +1054,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getEvent()
   {
     return eventEClass;
@@ -992,6 +1065,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getEvent_Script()
   {
     return (EReference)eventEClass.getEStructuralFeatures().get(0);
@@ -1002,6 +1076,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEvent_HideFromView()
   {
     return (EAttribute)eventEClass.getEStructuralFeatures().get(1);
@@ -1012,6 +1087,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEvent_Event()
   {
     return (EAttribute)eventEClass.getEStructuralFeatures().get(2);
@@ -1022,6 +1098,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEvent_Time()
   {
     return (EAttribute)eventEClass.getEStructuralFeatures().get(3);
@@ -1032,6 +1109,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getTrueFalse()
   {
     return trueFalseEClass;
@@ -1042,6 +1120,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getTrueFalse_Script()
   {
     return (EReference)trueFalseEClass.getEStructuralFeatures().get(0);
@@ -1052,6 +1131,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTrueFalse_HideFromView()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(1);
@@ -1062,6 +1142,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTrueFalse_Statement()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(2);
@@ -1072,6 +1153,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTrueFalse_TruthValue()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(3);
@@ -1082,6 +1164,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getTrueFalse_Justification()
   {
     return (EAttribute)trueFalseEClass.getEStructuralFeatures().get(4);
@@ -1092,6 +1175,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getChemEquation()
   {
     return chemEquationEClass;
@@ -1102,6 +1186,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getChemEquation_Script()
   {
     return (EReference)chemEquationEClass.getEStructuralFeatures().get(0);
@@ -1112,6 +1197,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemEquation_HideFromView()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(1);
@@ -1122,6 +1208,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemEquation_Description()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(2);
@@ -1132,6 +1219,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemEquation_Reactants()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(3);
@@ -1142,6 +1230,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemEquation_Produces()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(4);
@@ -1152,6 +1241,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemEquation_Products()
   {
     return (EAttribute)chemEquationEClass.getEStructuralFeatures().get(5);
@@ -1162,6 +1252,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getChemCompound()
   {
     return chemCompoundEClass;
@@ -1172,6 +1263,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getChemCompound_Script()
   {
     return (EReference)chemCompoundEClass.getEStructuralFeatures().get(0);
@@ -1182,6 +1274,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemCompound_HideFromView()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(1);
@@ -1192,6 +1285,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemCompound_Symbol()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(2);
@@ -1202,6 +1296,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemCompound_ChemicalName()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(3);
@@ -1212,6 +1307,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getChemCompound_CommonName()
   {
     return (EAttribute)chemCompoundEClass.getEStructuralFeatures().get(4);
@@ -1222,6 +1318,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getSpellbee()
   {
     return spellbeeEClass;
@@ -1232,6 +1329,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getSpellbee_Script()
   {
     return (EReference)spellbeeEClass.getEStructuralFeatures().get(0);
@@ -1242,6 +1340,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getSpellbee_HideFromView()
   {
     return (EAttribute)spellbeeEClass.getEStructuralFeatures().get(1);
@@ -1252,6 +1351,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getSpellbee_Word()
   {
     return (EAttribute)spellbeeEClass.getEStructuralFeatures().get(2);
@@ -1262,6 +1362,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getImageLabel()
   {
     return imageLabelEClass;
@@ -1272,6 +1373,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getImageLabel_Script()
   {
     return (EReference)imageLabelEClass.getEStructuralFeatures().get(0);
@@ -1282,6 +1384,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getImageLabel_HideFromView()
   {
     return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(1);
@@ -1292,6 +1395,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getImageLabel_Caption()
   {
     return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(2);
@@ -1302,6 +1406,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getImageLabel_ImageName()
   {
     return (EAttribute)imageLabelEClass.getEStructuralFeatures().get(3);
@@ -1312,6 +1417,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getImageLabel_Hotspots()
   {
     return (EReference)imageLabelEClass.getEStructuralFeatures().get(4);
@@ -1322,6 +1428,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getHotSpot()
   {
     return hotSpotEClass;
@@ -1332,6 +1439,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getHotSpot_X()
   {
     return (EAttribute)hotSpotEClass.getEStructuralFeatures().get(0);
@@ -1342,6 +1450,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getHotSpot_Y()
   {
     return (EAttribute)hotSpotEClass.getEStructuralFeatures().get(1);
@@ -1352,6 +1461,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getHotSpot_Label()
   {
     return (EAttribute)hotSpotEClass.getEStructuralFeatures().get(2);
@@ -1362,6 +1472,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getEquation()
   {
     return equationEClass;
@@ -1372,6 +1483,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getEquation_Script()
   {
     return (EReference)equationEClass.getEStructuralFeatures().get(0);
@@ -1382,6 +1494,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEquation_HideFromView()
   {
     return (EAttribute)equationEClass.getEStructuralFeatures().get(1);
@@ -1392,6 +1505,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEquation_Equation()
   {
     return (EAttribute)equationEClass.getEStructuralFeatures().get(2);
@@ -1402,6 +1516,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEquation_Description()
   {
     return (EAttribute)equationEClass.getEStructuralFeatures().get(3);
@@ -1412,6 +1527,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getEquation_Symbols()
   {
     return (EReference)equationEClass.getEStructuralFeatures().get(4);
@@ -1422,6 +1538,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getEqSymbol()
   {
     return eqSymbolEClass;
@@ -1432,6 +1549,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEqSymbol_Symbol()
   {
     return (EAttribute)eqSymbolEClass.getEStructuralFeatures().get(0);
@@ -1442,6 +1560,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEqSymbol_Description()
   {
     return (EAttribute)eqSymbolEClass.getEStructuralFeatures().get(1);
@@ -1452,6 +1571,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRefToContext()
   {
     return refToContextEClass;
@@ -1462,6 +1582,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRefToContext_Script()
   {
     return (EReference)refToContextEClass.getEStructuralFeatures().get(0);
@@ -1472,6 +1593,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRefToContext_HideFromView()
   {
     return (EAttribute)refToContextEClass.getEStructuralFeatures().get(1);
@@ -1482,6 +1604,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getRefToContext_Context()
   {
     return (EAttribute)refToContextEClass.getEStructuralFeatures().get(2);
@@ -1492,6 +1615,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getRefToContext_RtcElement()
   {
     return (EReference)refToContextEClass.getEStructuralFeatures().get(3);
@@ -1502,6 +1626,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getRTCElement()
   {
     return rtcElementEClass;
@@ -1512,6 +1637,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getMultiChoice()
   {
     return multiChoiceEClass;
@@ -1522,6 +1648,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMultiChoice_Script()
   {
     return (EReference)multiChoiceEClass.getEStructuralFeatures().get(0);
@@ -1532,6 +1659,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMultiChoice_HideFromView()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(1);
@@ -1542,6 +1670,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMultiChoice_Question()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(2);
@@ -1552,6 +1681,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getMultiChoice_Options()
   {
     return (EReference)multiChoiceEClass.getEStructuralFeatures().get(3);
@@ -1562,6 +1692,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMultiChoice_NumOptionsToShow()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(4);
@@ -1572,6 +1703,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMultiChoice_NumOptionsPerRow()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(5);
@@ -1582,6 +1714,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getMultiChoice_Explanation()
   {
     return (EAttribute)multiChoiceEClass.getEStructuralFeatures().get(6);
@@ -1592,6 +1725,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getExercise()
   {
     return exerciseEClass;
@@ -1602,6 +1736,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getExercise_Script()
   {
     return (EReference)exerciseEClass.getEStructuralFeatures().get(0);
@@ -1612,6 +1747,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExercise_HideFromView()
   {
     return (EAttribute)exerciseEClass.getEStructuralFeatures().get(1);
@@ -1622,6 +1758,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExercise_Marks()
   {
     return (EAttribute)exerciseEClass.getEStructuralFeatures().get(2);
@@ -1632,6 +1769,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExercise_Question()
   {
     return (EAttribute)exerciseEClass.getEStructuralFeatures().get(3);
@@ -1642,6 +1780,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExercise_Hints()
   {
     return (EAttribute)exerciseEClass.getEStructuralFeatures().get(4);
@@ -1652,6 +1791,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getExercise_Answer()
   {
     return (EAttribute)exerciseEClass.getEStructuralFeatures().get(5);
@@ -1662,6 +1802,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getVoiceToText()
   {
     return voiceToTextEClass;
@@ -1672,6 +1813,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getVoiceToText_Script()
   {
     return (EReference)voiceToTextEClass.getEStructuralFeatures().get(0);
@@ -1682,6 +1824,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getVoiceToText_HideFromView()
   {
     return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(1);
@@ -1692,6 +1835,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getVoiceToText_ClipName()
   {
     return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(2);
@@ -1702,6 +1846,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getVoiceToText_Text()
   {
     return (EAttribute)voiceToTextEClass.getEStructuralFeatures().get(3);
@@ -1712,6 +1857,29 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
+  public EClass getCompilerBreak()
+  {
+    return compilerBreakEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getCompilerBreak_Script()
+  {
+    return (EReference)compilerBreakEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getOption()
   {
     return optionEClass;
@@ -1722,6 +1890,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getOption_OptionValue()
   {
     return (EAttribute)optionEClass.getEStructuralFeatures().get(0);
@@ -1732,6 +1901,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getOption_CorrectOption()
   {
     return (EAttribute)optionEClass.getEStructuralFeatures().get(1);
@@ -1742,6 +1912,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getCMap()
   {
     return cMapEClass;
@@ -1752,6 +1923,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getCMap_Content()
   {
     return (EAttribute)cMapEClass.getEStructuralFeatures().get(0);
@@ -1762,6 +1934,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getScript()
   {
     return scriptEClass;
@@ -1772,6 +1945,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getScript_EvalVars()
   {
     return (EReference)scriptEClass.getEStructuralFeatures().get(0);
@@ -1782,6 +1956,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EReference getScript_ScriptBody()
   {
     return (EReference)scriptEClass.getEStructuralFeatures().get(1);
@@ -1792,6 +1967,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getEvalVar()
   {
     return evalVarEClass;
@@ -1802,6 +1978,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEvalVar_VarName()
   {
     return (EAttribute)evalVarEClass.getEStructuralFeatures().get(0);
@@ -1812,6 +1989,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getEvalVar_VarExpression()
   {
     return (EAttribute)evalVarEClass.getEStructuralFeatures().get(1);
@@ -1822,6 +2000,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EClass getScriptBody()
   {
     return scriptBodyEClass;
@@ -1832,6 +2011,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EAttribute getScriptBody_Script()
   {
     return (EAttribute)scriptBodyEClass.getEStructuralFeatures().get(0);
@@ -1842,6 +2022,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public JoveNotesFactory getJoveNotesFactory()
   {
     return (JoveNotesFactory)getEFactoryInstance();
@@ -2031,6 +2212,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     createEAttribute(voiceToTextEClass, VOICE_TO_TEXT__CLIP_NAME);
     createEAttribute(voiceToTextEClass, VOICE_TO_TEXT__TEXT);
 
+    compilerBreakEClass = createEClass(COMPILER_BREAK);
+    createEReference(compilerBreakEClass, COMPILER_BREAK__SCRIPT);
+
     optionEClass = createEClass(OPTION);
     createEAttribute(optionEClass, OPTION__OPTION_VALUE);
     createEAttribute(optionEClass, OPTION__CORRECT_OPTION);
@@ -2111,6 +2295,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     multiChoiceEClass.getESuperTypes().add(this.getRTCElement());
     exerciseEClass.getESuperTypes().add(this.getNotesElement());
     voiceToTextEClass.getESuperTypes().add(this.getNotesElement());
+    compilerBreakEClass.getESuperTypes().add(this.getNotesElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(joveNotesEClass, JoveNotes.class, "JoveNotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2276,6 +2461,9 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     initEAttribute(getVoiceToText_HideFromView(), ecorePackage.getEString(), "hideFromView", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVoiceToText_ClipName(), ecorePackage.getEString(), "clipName", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getVoiceToText_Text(), ecorePackage.getEString(), "text", null, 0, 1, VoiceToText.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(compilerBreakEClass, CompilerBreak.class, "CompilerBreak", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getCompilerBreak_Script(), this.getScript(), null, "script", null, 0, 1, CompilerBreak.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOption_OptionValue(), ecorePackage.getEString(), "optionValue", null, 0, 1, Option.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -28,13 +28,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getHideFromView <em>Hide From View</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getContext <em>Context</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.RefToContextImpl#getRtcElement <em>Rtc Element</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -126,6 +126,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -153,6 +154,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -174,6 +176,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -184,6 +187,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -197,6 +201,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getContext()
   {
     return context;
@@ -207,6 +212,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setContext(String newContext)
   {
     String oldContext = context;
@@ -220,6 +226,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public EList<RTCElement> getRtcElement()
   {
     if (rtcElement == null)
@@ -355,7 +362,7 @@ public class RefToContextImpl extends NotesElementImpl implements RefToContext
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", context: ");

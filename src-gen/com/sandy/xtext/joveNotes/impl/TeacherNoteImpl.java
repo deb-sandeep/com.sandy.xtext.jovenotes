@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
+ * </p>
  * <ul>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getScript <em>Script</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getHideFromView <em>Hide From View</em>}</li>
@@ -28,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getNote <em>Note</em>}</li>
  *   <li>{@link com.sandy.xtext.joveNotes.impl.TeacherNoteImpl#getCmap <em>Cmap</em>}</li>
  * </ul>
- * </p>
  *
  * @generated
  */
@@ -140,6 +140,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public Script getScript()
   {
     return script;
@@ -167,6 +168,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setScript(Script newScript)
   {
     if (newScript != script)
@@ -188,6 +190,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getHideFromView()
   {
     return hideFromView;
@@ -198,6 +201,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setHideFromView(String newHideFromView)
   {
     String oldHideFromView = hideFromView;
@@ -211,6 +215,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getCaption()
   {
     return caption;
@@ -221,6 +226,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCaption(String newCaption)
   {
     String oldCaption = caption;
@@ -234,6 +240,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public String getNote()
   {
     return note;
@@ -244,6 +251,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setNote(String newNote)
   {
     String oldNote = note;
@@ -257,6 +265,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public CMap getCmap()
   {
     return cmap;
@@ -284,6 +293,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
    * <!-- end-user-doc -->
    * @generated
    */
+  @Override
   public void setCmap(CMap newCmap)
   {
     if (newCmap != cmap)
@@ -434,7 +444,7 @@ public class TeacherNoteImpl extends NotesElementImpl implements TeacherNote
   {
     if (eIsProxy()) return super.toString();
 
-    StringBuffer result = new StringBuffer(super.toString());
+    StringBuilder result = new StringBuilder(super.toString());
     result.append(" (hideFromView: ");
     result.append(hideFromView);
     result.append(", caption: ");
