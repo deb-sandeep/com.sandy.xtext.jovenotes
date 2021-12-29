@@ -3,8 +3,6 @@
  */
 package com.sandy.xtext.validation;
 
-import com.sandy.xtext.validation.AbstractJoveNotesValidator;
-
 /**
  * This class contains custom validation rules.
  * 
