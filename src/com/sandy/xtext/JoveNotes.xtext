@@ -41,7 +41,8 @@ NotesElement: (
     MultiChoice    |
     Exercise       |
     VoiceToText    |
-    CompilerBreak )
+    CompilerBreak  |
+    ChapterSection )
     ( script = Script )?
 ;
 
@@ -212,6 +213,10 @@ VoiceToText:
 CompilerBreak:
     {CompilerBreak}
     '@compiler_break'
+;
+
+ChapterSection:
+    '@section' ( sectionName = STRING )
 ;
 
 Option:

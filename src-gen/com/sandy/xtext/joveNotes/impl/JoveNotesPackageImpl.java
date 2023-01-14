@@ -4,6 +4,7 @@ package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
+import com.sandy.xtext.joveNotes.ChapterSection;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.CompilerBreak;
@@ -246,6 +247,13 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * @generated
    */
   private EClass compilerBreakEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass chapterSectionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1880,6 +1888,39 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
    * @generated
    */
   @Override
+  public EClass getChapterSection()
+  {
+    return chapterSectionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getChapterSection_Script()
+  {
+    return (EReference)chapterSectionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getChapterSection_SectionName()
+  {
+    return (EAttribute)chapterSectionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getOption()
   {
     return optionEClass;
@@ -2215,6 +2256,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     compilerBreakEClass = createEClass(COMPILER_BREAK);
     createEReference(compilerBreakEClass, COMPILER_BREAK__SCRIPT);
 
+    chapterSectionEClass = createEClass(CHAPTER_SECTION);
+    createEReference(chapterSectionEClass, CHAPTER_SECTION__SCRIPT);
+    createEAttribute(chapterSectionEClass, CHAPTER_SECTION__SECTION_NAME);
+
     optionEClass = createEClass(OPTION);
     createEAttribute(optionEClass, OPTION__OPTION_VALUE);
     createEAttribute(optionEClass, OPTION__CORRECT_OPTION);
@@ -2296,6 +2341,7 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
     exerciseEClass.getESuperTypes().add(this.getNotesElement());
     voiceToTextEClass.getESuperTypes().add(this.getNotesElement());
     compilerBreakEClass.getESuperTypes().add(this.getNotesElement());
+    chapterSectionEClass.getESuperTypes().add(this.getNotesElement());
 
     // Initialize classes and features; add operations and parameters
     initEClass(joveNotesEClass, JoveNotes.class, "JoveNotes", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2464,6 +2510,10 @@ public class JoveNotesPackageImpl extends EPackageImpl implements JoveNotesPacka
 
     initEClass(compilerBreakEClass, CompilerBreak.class, "CompilerBreak", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getCompilerBreak_Script(), this.getScript(), null, "script", null, 0, 1, CompilerBreak.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(chapterSectionEClass, ChapterSection.class, "ChapterSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getChapterSection_Script(), this.getScript(), null, "script", null, 0, 1, ChapterSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getChapterSection_SectionName(), ecorePackage.getEString(), "sectionName", null, 0, 1, ChapterSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(optionEClass, Option.class, "Option", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOption_OptionValue(), ecorePackage.getEString(), "optionValue", null, 0, 1, Option.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

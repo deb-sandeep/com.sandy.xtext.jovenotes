@@ -6,6 +6,7 @@ package com.sandy.xtext.serializer;
 import com.google.inject.Inject;
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
+import com.sandy.xtext.joveNotes.ChapterSection;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.CompilerBreak;
@@ -67,6 +68,16 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case JoveNotesPackage.CHAPTER_DETAILS:
 				sequence_ChapterDetails(context, (ChapterDetails) semanticObject); 
 				return; 
+			case JoveNotesPackage.CHAPTER_SECTION:
+				if (rule == grammarAccess.getChapterSectionRule()) {
+					sequence_ChapterSection(context, (ChapterSection) semanticObject); 
+					return; 
+				}
+				else if (rule == grammarAccess.getNotesElementRule()) {
+					sequence_ChapterSection_NotesElement(context, (ChapterSection) semanticObject); 
+					return; 
+				}
+				else break;
 			case JoveNotesPackage.CHARACTER:
 				if (rule == grammarAccess.getCharacterRule()
 						|| rule == grammarAccess.getRTCElementRule()) {
@@ -339,6 +350,36 @@ public class JoveNotesSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     )
 	 */
 	protected void sequence_ChapterDetails(ISerializationContext context, ChapterDetails semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     ChapterSection returns ChapterSection
+	 *
+	 * Constraint:
+	 *     sectionName=STRING
+	 */
+	protected void sequence_ChapterSection(ISerializationContext context, ChapterSection semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, JoveNotesPackage.Literals.CHAPTER_SECTION__SECTION_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, JoveNotesPackage.Literals.CHAPTER_SECTION__SECTION_NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getChapterSectionAccess().getSectionNameSTRINGTerminalRuleCall_1_0(), semanticObject.getSectionName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     NotesElement returns ChapterSection
+	 *
+	 * Constraint:
+	 *     (sectionName=STRING script=Script?)
+	 */
+	protected void sequence_ChapterSection_NotesElement(ISerializationContext context, ChapterSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

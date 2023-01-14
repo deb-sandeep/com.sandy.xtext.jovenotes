@@ -275,6 +275,15 @@ public interface JoveNotesFactory extends EFactory
   CompilerBreak createCompilerBreak();
 
   /**
+   * Returns a new object of class '<em>Chapter Section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Chapter Section</em>'.
+   * @generated
+   */
+  ChapterSection createChapterSection();
+
+  /**
    * Returns a new object of class '<em>Option</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

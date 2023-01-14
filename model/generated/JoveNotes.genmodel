@@ -172,6 +172,10 @@
     <genClasses ecoreClass="JoveNotes.ecore#//CompilerBreak">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//CompilerBreak/script"/>
     </genClasses>
+    <genClasses ecoreClass="JoveNotes.ecore#//ChapterSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference JoveNotes.ecore#//ChapterSection/script"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//ChapterSection/sectionName"/>
+    </genClasses>
     <genClasses ecoreClass="JoveNotes.ecore#//Option">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/optionValue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute JoveNotes.ecore#//Option/correctOption"/>

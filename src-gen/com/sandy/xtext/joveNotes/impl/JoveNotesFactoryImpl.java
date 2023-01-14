@@ -4,6 +4,7 @@ package com.sandy.xtext.joveNotes.impl;
 
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
+import com.sandy.xtext.joveNotes.ChapterSection;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.CompilerBreak;
@@ -125,6 +126,7 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
       case JoveNotesPackage.EXERCISE: return createExercise();
       case JoveNotesPackage.VOICE_TO_TEXT: return createVoiceToText();
       case JoveNotesPackage.COMPILER_BREAK: return createCompilerBreak();
+      case JoveNotesPackage.CHAPTER_SECTION: return createChapterSection();
       case JoveNotesPackage.OPTION: return createOption();
       case JoveNotesPackage.CMAP: return createCMap();
       case JoveNotesPackage.SCRIPT: return createScript();
@@ -469,6 +471,18 @@ public class JoveNotesFactoryImpl extends EFactoryImpl implements JoveNotesFacto
   {
     CompilerBreakImpl compilerBreak = new CompilerBreakImpl();
     return compilerBreak;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public ChapterSection createChapterSection()
+  {
+    ChapterSectionImpl chapterSection = new ChapterSectionImpl();
+    return chapterSection;
   }
 
   /**

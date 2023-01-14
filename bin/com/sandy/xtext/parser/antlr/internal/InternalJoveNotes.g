@@ -540,19 +540,29 @@ ruleNotesElement returns [EObject current=null]
         $current = $this_CompilerBreak_18.current; 
         afterParserOrEnumRuleCall();
     }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getNotesElementAccess().getChapterSectionParserRuleCall_0_19()); 
+    }
+    this_ChapterSection_19=ruleChapterSection
+    { 
+        $current = $this_ChapterSection_19.current; 
+        afterParserOrEnumRuleCall();
+    }
 )(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getNotesElementAccess().getScriptScriptParserRuleCall_1_0()); 
 	    }
-		lv_script_19_0=ruleScript		{
+		lv_script_20_0=ruleScript		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getNotesElementRule());
 	        }
        		set(
        			$current, 
        			"script",
-        		lv_script_19_0, 
+        		lv_script_20_0, 
         		"com.sandy.xtext.JoveNotes.Script");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -2911,6 +2921,49 @@ ruleCompilerBreak returns [EObject current=null]
     	newLeafNode(otherlv_1, grammarAccess.getCompilerBreakAccess().getCompiler_breakKeyword_1());
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleChapterSection
+entryRuleChapterSection returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getChapterSectionRule()); }
+	 iv_ruleChapterSection=ruleChapterSection 
+	 { $current=$iv_ruleChapterSection.current; } 
+	 EOF 
+;
+
+// Rule ChapterSection
+ruleChapterSection returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='@section' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getChapterSectionAccess().getSectionKeyword_0());
+    }
+(
+(
+		lv_sectionName_1_0=RULE_STRING
+		{
+			newLeafNode(lv_sectionName_1_0, grammarAccess.getChapterSectionAccess().getSectionNameSTRINGTerminalRuleCall_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getChapterSectionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"sectionName",
+        		lv_sectionName_1_0, 
+        		"org.eclipse.xtext.common.Terminals.STRING");
+	    }
+
+)
+))
 ;
 
 

@@ -195,22 +195,24 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cExerciseParserRuleCall_0_16 = (RuleCall)cAlternatives_0.eContents().get(16);
 		private final RuleCall cVoiceToTextParserRuleCall_0_17 = (RuleCall)cAlternatives_0.eContents().get(17);
 		private final RuleCall cCompilerBreakParserRuleCall_0_18 = (RuleCall)cAlternatives_0.eContents().get(18);
+		private final RuleCall cChapterSectionParserRuleCall_0_19 = (RuleCall)cAlternatives_0.eContents().get(19);
 		private final Assignment cScriptAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cScriptScriptParserRuleCall_1_0 = (RuleCall)cScriptAssignment_1.eContents().get(0);
 		
 		//NotesElement:
 		//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
 		//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText
-		//	| CompilerBreak) script=Script?;
+		//	| CompilerBreak | ChapterSection) script=Script?;
 		@Override public ParserRule getRule() { return rule; }
 
 		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText | CompilerBreak)
-		//script=Script?
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText | CompilerBreak
+		//| ChapterSection) script=Script?
 		public Group getGroup() { return cGroup; }
 
 		//(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse | ChemEquation
-		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText | CompilerBreak)
+		//| ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText | CompilerBreak
+		//| ChapterSection)
 		public Alternatives getAlternatives_0() { return cAlternatives_0; }
 
 		//WordMeaning
@@ -269,6 +271,9 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 		//CompilerBreak
 		public RuleCall getCompilerBreakParserRuleCall_0_18() { return cCompilerBreakParserRuleCall_0_18; }
+
+		//ChapterSection
+		public RuleCall getChapterSectionParserRuleCall_0_19() { return cChapterSectionParserRuleCall_0_19; }
 
 		//script=Script?
 		public Assignment getScriptAssignment_1() { return cScriptAssignment_1; }
@@ -711,13 +716,13 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//MatchMCQConfig:
 		//	'@mcq_config' '{'
-		//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption'   reverseCaption=STRING)? ('@numOptionsToShow'
+		//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)? ('@numOptionsToShow'
 		//	numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 
 		//'@mcq_config' '{'
-		//'@forwardCaption' forwardCaption=STRING ('@reverseCaption'   reverseCaption=STRING)? ('@numOptionsToShow'
+		//'@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)? ('@numOptionsToShow'
 		//numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)?
 		//'}'
 		public Group getGroup() { return cGroup; }
@@ -737,7 +742,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getForwardCaptionSTRINGTerminalRuleCall_3_0() { return cForwardCaptionSTRINGTerminalRuleCall_3_0; }
 
-		//('@reverseCaption'   reverseCaption=STRING)?
+		//('@reverseCaption' reverseCaption=STRING)?
 		public Group getGroup_4() { return cGroup_4; }
 
 		//'@reverseCaption'
@@ -1705,6 +1710,30 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getCompiler_breakKeyword_1() { return cCompiler_breakKeyword_1; }
 	}
 
+	public class ChapterSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.ChapterSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSectionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cSectionNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSectionNameSTRINGTerminalRuleCall_1_0 = (RuleCall)cSectionNameAssignment_1.eContents().get(0);
+		
+		//ChapterSection:
+		//	'@section' sectionName=STRING;
+		@Override public ParserRule getRule() { return rule; }
+
+		//'@section' sectionName=STRING
+		public Group getGroup() { return cGroup; }
+
+		//'@section'
+		public Keyword getSectionKeyword_0() { return cSectionKeyword_0; }
+
+		//sectionName=STRING
+		public Assignment getSectionNameAssignment_1() { return cSectionNameAssignment_1; }
+
+		//STRING
+		public RuleCall getSectionNameSTRINGTerminalRuleCall_1_0() { return cSectionNameSTRINGTerminalRuleCall_1_0; }
+	}
+
 	public class OptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "com.sandy.xtext.JoveNotes.Option");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1926,6 +1955,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	private final ExerciseElements pExercise;
 	private final VoiceToTextElements pVoiceToText;
 	private final CompilerBreakElements pCompilerBreak;
+	private final ChapterSectionElements pChapterSection;
 	private final OptionElements pOption;
 	private final CMapElements pCMap;
 	private final ScriptElements pScript;
@@ -1970,6 +2000,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 		this.pExercise = new ExerciseElements();
 		this.pVoiceToText = new VoiceToTextElements();
 		this.pCompilerBreak = new CompilerBreakElements();
+		this.pChapterSection = new ChapterSectionElements();
 		this.pOption = new OptionElements();
 		this.pCMap = new CMapElements();
 		this.pScript = new ScriptElements();
@@ -2043,7 +2074,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	//NotesElement:
 	//	(WordMeaning | QuestionAnswer | FIB | Definition | Character | TeacherNote | Matching | Event | TrueFalse |
 	//	ChemEquation | ChemCompound | Spellbee | ImageLabel | Equation | RefToContext | MultiChoice | Exercise | VoiceToText
-	//	| CompilerBreak) script=Script?;
+	//	| CompilerBreak | ChapterSection) script=Script?;
 	public NotesElementElements getNotesElementAccess() {
 		return pNotesElement;
 	}
@@ -2155,7 +2186,7 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 
 	//MatchMCQConfig:
 	//	'@mcq_config' '{'
-	//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption'   reverseCaption=STRING)? ('@numOptionsToShow'
+	//	'@forwardCaption' forwardCaption=STRING ('@reverseCaption' reverseCaption=STRING)? ('@numOptionsToShow'
 	//	numOptionsToShow=INT)? ('@numOptionsPerRow' numOptionsPerRow=INT)?
 	//	'}';
 	public MatchMCQConfigElements getMatchMCQConfigAccess() {
@@ -2346,6 +2377,16 @@ public class JoveNotesGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getCompilerBreakRule() {
 		return getCompilerBreakAccess().getRule();
+	}
+
+	//ChapterSection:
+	//	'@section' sectionName=STRING;
+	public ChapterSectionElements getChapterSectionAccess() {
+		return pChapterSection;
+	}
+	
+	public ParserRule getChapterSectionRule() {
+		return getChapterSectionAccess().getRule();
 	}
 
 	//Option:

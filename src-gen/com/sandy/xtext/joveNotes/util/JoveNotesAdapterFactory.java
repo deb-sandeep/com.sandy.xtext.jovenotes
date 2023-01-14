@@ -4,6 +4,7 @@ package com.sandy.xtext.joveNotes.util;
 
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
+import com.sandy.xtext.joveNotes.ChapterSection;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.CompilerBreak;
@@ -245,6 +246,11 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCompilerBreak(CompilerBreak object)
       {
         return createCompilerBreakAdapter();
+      }
+      @Override
+      public Adapter caseChapterSection(ChapterSection object)
+      {
+        return createChapterSectionAdapter();
       }
       @Override
       public Adapter caseOption(Option object)
@@ -709,6 +715,21 @@ public class JoveNotesAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCompilerBreakAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link com.sandy.xtext.joveNotes.ChapterSection <em>Chapter Section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see com.sandy.xtext.joveNotes.ChapterSection
+   * @generated
+   */
+  public Adapter createChapterSectionAdapter()
   {
     return null;
   }

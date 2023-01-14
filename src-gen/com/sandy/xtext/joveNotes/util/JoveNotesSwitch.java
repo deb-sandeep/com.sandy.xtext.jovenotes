@@ -4,6 +4,7 @@ package com.sandy.xtext.joveNotes.util;
 
 import com.sandy.xtext.joveNotes.CMap;
 import com.sandy.xtext.joveNotes.ChapterDetails;
+import com.sandy.xtext.joveNotes.ChapterSection;
 import com.sandy.xtext.joveNotes.ChemCompound;
 import com.sandy.xtext.joveNotes.ChemEquation;
 import com.sandy.xtext.joveNotes.CompilerBreak;
@@ -330,6 +331,14 @@ public class JoveNotesSwitch<T> extends Switch<T>
         CompilerBreak compilerBreak = (CompilerBreak)theEObject;
         T result = caseCompilerBreak(compilerBreak);
         if (result == null) result = caseNotesElement(compilerBreak);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case JoveNotesPackage.CHAPTER_SECTION:
+      {
+        ChapterSection chapterSection = (ChapterSection)theEObject;
+        T result = caseChapterSection(chapterSection);
+        if (result == null) result = caseNotesElement(chapterSection);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -816,6 +825,22 @@ public class JoveNotesSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCompilerBreak(CompilerBreak object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Chapter Section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Chapter Section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseChapterSection(ChapterSection object)
   {
     return null;
   }
